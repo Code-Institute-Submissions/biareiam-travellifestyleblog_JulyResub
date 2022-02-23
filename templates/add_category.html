@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %} Add Book Genres{% endblock%}
+{% block content %}
+
+
+{% if user.is_authenticated %}
+<section class="cat">
+    <h3>Add Categories</h3>
+
+    <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-outline-secondary">Submit</button>
+
+    </div>
+    {% else %}
+
+    <p>You need to login to be able to edit a post.</p>
+    {% endif %}
+</section>
+{% endblock %}

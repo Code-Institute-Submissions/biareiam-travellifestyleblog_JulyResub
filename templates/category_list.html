@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block title %} {{ post.post_title}} {% endblock%}
+
+{% block content %}
+<section class="categories-container">
+    <h3>Categories</h3>
+    <div class="categories">
+        {% for item in cat_menu_list %}
+        <a class="dropdown-item-cat" href="{% url 'category' item %}">{{ item }}</a>
+        {% endfor %}
+    </div>
+    {% if user.is_authenticated %}
+    <button><a class="" href="{% url 'add-category' %}">Add Category</a></button>
+    {% endif %}
+</section>
+{% endblock %}

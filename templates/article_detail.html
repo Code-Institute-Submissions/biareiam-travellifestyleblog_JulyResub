@@ -10,7 +10,8 @@
                 <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ post.post_title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+                <p class="post-subtitle">Post by: {{ post.author }} | {{ post.created_on }} | <a
+                        href="{% url 'category' post.category %}">{{ post.category }}</a></p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute
@@ -55,11 +56,18 @@
             <hr>
         </div>
     </div>
+    {% if user.is_authenticated %}
+    {% if user.id == post.author.id %}
+
     <div class="update-post">
         <button type="button" class="btn btn-outline-success button"><a
                 href="{% url 'update-post' post.pk %}">Edit</a></button>
-        <button type="button" class="btn btn-outline-danger button"><a href="#">Delete</a></button>
+        <button type="button" class="btn btn-outline-danger button"><a
+                href="{% url 'delete-post' post.pk %}">Delete</a></button>
     </div>
+    {% endif %}
+    {% endif %}
+
 
 </div>
 
