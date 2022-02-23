@@ -16,12 +16,12 @@ class Category(models.Model):
 class Profile(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     bio = models.TextField()
-    image = models.ImageField(null=True, blank=True, upload_to="images/profile/")
+    profile_pic = models.ImageField(null=True, blank=True, upload_to="images/profile/")
     instagram_url = models.CharField(max_length=255, null=True, blank=True)
     facebook_url = models.CharField(max_length=255, null=True, blank=True)
-    first_name = models.CharField(max_length=255, default='Mary')
-    last_name = models.CharField(max_length=255, default='Ann')
-    email = models.EmailField(default='my@email.com')
+    first_name = models.CharField(max_length=255, default=' ')
+    last_name = models.CharField(max_length=255, default=' ')
+    email = models.EmailField(default=' ')
 
 
     def __str__(self):
