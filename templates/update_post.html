@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Edit {% endblock%}
+{% block content %}
+
+
+<section>
+    <div class="shadow p-4 mb-5 bg-body rounded edit-post">
+        <h1>Edit Your Post</h1>
+        <div class="form-group">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.media }}
+                {{ form.as_p }}
+                <button class="btn btn-secondary">Update</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

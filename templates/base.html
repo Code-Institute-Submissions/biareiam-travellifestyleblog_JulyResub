@@ -37,9 +37,10 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
+
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Add Post</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'add-post' %}">Add Post</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Logout</a>

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} Add Post {% endblock%}
+{% block content %}
+
+
+{% if user.is_authenticated %}
+<section class="add-post">
+    <div class="shadow p-4 mb-5 bg-body rounded">
+        <h3>Add Post</h3>
+        <div class="form-group">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.media}}
+                {{ form.as_p }}
+                <button class="btn btn-outline-secondary">Submit</button>
+            </form>
+
+        </div>
+        <script>
+            var name = "{{ user.username }}";
+            document.getElementById("user_name").value = name;
+        </script>
+
+        {% else %}
+
+        <p>You need to login to be able to edit a post. <a href="{% url 'login_user' %}">Login Here</a></p>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
