@@ -94,7 +94,7 @@
                     <h5 class="card-title">{{  post.author.profile.first_name }}
                         {{  post.author.profile.last_name }}
                     </h5>
-                    <p><a href="#">Profile</a>
+                    <p><a href="{% url 'show_profile_page' post.author.profile.id %}">Profile</a>
                         {% if post.author.profile.facebook_url %}
                         | <a href="{{ post.author.profile.instagram_url }}">Facebook</a>
                         {% endif %}
