@@ -28,6 +28,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">W<span class="red-o">h</span>at's
                     Up<span class="thin"> | blog</span></span></span></a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -39,30 +40,45 @@
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'category-list' %}">Categories</a>
-                    </li>
+                    <!-- Category Menu-->
+                    {% if cat_menu %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Category
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="nav-link" href="{% url 'category-list' %}">All Categories</a>
+                            {% for item in cat_menu %}
+                            <a class="dropdown-item" href="{% url 'category' item %}">{{ item }}</a>
+                            {% endfor %}
 
+                        </div>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'category-list' %}">Category</a>
+                    </li>
+                    {% endif %}
                     {% if user.is_authenticated %}
                     {% if user.profile.id %}
                     <li><a class="nav-link" href="{% url 'add-post' %}">Add Post</a>
                     </li>
                     {% endif %}
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            {{ user.first_name }}
-                        </a>
+                        <a class="nav-link dropdown-toggle" href="{% url 'profile' user.profile.id %}"
+                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ user.first_name }}</a>
+
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     </li>
 
                     {% if user.profile.id %}
                     <li><a class="dropdown-item" href="{% url 'profile' user.profile.id %}">Profile</a>
                     </li>
-                    <li><a class="dropdown-item" href="{% url 'setting' %}">Settings</a>
-
-                    </li>
                     <li><a class="dropdown-item" href="{% url 'edit_profile' user.profile.id %}">Edit Profile</a>
+                    </li>
+                    <li><a class="dropdown-item" href="{% url 'setting' %}">Settings</a>
                     </li>
 
                     {% else %}
