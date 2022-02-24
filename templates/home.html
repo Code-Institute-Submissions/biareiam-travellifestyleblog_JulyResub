@@ -24,20 +24,17 @@
                     <div class="col-lg-4 col-md-4 col-12">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <div class="d-none d-md-block col-md-6 masthead-image">
-                                    {% if post.image %}
-                                    <p><img src="{{post.image.url}}" width="100%"></p>
-                                    {% else %}
-                                    <p><img src="{% static 'media/img1.jpeg'}"></p>
-                                    {% endif %}
+                                <div class=" masthead-image">
+
+                                    <img src=" {{ post.image.url }}" width="100%">
 
                                     <a href=" {% url 'article-detail' post.pk %}" class="post-link">
                                         <p class="card-title"><strong>{{ post.post_title }}</strong></p>
-                                        </a>
+                                    </a>
 
-                                        <p class="author">By {{ post.author }} | <a
-                                                href="{% url 'category' post.category %}">{{ post.category }}</a>
-                                        </p>
+                                    <p class="author">By {{ post.author }} | <a
+                                            href="{% url 'category' post.category %}">{{ post.category }}</a>
+                                    </p>
 
                                 </div>
                                 <hr />
