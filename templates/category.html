@@ -7,31 +7,36 @@
     <div class="container-fluid">
         <div class="row">
             {% for post in category_posts %}
+
             <div class="col-lg-4 col-md-4 col-12">
                 <div class="card mb-4">
-                    <div class="card-body">
-                        <div class="image-container">
-                            <img class="card-img-top" src="#" alt="Book image">
-                            <div class="image-flash">
-                                <a href="{% url 'article-detail' post.pk %}" class="post-link">
-                                    <p class="card-title"><strong>{{ post.post_title }}</strong></p>
-                                </a>
-                                <p class="author">By {{ post.author }} | <a
-                                        href="{% url 'category' post.category %}">{{ post.category }}</a>
-                                </p>
-                            </div>
+                    <div class="cards">
+                        <div class="masthead-image">
+
+                            <a href=" {% url 'article-detail' post.pk %}" class="post-link"><img
+                                    src=" {{ post.image.url }}" width="100%"></a>
+                            <br>
+                            <p class="card-title"><strong>{{ post.post_title }}</strong></p>
+                            </a>
+                            <p class="author">By {{ post.author }} | <a
+                                    href="{% url 'category' post.category %}">{{ post.category }}</a>
+                            </p>
+                            <p class="card-text text-muted"><small>{{ post.created_on}} </small>
                         </div>
-                        <hr />
-                        <p class="card-text text-muted">{{ post.created_on}}</p>
+                        <br>
+                        <p>{{ post.content|slice:":200"|safe }} ...</p>
+
+                        <button><a href="{% url 'article-detail' post.pk %}">Read More</a></button>
+
                     </div>
                 </div>
             </div>
-            {% if forloop.counter|divisibleby:6 %}
+            {% if forloop.counter|divisibleby:3 %}
         </div>
-
-        {% endif %}
-        {% endfor %}
-
+        <div class="row">
+            {% endif %}
+            {% endfor %}
+        </div>
     </div>
 
     {% if is_paginated %}
@@ -48,10 +53,6 @@
         </ul>
     </nav>
     {% endif %}
+    {% endif %}
 
-</section>
-{% else %}
-<p>Sorry, this page does not exist</p>
-{% endif%}
-
-{% endblock %}
+    {% endblock %}

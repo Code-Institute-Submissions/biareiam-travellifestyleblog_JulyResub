@@ -50,7 +50,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="nav-link" href="{% url 'category-list' %}">All Categories</a>
                             {% for item in cat_menu %}
-                            <a class="dropdown-item" href="{% url 'category' item %}">{{ item }}</a>
+                            <a class=" nav-link dropdown-item" href="{% url 'category' item %}">{{ item }}</a>
                             {% endfor %}
 
                         </div>
@@ -74,18 +74,19 @@
                     </li>
 
                     {% if user.profile.id %}
-                    <li><a class="dropdown-item" href="{% url 'profile' user.profile.id %}">Profile</a>
+                    <li><a class="dropdown-item nav-link" href="{% url 'profile' user.profile.id %}">Profile</a>
                     </li>
-                    <li><a class="dropdown-item" href="{% url 'edit_profile' user.profile.id %}">Edit Profile</a>
+                    <li><a class="dropdown-item nav-link" href="{% url 'edit_profile' user.profile.id %}">Edit
+                            Profile</a>
                     </li>
-                    <li><a class="dropdown-item" href="{% url 'setting' %}">Settings</a>
+                    <li><a class="dropdown-item nav-link" href="{% url 'setting' %}">Settings</a>
                     </li>
 
                     {% else %}
-                    <li><a class="dropdown-item" href="{% url 'create_profile' %}">Create Profile</a>
+                    <li><a class="dropdown-item nav-link" href="{% url 'create_profile' %}">Create Profile</a>
                     </li>
                     {% endif %}
-                    <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                    <li><a class="dropdown-item nav-link" href="{% url 'logout' %}">Logout</a>
                     </li>
                 </ul>
                 </li>
@@ -115,7 +116,7 @@
         </div>
     </div>
 
-    <main class="flex-shrink-0 main-bg">
+    <main class="flex-shrink-0 main-bg base">
 
         {% block content %}
 

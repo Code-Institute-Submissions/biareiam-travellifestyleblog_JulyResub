@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 #from cloudinary.models import CloudinaryField
 from django.urls import reverse
+from ckeditor.fields import RichTextField
 
 class Category(models.Model):
     name = models.CharField(max_length=255)
@@ -15,7 +16,8 @@ class Category(models.Model):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
-    bio = models.TextField()
+    #bio = models.TextField()
+    bio = RichTextField(blank=True, null=True)
     profile_pic = models.ImageField(null=True, blank=True, upload_to="images/profile/", default="placeholder")
     instagram_url = models.CharField(max_length=255, null=True, blank=True)
     facebook_url = models.CharField(max_length=255, null=True, blank=True)
@@ -39,7 +41,8 @@ class Post (models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     #featured_image = models.ImageField(null=True, blank=True, upload_to="images/")
     #featured_image = CloudinaryField('image', default='placeholder')
-    content = models.TextField()
+    content = RichTextField(blank=True, null=True)
+    #content = models.TextField()
     category = models.CharField(max_length=255, default="Movies")
     likes = models.ManyToManyField(User, related_name="blog_posts")
     image = models.ImageField(null=False, blank=False, upload_to="images/", default="placeholder")
