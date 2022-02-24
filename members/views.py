@@ -6,6 +6,8 @@ from django.contrib.auth.views import PasswordChangeView
 from django.urls import reverse_lazy
 from .forms import SignUpForm, EditProfileForm, PasswordChangingForm, ProfilePageForm
 from travellifestyleblog22.models import Profile
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 class CreateProfilePageView(CreateView):
     model = Profile
@@ -21,9 +23,13 @@ class CreateProfilePageView(CreateView):
 class EditProfilePageview(generic.UpdateView):
     model = Profile
     template_name = 'registration/edit_profile_page.html'
-    fields = ['bio','profile_pic','instagram_url','facebook_url']
+    form_class = ProfilePageForm
     success_url = reverse_lazy('home')
 
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+   
 
 class ShowProfilePageview(DetailView):
     model = Profile
@@ -61,3 +67,25 @@ class UserEditView(generic.UpdateView):
 
     def get_object(self):
         return self.request.user
+
+@login_required
+def profile(request):
+    if request.method == 'POST':
+        u_form = UserUpdateForm(request.POST, instance=request.user)
+        p_form = ProfilePageForm(request.POST,
+                                   request.FILES,
+                                   instance=request.user.profile)
+        if u_form.is_valid() and p_form.is_valid():
+            u_form.save()
+            p_form.save()
+            return redirect('user_profile')
+
+    else:
+        u_form = UserUpdateForm(instance=request.user)
+        p_form = ProfileUpdateForm(instance=request.user.profile)
+
+    context = {
+        'u_form': u_form,
+        'p_form': p_form
+    }
+    return render(request, 'registration/user_profile.html', context)

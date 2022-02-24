@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
-{% block title %} Add Post {% endblock%}
+{% block title %} Create Profile {% endblock%}
 {% block content %}
 
 
 {% if user.is_authenticated %}
 <section class="add-post">
     <div class="shadow p-4 mb-5 bg-body rounded">
-        <h3>Add Post</h3>
+        <h3>Create Profile</h3>
         <div class="form-group">
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
@@ -17,14 +17,9 @@
             </form>
 
         </div>
-        <script>
-            var name = "{{ user.username }}";
-            document.getElementById("user_name").value = name;
-        </script>
+              {% else %}
 
-        {% else %}
-
-        <p>You need to login to be able to add a post. <a href="{% url 'login_user' %}">Login Here</a></p>
+        <p>You need to login to be able to create a profile. <a href="{% url 'login_user' %}">Login Here</a></p>
         {% endif %}
     </div>
 

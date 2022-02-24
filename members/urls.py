@@ -4,13 +4,13 @@ from .views import UserRegisterView, UserEditView, PasswordsChangeView, ShowProf
 from . import views
 
 urlpatterns = [
-    path('register/', UserRegisterView.as_view(), name="register"),
-    path('settings/', UserEditView.as_view(), name="setting"),
+    path('register/', UserRegisterView.as_view(), name='register'),
+    path('settings/', UserEditView.as_view(), name='setting'),
     #path('password/', auth_views.PasswordChangeView.as_view(template_name="registration/change_password.html")),
-    path('password/', PasswordsChangeView.as_view(template_name="registration/change_password.html")),
+    path('password/', PasswordsChangeView.as_view(template_name='registration/change_password.html')),
     path('password_success', views.password_success, name='password_success'),
     path('<int:pk>/profile/',ShowProfilePageview.as_view(), name='profile'),
-     path('<int:pk>/edit/profile_page/', EditProfilePageview.as_view(), name='edit_profile_page'),
-    path('create_profile_page/', CreateProfilePageView.as_view(), name='create_profile_page'),
+    path('<int:pk>/edit/profile_page/', EditProfilePageview.as_view(), name='edit_profile'),
+    path('create_profile/', CreateProfilePageView.as_view(), name='create_profile'),
     
 ]
