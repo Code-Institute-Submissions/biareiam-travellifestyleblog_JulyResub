@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .models import Post, Category
-from .forms import PostForm, EditForm
+from .models import Post, Category, Comment
+from .forms import PostForm, EditForm, CommentForm
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
 
@@ -36,6 +36,13 @@ class HomeView(ListView):
     template_name = 'home.html'
     paginate_by = 6
 
+    def get_context_data(self,*args, **kwargs):
+        cat_menu = Category.objects.all()
+        context = super(HomeView, self).get_context_data(*args, **kwargs)
+        context["cat_menu"] = cat_menu
+        return context 
+
+
 class ArticleDetailView(DetailView):
     model = Post
     template_name = 'article_detail.html'
@@ -62,6 +69,12 @@ class AddPostView(CreateView):
     #fields = '__all__'
     #fields = ('post_title', 'content')
 
+    def get_context_data(self,*args, **kwargs):
+        cat_menu = Category.objects.all()
+        context = super(AddPostView, self).get_context_data(*args, **kwargs)
+        context["cat_menu"] = cat_menu
+        return context 
+
 class UpdatePostView(UpdateView):
     model = Post
     template_name = 'update_post.html'
@@ -69,7 +82,29 @@ class UpdatePostView(UpdateView):
     #fields = '__all__'
     #fields = ('post_title', 'content')
 
+    def get_context_data(self,*args, **kwargs):
+        cat_menu = Category.objects.all()
+        context = super(UpdatePostView, self).get_context_data(*args, **kwargs)
+        context["cat_menu"] = cat_menu
+        return context 
+
 class DeletePostView(DeleteView):
     model = Post
     template_name = 'delete_post.html'
     success_url = reverse_lazy('home')
+
+    def get_context_data(self,*args, **kwargs):
+        cat_menu = Category.objects.all()
+        context = super(DeletePostView, self).get_context_data(*args, **kwargs)
+        context["cat_menu"] = cat_menu
+        return context 
+
+class AddCommentView(CreateView):
+    model = Comment
+    form_class = CommentForm
+    template_name = 'add_comment.html'
+    success_url = reverse_lazy('home')
+
+    def form_valid(self, form):
+        form.instance.post_id = self.kwargs['pk']
+        return super().form_valid(form)

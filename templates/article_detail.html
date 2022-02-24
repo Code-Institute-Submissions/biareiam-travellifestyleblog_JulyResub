@@ -35,10 +35,10 @@
                 </div>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                {% if "placeholder" in post.image.url %}
+                {% if post.image.url %}
                 <img src=" {{ post.image.url }}" width="100%">
                 {% else %}
-                <img src="{% static 'media/img1.jpeg' %}" width="100%">
+                <img src="https://assets-client.avastbrowser.com/doodles/avast.png" width="100%">
                 {% endif %}
             </div>
 
@@ -83,8 +83,14 @@
                 {% if post.author.profile.profile_pic %}
                 <img src="{{ post.author.profile.profile_pic.url }}" class="img-fluid rounded-start" alt="...">
                 {% else %}
-                <img src="{% static 'media/images.png' %}" class="img-fluid rounded-start">
+                <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Ft4.ftcdn.net%2Fjpg%2F00%2F64%2F67%2F63%2F360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg&imgrefurl=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3D%2522default%2Bprofile%2Bpicture%2522&tbnid=fzm-cB-sF1nIvM&vet=12ahUKEwit8vf14pj2AhVEwIUKHYCgBg8QMygBegUIARDcAQ..i&docid=Ylh7sHyFI9lHtM&w=360&h=360&q=default%20profile%20picture%20&client=avast-a-1&ved=2ahUKEwit8vf14pj2AhVEwIUKHYCgBg8QMygBegUIARDcAQ"
+                    class="img-fluid rounded-start">
                 {% endif %}
+
+
+
+
+
             </div>
             <div class="col-md-8">
                 <div class="card-body">
@@ -103,7 +109,23 @@
             </div>
         </div>
     </div>
+    <div class="row comment">
+        <div class="col">
 
+            <h5 class="comment-title">Comments...</h5>
+            {% if not post.comments.all %}
+            <p><a href="{% url 'add_comment' post.pk %}" class="add-comment">Add comment</a></p>
+            {% else%}
+            <p><a href="{% url 'add_comment' post.pk %}" class="add-comment">Add Comment</a></p>
+
+            {% for comment in post.comments.all %}
+            <strong>{{ comment.name}}</strong> - <small>{{ comment.date_added}}</small>
+            <br>
+            <p>{{ comment.body }}</p>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
 
 
 </div>
