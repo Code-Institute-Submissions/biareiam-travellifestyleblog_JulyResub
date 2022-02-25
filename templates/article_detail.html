@@ -9,7 +9,7 @@
         <div class="col-md-6 masthead-text">
             <h2 class="card-title post-title">{{ post.post_title }}</h2>
             <p class="author">Post by: {{ post.author }} | <a href="{% url 'category' post.category %}"
-                    class="categories">
+                    class="categories" class="cat">
                     {{ post.category }}</a></p>
             <p class="card-text"><small>{{ post.created_on}}</small></p>
             <div class="likes">

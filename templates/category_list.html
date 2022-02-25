@@ -4,15 +4,37 @@
 {% block title %} {{ post.post_title}} {% endblock%}
 
 {% block content %}
-<section class="categories-container">
-    <h3>Categories</h3>
-    <div class="categories">
-        {% for item in cat_menu_list %}
-        <a class="dropdown-item-cat" href="{% url 'category' item %}">{{ item }}</a>
-        {% endfor %}
+<div class="container-fluid homepage">
+    <h3 class="blog-categories">Categories</h3>
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-12 mt-3 card-body-categories-items">
+            <div class="row">
+                {% for item in cat_menu_list %}
+                <div class="col-sm-6 col-xsm-12">
+                    <div class="card-categories mb-4">
+                        <div class="card-body-categories">
+                            <a class="dropdown-item-cat" href="{% url 'category' item %}">{{ item }}</a>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:4 %}
+            </div>
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+
+            </div>
+        </div>
+        {% if user.is_authenticated %}
+        <div class="btn-category">
+            <button class="btn btn-outline-dark add-category"><a class="add-category-item"
+                    href="{% url 'add-category' %}">Add
+                    Category</a></button>
+        </div>
+        {% endif %}
     </div>
-    {% if user.is_authenticated %}
-    <button><a class="" href="{% url 'add-category' %}">Add Category</a></button>
-    {% endif %}
-</section>
+</div>
+
+
 {% endblock %}
