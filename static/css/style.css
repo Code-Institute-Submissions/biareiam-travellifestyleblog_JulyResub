@@ -121,6 +121,7 @@
     flex: 1 1 auto;
     padding: 0.3rem;
     height: 650px;
+    margin-bottom: 1rem;
 }
 
 .btn-outline-dark {
@@ -128,7 +129,6 @@
     background-color: #32373c;
     margin-top: 1rem;
     border-radius: 0;
-    margin-left: 1rem;
     padding: 0.8rem 2rem;
     font-size: 1.1rem;
 }
@@ -160,6 +160,12 @@
     flex-direction: column;
 }
 
+.categories-home {
+    text-decoration: none;
+    color: #5398dd;
+    font-weight: 600;
+}
+
 .card-img,
 .card-img-top {
     border-radius: 0;
@@ -187,6 +193,38 @@
     text-decoration: underline;
     background-color: #32373c;
     color: white;
+}
+
+
+@media(max-width:1024px) {
+    .homepage {
+        padding: 0 2rem;
+    }
+
+    .navbar-brand {
+        padding-left: 1.5rem;
+    }
+}
+
+@media(max-width:800px) {
+    .homepage {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .card-img,
+    .card-img-top {
+        padding-top: 0;
+
+    }
+}
+
+@media (max-width: 400px) {
+    .homepage {
+        padding: 0 0.5rem;
+    }
 }
 
 /*------------------------ Footer -----------------*/
@@ -306,10 +344,6 @@
         padding: 0 1.5rem;
     }
 
-    .card-img,
-    .card-img-top {
-        padding-top: 1rem;
-    }
 }
 
 /**----------- Categories ---------**/
@@ -422,4 +456,143 @@
 .card-categories:hover,
 .card-categories:focus {
     text-decoration: underline;
+}
+
+/*------------- Add Post ------------------*/
+/* main.css */
+.editor {
+    width: 40%;
+}
+
+.btn-submit {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.add-post-btn {
+    color: #ffffff;
+    background-color: #32373c;
+    border-radius: 0;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+@media(max-width:800px) {
+
+    #cke_id_content {
+        max-width: 725px;
+    }
+
+    .navbar-brand {
+        padding-left: 1rem;
+    }
+}
+
+@media(max-width:500px) {
+
+    #cke_id_content {
+        max-width: 375px;
+    }
+
+    .navbar>.container,
+    .navbar>.container-fluid,
+    .navbar>.container-lg,
+    .navbar>.container-md,
+    .navbar>.container-sm,
+    .navbar>.container-xl,
+    .navbar>.container-xxl {
+        padding-right: 1rem;
+    }
+}
+
+@media(max-width:400px) {
+
+    #cke_id_content {
+        max-width: 325px;
+    }
+}
+
+@media(max-width:320px) {
+
+    #cke_id_content {
+        max-width: 275px;
+    }
+}
+
+.add-post {
+    width: 82%;
+    margin: auto;
+}
+
+@media(max-width:1440px) {
+    .add-post {
+        width: 55%;
+        margin: auto;
+    }
+
+    #cke_id_content {
+        max-width: 795px;
+    }
+
+}
+
+@media(max-width:1024px) {
+    .add-post {
+        width: 65%;
+    }
+
+    #cke_id_content {
+        max-width: 665px;
+    }
+
+}
+
+@media(max-width:800px) {
+    .add-post {
+        width: 85%;
+    }
+
+    #cke_id_content {
+        max-width: 655px;
+    }
+
+}
+
+@media(max-width:500px) {
+    .add-post {
+        width: 85%;
+    }
+
+    #cke_id_content {
+        max-width: 360px;
+    }
+
+}
+
+@media(max-width:400px) {
+    .add-post {
+        width: 89%;
+    }
+
+    #cke_id_content {
+        max-width: 330px;
+    }
+
+}
+
+@media(max-width:320px) {
+    .add-post {
+        width: 90%;
+        margin: auto;
+    }
+
+    #cke_id_content {
+        max-width: 290px;
+    }
+
+    .navbar-brand {
+        padding-left: 0.5rem;
+    }
+
 }

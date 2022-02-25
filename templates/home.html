@@ -9,7 +9,7 @@
             <div class="row">
                 {% for post in object_list %}
                 <div class="col-md-4">
-                    <div class="card mb-4">
+                    <div class="card mb-2">
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.image.url %}
@@ -24,7 +24,7 @@
                                     <br>
                                     <h5 class="card-title">{{ post.post_title }}</h5>
                                     <p class="author">Post by: {{ post.author }} | <a
-                                            href="{% url 'category' post.category %}" class="categories">
+                                            href="{% url 'category' post.category %}" class="categories-home">
                                             {{ post.category }}</a></p>
                                     <p class="card-text"><small>{{ post.created_on}}</small></p>
                                     <p class=" card-text-2 "> {{ post.content|slice:":200"|safe }} ... </p>

@@ -5,28 +5,29 @@
 
 
 {% if user.is_authenticated %}
-<section class="add-post">
-    <div class="shadow p-4 mb-5 bg-body rounded">
-        <h3>Add Post</h3>
-        <div class="form-group">
-            <form method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ form.media}}
-                {{ form.as_p }}
-                <button class="btn btn-outline-secondary">Submit</button>
-            </form>
 
-        </div>
-        <script>
-            var name = "{{ user.username }}";
-            document.getElementById("user_name").value = name;
-        </script>
+<div class="add-post">
+    <h3 class="blog-categories">Add Post</h3>
+    <div class="form-group">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.media}}
+            {{ form.as_p }}
+            <div class="btn-submit">
+                <button class="btn btn-outline-secondary add-post-btn">Submit</button>
+            </div>
+        </form>
 
-        {% else %}
-
-        <p>You need to login to be able to add a post. <a href="{% url 'login_user' %}">Login Here</a></p>
-        {% endif %}
     </div>
+    <script>
+        var name = "{{ user.username }}";
+        document.getElementById("user_name").value = name;
+    </script>
 
-</section>
+    {% else %}
+
+    <p>You need to login to be able to add a post. <a href="{% url 'login_user' %}">Login Here</a></p>
+    {% endif %}
+</div>
+
 {% endblock %}

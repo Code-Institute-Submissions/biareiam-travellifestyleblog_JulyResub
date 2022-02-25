@@ -48,7 +48,7 @@
                             Category
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="nav-link" href="{% url 'category-list' %}">All Categories</a>
+                            <a class=" nav-link dropdown-item" href="{% url 'category-list' %}">All Categories</a>
                             {% for item in cat_menu %}
                             <a class=" nav-link dropdown-item" href="{% url 'category' item %}">{{ item }}</a>
                             {% endfor %}
@@ -57,7 +57,7 @@
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'category-list' %}">Category</a>
+                        <a class="nav-link dropdown-item" href="{% url 'category-list' %}">Category</a>
                     </li>
                     {% endif %}
                     {% if user.is_authenticated %}
