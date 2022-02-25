@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="container-fluid">
+<div class="container-fluid homepage">
     <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
@@ -21,12 +21,15 @@
                                         class="card-img-top" src=" {{ post.image.url }}"></a>
                                 {% endif %}
                                 <div class="image-flash">
+                                    <br>
                                     <h5 class="card-title">{{ post.post_title }}</h5>
-                                    <p class="author">Post by: {{ post.author }} <a
-                                            href="{% url 'category' post.category %}"> | {{ post.category }}</a></p>
-                                    <p class="card-text text-muted h6">{{ post.created_on}}</p>
-                                    <p>{{ post.content|slice:":200"|safe }} ...</p>
-                                    <a href="{% url 'article-detail' post.pk %}" class="btn btn-outline-dark">Read
+                                    <p class="author">Post by: {{ post.author }} | <a
+                                            href="{% url 'category' post.category %}" class="categories">
+                                            {{ post.category }}</a></p>
+                                    <p class="card-text"><small>{{ post.created_on}}</small></p>
+                                    <p class=" card-text-2 "> {{ post.content|slice:":200"|safe }} ... </p>
+                                    <a href="{% url 'article-detail' post.pk %}"
+                                        class="btn btn-outline-dark readmore">Read
                                         More</a>
                                 </div>
                             </div>
@@ -46,10 +49,12 @@
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            <button class="btn btn-page"><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo;
+                    PREV </a></button>
             {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            <button class="btn btn-page"><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT
+                    &raquo;</a></button>
 
             {% endif %}
         </ul>

@@ -1,15 +1,17 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %} {{ post.title }} {% endblock %}
+{% block title %} {{ post.post_title }} {% endblock %}
 
 {% block content %}
 
-<div class="container">
+<div class="container article-detail">
     <div class="row g-0">
         <div class="col-md-6 masthead-text">
-            <h1 class="post-title">{{ post.post_title }}</h1>
-            <p class="post-subtitle">Post by: {{ post.author }} | {{ post.created_on }} | <a
-                    href="{% url 'category' post.category %}">{{ post.category }}</a></p>
+            <h2 class="card-title post-title">{{ post.post_title }}</h2>
+            <p class="author">Post by: {{ post.author }} | <a href="{% url 'category' post.category %}"
+                    class="categories">
+                    {{ post.category }}</a></p>
+            <p class="card-text"><small>{{ post.created_on}}</small></p>
             <div class="likes">
                 <form action="{% url 'like_post' post.pk %}" method="POST">
                     {% csrf_token %}
@@ -21,10 +23,7 @@
                     <button type="submit" name="post_id" value="{{ post.id }}" class="btn btn-danger btn-sm">
                         <i class="far fa-heart"></i> {{ total_likes }}</button>
                     {% endif %}
-                    {% with comments.count as total_comments %}
-                    <i class="far fa-comments"></i>
-                    {{ total_comments }}</strong>
-                    {% endwith %}
+
                     {% else %}
                     <small><i class="far fa-heart"></i> <a href="{% url 'login' %}"> Login</a> to like</small>
                     {% endif %}
@@ -41,46 +40,48 @@
             {% endif %}
             {% endif %}
         </div>
-        <div class="d-none d-md-block col-md-6 masthead-image">
+        <div class="col-md-6">
             {% if "placeholder" in post.image.url %}
             <img class="card-img-top" src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.png">
             {% else %}
             <img class="card-img-top" src=" {{ post.image.url }}">
             {% endif %}
         </div>
-        <div class="col card mb-4  mt-3  top">
-
-            <p class="card-text ">{{ post.content|safe }}</p>
+    </div>
+    <div class="row">
+        <div class="col content-card mb-4">
+            <p class="">{{ post.content|safe }}</p>
         </div>
     </div>
-    <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-            <div class="col-md-4">
+</div>
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+        <div class="col-md-4">
 
-                {% if post.author.profile.profile_pic %}
-                <img src="{{ post.author.profile.profile_pic.url }}" class="img-fluid rounded-start" alt="...">
-                {% else %}
-                <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Ft4.ftcdn.net%2Fjpg%2F00%2F64%2F67%2F63%2F360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg&imgrefurl=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3D%2522default%2Bprofile%2Bpicture%2522&tbnid=fzm-cB-sF1nIvM&vet=12ahUKEwit8vf14pj2AhVEwIUKHYCgBg8QMygBegUIARDcAQ..i&docid=Ylh7sHyFI9lHtM&w=360&h=360&q=default%20profile%20picture%20&client=avast-a-1&ved=2ahUKEwit8vf14pj2AhVEwIUKHYCgBg8QMygBegUIARDcAQ"
-                    class="img-fluid rounded-start">
-                {% endif %}
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">{{  post.author.profile.first_name }}
-                        {{  post.author.profile.last_name }}
-                    </h5>
-                    <p><a href="{% url 'profile' post.author.profile.id %}">Profile</a>
-                        {% if post.author.profile.facebook_url %}
-                        | <a href="{{ post.author.profile.instagram_url }}">Facebook</a>
-                        {% endif %}
-                        {% if post.author.profile.instagram_url %}
-                        | <a href="{{ post.author.profile.instagram_url }}">Instagram</a></p>
+            {% if post.author.profile.profile_pic %}
+            <img src="{{ post.author.profile.profile_pic.url }}" class="img-fluid rounded-start" alt="...">
+            {% else %}
+            <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Ft4.ftcdn.net%2Fjpg%2F00%2F64%2F67%2F63%2F360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg&imgrefurl=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3D%2522default%2Bprofile%2Bpicture%2522&tbnid=fzm-cB-sF1nIvM&vet=12ahUKEwit8vf14pj2AhVEwIUKHYCgBg8QMygBegUIARDcAQ..i&docid=Ylh7sHyFI9lHtM&w=360&h=360&q=default%20profile%20picture%20&client=avast-a-1&ved=2ahUKEwit8vf14pj2AhVEwIUKHYCgBg8QMygBegUIARDcAQ"
+                class="img-fluid rounded-start">
+            {% endif %}
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{  post.author.profile.first_name }}
+                    {{  post.author.profile.last_name }}
+                </h5>
+                <p><a href="{% url 'profile' post.author.profile.id %}">Profile</a>
+                    {% if post.author.profile.facebook_url %}
+                    | <a href="{{ post.author.profile.instagram_url }}">Facebook</a>
                     {% endif %}
-                    <p class="card-text">{{ post.author.profile.bio }}</p>
-                </div>
+                    {% if post.author.profile.instagram_url %}
+                    | <a href="{{ post.author.profile.instagram_url }}">Instagram</a></p>
+                {% endif %}
+                <p class="card-text">{{ post.author.profile.bio }}</p>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 
