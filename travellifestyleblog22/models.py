@@ -54,7 +54,7 @@ class Post (models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
-        return self.title + ' | ' + str(self.username)
+        return self.post_title + ' | ' + str(self.author)
 
     def get_absolute_url(self):
         return reverse('home')
@@ -73,7 +73,7 @@ class Comment(models.Model):
         ordering = ["-date_addded"]
     
     def __str__(self):
-        return '%s -%s' % (self.post.title, self.name)
+        return '%s -%s' % (self.post.post_title, self.name)
 
 
 

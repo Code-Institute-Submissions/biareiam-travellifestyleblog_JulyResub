@@ -4,74 +4,55 @@
 
 {% block content %}
 
-<div class="masthead">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <h1 class="post-title">{{ post.post_title }}</h1>
-                <p class="post-subtitle">Post by: {{ post.author }} | {{ post.created_on }} | <a
-                        href="{% url 'category' post.category %}">{{ post.category }}</a></p>
-                <div class="likes">
-                    <form action="{% url 'like_post' post.pk %}" method="POST">
-                        {% csrf_token %}
-                        {% if user.is_authenticated %}
-                        {% if liked %}
-                        <button type="submit" name="post_id" value="{{ post.id }}" class="btn btn-success btn-sm">
-                            <i class="far fa-heart"></i> {{ total_likes }}</button>
-                        {% else %}
-                        <button type="submit" name="post_id" value="{{ post.id }}" class="btn btn-danger btn-sm">
-                            <i class="far fa-heart"></i> {{ total_likes }}</button>
-                        {% endif %}
-                        {% with comments.count as total_comments %}
-                        <i class="far fa-comments"></i>
-                        {{ total_comments }}</strong>
-                        {% endwith %}
-                        {% else %}
-                        <small><i class="far fa-heart"></i> <a href="{% url 'login' %}"> Login</a> to like</small>
-                        {% endif %}
-                    </form>
-                </div>
-                {% if user.is_authenticated %}
-                {% if user.id == post.author.id %}
-                <div class="update-post">
-                    <button type="button" class="btn btn-outline-success button"><a
-                            href="{% url 'update-post' post.pk %}">Edit</a></button>
-                    <button type="button" class="btn btn-outline-danger button"><a
-                            href="{% url 'delete-post' post.pk %}">Delete</a></button>
-                </div>
-                {% endif %}
-                {% endif %}
+<div class="container">
+    <div class="row g-0">
+        <div class="col-md-6 masthead-text">
+            <h1 class="post-title">{{ post.post_title }}</h1>
+            <p class="post-subtitle">Post by: {{ post.author }} | {{ post.created_on }} | <a
+                    href="{% url 'category' post.category %}">{{ post.category }}</a></p>
+            <div class="likes">
+                <form action="{% url 'like_post' post.pk %}" method="POST">
+                    {% csrf_token %}
+                    {% if user.is_authenticated %}
+                    {% if liked %}
+                    <button type="submit" name="post_id" value="{{ post.id }}" class="btn btn-success btn-sm">
+                        <i class="far fa-heart"></i> {{ total_likes }}</button>
+                    {% else %}
+                    <button type="submit" name="post_id" value="{{ post.id }}" class="btn btn-danger btn-sm">
+                        <i class="far fa-heart"></i> {{ total_likes }}</button>
+                    {% endif %}
+                    {% with comments.count as total_comments %}
+                    <i class="far fa-comments"></i>
+                    {{ total_comments }}</strong>
+                    {% endwith %}
+                    {% else %}
+                    <small><i class="far fa-heart"></i> <a href="{% url 'login' %}"> Login</a> to like</small>
+                    {% endif %}
+                </form>
             </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                {% if post.image.url %}
-                <img src=" {{ post.image.url }}" width="100%">
-                {% else %}
-                <img src="https://assets-client.avastbrowser.com/doodles/avast.png" width="100%">
-                {% endif %}
+            {% if user.is_authenticated %}
+            {% if user.id == post.author.id %}
+            <div class="update-post">
+                <button type="button" class="btn btn-outline-success button"><a
+                        href="{% url 'update-post' post.pk %}">Edit</a></button>
+                <button type="button" class="btn btn-outline-danger button"><a
+                        href="{% url 'delete-post' post.pk %}">Delete</a></button>
             </div>
+            {% endif %}
+            {% endif %}
+        </div>
+        <div class="d-none d-md-block col-md-6 masthead-image">
+            {% if "placeholder" in post.image.url %}
+            <img class="card-img-top" src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.png">
+            {% else %}
+            <img class="card-img-top" src=" {{ post.image.url }}">
+            {% endif %}
+        </div>
+        <div class="col card mb-4  mt-3  top">
 
+            <p class="card-text ">{{ post.content|safe }}</p>
         </div>
     </div>
-</div>
-
-<div class=" container">
-    <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
-                <p class="card-text ">
-                    {{ post.content|safe }}
-                </p>
-
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <hr>
-        </div>
-    </div>
-
-
     <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
             <div class="col-md-4">
@@ -100,25 +81,8 @@
             </div>
         </div>
     </div>
-    <div class="row comment">
-        <div class="col">
-
-            <h5 class="comment-title">Comments...</h5>
-            {% if not post.comments.all %}
-            <p><a href="{% url 'add_comment' post.pk %}" class="add-comment">Add comment</a></p>
-            {% else%}
-            <p><a href="{% url 'add_comment' post.pk %}" class="add-comment">Add Comment</a></p>
-
-            {% for comment in post.comments.all %}
-            <strong>{{ comment.name}}</strong> - <small>{{ comment.date_added}}</small>
-            <br>
-            <p>{{ comment.body }}</p>
-            {% endfor %}
-            {% endif %}
-        </div>
-    </div>
-
-
 </div>
+
+
 
 {% endblock %}
