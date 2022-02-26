@@ -6,9 +6,9 @@
 
 {% if user.is_authenticated %}
 <div class="post">
-    <div class="add-post">
-        <h3 class="add-post-page">Add Post</h3>
-        <div class="form-group">
+    <div class="add-edit-post">
+        <h2 class="add-edit-post-page">Add Post</h2>
+        <div class="form-group add-edit-post-form">
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.media}}
@@ -25,8 +25,12 @@
         </script>
 
         {% else %}
-
-        <p>You need to login to be able to add a post. <a href="{% url 'login_user' %}">Login Here</a></p>
+        <div class="not-allow">
+            <div class="not-allow-box">
+                <p>You need to login to be able to add a post</p>
+                <p><a href="{% url 'login' %}">Login Here</a></p>
+            </div>
+        </div>
         {% endif %}
     </div>
 </div>

@@ -8,37 +8,36 @@
     <div class="row g-0">
         <div class="col-md-6 masthead-text">
             <h2 class="card-title post-title">{{ post.post_title }}</h2>
-            <p class="author">Post by: {{ post.author }} | <a href="{% url 'category' post.category %}"
-                    class="categories" class="cat">
-                    {{ post.category }}</a></p>
-            <p class="card-text"><small>{{ post.created_on}}</small></p>
-            <div class="likes">
-                <form action="{% url 'like_post' post.pk %}" method="POST">
-                    {% csrf_token %}
-                    {% if user.is_authenticated %}
-                    {% if liked %}
-                    <button type="submit" name="post_id" value="{{ post.id }}" class="btn btn-success btn-sm">
-                        <i class="far fa-heart"></i> {{ total_likes }}</button>
-                    {% else %}
-                    <button type="submit" name="post_id" value="{{ post.id }}" class="btn btn-danger btn-sm">
-                        <i class="far fa-heart"></i> {{ total_likes }}</button>
-                    {% endif %}
+            <div class="row">
+                <div class="col">
+                    <p class="author">Post by: {{ post.author }} | <a href="{% url 'category' post.category %}"
+                            class="categories-home">
+                            {{ post.category }}</a></p>
 
-                    {% else %}
-                    <small><i class="far fa-heart"></i> <a href="{% url 'login' %}"> Login</a> to like</small>
-                    {% endif %}
-                </form>
+                    <p class="card-text"><small>{{ post.created_on}}</small></p>
+                </div>
+                <div class="col">
+                    <div class="likes">
+                        <form action="{% url 'like_post' post.pk %}" method="POST">
+                            {% csrf_token %}
+                            {% if user.is_authenticated %}
+                            {% if liked %}
+                            <button type="submit" name="post_id" value="{{ post.id }}"
+                                class="btn btn-success btn-sm like-btn">
+                                <i class="far fa-heart"></i> {{ total_likes }}</button>
+                            {% else %}
+                            <button type="submit" name="post_id" value="{{ post.id }}"
+                                class="btn btn-danger btn-sm like-btn">
+                                <i class="far fa-heart"></i> {{ total_likes }}</button>
+                            {% endif %}
+
+                            {% else %}
+                            <small><i class="far fa-heart"></i> <a href="{% url 'login' %}"> Login</a> to like</small>
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
             </div>
-            {% if user.is_authenticated %}
-            {% if user.id == post.author.id %}
-            <div class="update-post">
-                <button type="button" class="btn btn-outline-success button"><a
-                        href="{% url 'update-post' post.pk %}">Edit</a></button>
-                <button type="button" class="btn btn-outline-danger button"><a
-                        href="{% url 'delete-post' post.pk %}">Delete</a></button>
-            </div>
-            {% endif %}
-            {% endif %}
         </div>
         <div class="col-md-6">
             {% if "placeholder" in post.image.url %}
@@ -46,10 +45,20 @@
             {% else %}
             <img class="card-img-top" src=" {{ post.image.url }}">
             {% endif %}
+            {% if user.is_authenticated %}
+            {% if user.id == post.author.id %}
+            <div class="update-post">
+                <button type="button" class="btn btn-outline-success button btn-edit"><a
+                        href="{% url 'update-post' post.pk %}">Edit</a></button>
+                <button type="button" class="btn btn-outline-danger button btn-delete"><a
+                        href="{% url 'delete-post' post.pk %}">Delete</a></button>
+            </div>
+            {% endif %}
+            {% endif %}
         </div>
     </div>
     <div class="row">
-        <div class="col content-card mb-4">
+        <div class="col content-card">
             <p class="">{{ post.content|safe }}</p>
         </div>
     </div>
@@ -82,7 +91,7 @@
         </div>
     </div>
 </div>
-</div>
+
 
 
 

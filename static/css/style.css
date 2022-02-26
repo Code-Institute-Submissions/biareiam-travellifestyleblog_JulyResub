@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    color: #2f4c4c;
 }
 
 /**--------------------base---------------**/
@@ -12,11 +13,11 @@
 .nav-link {
     text-transform: uppercase;
     font-weight: 600;
-    color: rgb(0, 0, 0);
+    color: #2f4c4c;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: rgb(0, 0, 0);
+    color: #2f4c4c;
 }
 
 .navbar {
@@ -35,6 +36,11 @@
     padding-top: 1.3rem;
     padding-bottom: 1.3rem;
 
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: #2f4c4c;
 }
 
 @media(max-width:500px) {
@@ -160,6 +166,24 @@
     flex-direction: column;
 }
 
+@media(max-width:430px) {
+    .category-add {
+        max-width: 20rem;
+    }
+}
+
+@media(max-width:400px) {
+    .category-add {
+        max-width: 18rem;
+    }
+}
+
+@media(max-width:350px) {
+    .category-add {
+        max-width: 16rem;
+    }
+}
+
 .categories-home {
     text-decoration: none;
     color: #5398dd;
@@ -186,6 +210,7 @@
     padding: 0.8rem 2rem;
     background-color: #32373c;
     color: white;
+
 }
 
 .page-link:hover,
@@ -237,14 +262,14 @@
 
 .copyright p {
     padding-top: 1rem;
-    color: gray;
+    color: #212529;
 }
 
 .line {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border: 0;
-    border-top: 1px solid rgb(0, 0, 0);
+    border-top: 2px solid #2f4c4c;
     margin: 0 3rem;
 }
 
@@ -346,11 +371,86 @@
 
 }
 
+.far {
+    color: white;
+
+}
+
+.likes {
+    margin-top: 0.7rem;
+    text-align: left;
+    margin-left: -1rem;
+
+}
+
+.update-post {
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.button {
+    padding: 0.3rem 5.5rem;
+}
+
+.btn-delete,
+.btn-edit {
+    border-radius: 0;
+}
+
+.btn-delete a,
+.btn-edit a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.btn-delete {
+    background-color: #af3322;
+    border: none;
+}
+
+.btn-edit {
+    background-color: rgb(20, 90, 20);
+    border: none;
+}
+
+@media(max-width:800px) {
+    .button {
+        padding: 0.3rem 3rem;
+    }
+}
+
+@media(max-width:500px) {
+    .likes {
+        margin-top: -1rem;
+        margin-bottom: 1rem;
+    }
+
+    .update-post {
+        margin-bottom: -1.5rem;
+
+    }
+}
+
+@media(max-width:350px) {
+    .likes {
+        margin-top: 1rem;
+
+    }
+
+    .button {
+        padding: 0.2rem 2rem;
+    }
+}
+
+
 /**----------- Categories ---------**/
 .blog-categories {
     text-transform: uppercase;
     text-align: center;
     margin-top: -1rem;
+    font-size: 1.7rem;
 }
 
 .card-body-categories-items {
@@ -368,6 +468,7 @@
     font-weight: 600;
     text-decoration: none;
     font-size: 1rem;
+    color: black;
 }
 
 @media(max-width:800px) {
@@ -390,7 +491,7 @@
 
 
     .card-categories {
-        border: 1px solid;
+
         padding: 4px;
         background-color: #212529;
         color: white;
@@ -445,11 +546,11 @@
 }
 
 .card-categories {
-    border: 1px solid;
-    padding: 10px;
-    background-color: #212529;
-    color: white;
 
+    padding: 10px;
+    box-shadow: 12px 12px 2px 1px #2f4c4c;
+    color: #32373c;
+    border: 2px solid #2f4c4c;
 }
 
 .card-categories:hover,
@@ -529,11 +630,17 @@
 }
 
 .cat {
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-    max-width: 25rem;
+    padding-bottom: 7rem;
+    padding-top: 3rem;
+}
+
+.category-add {
+    box-shadow: 12px 12px 2px 1px #2f4c4c;
+    max-width: 26rem;
     margin: auto;
-    padding: 3rem;
-    border: 1px solid gray;
+    padding: 2rem;
+    border: 2px solid #2f4c4c;
+    text-align: center;
 }
 
 .btn-cat {
@@ -541,24 +648,35 @@
     margin-top: 2rem;
 }
 
+.category-add-title {
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.form-categories label {
+    padding-right: 1rem;
+}
+
 /*------------- Add Post ------------------*/
 .post {
     margin-bottom: 2rem;
 }
 
-.add-post {
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-    border: 1px solid gray;
+.add-edit-post {
+    box-shadow: 12px 12px 2px 1px #2f4c4c;
+    border: 2px solid #2f4c4c;
     margin-top: -1rem;
     margin-bottom: 2.5rem;
     padding: 1rem;
 }
 
-.add-post-page {
+.add-edit-post-page {
     text-transform: uppercase;
     text-align: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    font-size: 1.7rem;
 }
 
 
@@ -567,7 +685,7 @@
     margin-bottom: 1rem;
 }
 
-.add-post-btn {
+.add-edit-post-btn {
     color: #ffffff;
     background-color: #32373c;
     border-radius: 0;
@@ -576,10 +694,62 @@
     margin-bottom: 0.5rem;
 }
 
-@media(max-width:800px) {
+@media(max-width:1440px) {
+    .add-edit-post {
+        width: 55%;
+        margin: auto;
+    }
 
     #cke_id_content {
-        max-width: 725px;
+        max-width: 750px;
+    }
+
+}
+
+@media(max-width:1300px) {
+    .add-edit-post {
+        width: 55%;
+        margin: auto;
+    }
+
+    #cke_id_content {
+        max-width: 650px;
+    }
+
+}
+
+@media(max-width:1200px) {
+    .add-edit-post {
+        width: 55%;
+        margin: auto;
+    }
+
+    #cke_id_content {
+        max-width: 620px;
+    }
+
+}
+
+@media(max-width:1024px) {
+    .add-edit-post {
+        width: 55%;
+    }
+
+    #cke_id_content {
+        max-width: 525px;
+
+    }
+
+}
+
+@media(max-width:800px) {
+    .add-edit-post {
+        width: 75%;
+    }
+
+
+    #cke_id_content {
+        max-width: 535px;
     }
 
     .navbar-brand {
@@ -588,9 +758,12 @@
 }
 
 @media(max-width:500px) {
+    .add-edit-post {
+        width: 85%;
+    }
 
     #cke_id_content {
-        max-width: 375px;
+        max-width: 315px;
     }
 
     .navbar>.container,
@@ -607,96 +780,26 @@
 @media(max-width:400px) {
 
     #cke_id_content {
-        max-width: 325px;
+        max-width: 290px;
     }
 }
+
 
 @media(max-width:320px) {
 
     #cke_id_content {
-        max-width: 275px;
+        max-width: 225px;
     }
-}
 
-.add-post {
-    width: 82%;
-    margin: auto;
-}
-
-@media(max-width:1440px) {
-    .add-post {
-        width: 55%;
+    .add-edit-post {
+        width: 82%;
         margin: auto;
     }
-
-    #cke_id_content {
-        max-width: 655px;
-    }
-
 }
 
-@media(max-width:1024px) {
-    .add-post {
-        width: 65%;
-    }
-
-    #cke_id_content {
-        max-width: 630px;
-
-    }
-
+.add-edit-post-form label {
+    text-transform: capitalize;
 }
-
-@media(max-width:800px) {
-    .add-post {
-        width: 85%;
-    }
-
-    #cke_id_content {
-        max-width: 615px;
-    }
-
-}
-
-@media(max-width:500px) {
-    .add-post {
-        width: 85%;
-    }
-
-    #cke_id_content {
-        max-width: 325px;
-    }
-
-}
-
-@media(max-width:400px) {
-    .add-post {
-        width: 89%;
-    }
-
-    #cke_id_content {
-        max-width: 300px;
-    }
-
-}
-
-@media(max-width:320px) {
-    .add-post {
-        width: 90%;
-        margin: auto;
-    }
-
-    #cke_id_content {
-        max-width: 250px;
-    }
-
-    .navbar-brand {
-        padding-left: 0.5rem;
-    }
-}
-
-
-
 
 
 /*------------- Login ------------------*/
@@ -706,8 +809,8 @@
     width: 40%;
     margin-top: -1rem;
     padding-bottom: 0.5rem;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-    border: 1px solid rgb(212, 212, 212);
+    box-shadow: 12px 12px 2px 1px #2f4c4c;
+    border: 2px solid #2f4c4c;
     padding-left: 2rem;
     padding-right: 2rem;
     margin-bottom: 2.9rem;
@@ -717,6 +820,7 @@
 .login-title,
 .register-title {
     text-align: center;
+    font-size: 1.7rem;
 }
 
 .register-title {
@@ -761,8 +865,12 @@
     color: #5398dd;
 }
 
-.form-register form li,
+
 .helptext {
+    font-size: 0.8rem;
+}
+
+.form-register ul li {
     display: none;
 }
 
@@ -801,5 +909,198 @@
     .login,
     .register {
         width: 95%;
+    }
+}
+
+
+
+/*----- Delete Post -------------*/
+.delete {
+    margin-top: 3rem;
+}
+
+.delete-post {
+    box-shadow: 12px 12px 2px 1px #2f4c4c;
+    border: 2px solid #2f4c4c;
+    margin-top: 3rem;
+    padding: 2rem;
+    max-width: 40%;
+    margin: auto;
+    margin-bottom: 8rem;
+}
+
+.delete-title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+.delete-post-title {
+    text-align: center;
+    font-style: italic;
+    color: #575757;
+}
+
+.delete-question {
+    text-align: center;
+    font-weight: 600;
+}
+
+@media(max-width:800px) {
+    .delete-post {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 500px) {
+    .delete-post {
+        max-width: 85%;
+    }
+}
+
+.not-allow-box {
+    box-shadow: 12px 12px 2px 1px #2f4c4c;
+    border: 2px solid #2f4c4c;
+    margin-top: 5rem;
+    padding: 2rem;
+    max-width: 40%;
+    margin: auto;
+    text-align: center;
+}
+
+.not-allow a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #5398dd;
+}
+
+.not-allow {
+    margin-top: 6rem;
+    margin-bottom: 13rem;
+}
+
+@media(max-width:800px) {
+    .not-allow-box {
+        max-width: 70%;
+    }
+}
+
+@media(max-width:500px) {
+    .not-allow-box {
+        max-width: 90%;
+    }
+}
+
+@media(max-width:400px) {
+    .not-allow-box {
+        max-width: 90%;
+    }
+}
+
+/*------------------ Create/edit profile and seetings --------------------*/
+.profile {
+    margin-bottom: 3rem;
+}
+
+.profile-page {
+    box-shadow: 12px 12px 2px 1px #2f4c4c;
+    border: 2px solid #2f4c4c;
+    margin-top: -1rem;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    width: 57%;
+    margin: auto;
+}
+
+
+.profile-page-title {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.profile-page-form label {
+    padding-bottom: 0.5rem;
+}
+
+@media(max-width:1440px) {
+    #cke_id_bio {
+
+        max-width: 755px;
+    }
+
+    .profile-page {
+        width: 55%;
+    }
+}
+
+@media(max-width:1300px) {
+    #cke_id_bio {
+
+        max-width: 675px;
+    }
+}
+
+
+@media(max-width:1200px) {
+    #cke_id_bio {
+
+        max-width: 500px;
+    }
+}
+
+
+
+@media(max-width:1024px) {
+    #cke_id_bio {
+
+        max-width: 510px;
+    }
+}
+
+@media(max-width:800px) {
+    #cke_id_bio {
+
+        max-width: 460px;
+    }
+
+    .profile-page {
+        width: 65%;
+    }
+}
+
+@media(max-width:500px) {
+    #cke_id_bio {
+
+        max-width: 325px;
+    }
+
+    .profile-page {
+        width: 85%;
+    }
+}
+
+@media(max-width:400px) {
+    #cke_id_bio {
+
+        max-width: 285px;
+    }
+
+    .profile-page {
+        width: 85%;
+    }
+}
+
+@media(max-width:350px) {
+    #cke_id_bio {
+
+        max-width: 235px;
+    }
+
+    .profile-page {
+        width: 85%;
     }
 }

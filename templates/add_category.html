@@ -1,24 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %} Add Book Genres{% endblock%}
 {% block content %}
 
 
 {% if user.is_authenticated %}
 <div class="cat">
-    <h3>Add Categories</h3>
+    <div class="category-add">
+        <h2 class="category-add-title">Add Categories</h2>
+        <div class="form-group form-categories">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="btn-cat">
+                    <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+                </div>
+        </div>
+        {% else %}
 
-    <div class="form-group">
-        <form method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <div class="btn-cat">
-                <button type="submit" class="btn btn-primary btn-submit">Submit</button>
-            </div>
-
+        <p>You need to login to be able to edit a post.</p>
+        {% endif %}
     </div>
-    {% else %}
-
-    <p>You need to login to be able to edit a post.</p>
-    {% endif %}
 </div>
 {% endblock %}

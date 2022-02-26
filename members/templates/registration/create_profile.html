@@ -5,23 +5,28 @@
 
 
 {% if user.is_authenticated %}
-<section class="add-post">
-    <div class="shadow p-4 mb-5 bg-body rounded">
-        <h3>Create Profile</h3>
-        <div class="form-group">
+<div class="profile">
+    <div class="profile-page">
+        <h3 class="profile-page-title">Create Profile</h3>
+        <div class="form-group profile-page-form">
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.media}}
                 {{ form.as_p }}
-                <button class="btn btn-outline-secondary">Submit</button>
+                <div class="btn-login">
+                    <button type="submit" class="btn btn-primary btn-submit">Create</button>
+                </div>
             </form>
 
         </div>
-              {% else %}
-
-        <p>You need to login to be able to create a profile. <a href="{% url 'login_user' %}">Login Here</a></p>
+        {% else %}
+        <div class="not-allow">
+            <div class="not-allow-box">
+                <p>You need to login to be able to create a profile</p>
+                <p><a href="{% url 'login' %}">Login Here</a></p>
+            </div>
+        </div>
         {% endif %}
     </div>
-
-</section>
+</div>
 {% endblock %}

@@ -3,8 +3,8 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<div class="shadow p-4 mb-5 bg-body rounded">
-    <h1>Add Comment</h1>
+<div class="add-comment">
+    <h2>Add Comment</h2>
     <div class="form-group">
         <form method="POST">
             {% csrf_token %}
