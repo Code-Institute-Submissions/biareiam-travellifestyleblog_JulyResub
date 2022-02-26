@@ -109,7 +109,7 @@
 
 /**----------- Home ---------------------**/
 .homepage {
-    padding: 0 3.5rem;
+    padding: 0 3.5rem 1rem 3.5rem;
 }
 
 .author {
@@ -208,7 +208,7 @@
 
 @media(max-width:800px) {
     .homepage {
-        padding: 0 1rem;
+        padding: 0 1rem 1rem 1rem;
     }
 }
 
@@ -350,7 +350,6 @@
 .blog-categories {
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 2rem;
     margin-top: -1rem;
 }
 
@@ -458,11 +457,110 @@
     text-decoration: underline;
 }
 
-/*------------- Add Post ------------------*/
-/* main.css */
-.editor {
-    width: 40%;
+/*-------------- categories ---------------*/
+.category-page {
+    padding: 0 3.5rem 1rem 3.5rem;
 }
+
+@media(max-width:1440px) {
+    .category-page-title {
+        font-size: 3rem;
+        padding-bottom: 1.5rem;
+        padding-top: 1rem;
+    }
+}
+
+
+@media(max-width:1024px) {
+    .category-page {
+        padding: 0.8rem;
+    }
+
+    .category-page-title {
+        padding-bottom: 1.5rem;
+    }
+
+    .category-title {
+        margin-top: -2.5rem;
+    }
+
+}
+
+.category-page-title {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 2.5rem;
+
+}
+
+.category-title {
+    background-color: #f9f4f1;
+    padding-top: 1rem;
+    margin-top: -1.4rem;
+}
+
+@media(max-width:800px) {
+    .category-page-title {
+        padding-bottom: 1rem;
+        padding-top: -1rem;
+        font-size: 1.4rem;
+    }
+
+    .category-title {
+        margin-top: -2.5rem;
+    }
+
+    .navbar>.container,
+    .navbar>.container-fluid,
+    .navbar>.container-lg,
+    .navbar>.container-md,
+    .navbar>.container-sm,
+    .navbar>.container-xl,
+    .navbar>.container-xxl {
+        padding-right: 1rem;
+    }
+}
+
+@media(max-width:500px) {
+    .category-page {
+        padding: 0.5rem;
+    }
+}
+
+.cat {
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    max-width: 25rem;
+    margin: auto;
+    padding: 3rem;
+    border: 1px solid gray;
+}
+
+.btn-cat {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/*------------- Add Post ------------------*/
+.post {
+    margin-bottom: 2rem;
+}
+
+.add-post {
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    border: 1px solid gray;
+    margin-top: -1rem;
+    margin-bottom: 2.5rem;
+    padding: 1rem;
+}
+
+.add-post-page {
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 
 .btn-submit {
     text-align: center;
@@ -532,7 +630,7 @@
     }
 
     #cke_id_content {
-        max-width: 795px;
+        max-width: 655px;
     }
 
 }
@@ -543,7 +641,8 @@
     }
 
     #cke_id_content {
-        max-width: 665px;
+        max-width: 630px;
+
     }
 
 }
@@ -554,7 +653,7 @@
     }
 
     #cke_id_content {
-        max-width: 655px;
+        max-width: 615px;
     }
 
 }
@@ -565,7 +664,7 @@
     }
 
     #cke_id_content {
-        max-width: 360px;
+        max-width: 325px;
     }
 
 }
@@ -576,7 +675,7 @@
     }
 
     #cke_id_content {
-        max-width: 330px;
+        max-width: 300px;
     }
 
 }
@@ -588,11 +687,119 @@
     }
 
     #cke_id_content {
-        max-width: 290px;
+        max-width: 250px;
     }
 
     .navbar-brand {
         padding-left: 0.5rem;
     }
+}
 
+
+
+
+
+/*------------- Login ------------------*/
+.login,
+.register {
+    margin: auto;
+    width: 40%;
+    margin-top: -1rem;
+    padding-bottom: 0.5rem;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    border: 1px solid rgb(212, 212, 212);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2.9rem;
+}
+
+
+.login-title,
+.register-title {
+    text-align: center;
+}
+
+.register-title {
+    padding-top: 1rem;
+}
+
+
+
+.login-title h3,
+.register-title {
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.btn-login,
+.btn-register {
+    text-align: center;
+}
+
+.btn-submit {
+    background-color: #212529;
+    border-radius: 0;
+    padding: 0.5rem 2rem;
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+    text-decoration: underline;
+    color: #fff;
+    background-color: #212529;
+
+}
+
+.signin {
+    color: gray;
+}
+
+.signin a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #5398dd;
+}
+
+.form-register form li,
+.helptext {
+    display: none;
+}
+
+.form-register form label {
+    padding-bottom: 0.5rem;
+}
+
+@media(max-width:1024px) {
+
+    .login,
+    .register {
+        width: 50%;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .login,
+    .register {
+        width: 60%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .login,
+    .register {
+        width: 95%;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .login,
+    .register {
+        width: 95%;
+    }
 }
