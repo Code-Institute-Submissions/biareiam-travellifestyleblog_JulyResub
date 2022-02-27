@@ -56,53 +56,71 @@
         </div>
     </div>
 </div>
-<div class="card mb-3">
-    <div class="row g-0">
-        <div class="col-md-4 image-avatar-col">
-            {% if post.author.profile.profile_pic %}
-            <img src="{{ post.author.profile.profile_pic.url }}" class="img-fluid image-profile" alt="...">
-            {% else %}
-            <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Ft4.ftcdn.net%2Fjpg%2F00%2F64%2F67%2F63%2F360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg&imgrefurl=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3D%2522default%2Bprofile%2Bpicture%2522&tbnid=fzm-cB-sF1nIvM&vet=12ahUKEwit8vf14pj2AhVEwIUKHYCgBg8QMygBegUIARDcAQ..i&docid=Ylh7sHyFI9lHtM&w=360&h=360&q=default%20profile%20picture%20&client=avast-a-1&ved=2ahUKEwit8vf14pj2AhVEwIUKHYCgBg8QMygBegUIARDcAQ"
-                class="img-fluid image-profile">
-            {% endif %}
+
+
+<div class="container profile-container">
+    <div class="row profile-post">
+        <div class="col-md-3">
+            <div>
+                <img class="d-flex rounded-circle g-mt-3 g-mr-15 profile-image-post circle-profile"
+                    src="{{ post.author.profile.profile_pic.url }}" alt="Image Description">
+            </div>
         </div>
-        <div class="col-md-8 image-avatar-page">
-            <div class="card-body-page">
-                <h5 class="card-title-page">{{  post.author.profile.first_name }}
-                    {{  post.author.profile.last_name }}
-                </h5>
-                <p class="links"><a href="{% url 'profile' post.author.profile.id %}" class="social-media">Profile</a>
-                    {% if post.author.profile.facebook_url %}
-                    | <a href="{{ post.author.profile.instagram_url }}" class="social-media">Facebook</a>
-                    {% endif %}
-                    {% if post.author.profile.instagram_url %}
-                    | <a href="{{ post.author.profile.instagram_url }}" class="social-media">Instagram</a></p>
-                {% endif %}
-                <p class="card-text-bio">{{ post.author.profile.bio }}</p>
+        <div class="col-md-9">
+            <div class="media g-mb-30 media-comment">
+
+                <div class="media-body g-bg-secondary">
+                    <div class="g-mb-15">
+                        <h5 class="g-color-gray-dark-v1 profile-name">{{  post.author.profile.first_name }}
+                            {{  post.author.profile.last_name }}</h5>
+                        <p class="links"><a href="{% url 'profile' post.author.profile.id %}"
+                                class="social-media">Profile</a>
+                            {% if post.author.profile.facebook_url %}
+                            | <a href="{{ post.author.profile.instagram_url }}" class="social-media">Facebook</a>
+                            {% endif %}
+                            {% if post.author.profile.instagram_url %}
+                            | <a href="{{ post.author.profile.instagram_url }}" class="social-media">Instagram</a></p>
+                        {% endif %}
+                    </div>
+
+                    <p class="profile-bio-text">{{ post.author.profile.bio }}</p>
+
+
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div class="row comment">
-    <div class="col">
+<div class="container mt-5">
+    <h3>Comments...</h3>
 
-        <h5 class="comment-title">Comments...</h5>
-        {% if not post.comments.all %}
-        <p><a href="{% url 'add_comment' post.pk %}" class="add-comment">Add comment</a></p>
-        {% else%}
-        <p><a href="{% url 'add_comment' post.pk %}" class="add-comment">Add Comment</a></p>
+    {% if not post.comments.all %}
+    <p><a href="{% url 'add_comment' post.pk %}" class="add-comment">Add comment</a></p>
+    {% else%}
+    <p><a href="{% url 'add_comment' post.pk %}" class="add-comment">Add Comment</a></p>
 
-        {% for comment in post.comments.all %}
-        <strong>{{ comment.name}}</strong> - <small>{{ comment.date_addded}}</small>
-        <br>
-        <p>{{ comment.body }}</p>
-        {% endfor %}
-        {% endif %}
+
+
+
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-12 comment-unity ">
+
+            <div class="d-flex flex-row mt-4">
+                {% for comment in post.comments.all %}
+                <img src="data:image/png;base64,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"
+                    width="40" height="40" class="icon-comment">
+                <strong>{{ comment.name}}</strong>
+                <small class="date-comment">{{ comment.date_addded}}</small>
+                <p class="user-comment-text text-justify">{{ comment.body }}</p>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </div>
-
-
-
+{% endif %}
+</div>
+</div>
 
 
 {% endblock %}
