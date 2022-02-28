@@ -61,11 +61,12 @@
 <div class="container profile-container">
     <div class="row profile-post">
         <div class="col-md-3">
-            <div>
-                <img class="d-flex rounded-circle g-mt-3 g-mr-15 profile-image-post circle-profile"
+            <div class="circle-image">
+                <img class="d-flex rounded-circle g-mt-3 g-mr-15 profile-image-post"
                     src="{{ post.author.profile.profile_pic.url }}" alt="Image Description">
             </div>
         </div>
+
         <div class="col-md-9">
             <div class="media g-mb-30 media-comment">
 
@@ -79,13 +80,13 @@
                             | <a href="{{ post.author.profile.instagram_url }}" class="social-media">Facebook</a>
                             {% endif %}
                             {% if post.author.profile.instagram_url %}
-                            | <a href="{{ post.author.profile.instagram_url }}" class="social-media">Instagram</a></p>
+                            | <a href="{{ post.author.profile.instagram_url }}" class="social-media">Instagram</a>
+                            {% endif %}
+                            {% if post.author.profile.twitter_url %}
+                            | <a href="{{ post.author.profile.twitter_url }}" class="social-media">Twitter</a></p>
                         {% endif %}
                     </div>
-
                     <p class="profile-bio-text">{{ post.author.profile.bio }}</p>
-
-
                 </div>
             </div>
         </div>

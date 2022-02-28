@@ -22,6 +22,11 @@
 </div>
 {% else %}
 
-<p>Please <a href="{% url 'login' %}">login</a> to leave a comment</p>
+<div class="not-allow">
+    <div class="not-allow-box">
+        <p>You need to login to be able to comment on a post</p>
+        <p><a href="{% url 'login' %}">Login Here</a></p>
+    </div>
+</div>
 {% endif %}
 {% endblock %}
