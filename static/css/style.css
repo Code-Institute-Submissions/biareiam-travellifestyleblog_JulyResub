@@ -607,7 +607,9 @@
 
 @media(max-width:1440px) {
     .category-page-title {
-        font-size: 3rem;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        text-align: center;
         padding-bottom: 1.5rem;
         padding-top: 1rem;
     }
@@ -620,7 +622,7 @@
     }
 
     .category-page-title {
-        padding-bottom: 1.5rem;
+        padding-bottom: 1rem;
     }
 
     .category-title {
@@ -629,13 +631,14 @@
 
 }
 
-.category-page-title {
-    font-size: 1.7rem;
-    text-transform: uppercase;
-    text-align: center;
-    padding-bottom: 2.5rem;
 
-}
+    .category-page-title {
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        text-align: center;
+        /* padding-bottom: 2.5rem; */
+    }
+
 
 .category-title {
     background-color: #f9f4f1;
@@ -1707,11 +1710,12 @@
 
 .post-comments {
     display: grid;
-    box-shadow: 0 5px 10px -6px #32373c;
-    border: 1px rgb(209, 209, 209) solid;
+    /* box-shadow: 0 5px 10px -6px #32373c; */
+    /* border: 1px rgb(209, 209, 209) solid; */
     margin-top: 0.7rem;
     padding: 0.5rem;
     margin-left: -2rem;
+    background-color: #f9f4f1;
 }
 
 .comments li {
@@ -1743,6 +1747,7 @@
 
 .comments {
     margin-top: 1.5rem;
+    
 }
 
 .comment-body {
@@ -1757,4 +1762,56 @@
     border-color: #ccc;
     border-width: 1px;
     border-radius: 50%;
+}
+
+/*Change password*/
+.password-container {
+    margin: auto;
+    width: 40%;
+    margin-top: -1rem;
+    padding-bottom: 0.5rem;
+    box-shadow: 12px 12px 2px 1px #2f4c4c;
+    border: 2px solid #2f4c4c;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2.9rem;
+}
+
+.change-password {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#id_password {
+    display: none;
+}
+
+.helptext a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #3B5998;
+}
+
+.password-change {
+    margin-top: 1rem;
+}
+
+@media(max-width:800px) {
+    .password-container {
+        width: 60%;
+    }
+
+    .change-password {
+        font-size: 1.3rem;
+    }
+}
+
+@media(max-width:500px) {
+    .password-container {
+        width: 90%;
+
+    }
 }

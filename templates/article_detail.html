@@ -8,7 +8,6 @@
     <div class="row g-0">
         <div class="col-md-6 masthead-text">
             <h2 class="card-title post-title">{{ post.post_title }}</h2>
-
             <p class="author">Post by: {{ post.author }} | <a href="{% url 'category' post.category %}"
                     class="categories-home">
                     {{ post.category }}</a></p>
@@ -30,7 +29,6 @@
                     {% endif %}
                 </form>
             </div>
-
         </div>
         <div class="col-md-6">
             {% if "placeholder" in post.image.url %}
@@ -56,8 +54,6 @@
         </div>
     </div>
 </div>
-
-
 <div class="container profile-container">
     <div class="row profile-post">
         <div class="col-md-3">
@@ -66,7 +62,6 @@
                     src="{{ post.author.profile.profile_pic.url }}" alt="Image Description">
             </div>
         </div>
-
         <div class="col-md-9">
             <div class="media g-mb-30 media-comment">
 
@@ -86,30 +81,27 @@
                             | <a href="{{ post.author.profile.twitter_url }}" class="social-media">Twitter</a></p>
                         {% endif %}
                     </div>
-                    <p class="profile-bio-text">{{ post.author.profile.bio }}</p>
+                    <p class="profile-bio-text">{{ post.author.profile.bio|safe }}</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-
-
 <div class="container bootstrap snippets bootdey">
     <div class="row">
         <div class="col-md-12">
             <div class="blog-comment">
-                <h3 class="text-success">Comments</h3>
+                <h3 class="text-success">Leave a Comment</h3>
                 {% if not post.comments.all %}
                 <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add comment</a></p>
+            
                 {% else%}
                 <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add Comment</a></p>
                 <ul class="comments">
                     <li class="">
                         {% for comment in post.comments.all %}
                         <div class="post-comments">
-                            <p class="meta">{{ comment.name}}
+                            <p class="meta"><strong>{{ comment.name}}</strong>
                                 says : <i class="pull-right">{{ comment.date_addded}}</i></p>
                             <p class="comment-body">{{ comment.body }}</p>
                         </div>
@@ -121,7 +113,4 @@
         </div>
     </div>
 </div>
-
-
-
 {% endblock %}

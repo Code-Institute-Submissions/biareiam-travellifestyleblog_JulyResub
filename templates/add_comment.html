@@ -16,7 +16,6 @@
                     <button type="submit" class="btn btn-primary btn-submit">Submit</button>
                 </div>
             </form>
-
         </div>
     </div>
 </div>
@@ -24,8 +23,8 @@
 
 <div class="not-allow">
     <div class="not-allow-box">
-        <p>You need to login to be able to comment on a post</p>
-        <p><a href="{% url 'login' %}">Login Here</a></p>
+        <p>You must be <a href="{% url 'login' %}">logged in</a> to post a comment.</p>
+       
     </div>
 </div>
 {% endif %}
