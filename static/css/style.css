@@ -1526,7 +1526,7 @@
 }
 
 .circle-profile {
-    border: 2px red solid;
+    border: 2px rgb(122, 122, 122) solid;
     border-radius: 50%;
 }
 
@@ -1544,7 +1544,7 @@
 }
 
 .content-card p {
-    /* padding-top: 1rem; */
+
     text-align: justify;
 }
 
@@ -1580,8 +1580,6 @@
     .col-md-9 {
         flex: 0 0 auto;
         width: 70%;
-        /* margin-left: 3rem; */
-        /* margin-top: -1rem; */
         margin: auto;
         margin-top: -1.5rem;
         margin-left: 3rem;
@@ -1616,9 +1614,7 @@
     }
 
     .links {
-        /* text-align: center; */
-        /* display: flex; */
-        /* flex-direction: row; */
+
         padding-top: 2rem;
         text-align: center;
     }
@@ -1684,7 +1680,7 @@
 
     .comment-section {
         margin-right: 0.5rem;
-        /* margin-right: 1rem; */
+
     }
 }
 
@@ -1701,21 +1697,46 @@
     padding-right: -2rem;
 }
 
-.comment-unity {
+.post-comments {
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-row-gap: 30px;
     box-shadow: 0 5px 10px -6px #32373c;
     border: 1px rgb(209, 209, 209) solid;
+    margin-top: 0.7rem;
+    padding: 0.5rem;
+    margin-left: -2rem;
 }
 
-
-
-.date-comment {
-    text-align: right;
+.comments li {
+    list-style: none;
+    margin-left: 0;
 }
 
-.mt-4 {
-    margin-top: 1.5rem !important;
-    padding: 1rem;
+.text-success {
+    padding-top: 1rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #233535 !important;
+    margin-bottom: 1rem;
+}
+
+.add-comment-page {
+    padding: 0.5rem;
+    background-color: #32373c;
+    color: white;
+    text-decoration: none;
+
+}
+
+.add-comment-page:hover,
+.add-comment-page:focus {
+    text-decoration: underline;
+    color: white;
+}
+
+.comments {
+    margin-top: 1.5rem;
+}
+
+.comment-body {
+    font-size: 0.9rem;
 }
