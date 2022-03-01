@@ -25,17 +25,7 @@
                             <a href="{{ page_user.instagram_url }}"><i class="fab fa-instagram-square fa-2x"></i></a>
                             <a href="{{ page_user.twitter_url }}"><i class="fa fa-twitter-square fa-2x"></i></a>
                         </div>
-                        {% if user.is_authenticated %}
-
-                        <div class="update-profile">
-                            <button type="button" class="btn btn-outline-success button btn-edit-profile"><a
-                                    href="{% url 'edit_profile' user.profile.id %}">Edit Profile</a></button>
-                            <button type="button" class="btn btn-outline-danger button btn-setting"><a
-                                    href="{% url 'setting' %}">Settings</a></button>
-                        </div>
-
-                        {% endif %}
-
+                       
                     </div>
                 </div>
             </div>

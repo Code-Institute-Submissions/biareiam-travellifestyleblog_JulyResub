@@ -20,21 +20,25 @@ def LikeView(request, pk):
 
 def CategoryView(request, cats):
     category_posts = Post.objects.filter(category=cats)
-    return render(request, 'category.html', {'cats':cats.title(), 'category_posts':category_posts})
+    return render(request, 'category.html', {'cats':cats.title(), 'category_posts': category_posts})
+
 
 def CategoryListView(request):
     cat_menu_list = Category.objects.all()
-    return render(request, 'category_list.html', {'cat_menu_list':cat_menu_list})
+    return render(request, 'category_list.html', {'cat_menu_list': cat_menu_list})
+
 
 class AddCategoryView(CreateView):
     model = Category
     template_name = 'add_category.html'
     fields = '__all__'
 
+
 class HomeView(ListView):
     model = Post
     template_name = 'home.html'
     paginate_by = 6
+
 
     def get_context_data(self,*args, **kwargs):
         cat_menu = Category.objects.all()
@@ -47,7 +51,7 @@ class ArticleDetailView(DetailView):
     model = Post
     template_name = 'article_detail.html'
     
-    def get_context_data(self,*args, **kwargs):
+    def get_context_data(self, *args, **kwargs):
         cat_menu = Category.objects.all()
         context = super(ArticleDetailView, self).get_context_data(*args, **kwargs)
         
@@ -57,19 +61,19 @@ class ArticleDetailView(DetailView):
         liked = False
         if engagement.likes.filter(id=self.request.user.id).exists():
             liked = True
-        context ["cat_menu"] = cat_menu
-        context ["total_likes"] = total_likes
-        context ["liked"] = liked
+        context["cat_menu"] = cat_menu
+        context["total_likes"] = total_likes
+        context["liked"] = liked
         return context 
+
 
 class AddPostView(CreateView):
     model = Post
     template_name = 'add_post.html'
     form_class = PostForm
-    #fields = '__all__'
-    #fields = ('post_title', 'content')
+ 
 
-    def get_context_data(self,*args, **kwargs):
+    def get_context_data(self, *args, **kwargs):
         cat_menu = Category.objects.all()
         context = super(AddPostView, self).get_context_data(*args, **kwargs)
         context["cat_menu"] = cat_menu
@@ -79,25 +83,26 @@ class UpdatePostView(UpdateView):
     model = Post
     template_name = 'update_post.html'
     form_class = EditForm
-    #fields = '__all__'
-    #fields = ('post_title', 'content')
+ 
 
-    def get_context_data(self,*args, **kwargs):
+    def get_context_data(self, *args, **kwargs):
         cat_menu = Category.objects.all()
         context = super(UpdatePostView, self).get_context_data(*args, **kwargs)
         context["cat_menu"] = cat_menu
         return context 
+
 
 class DeletePostView(DeleteView):
     model = Post
     template_name = 'delete_post.html'
     success_url = reverse_lazy('home')
 
-    def get_context_data(self,*args, **kwargs):
+    def get_context_data(self, *args, **kwargs):
         cat_menu = Category.objects.all()
         context = super(DeletePostView, self).get_context_data(*args, **kwargs)
         context["cat_menu"] = cat_menu
         return context 
+
 
 class AddCommentView(CreateView):
     model = Comment
