@@ -9,11 +9,11 @@ from travellifestyleblog22.models import Profile
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
+
 class CreateProfilePageView(CreateView):
     model = Profile
     form_class = ProfilePageForm
     template_name = 'registration/create_profile.html'
-    #fields = '__all__'
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -29,29 +29,27 @@ class EditProfilePageview(generic.UpdateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
-   
+
 
 class ShowProfilePageview(DetailView):
     model = Profile
     template_name = 'registration/user_profile.html'
 
     def get_context_data(self, *args, **kwargs):
-        users= Profile.objects.all()
+        users = Profile.objects.all()
         context = super(ShowProfilePageview, self).get_context_data(*args, **kwargs)
         page_user = get_object_or_404(Profile, id=self.kwargs['pk'])
         context["page_user"] = page_user
-        return context 
-    
+        return context
+
 
 class PasswordsChangeView(PasswordChangeView):
-   form_class = PasswordChangingForm
-   #form_class = PasswordChangeForm
-   success_url = reverse_lazy('password_success')
+    form_class = PasswordChangingForm
+    success_url = reverse_lazy('password_success')
 
 
 def password_success(request):
-    return render(request,'registration/password_success.html', {})
-
+    return render(request, 'registration/password_success.html', {})
 
 
 class UserRegisterView(generic.CreateView):
@@ -63,10 +61,11 @@ class UserRegisterView(generic.CreateView):
 class UserEditView(generic.UpdateView):
     form_class = EditProfileForm
     template_name = 'registration/edit_profile.html'
-    success_url = reverse_lazy('home') 
+    success_url = reverse_lazy('home')
 
     def get_object(self):
         return self.request.user
+
 
 @login_required
 def profile(request):
