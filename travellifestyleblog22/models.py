@@ -6,7 +6,7 @@ from ckeditor.fields import RichTextField
 
 class Category(models.Model):
     name = models.CharField(max_length=255)
-    
+
     def __str__(self):
         return self.name
 
@@ -31,6 +31,7 @@ class Profile(models.Model):
     def get_absolute_url(self):
         return reverse('home')
 
+
 class Post (models.Model):
     post_title = models.CharField(max_length=255)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -40,9 +41,7 @@ class Post (models.Model):
     likes = models.ManyToManyField(User, related_name="blog_posts")
     image = models.ImageField(null=False, blank=False, upload_to="images/", default="placeholder")
     headline = models.TextField(null=False, blank=False, default="")
-   
 
-  
     class Meta:
         ordering = ["-created_on"]
 
@@ -55,21 +54,16 @@ class Post (models.Model):
     def total_likes(self):
         return self.likes.count()
 
+
 class Comment(models.Model):
     post = models.ForeignKey(Post, related_name="comments", on_delete=models.CASCADE)
-    
-    
+
     name = models.CharField(max_length=255)
     body = models.TextField()
     date_addded = models.DateTimeField(auto_now_add=True)
 
-
     class Meta:
         ordering = ["-date_addded"]
-    
+
     def __str__(self):
         return '%s -%s' % (self.post.post_title, self.name)
-
-
-
-    
