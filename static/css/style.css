@@ -43,6 +43,13 @@
     color: #2f4c4c;
 }
 
+.navbar-light:hover .navbar-nav:hover .nav-link:hover {
+    color: #ca6c68;
+
+}
+
+
+
 @media(max-width:500px) {
     .navbar-brand {
         padding-left: 1rem;
@@ -192,7 +199,7 @@
 
 .categories-home:hover,
 .categories-home:focus {
-    color: #bf3b4a;
+    color: #ca6c68;
     text-decoration: underline;
 }
 
@@ -401,6 +408,16 @@
     padding: 1rem 2.5rem 0 2.5rem;
 }
 
+.login-btn {
+    color: #3B5998;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    color: #ca6c68;
+}
+
 .content-card p {
     text-align: justify;
     margin-bottom: 1rem;
@@ -408,6 +425,10 @@
 
 .links {
     padding-top: 0.5rem;
+}
+
+.links a:hover {
+    color: #ca6c68;
 }
 
 .post-title {
@@ -462,6 +483,7 @@
     margin-top: 0.7rem;
     text-align: center;
     margin: auto;
+    margin-bottom: 3rem;
 
 }
 
@@ -506,7 +528,8 @@
 @media(max-width:500px) {
     .likes {
         margin-top: -1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
+
     }
 
     .update-post {
@@ -573,11 +596,9 @@
 
 
     .card-categories {
-
         padding: 4px;
         background-color: white;
         color: #212529;
-
     }
 }
 
@@ -1204,12 +1225,9 @@
 }
 
 .profile-card {
-
     margin-bottom: 20px;
     box-shadow: 12px 12px 2px 1px #2f4c4c;
     border: 2px solid #2f4c4c;
-
-
 }
 
 .profile-content {
@@ -1267,8 +1285,17 @@
     opacity: 1;
 }
 
+.col-md-4 {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+    border-right: 2px solid rgb(207, 203, 203);
+}
 
-
+.col-md-8 {
+    flex: 0 0 auto;
+    width: 66.6666666667%;
+    padding-left: 1.5rem;
+}
 
 /* Underline From Center */
 .hvr-underline-from-center {
@@ -1417,7 +1444,6 @@
     .card-body-page {
         flex: 1 1 auto;
         padding: 0.3rem;
-        /* height: 60px; */
         margin-bottom: -5rem;
         margin-left: -6rem;
         padding-top: 3rem;
@@ -1450,7 +1476,6 @@
     .card-body-page {
         flex: 1 1 auto;
         padding: 0.3rem;
-        /* height: 60px; */
         margin-bottom: -5rem;
         margin-left: -6rem;
         padding-top: 3rem;
@@ -1484,6 +1509,10 @@
         text-align: center;
     }
 }
+
+
+
+
 
 /*------------ Comment area -----------------*/
 
@@ -1524,6 +1553,17 @@
     text-decoration: none;
     color: #3B5998;
     font-weight: 600;
+
+}
+
+.links {
+    text-align: center;
+}
+
+.profile-name {
+
+    text-align: center;
+
 }
 
 @media (min-width: 0) {
@@ -1552,9 +1592,6 @@
     }
 }
 
-.g-bg-secondary {
-    background-color: #f9f4f1 !important;
-}
 
 .u-shadow-v18 {
     box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.15);
@@ -1575,7 +1612,7 @@
 .profile-image-post {
     width: 180px;
     height: auto;
-    margin-left: 2rem;
+    margin-left: 7rem;
 }
 
 
@@ -1586,12 +1623,14 @@
     padding-left: 1rem;
 }
 
+
 .col-md-9 {
     flex: 0 0 auto;
-    width: 80%;
-    margin-left: -2rem;
-    margin-top: -1rem;
+    width: 90%;
+    margin-left: -5rem;
+    margin-top: 11rem;
 }
+
 
 .content-card p {
 
@@ -1599,8 +1638,10 @@
 }
 
 .g-bg-secondary {
-    background-color: #f9f4f1 !important;
-    padding: 0.8rem 1rem 1rem 0.8rem;
+    padding: 0.8rem 0.8rem 0.5rem 0.8rem;
+    margin-bottom: -1rem;
+    border-top: 2px rgb(207, 203, 203) solid;
+    border-bottom: 2px rgb(207, 203, 203) solid;
 }
 
 .profile-bio-text {
@@ -1610,18 +1651,24 @@
 @media(max-width:1300px) {
     .col-md-9 {
         flex: 0 0 auto;
-        width: 75%;
-        margin-left: 1rem;
-        margin-top: -1rem;
+        width: 95%;
+    }
+
+    .profile-image-post {
+        margin-left: 5rem;
     }
 }
 
 @media(max-width:1024px) {
     .col-md-9 {
         flex: 0 0 auto;
-        width: 75%;
-        margin-left: 3rem;
+        width: 95%;
+        margin-left: -1rem;
         margin-top: -1rem;
+    }
+
+    .profile-image-post {
+        margin-left: 2.6rem;
     }
 
 }
@@ -1629,10 +1676,10 @@
 @media(max-width:800px) {
     .col-md-9 {
         flex: 0 0 auto;
-        width: 65%;
+        width: 95%;
         margin: auto;
-        margin-top: -1.5rem;
-        margin-left: 5rem;
+        /* margin-top: -1.5rem; */
+        margin-left: -1rem;
     }
 
     .g-bg-secondary {
@@ -1645,20 +1692,22 @@
     }
 
     .profile-image-post {
-        width: 130px;
-        margin-left: 2rem;
+        margin-left: -0.5rem;
+        width: 140px;
     }
 
     .profile-name {
         font-size: 1rem;
+        text-align: center;
+
     }
 }
 
 @media(max-width:500px) {
     .profile-image-post {
-        width: 140px;
+        width: 110px;
         height: auto;
-        margin-left: 7rem;
+        margin-left: 5rem;
         margin-bottom: 2rem;
     }
 
@@ -1687,7 +1736,7 @@
 
     .g-bg-secondary {
         margin-left: 0;
-        margin-bottom: -2.5rem;
+        margin-bottom: 1.5rem;
     }
 
     .allcomment-section {
@@ -1755,8 +1804,6 @@
 
 .post-comments {
     display: grid;
-    /* box-shadow: 0 5px 10px -6px #32373c; */
-    /* border: 1px rgb(209, 209, 209) solid; */
     margin-top: 0.7rem;
     padding: 0.5rem;
     margin-left: -2rem;

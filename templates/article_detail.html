@@ -4,9 +4,9 @@
 
 {% block content %}
 
-<div class="container article-detail">
+<article class="container article-detail">
     <div class="row g-0">
-        <div class="col-md-6 masthead-text">
+        <div class="col-md-4 masthead-text">
             <h2 class="card-title post-title">{{ post.post_title }}</h2>
             <p class="author">Post by: {{ post.author }} | <a href="{% url 'category' post.category %}"
                     class="categories-home">
@@ -25,12 +25,49 @@
                     {% endif %}
 
                     {% else %}
-                    <small><i class="far fa-heart"></i> <a href="{% url 'login' %}"> Login</a> to like</small>
+                    <small><i class="far fa-heart"></i> <a href="{% url 'login' %}" class="login-btn"> Login</a> to
+                        like</small>
                     {% endif %}
                 </form>
             </div>
+            <aside class="container profile-container">
+                <div class="row profile-post">
+                    <div class="col-md-3">
+                        <div class="circle-image">
+                            <img class="d-flex rounded-circle g-mt-3 g-mr-15 profile-image-post"
+                                src="{{ post.author.profile.profile_pic.url }}" alt="Image Description">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="media g-mb-30 media-comment">
+
+                            <div class="media-body g-bg-secondary">
+                                <div class="g-mb-15">
+                                    <h5 class="g-color-gray-dark-v1 profile-name">{{  post.author.profile.first_name }}
+                                        {{  post.author.profile.last_name }}</h5>
+                                    <p class="links"><a href="{% url 'profile' post.author.profile.id %}"
+                                            class="social-media">Profile</a>
+                                        {% if post.author.profile.facebook_url %}
+                                        | <a href="{{ post.author.profile.instagram_url }}"
+                                            class="social-media">Facebook</a>
+                                        {% endif %}
+                                        {% if post.author.profile.instagram_url %}
+                                        | <a href="{{ post.author.profile.instagram_url }}"
+                                            class="social-media">Instagram</a>
+                                        {% endif %}
+                                        {% if post.author.profile.twitter_url %}
+                                        | <a href="{{ post.author.profile.twitter_url }}"
+                                            class="social-media">Twitter</a></p>
+                                    {% endif %}
+                                </div>
+                                <p class="profile-bio-text">{{ post.author.profile.bio|safe }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-8">
             {% if "placeholder" in post.image.url %}
             <img class="card-img-top" src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.png">
             {% else %}
@@ -46,47 +83,11 @@
             </div>
             {% endif %}
             {% endif %}
+            <p class="float-right">{{ post.content|safe }}</p>
         </div>
     </div>
-    <div class="row">
-        <div class="col content-card">
-            <p class="">{{ post.content|safe }}</p>
-        </div>
-    </div>
-</div>
-<div class="container profile-container">
-    <div class="row profile-post">
-        <div class="col-md-3">
-            <div class="circle-image">
-                <img class="d-flex rounded-circle g-mt-3 g-mr-15 profile-image-post"
-                    src="{{ post.author.profile.profile_pic.url }}" alt="Image Description">
-            </div>
-        </div>
-        <div class="col-md-9">
-            <div class="media g-mb-30 media-comment">
+</article>
 
-                <div class="media-body g-bg-secondary">
-                    <div class="g-mb-15">
-                        <h5 class="g-color-gray-dark-v1 profile-name">{{  post.author.profile.first_name }}
-                            {{  post.author.profile.last_name }}</h5>
-                        <p class="links"><a href="{% url 'profile' post.author.profile.id %}"
-                                class="social-media">Profile</a>
-                            {% if post.author.profile.facebook_url %}
-                            | <a href="{{ post.author.profile.instagram_url }}" class="social-media">Facebook</a>
-                            {% endif %}
-                            {% if post.author.profile.instagram_url %}
-                            | <a href="{{ post.author.profile.instagram_url }}" class="social-media">Instagram</a>
-                            {% endif %}
-                            {% if post.author.profile.twitter_url %}
-                            | <a href="{{ post.author.profile.twitter_url }}" class="social-media">Twitter</a></p>
-                        {% endif %}
-                    </div>
-                    <p class="profile-bio-text">{{ post.author.profile.bio|safe }}</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="container bootstrap snippets bootdey">
     <div class="row">
         <div class="col-md-12">
@@ -94,7 +95,7 @@
                 <h3 class="text-success">Leave a Comment</h3>
                 {% if not post.comments.all %}
                 <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add comment</a></p>
-            
+
                 {% else%}
                 <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add Comment</a></p>
                 <ul class="comments">
