@@ -12,9 +12,9 @@
 
                         <div class="profile-info">
                             {% if page_user.profile_pic %}
-                            <img src="{{ page_user.profile_pic.url }}" class="profile-pic" alt="...">
+                            <img src="{{ page_user.profile_pic.url }}" class="profile-pic" alt="profile image">
                             {% else %}
-                            <img src="{% static 'media/images.jfif' %}" class="profile-pic">
+                            <img src="{% static 'media/images.jfif' %}" class="profile-pic" alt="default profile image">
                             {% endif %}
 
                             <h2 class=" hvr-underline-from-center profile-content">{{  page_user.user.first_name }}
@@ -25,7 +25,7 @@
                             <a href="{{ page_user.instagram_url }}"><i class="fab fa-instagram-square fa-2x"></i></a>
                             <a href="{{ page_user.twitter_url }}"><i class="fa fa-twitter-square fa-2x"></i></a>
                         </div>
-                       
+
                     </div>
                 </div>
             </div>

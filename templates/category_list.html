@@ -27,12 +27,10 @@
         </div>
         {% if user.is_authenticated %}
         <div class="btn-category">
-            <button class="btn btn-outline-dark add-category"><a class="add-category-item"
-                    href="{% url 'add-category' %}">Add
-                    Category</a></button>
+            <a class="add-category-item btn btn-outline-dark add-category" href=" {% url 'add-category' %}">Add
+                Category</a>
+            {% endif %}
         </div>
-        {% endif %}
     </div>
 </div>
-
 {% endblock %}
