@@ -35,6 +35,8 @@ DEBUG = True
 ALLOWED_HOSTS = ["travellifestyleblog22.herokuapp.com", "localhost"]
 
 
+
+
 # Application definition
 
 INSTALLED_APPS = [

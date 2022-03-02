@@ -25,14 +25,11 @@ class Profile(models.Model):
     last_name = models.CharField(max_length=255, default=' ')
     email = models.EmailField(default=' ')
 
-
     def __str__(self):
         return str(self.user)
 
-
     def get_absolute_url(self):
         return reverse('home')
-
 
 class Post (models.Model):
     post_title = models.CharField(max_length=255)
@@ -43,10 +40,9 @@ class Post (models.Model):
     likes = models.ManyToManyField(User, related_name="blog_posts")
     image = models.ImageField(null=False, blank=False, upload_to="images/", default="placeholder")
     headline = models.TextField(null=False, blank=False, default="")
- 
-    
+   
 
-    
+  
     class Meta:
         ordering = ["-created_on"]
 
@@ -61,6 +57,8 @@ class Post (models.Model):
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, related_name="comments", on_delete=models.CASCADE)
+    
+    
     name = models.CharField(max_length=255)
     body = models.TextField()
     date_addded = models.DateTimeField(auto_now_add=True)
