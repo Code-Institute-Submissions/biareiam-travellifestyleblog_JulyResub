@@ -17,8 +17,8 @@ class PostForm(forms.ModelForm):
             'post_title': forms.TextInput(attrs={'class': 'form-control'}),
             'author': forms.Select(attrs={'class': 'form-control'}),
             'category': forms.Select(choices=choice_list, attrs={'class': 'form-control'}),
-            'content': forms.Textarea(attrs={'class': 'form-control'}),   
-        }
+            'content': forms.Textarea(attrs={'class': 'form-control'}),
+            }
 
 
 class EditForm(forms.ModelForm):
@@ -27,7 +27,7 @@ class EditForm(forms.ModelForm):
         fields = ('post_title', 'category', 'image', 'content')
         widgets = {
             'post_title': forms.TextInput(attrs={'class': 'form-control'}),
-            'category': forms.Select(choices=choice_list, attrs={'class' : 'form-control'}),
+            'category': forms.Select(choices=choice_list, attrs={'class': 'form-control'}),
             'content': forms.Textarea(attrs={'class': 'form-control'}),
         }
 
@@ -38,5 +38,5 @@ class CommentForm(forms.ModelForm):
         fields = ('name', 'body')
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
-            'body': forms.Textarea(attrs={'class':'form-control'}),
-        }
+            'body': forms.Textarea(attrs={'class': 'form-control'}),
+            }
