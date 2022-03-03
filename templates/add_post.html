@@ -18,20 +18,24 @@
                 </div>
             </form>
         </div>
-        <script>
-            var name = "{{ user.username }}";
-            document.getElementById("user_name").value = name;
-        </script>
-
-        {% else %}
-        <div class="not-allow">
-            <div class="not-allow-box">
-                <p>You need to login to be able to add a post</p>
-                <p><a href="{% url 'login' %}">Login Here</a></p>
-            </div>
-        </div>
-        {% endif %}
     </div>
 </div>
+<script>
+    var name = "{{ user.id }}";
+    document.getElementById("identifier").value = name;
+</script>
+{% else %}
+<div class="not-allow">
+    <div class="not-allow-box">
+        <p>You need to login to be able to add a post</p>
+        <p><a href="{% url 'login' %}">Login Here</a></p>
+    </div>
+</div>
+{% endif %}
+</div>
+</div>
+
+
+
 
 {% endblock %}
