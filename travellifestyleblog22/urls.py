@@ -1,5 +1,6 @@
+""" Libraries """
 from django.urls import path
-from .views import HomeView, ArticleDetailView, AddPostView, UpdatePostView, DeletePostView, CategoryView, CategoryListView, AddCategoryView, LikeView, AddCommentView
+from .views import HomeView, ArticleDetailView, AddPostView, UpdatePostView, DeletePostView, category_view, category_list_view, AddCategoryView, like_view, AddCommentView
 from . import views
 
 urlpatterns = [
@@ -9,8 +10,8 @@ urlpatterns = [
     path('add_category/', AddCategoryView.as_view(), name="add-category"),
     path('post/edit/<int:pk>', UpdatePostView.as_view(), name="update-post"),
     path('post/<int:pk>/delete', DeletePostView.as_view(), name='delete-post'),
-    path('category/<str:cats>', CategoryView, name="category"),
-    path('category-list/', CategoryListView, name="category-list"),
-    path('like/<int:pk>', LikeView, name='like_post'),
+    path('category/<str:cats>', category_view, name="category"),
+    path('category-list/', category_list_view, name="category-list"),
+    path('like/<int:pk>', like_view, name='like_post'),
     path('post/<int:pk>/comment/', AddCommentView.as_view(), name='add_comment'),
 ]

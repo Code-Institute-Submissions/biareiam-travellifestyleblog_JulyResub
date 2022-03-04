@@ -1,12 +1,14 @@
+""" Libraries """
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .models import Post, Category, Comment
-from .forms import PostForm, EditForm, CommentForm
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
+from .models import Post, Category, Comment
+from .forms import PostForm, EditForm, CommentForm
 
 
-def LikeView(request, pk):
+def like_view(request, pk):
+    """ Function which will allow user to like and deslike post """
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
     liked = False
     if post.likes.filter(id=request.user.id).exists():
@@ -18,23 +20,27 @@ def LikeView(request, pk):
     return HttpResponseRedirect(reverse('article-detail', args=[str(pk)]))
 
 
-def CategoryView(request, cats):
+def category_view(request, cats):
+    """ Function which will allow users to sort the posts into categories """
     category_posts = Post.objects.filter(category=cats)
     return render(request, 'category.html', {'cats': cats.title(), 'category_posts': category_posts})
 
 
-def CategoryListView(request):
+def category_list_view(request):
+    """ Function which will allow user to see the post sorted by category """
     cat_menu_list = Category.objects.all()
     return render(request, 'category_list.html', {'cat_menu_list': cat_menu_list})
 
 
 class AddCategoryView(CreateView):
+    """ It will allow users to add new categories """
     model = Category
     template_name = 'add_category.html'
     fields = '__all__'
 
 
 class HomeView(ListView):
+    """ Allow user to see the home page and the posts on it  """
     model = Post
     template_name = 'home.html'
     paginate_by = 6
@@ -47,6 +53,7 @@ class HomeView(ListView):
 
 
 class ArticleDetailView(DetailView):
+    """ Thies will allow users to see each post individually """
     model = Post
     template_name = 'article_detail.html'
 
@@ -67,6 +74,7 @@ class ArticleDetailView(DetailView):
 
 
 class AddPostView(CreateView):
+    """ This will allow users to add posts """
     model = Post
     template_name = 'add_post.html'
     form_class = PostForm
@@ -79,6 +87,7 @@ class AddPostView(CreateView):
 
 
 class UpdatePostView(UpdateView):
+    """ This will allow user to update their own posts """
     model = Post
     template_name = 'update_post.html'
     form_class = EditForm
@@ -91,6 +100,7 @@ class UpdatePostView(UpdateView):
 
 
 class DeletePostView(DeleteView):
+    """ This will allow users to delete their own posts """
     model = Post
     template_name = 'delete_post.html'
     success_url = reverse_lazy('home')
@@ -103,6 +113,7 @@ class DeletePostView(DeleteView):
 
 
 class AddCommentView(CreateView):
+    """ This will allow users to add comments """
     model = Comment
     form_class = CommentForm
     template_name = 'add_comment.html'

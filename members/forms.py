@@ -1,3 +1,4 @@
+""" Libraries """
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
 from django.contrib.auth.models import User
 from django import forms
@@ -5,7 +6,9 @@ from travellifestyleblog22.models import Profile
 
 
 class ProfilePageForm(forms.ModelForm):
+    """ adjust form style """
     class Meta:
+        """ Adjust bootstrap style """
         model = Profile
         fields = ('bio', 'profile_pic', 'instagram_url', 'facebook_url', 'twitter_url')
         widgets = {
@@ -17,11 +20,13 @@ class ProfilePageForm(forms.ModelForm):
 
 
 class SignUpForm(UserCreationForm):
+    """ adding bootstrap to the registration form """
     email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control'}))
     first_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
     last_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
 
     class Meta:
+        """ adjust form """
         model = User
         fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2')
 
@@ -34,21 +39,25 @@ class SignUpForm(UserCreationForm):
 
 
 class EditProfileForm(UserChangeForm):
+    """ adding bootstrap to the edit form """
     email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control'}))
     first_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
     last_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
     username = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
 
     class Meta:
+        """ adjusting what the user can add """
         model = User
         fields = ('username', 'first_name', 'last_name', 'email')
 
 
 class PasswordChangingForm(PasswordChangeForm):
+    """ adding boostrap to the password change form """
     old_password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'type': 'password'}))
     new_password1 = forms.CharField(max_length=100, widget=forms.PasswordInput(attrs={'class': 'form-control', 'type': 'password'}))
     new_password2 = forms.CharField(max_length=100, widget=forms.PasswordInput(attrs={'class': 'form-control', 'type': 'password'}))
 
     class Meta:
+        """ adding bootstrap to the change password form """
         model = User
         fields = ('old_password', 'new_password1', 'new_password2')

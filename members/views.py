@@ -1,16 +1,18 @@
+""" Libraries """
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.views.generic import DetailView, CreateView
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
+# from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
 from django.contrib.auth.views import PasswordChangeView
 from django.urls import reverse_lazy
-from .forms import SignUpForm, EditProfileForm, PasswordChangingForm, ProfilePageForm
-from travellifestyleblog22.models import Profile
+# from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.contrib import messages
+from travellifestyleblog22.models import Profile
+from .forms import SignUpForm, EditProfileForm, PasswordChangingForm, ProfilePageForm
 
 
 class CreateProfilePageView(CreateView):
+    """ Create user profile """
     model = Profile
     form_class = ProfilePageForm
     template_name = 'registration/create_profile.html'
@@ -21,6 +23,7 @@ class CreateProfilePageView(CreateView):
 
 
 class EditProfilePageview(generic.UpdateView):
+    """ Edit user profile """
     model = Profile
     template_name = 'registration/edit_profile_page.html'
     form_class = ProfilePageForm
@@ -32,6 +35,7 @@ class EditProfilePageview(generic.UpdateView):
 
 
 class ShowProfilePageview(DetailView):
+    """ Show user profile """
     model = Profile
     template_name = 'registration/user_profile.html'
 
@@ -44,21 +48,25 @@ class ShowProfilePageview(DetailView):
 
 
 class PasswordsChangeView(PasswordChangeView):
+    """ Change password """
     form_class = PasswordChangingForm
     success_url = reverse_lazy('password_success')
 
 
 def password_success(request):
+    """ redirect to the registraion successful page """
     return render(request, 'registration/password_success.html', {})
 
 
 class UserRegisterView(generic.CreateView):
+    """ Show registration form """
     form_class = SignUpForm
     template_name = 'registration/register.html'
     success_url = reverse_lazy('login')
 
 
 class UserEditView(generic.UpdateView):
+    """ Edit settings"""
     form_class = EditProfileForm
     template_name = 'registration/edit_profile.html'
     success_url = reverse_lazy('home')
@@ -69,11 +77,10 @@ class UserEditView(generic.UpdateView):
 
 @login_required
 def profile(request):
+    """ Display user profile """
     if request.method == 'POST':
         u_form = UserUpdateForm(request.POST, instance=request.user)
-        p_form = ProfilePageForm(request.POST,
-                                   request.FILES,
-                                   instance=request.user.profile)
+        p_form = ProfilePageForm(request.POST, request.FILES, instance=request.user.profile)
         if u_form.is_valid() and p_form.is_valid():
             u_form.save()
             p_form.save()
