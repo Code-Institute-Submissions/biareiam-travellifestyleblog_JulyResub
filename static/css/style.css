@@ -81,13 +81,7 @@ body {
         padding-left: 1rem;
     }
 
-    .navbar>.container,
-    .navbar>.container-fluid,
-    .navbar>.container-lg,
-    .navbar>.container-md,
-    .navbar>.container-sm,
-    .navbar>.container-xl,
-    .navbar>.container-xxl {
+    .navbar>.container {
 
         padding-right: 0;
     }
@@ -451,7 +445,7 @@ hr {
 }
 
 .blog-card {
-    background-image: linear-gradient(#C7C6D8);
+    background-image: linear-gradient(#D4C4CE);
     padding: 2rem 1rem 1rem 1rem;
     margin-bottom: 1rem;
     color: #212529;
@@ -518,11 +512,14 @@ hr {
 
 .bio {
     margin-bottom: 3rem;
+    color: #4e4e4e;
+    padding-right: 1rem;
 }
 
 .media-heading {
     font-size: 1.3rem;
     padding-top: 1.5rem;
+    color: #4e4e4e;
 }
 
 .blog-post-format span a {
@@ -734,7 +731,7 @@ hr {
     padding: 10px;
     box-shadow: 12px 12px 2px 1px #5f555e;
     border: 2px solid #ffffff;
-    background-color: #C7C6D8;
+    background-color: #D4C4CE;
     color: white;
 }
 
@@ -806,13 +803,7 @@ hr {
         margin-top: -2.5rem;
     }
 
-    .navbar>.container,
-    .navbar>.container-fluid,
-    .navbar>.container-lg,
-    .navbar>.container-md,
-    .navbar>.container-sm,
-    .navbar>.container-xl,
-    .navbar>.container-xxl {
+    .navbar>.container {
         padding-right: 1rem;
     }
 }
@@ -830,13 +821,12 @@ hr {
 }
 
 .category-add {
-    /* box-shadow: 12px 12px 2px 1px #2f4c4c; */
+
     max-width: 26rem;
     margin: auto;
     padding: 2rem;
-    border: 2px solid #f8f9fa;
     text-align: center;
-    background-color: #C7C6D8;
+    background-color: #D4C4CE;
     color: white;
     margin-top: 2rem;
 }
@@ -866,10 +856,9 @@ hr {
 .add-edit-post {
     margin-bottom: 2.5rem;
     padding: 1rem;
-    background-color: #C7C6D8;
+    background-color: #D4C4CE;
     color: white;
-    margin-top: 2rem;
-    border: 1px white solid;
+
 }
 
 
@@ -976,13 +965,7 @@ hr {
         max-width: 315px;
     }
 
-    .navbar>.container,
-    .navbar>.container-fluid,
-    .navbar>.container-lg,
-    .navbar>.container-md,
-    .navbar>.container-sm,
-    .navbar>.container-xl,
-    .navbar>.container-xxl {
+    .navbar>.container {
         padding-right: 1rem;
     }
 }
@@ -1021,11 +1004,10 @@ hr {
     width: 40%;
     margin-top: 2.5rem;
     padding-bottom: 0.5rem;
-    border: 1px solid white;
     padding-left: 2rem;
     padding-right: 2rem;
     margin-bottom: 2.5rem;
-    background-color: #C7C6D8;
+    background-color: #D4C4CE;
     color: white;
 }
 
@@ -1129,16 +1111,14 @@ hr {
 }
 
 .delete-post {
-    /* box-shadow: 12px 12px 2px 1px #2f4c4c; */
-    /* border: 2px solid #2f4c4c; */
+
     margin-top: 3rem;
     padding: 2rem;
     max-width: 40%;
     margin: auto;
     margin-bottom: 8rem;
-    border: 1px solid white;
     color: white;
-    background-color: #C7C6D8;
+    background-color: #D4C4CE;
 }
 
 .delete-title {
@@ -1177,8 +1157,8 @@ hr {
     max-width: 40%;
     margin: auto;
     text-align: center;
-    background-color: #C7C6D8;
-    border: 1px solid white;
+    background-color: #D4C4CE;
+
 }
 
 
@@ -1224,10 +1204,10 @@ hr {
     padding: 1rem;
     width: 57%;
     margin: auto;
-    background-color: #C7C6D8;
+    background-color: #D4C4CE;
     color: white;
     margin-top: 2rem;
-    border: 1px solid white;
+
 }
 
 
@@ -1333,7 +1313,7 @@ hr {
 
 .profile-card {
     margin-bottom: 20px;
-    background-color: #C7C6D8;
+    background-color: #D4C4CE;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
 }
@@ -1596,13 +1576,12 @@ hr {
 .blog-author {
     padding-left: 1rem;
     padding-right: 0.5rem;
-    padding-bottom: 0.5rem;
-    /* background-color: #e2dae1; */
-    /* box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px; */
+    padding-bottom: 0.1rem;
     text-align: justify;
     margin-bottom: 1rem;
-    color: #757778;
-    border: 1px #8080802e solid;
+    color: #808181;
+    /* border: 1px #5a59592e solid; */
+    background-color: #b79dad24;
 }
 
 .bootdey {
@@ -1617,12 +1596,13 @@ hr {
 /*------------ Comment area -----------------*/
 
 .add-comment {
-    box-shadow: 12px 12px 2px 1px #2f4c4c;
-    border: 2px solid #2f4c4c;
     padding: 1rem;
     width: 50%;
     margin: auto;
+    background-color: #D4C4CE;
+    color: white;
 }
+
 
 .comment-title {
     text-transform: uppercase;
@@ -1651,9 +1631,8 @@ hr {
 
 .links a {
     text-decoration: none;
-    color: #d6aad2;
+    color: #956f86;
     font-weight: 600;
-
 }
 
 .links a:hover {
@@ -1765,7 +1744,7 @@ hr {
 }
 
 .divisor {
-    color: #eee;
+    color: rgb(179, 179, 179);
 }
 
 @media(max-width:1300px) {
@@ -1980,11 +1959,12 @@ hr {
     width: 40%;
     margin-top: -1rem;
     padding-bottom: 0.5rem;
-    box-shadow: 12px 12px 2px 1px #2f4c4c;
-    border: 2px solid #2f4c4c;
     padding-left: 2rem;
     padding-right: 2rem;
     margin-bottom: 2.9rem;
+    background-color: #D4C4CE;
+    color: white;
+
 }
 
 .change-password {
@@ -1994,6 +1974,7 @@ hr {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
+
 
 #id_password {
     display: none;
@@ -2006,8 +1987,8 @@ hr {
 }
 
 .password-change {
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
 }
 
 @media(max-width:800px) {
