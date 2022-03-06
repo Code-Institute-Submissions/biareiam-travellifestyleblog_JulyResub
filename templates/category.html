@@ -6,7 +6,9 @@
     <div class="category-title">
         <h2 class="category-page-title"> {{ cats }}</h2>
     </div>
+    <hr class="line-cat">
     <div class="container-fluid">
+
         <div class="row">
             {% for post in category_posts %}
             <div class="col-md-4">
@@ -24,7 +26,7 @@
                                 <br>
                                 <h5 class="card-title">{{ post.post_title }}</h5>
                                 <p class="author">Post by: {{ post.author }} <a
-                                        href="{% url 'category' post.category %}" class="categories-home"> |
+                                        href="{% url 'category' post.category %}" class="categories-home">
                                         {{ post.category }}</a></p>
                                 <p class="card-text"><small>{{ post.created_on}}</small></p>
                                 <p>{{ post.content|slice:":200"|safe }} ...</p>

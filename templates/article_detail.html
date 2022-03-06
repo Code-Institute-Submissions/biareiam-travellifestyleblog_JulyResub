@@ -4,73 +4,75 @@
 
 {% block content %}
 <div id="blog-single-post">
-    <div class="container">
+    <div class="container blog-single-post-box">
         <div class="row">
             <div class="col-sm-12">
                 <div class="blog-single-post-thumb">
-                    <div class="blog-post-title">
-                        <h2 class="post-title">{{ post.post_title}}</h2>
-                    </div>
-                    <div class="blog-post-format">
-                        <span class="author"><a href="{% url 'profile' post.author.profile.id %}"><img
-                                    src="{{ post.author.profile.profile_pic.url }}"
-                                    class="img-responsive img-circle">{{ post.author }}</a></span>
-                        <span class="line-space"> | </span>
-                        <span><small class="date"><i class="fa fa-date">{{ post.created_on}}</i></small></span>
-                        <div class="sub-title">
-                            <div class="row icons-sub-title">
+                    <div class="blog-card">
+                        <div class="blog-post-title">
+                            <h2 class="post-title">{{ post.post_title}}</h2>
+                        </div>
+                        <div class="blog-post-format">
+                            <span class="author"><a href="{% url 'profile' post.author.profile.id %}"><img
+                                        src="{{ post.author.profile.profile_pic.url }}"
+                                        class="img-responsive img-circle">{{ post.author }}</a></span>
+                            <span class="line-space"> | </span>
+                            <span><small class="date"><i class="fa fa-date">{{ post.created_on}}</i></small></span>
+                            <div class="sub-title">
+                                <div class="row icons-sub-title">
 
-                                <div class="col">
-                                    <div class="likes">
-                                        <form action="{% url 'like_post' post.pk %}" method="POST">
-                                            {% csrf_token %}
-                                            {% if user.is_authenticated %}
-                                            {% if liked %}
-                                            <button type="submit" name="post_id" value="{{ post.id }}"
-                                                class="btn btn-danger btn-sm like-btn">
-                                                <i class="far fa-heart"></i>
-                                                {{ total_likes }}</button>
-                                            {% else %}
-                                            <button type="submit" name="post_id" value="{{ post.id }}"
-                                                class="btn  btn-secondary btn-sm like-btn">
-                                                <i class="far fa-heart"></i>
-                                                {{ total_likes }}</button>
-                                            {% endif %}
+                                    <div class="col">
+                                        <div class="likes">
+                                            <form action="{% url 'like_post' post.pk %}" method="POST">
+                                                {% csrf_token %}
+                                                {% if user.is_authenticated %}
+                                                {% if liked %}
+                                                <button type="submit" name="post_id" value="{{ post.id }}"
+                                                    class="btn btn-danger btn-sm like-btn">
+                                                    <i class="far fa-heart"></i>
+                                                    {{ total_likes }}</button>
+                                                {% else %}
+                                                <button type="submit" name="post_id" value="{{ post.id }}"
+                                                    class="btn  btn-secondary btn-sm like-btn">
+                                                    <i class="far fa-heart"></i>
+                                                    {{ total_likes }}</button>
+                                                {% endif %}
 
-                                            {% else %}
-                                            <small><i class="far fa-heart"></i> <a href="{% url 'login' %}"
-                                                    class="login-btn">
-                                                    Login</a> to
-                                                like</small>
-                                            {% endif %}
-                                        </form>
+                                                {% else %}
+                                                <small><i class="far fa-heart"></i> <a href="{% url 'login' %}"
+                                                        class="login-btn">
+                                                        Login</a> to
+                                                    like</small>
+                                                {% endif %}
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="blog-post-image">
-                        <img src="{{ post.image.url }}" class="img-fluid post-image" alt="Blog Image 3">
-                    </div>
-                    <div class="blog-post-des">
-                        <p>{{ post.content|safe }}</p>
-                    </div>
-                    {% if user.is_authenticated %}
-                    {% if user.id == post.author.id %}
-                    <div class="update-post">
-                        <button type="button" class="btn btn-success button btn-edit"><a
-                                href="{% url 'update-post' post.pk %}">Edit</a></button>
-                        <button type="button" class="btn btn-danger button btn-delete"><a
-                                href="{% url 'delete-post' post.pk %}">Delete</a></button>
-                    </div>
-                    {% endif %}
-                    {% endif %}
-                    <hr>
-                    <div class="col-12">
-                        <p>Category: <span class="categories-detail-2 btn btn-success"><a
-                                    href="{% url 'category' post.category %}">
-                                    {{ post.category }}</a></span></p>
+                        <div class="blog-post-image">
+                            <img src="{{ post.image.url }}" class="img-fluid post-image" alt="Blog Image 3">
+                        </div>
+                        <div class="blog-post-des">
+                            <p>{{ post.content|safe }}</p>
+                        </div>
+                        {% if user.is_authenticated %}
+                        {% if user.id == post.author.id %}
+                        <div class="update-post">
+                            <button type="button" class="btn btn-success button btn-edit"><a
+                                    href="{% url 'update-post' post.pk %}">Edit</a></button>
+                            <button type="button" class="btn btn-danger button btn-delete"><a
+                                    href="{% url 'delete-post' post.pk %}">Delete</a></button>
+                        </div>
+                        {% endif %}
+                        {% endif %}
+                        <hr class="divisor">
+                        <div class="col-12">
+                            <p>Category: <span class="categories-detail-2 btn btn-success"><a
+                                        href="{% url 'category' post.category %}">
+                                        {{ post.category }}</a></span></p>
 
+                        </div>
                     </div>
 
                     <div class="blog-author">
@@ -98,31 +100,30 @@
         </div>
     </div>
     <div class="container bootstrap  bootdey">
-        <div class="row">
-            <div class="col-md-12 snippets">
-                <div class="blog-comment">
-                    <h3 class="text-success">Comment</h3>
-                    {% if not post.comments.all %}
-                    <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add
-                            comment</a></p>
-                    {% else%}
-                    <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add
-                            Comment</a></p>
-                    <ul class="comments">
-                        <li class="">
-                            {% for comment in post.comments.all %}
-                            <div class="post-comments">
-                                <p class="meta"><strong>{{ comment.name}}</strong>
-                                    says : <i class="pull-right"><small>{{ comment.date_addded}}</small></i></p>
-                                <p class="comment-body">{{ comment.body }}</p>
-                            </div>
-                            {% endfor %}
-                        </li>
-                    </ul>
-                    {% endif %}
-                </div>
-            </div>
+
+        <div class="blog-comment">
+            <h3 class="text-success">Comment</h3>
+            {% if not post.comments.all %}
+            <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add
+                    comment</a></p>
+            {% else%}
+            <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add
+                    Comment</a></p>
+            <ul class="comments">
+                <li class="">
+                    {% for comment in post.comments.all %}
+                    <div class="post-comments">
+                        <p class="meta"><strong>{{ comment.name}}</strong>
+                            says : <i class="pull-right"><small>{{ comment.date_addded}}</small></i></p>
+                        <p class="comment-body">{{ comment.body }}</p>
+                    </div>
+                    {% endfor %}
+                </li>
+            </ul>
+            {% endif %}
         </div>
     </div>
+</div>
+</div>
 </div>
 {% endblock %}
