@@ -142,28 +142,32 @@ body {
     flex: 1 1 auto;
     padding: 0rem;
     height: 650px;
-    margin-bottom: 1rem;
-    background-color: #fceee5;
+    background-color: :white;
     border: none;
     border-radius: 0;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.col-md-4 {
+    margin-bottom: 1.5rem;
 }
 
 
 
 .btn-outline-dark {
     color: #ffffff;
-    background-color: #32373c;
+    background-color: #44383C;
     margin-top: 1rem;
-    border-radius: 0;
+    border-radius: 5px;
     padding: 0.8rem 2rem;
     font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .btn-outline-dark:hover,
 .btn-outline-dark:focus {
     text-decoration: underline;
-    background-color: #32373c;
+    background-color: #44383C;
     color: white;
 }
 
@@ -200,14 +204,18 @@ body {
 
 .categories-home {
     text-decoration: none;
-    color: #5398dd;
+    color: #ffffff;
     font-weight: 600;
+    padding: 0.1rem 0.5rem;
+    background-color: #D4C4CE;
+    border-radius: 2px;
+
 }
 
 .categories-home:hover,
 .categories-home:focus {
-    color: #ca6c68;
-    text-decoration: underline;
+    color: #ffffff;
+    background-color: #BFACB2;
 }
 
 .card-img,
@@ -228,15 +236,19 @@ body {
 
 .page-link {
     padding: 0.8rem 2rem;
-    background-color: #32373c;
+    background-color: #61575a;
     color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 10px;
 
 }
 
 .page-link:hover,
 .page-link:focus {
-    text-decoration: underline;
-    background-color: #32373c;
+
+    background-color: #55333fde;
     color: white;
 }
 

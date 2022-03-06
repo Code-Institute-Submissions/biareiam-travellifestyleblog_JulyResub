@@ -24,7 +24,7 @@
                                 <div class="image-flash">
                                     <br>
                                     <h5 class="card-title">{{ post.post_title }}</h5>
-                                    <p class="author">Post by: {{ post.author }} | <a
+                                    <p class="author">Post by: {{ post.author }} <a
                                             href="{% url 'category' post.category %}" class="categories-home">
                                             {{ post.category }}</a></p>
                                     <p class="card-text"><small>{{ post.created_on}}</small></p>
