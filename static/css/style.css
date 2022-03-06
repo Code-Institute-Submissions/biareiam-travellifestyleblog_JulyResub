@@ -341,8 +341,6 @@
 
 
 .line {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
     border: 0;
     border-top: 2px solid #2f4c4c;
     margin: 0 3rem;
@@ -580,11 +578,9 @@
 }
 
 
-
-
-
-
-
+.snippets {
+    margin-bottom: 3.5rem;
+}
 
 
 
@@ -1857,6 +1853,12 @@
     text-align: justify;
 }
 
+.btn-edit a,
+.btn-delete a {
+    text-decoration: none;
+    color: white;
+}
+
 
 @media(max-width:1300px) {
     .col-md-9 {
@@ -1889,7 +1891,7 @@
     .bio {
         margin-bottom: 0.5rem;
         padding-right: 0.5rem;
-        margin-top: -3rem;
+        margin-top: 0;
     }
 
     .links {
@@ -2029,6 +2031,7 @@
     background-color: #32373c;
     color: white;
     text-decoration: none;
+    margin-bottom: 2rem;
 
 }
 

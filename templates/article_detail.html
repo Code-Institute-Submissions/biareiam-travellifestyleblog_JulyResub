@@ -58,9 +58,9 @@
                     {% if user.is_authenticated %}
                     {% if user.id == post.author.id %}
                     <div class="update-post">
-                        <button type="button" class="btn btn-outline-success button btn-edit"><a
+                        <button type="button" class="btn btn-success button btn-edit"><a
                                 href="{% url 'update-post' post.pk %}">Edit</a></button>
-                        <button type="button" class="btn btn-outline-danger button btn-delete"><a
+                        <button type="button" class="btn btn-danger button btn-delete"><a
                                 href="{% url 'delete-post' post.pk %}">Delete</a></button>
                     </div>
                     {% endif %}
@@ -97,15 +97,14 @@
             </div>
         </div>
     </div>
-    <div class="container bootstrap snippets bootdey">
+    <div class="container bootstrap  bootdey">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 snippets">
                 <div class="blog-comment">
                     <h3 class="text-success">Comment</h3>
                     {% if not post.comments.all %}
                     <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add
                             comment</a></p>
-
                     {% else%}
                     <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add
                             Comment</a></p>
