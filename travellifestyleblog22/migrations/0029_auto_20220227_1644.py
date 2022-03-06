@@ -15,12 +15,12 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='comment',
-            options={'ordering': ['-date_added']},
+            options={'ordering': ['-date_addded']},
         ),
         migrations.RenameField(
             model_name='comment',
-            old_name='date_added',
-            new_name='date_added',
+            old_name='date_addded',
+            new_name='date_addded',
         ),
         migrations.AddField(
             model_name='comment',

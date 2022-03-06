@@ -42,12 +42,12 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=255)),
                 ('body', models.TextField()),
-                ('date_added', models.DateTimeField(auto_now_add=True)),
+                ('date_addded', models.DateTimeField(auto_now_add=True)),
                 ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
                 ('post', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='comments', to='travellifestyleblog22.post')),
             ],
             options={
-                'ordering': ['-date_added'],
+                'ordering': ['-date_addded'],
             },
         ),
     ]

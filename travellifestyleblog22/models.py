@@ -3,6 +3,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 from ckeditor.fields import RichTextField
+from datetime import datetime
 
 
 class Category(models.Model):
@@ -41,7 +42,7 @@ class Post (models.Model):
     """ Creating a post model """
     post_title = models.CharField(max_length=255)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    created_on = models.DateTimeField(auto_now_add=True)
+    created_on = models.DateField(default=datetime.now)
     content = RichTextField(blank=True, null=True)
     category = models.CharField(max_length=255, default="Movies")
     likes = models.ManyToManyField(User, related_name="blog_posts")
@@ -67,10 +68,9 @@ class Post (models.Model):
 class Comment(models.Model):
     """ Comment Model """
     post = models.ForeignKey(Post, related_name="comments", on_delete=models.CASCADE)
-
     name = models.CharField(max_length=255)
     body = models.TextField()
-    date_addded = models.DateTimeField(auto_now_add=True)
+    date_addded = models.DateField(auto_now_add=True)
 
     class Meta:
         """ Display the posts by date added """

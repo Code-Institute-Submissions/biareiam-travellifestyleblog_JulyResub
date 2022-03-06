@@ -3,7 +3,8 @@
 {% block title %} {{ post.post_title }} {% endblock %}
 
 {% block content %}
-<section id="blog-single-post">
+
+<div id="blog-single-post">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -15,7 +16,8 @@
                         <span class="author"><a href="{% url 'profile' post.author.profile.id %}"><img
                                     src="{{ post.author.profile.profile_pic.url }}"
                                     class="img-responsive img-circle">{{ post.author }}</a></span>
-                        <span><small><i class="fa fa-date">{{ post.created_on}}</i></small></span>
+                        <span class="line-space"> | </span>
+                        <span><small class="date"><i class="fa fa-date">{{ post.created_on}}</i></small></span>
                         <div class="sub-title">
                             <div class="row icons-sub-title">
 
@@ -27,11 +29,13 @@
                                             {% if liked %}
                                             <button type="submit" name="post_id" value="{{ post.id }}"
                                                 class="btn btn-danger btn-sm like-btn">
-                                                <i class="far fa-heart"></i> {{ total_likes }}</button>
+                                                <i class="far fa-heart"></i>
+                                                {{ total_likes }}</button>
                                             {% else %}
                                             <button type="submit" name="post_id" value="{{ post.id }}"
                                                 class="btn  btn-secondary btn-sm like-btn">
-                                                <i class="far fa-heart"></i> {{ total_likes }}</button>
+                                                <i class="far fa-heart"></i>
+                                                {{ total_likes }}</button>
                                             {% endif %}
 
                                             {% else %}
@@ -87,9 +91,6 @@
                                 {% if post.author.profile.instagram_url %}
                                 | <a href="{{ post.author.profile.instagram_url }}" class="social-media">Instagram</a>
                                 {% endif %}
-                                {% if post.author.profile.twitter_url %}
-                                | <a href="{{ post.author.profile.twitter_url }}" class="social-media">Twitter</a></p>
-                            {% endif %}
                         </small>
                         <p class="bio">{{ post.author.profile.bio|safe }}</p>
                     </div>
@@ -101,18 +102,20 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="blog-comment">
-                    <h3 class="text-success">Leave a Comment</h3>
+                    <h3 class="text-success">Comment</h3>
                     {% if not post.comments.all %}
-                    <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add comment</a></p>
+                    <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add
+                            comment</a></p>
 
                     {% else%}
-                    <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add Comment</a></p>
+                    <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add
+                            Comment</a></p>
                     <ul class="comments">
                         <li class="">
                             {% for comment in post.comments.all %}
                             <div class="post-comments">
                                 <p class="meta"><strong>{{ comment.name}}</strong>
-                                    says : <i class="pull-right">{{ comment.date_addded}}</i></p>
+                                    says : <i class="pull-right"><small>{{ comment.date_addded}}</small></i></p>
                                 <p class="comment-body">{{ comment.body }}</p>
                             </div>
                             {% endfor %}
@@ -123,16 +126,6 @@
             </div>
         </div>
     </div>
-</section>
-
-<br>
-<br>
-<br>
-<br>
-
-
-
-
-
+</div>
 
 {% endblock %}
