@@ -30,7 +30,6 @@ body {
     padding: 0.5rem 1rem;
     text-decoration: none;
     transition: none;
-
 }
 
 .nav-link:hover {
@@ -42,7 +41,6 @@ body {
 }
 
 .navbar {
-    /*background-color: white;*/
     background-color: transparent;
 }
 
@@ -73,7 +71,6 @@ body {
 
 .navbar-light:hover .navbar-nav:hover .nav-link:hover {
     color: #3b1c74;
-
 }
 
 @media(max-width:500px) {
@@ -124,7 +121,6 @@ body {
 }
 
 .navbar>.container {
-
     display: flex;
     flex-wrap: inherit;
     align-items: center;
@@ -148,7 +144,7 @@ body {
     flex: 1 1 auto;
     padding: 0rem;
     height: 650px;
-    background-color: :white;
+    background-color: white;
     border: none;
     border-radius: 0;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
@@ -215,7 +211,6 @@ body {
     padding: 0.1rem 0.5rem;
     background-color: #D4C4CE;
     border-radius: 2px;
-
 }
 
 .categories-home:hover,
