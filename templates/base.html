@@ -79,6 +79,9 @@
                     <li><a class="dropdown-item nav-link" href="{% url 'edit_profile' user.profile.id %}">Edit
                             Profile</a>
                     </li>
+                    <li><a class="dropdown-item nav-link" href="{% url 'my_posts' %}">My Posts</a>
+                    </li>
+
                     <li><a class="dropdown-item nav-link" href="{% url 'setting' %}">Settings</a>
                     </li>
 
@@ -98,9 +101,9 @@
                     <a class="nav-link" href="{% url 'login' %}">Login</a>
                 </li>
                 {% endif %}
-
             </div>
         </div>
+
     </nav>
 
     <div class="container">

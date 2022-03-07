@@ -10,7 +10,10 @@ from .forms import PostForm, EditForm, CommentForm
 def my_posts(request):
     """ Create my posts page """
     if request.user.is_authenticated:
-        return render(request,"my_posts.html", {})
+        posts = Post.objects.filter(author=request.user.id)
+        return render(request,"my_posts.html", {
+            "posts" : posts
+        })
 
     else:
         messages.success(request, ("You are not authorized to view this page"))

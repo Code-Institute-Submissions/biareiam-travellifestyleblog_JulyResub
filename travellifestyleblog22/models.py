@@ -47,7 +47,6 @@ class Post (models.Model):
     category = models.CharField(max_length=255, default="Movies")
     likes = models.ManyToManyField(User, related_name="blog_posts")
     image = models.ImageField(null=False, blank=False, upload_to="images/", default="placeholder")
-    headline = models.TextField(null=False, blank=False, default="")
 
     class Meta:
         """ Post sorted by date """
