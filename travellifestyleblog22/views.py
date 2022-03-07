@@ -7,6 +7,17 @@ from .models import Post, Category, Comment
 from .forms import PostForm, EditForm, CommentForm
 
 
+def my_posts(request):
+    """ Create my posts page """
+    if request.user.is_authenticated:
+        return render(request,"my_posts.html", {})
+
+    else:
+        messages.success(request, ("You are not authorized to view this page"))
+        return redirect('home')
+
+
+
 def like_view(request, pk):
     """ Function which will allow user to like and deslike post """
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
@@ -122,3 +133,5 @@ class AddCommentView(CreateView):
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
         return super().form_valid(form)
+
+

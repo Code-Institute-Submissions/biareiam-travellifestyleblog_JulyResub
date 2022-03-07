@@ -14,4 +14,6 @@ urlpatterns = [
     path('category-list/', category_list_view, name="category-list"),
     path('like/<int:pk>', like_view, name='like_post'),
     path('post/<int:pk>/comment/', AddCommentView.as_view(), name='add_comment'),
+    path('my_posts', views.my_posts, name='my_posts'),
+
 ]
