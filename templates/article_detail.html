@@ -15,7 +15,7 @@
                         <div class="blog-post-format">
                             <span class="author"><a href="{% url 'profile' post.author.profile.id %}"><img
                                         src="{{ post.author.profile.profile_pic.url }}"
-                                        class="img-responsive img-circle">{{ post.author }}</a></span>
+                                        class="img-responsive img-circle"></a>Post by: {{ post.author }}</span>
                             <span class="line-space"> | </span>
                             <span><small class="date"><i class="fa fa-date">{{ post.created_on}}</i></small></span>
                             <div class="sub-title">
@@ -68,9 +68,7 @@
                         {% endif %}
                         <hr class="divisor">
                         <div class="col-12">
-                            <p>Category: <span class="categories-detail-2 btn btn-success"><a
-                                        href="{% url 'category' post.category %}">
-                                        {{ post.category }}</a></span></p>
+
 
                         </div>
                     </div>
@@ -101,14 +99,19 @@
     </div>
     <div class="container bootstrap  bootdey">
 
+
         <div class="blog-comment">
             <h3 class="text-success">Comment</h3>
+
             {% if not post.comments.all %}
             <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add
                     comment</a></p>
             {% else%}
+
             <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add
-                    Comment</a></p>
+                    comment</a></p>
+
+
             <ul class="comments">
                 <li class="">
                     {% for comment in post.comments.all %}
@@ -120,10 +123,10 @@
                     {% endfor %}
                 </li>
             </ul>
+
             {% endif %}
         </div>
     </div>
 </div>
-</div>
-</div>
+
 {% endblock %}
