@@ -1158,9 +1158,9 @@ hr {
     margin: auto;
     text-align: center;
     background-color: #D4C4CE;
+    border: 1px solid white;
 
 }
-
 
 
 .not-allow a {
@@ -2006,4 +2006,22 @@ hr {
         width: 90%;
 
     }
+}
+
+/* my posts */
+
+.no-post {
+    margin-top: 3rem;
+    margin-bottom: 8rem !important;
+}
+
+.no-post a {
+    text-decoration: none;
+    color: #5398dd;
+    font-size: 1rem;
+}
+
+.no-post a:hover {
+    color: #3b1c74;
+
 }

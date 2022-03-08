@@ -62,5 +62,12 @@
         </ul>
     </nav>
     {% endif %}
+    <div class="no-post">
+        <div class="not-allow-box">
+            <p>You need have no posts yet</p>
+            <p><a href="{% url 'add-post' %}">Add one here</a></p>
+        </div>
+    </div>
 </div>
+
 {%endblock%}

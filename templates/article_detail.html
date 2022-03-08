@@ -51,7 +51,14 @@
                             </div>
                         </div>
                         <div class="blog-post-image">
-                            <img src="{{ post.image.url }}" class="img-fluid post-image" alt="Blog Image 3">
+                            {% if "placeholder" in post.image.url %}
+                            <a href="{% url 'article-detail' post.pk  %}" class="post-link"><img class="card-img-top"
+                                    src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.png"
+                                    alt="defalt profile image"></a>
+                            {% else %}
+                            <a href="{% url 'article-detail' post.pk  %}" class="post-link"><img class="card-img-top"
+                                    src=" {{ post.image.url }}" alt="post image"></a>
+                            {% endif %}
                         </div>
                         <div class="blog-post-des">
                             <p>{{ post.content|safe }}</p>
