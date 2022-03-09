@@ -202,3 +202,26 @@ Extensively used Crome Developer tools to test form submissions through network 
     - Test if navigation bar works correctly on phone, tablet and desktop browsers
     - Test if page is responsive at all sizes
     - Test footer social icon links (links open homepages in a new window)
+
+2. Sign Up
+
+- Try registering with empty form/inputs (shows tooltip "Fill out this field")
+- Try to register with invalid email ("Enter an email adress")
+- Attempt to use username/password that is too long or too short ("Match the requested format!")
+
+3. Login
+
+- Try using empty form (shows tooltip "Fill out this field")
+- Try to use not existing or wrong credentials, the page reloads and the user needs to try again. 
+
+4. Submit recipe
+
+Go to the "Submit Recipe" page
+Try to submit empty form and verify that no recipe has been added to any category page.
+Try to submit filled out form and verify that fields appear correctly, there is no missing information
+Try to submit recipe with empty fields
+Edit recipe
+
+Try to submit recipe with empty fields
+Test edit button, submit edit button
+Check if changes have been made and displayed correctly

@@ -2036,3 +2036,31 @@ hr {
     color: #3b1c74;
 
 }
+
+/*Alert messages*/
+.alert-danger {
+    color: #842029;
+    background-color: #f8d7da;
+    text-align: center;
+    font-weight: 600;
+}
+
+.alert {
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    max-width: 480px;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+    background-color: #ceaec2;
+    color: #842029;
+}
+
+.alert-success {
+    color: #0f5132 !important;
+    background-color: #d1e7dd !important;
+    border-color: #badbcc !important;
+}

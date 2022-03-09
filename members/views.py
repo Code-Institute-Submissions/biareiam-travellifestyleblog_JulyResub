@@ -7,6 +7,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from travellifestyleblog22.models import Profile
 from .forms import SignUpForm, EditProfileForm, PasswordChangingForm, ProfilePageForm
+from django.contrib import messages
 
 
 class CreateProfilePageView(CreateView):
@@ -61,6 +62,10 @@ class UserRegisterView(generic.CreateView):
     form_class = SignUpForm
     template_name = 'registration/register.html'
     success_url = reverse_lazy('login')
+
+    def form_valid(self, form):
+        messages.success(self.request, f'Account created successfully')
+        return super().form_valid(form)
 
 
 class UserEditView(generic.UpdateView):
