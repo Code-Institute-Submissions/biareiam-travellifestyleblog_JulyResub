@@ -23,9 +23,15 @@
                                 {{page_user.user.last_name}}</h2>
                             <p class="profile-content">{{ page_user.email}}</p>
                             <div class="profile-content">{{ page_user.bio }}</div>
+                            {% if page_user.facebook_url %}
                             <a href="{{ page_user.facebook_url }}"><i class="fa fa-facebook-square fa-2x"></i></a>
+                            {% endif %}
+                            {% if page_user.instagram_url %}
                             <a href="{{ page_user.instagram_url }}"><i class="fab fa-instagram-square fa-2x"></i></a>
+                            {% endif %}
+                            {% if page_user.twitter_url %}
                             <a href="{{ page_user.twitter_url }}"><i class="fa fa-twitter-square fa-2x"></i></a>
+                            {% endif %}
                         </div>
 
                     </div>

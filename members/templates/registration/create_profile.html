@@ -3,7 +3,12 @@
 {% block title %} Create Profile {% endblock%}
 {% block content %}
 
-
+{% if form.errors %}
+<br>
+<div class="alert alert-danger" role="alert">
+    There was an error with your form!
+</div>
+{% endif %}
 {% if user.is_authenticated %}
 <div class="profile">
     <div class="profile-page">

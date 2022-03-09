@@ -1,10 +1,11 @@
 """ Libraries """
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
 from .models import Post, Category, Comment
 from .forms import PostForm, EditForm, CommentForm
+from django.contrib import messages
 
 
 def my_posts(request):

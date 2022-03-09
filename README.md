@@ -198,30 +198,53 @@ For this project the following technologies were used:
 Extensively used Crome Developer tools to test form submissions through network tab etc.
 
 1. Visiting page
-
     - Test if navigation bar works correctly on phone, tablet and desktop browsers
     - Test if page is responsive at all sizes
     - Test footer social icon links (links open homepages in a new window)
+    - Test If I see the different posts on the home page (Pagination)
+    - Test if I could go to each post individually, by clicking on the image or "Read More" button
 
 2. Sign Up
-
-- Try registering with empty form/inputs (shows tooltip "Fill out this field")
-- Try to register with invalid email ("Enter an email adress")
-- Attempt to use username/password that is too long or too short ("Match the requested format!")
+    - Try registering with empty form/inputs (shows tooltip "Please fill out this field")
+    - Try to register with invalid email or not email at all ("Please include a "@" in the email address" or "Please fill out this field")
+    - Attempt to use username/password that is too long or too short ("There was an error with your form!")
 
 3. Login
+    - Try leaving fields empty (message "There was an error with your form...Please try again")
+    - Typed the wrong username or password (message "There was an error with your form...Please try again" )
 
-- Try using empty form (shows tooltip "Fill out this field")
-- Try to use not existing or wrong credentials, the page reloads and the user needs to try again. 
+4. Create  Profile
+    - Try leaving the form empty. A default image will be added to the profile image.
+    - Try not to add all the social media links. It will be displayed in the profile page only the ones added. 
 
-4. Submit recipe
+5. Edit Profile
+    - Test if it is possible to edit an existing profile.
+    - Check if changes were effective.
 
-Go to the "Submit Recipe" page
-Try to submit empty form and verify that no recipe has been added to any category page.
-Try to submit filled out form and verify that fields appear correctly, there is no missing information
-Try to submit recipe with empty fields
-Edit recipe
+6. Settings
+    - Try to update the user first name. 
+    - Check if change was effective.
+    - Try to change password, once it is done a successful message will post up.
+    - Test if the passwords do not match.(Message "The two password fields didn’t match.")
+    - Try inserting the wrong "old password". (Message "Your old password was entered incorrectly. Please enter it again.")
 
-Try to submit recipe with empty fields
-Test edit button, submit edit button
-Check if changes have been made and displayed correctly
+7. Add Post
+
+    - Log in
+    - Go to the "Add Post" page
+    - Try to submit empty form and verify that no post has been added to any category page.The page just reloads and will not submit the form until it is filled in.
+    - Try to submit filled out form and verify that fields appear correctly, there is no missing information.
+    - Try not add any image to the post. A default image is added as a placeholder. 
+
+8. Edit and Delete Post
+
+    - Try to edit a post published by me.
+    - Try to delete a post published by me. 
+    - Check if changes have been made and displayed correctly
+
+9. My Posts page
+    - Try to check if all the posts from the user who is logged in are in one page.
+    - Try to check the "My Posts" page without having any post. (Message "You do not have any post yet")
+
+10. 
+
