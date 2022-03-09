@@ -131,10 +131,26 @@ Clicking 'Logout' ends a user session and redirects them to the 'Home' page.
 * Register
 This section contains a registration form.Once it is completed, they will be redirectd to the login page where they can then sign in.
 
+* User Profile
 
+It contains a profile image, the user first and last name, their email, bio and a link to their social media.
 
+* Edit Profile
 
- 
+The own of the profile can edit it, for instance change the profile image or the information provided in the bio. 
 
+* Settings
+On this page, the user can change their first and last name, email, and password. 
+
+* My Post
+This page display as posts published by the user, who is logged in. if there is no posts, there is a message and a button directing them to the add post page. 
+
+* Add Post
+User who are registered can cread their own post.
+
+* Categories
+User can see all the existing categories and if needed, add a new one. For instance, pets.
 
 #### Future Features
+* make it possible for users to edit and deleted comments.
+* Have "favorites" area where users can add their favorite posts.
