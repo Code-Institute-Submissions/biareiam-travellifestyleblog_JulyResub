@@ -74,18 +74,24 @@
                         {% endif %}
                         {% endif %}
                         <hr class="divisor">
-                        <div class="col-12">
 
-
-                        </div>
                     </div>
 
                     <div class="blog-author">
 
-                        <div class="media-object pull-left"><a href="{% url 'profile' post.author.profile.id %}">
+                        <div class="media-object pull-left">
+                            {% if "placeholder" in post.author.profile.profile_pic.url %}
+                            <div class="media-object pull-left"><a href="{% url 'profile' post.author.profile.id %}">
+                                    <img src="https://www.kindpng.com/picc/m/451-4517876_default-profile-hd-png-download.png"
+                                        class="img-circle-2 img-responsive" alt="post author"></a>
+                            </div>
+                            {% else %}
+                            <a href="{% url 'profile' post.author.profile.id %}">
                                 <img src="{{ post.author.profile.profile_pic.url }}" class="img-circle-2 img-responsive"
-                                    alt="blog"></a>
+                                    alt="postr author"></a>
                         </div>
+                        {% endif %}
+
                         <h3 class="media-heading">{{  post.author.profile.first_name }}
                             {{  post.author.profile.last_name }}</h3>
                         <small>

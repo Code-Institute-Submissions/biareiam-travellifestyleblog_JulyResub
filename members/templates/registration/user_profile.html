@@ -11,10 +11,12 @@
                     <div class="profile-card text-center">
 
                         <div class="profile-info">
-                            {% if page_user.profile_pic %}
-                            <img src="{{ page_user.profile_pic.url }}" class="profile-pic" alt="profile image">
+
+                            {% if "placeholder" in page_user.profile_pic.url %}
+                            <img src="https://www.kindpng.com/picc/m/451-4517876_default-profile-hd-png-download.png"
+                                class="profile-pic" alt="default profile image" width="250px" height="auto">
                             {% else %}
-                            <img src="{% static 'media/images.jfif' %}" class="profile-pic" alt="default profile image">
+                            <img src="{{ page_user.profile_pic.url }}" class="profile-pic" alt="profile image">
                             {% endif %}
 
                             <h2 class=" hvr-underline-from-center profile-content">{{  page_user.user.first_name }}
