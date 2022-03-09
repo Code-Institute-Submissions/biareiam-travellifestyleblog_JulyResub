@@ -9,7 +9,7 @@ This blog was created to host posts covering a series of different topics, such 
 
 What's Up Blog is a milestone project for Code Institute Data Centric Development module. The goal of this project is to create, store, edit and delete posts (CRUD). Target audience for this project is people that are interested in topics such as travel, lifestyle, books and movies. Users have the ability to create different categories, expanding the topics for discussion on the blog. 
 
-#### User Stories
+### User Stories
 As a user, I want: 
 
 * Be able to view the site on my preferred device (mobile, tablet, desktop).
@@ -33,12 +33,36 @@ As a user, I want:
 
 This site was built on the basis of ideas from initial wireframes created in Figma and exported image files for these can be seen below. Some changes were done as the projectes started to get into shape, for instance the colour of the background is different from the initial idea. 
 
-IMAGES!!!!
 
-#### Colour Scheme
+<details>
+<summary>Desktop</summary>
+<br>
+<p class="align-center">
+<img width="700" alt="desktop" src="https://user-images.githubusercontent.com/65717229/157550577-c41ea9a1-0361-44ca-a044-7b5c28b1530e.PNG">
+</p>
+</details>
+<br>
+<details>
+<summary>Tablet</summary>
+<br>
+<p class="align-center">
+  <img width="700" src="https://user-images.githubusercontent.com/65717229/157550403-e90a505a-54e3-4c45-a54d-cd70752a3e63.PNG" alt="tablet">
+</p>
+</details>
+<br>
+<details>
+<summary>Mobile</summary>
+<br>
+<p class="align-center">
+  <img width="700" src="https://user-images.githubusercontent.com/65717229/157549908-f67ff91d-82e8-4586-aeac-cbb928d6f4ff.PNG" alt="mobile">
+</p>
+</details>
+<br>
+
+### Colour Scheme
 Colours are kept to a minimum in order to keep focus on the imagery of the post, chosen colours are various shades of purple. Colour scheme can be found below:
 
-IMAGESS!!
+![colour_scheme](https://user-images.githubusercontent.com/65717229/157550822-a0f2f9aa-cc02-44f2-af3d-e6cc1b293dff.PNG)
 
 #### Typography
 Two Google Fonts were used across the site: fontssssss
@@ -162,6 +186,43 @@ Users can see all the existing categories and if needed, add a new one. For inst
 * make it possible for users to edit and delete comments.
 * Have a "favourites" area where users can add their favourite posts.
 
+### Database
+This website have 4 databases, 1 for user profile, 1 for posts, 1 for comments and 1 for the categories. they are connected to some extend to each other as well as being used to store various calculations, and store all general information on the page. 
+
+- Profile Database
+- Post Database 
+- Categories
+- Comment Database
+
+**Profile database explained**
+User: Stores the chosen username added by the user.
+First_name: Stores the user's first name.
+Last_name: Stores the user's last name.
+Email: Stores the email address added by the user.
+Bio: Stores the bio added by the user to the profile.
+Profile_Pic: Stores the profile picture uploaded by the user. If none is uploaded by the user, a default images will be added instead. 
+Instagram_url: Store the url of the user's instragram account
+Facebook_url: Store the url of the user's facebook account
+Twitter_url: Store the url of the user's Twitter account
+
+**Post database explained**
+Post_title: Stores the title of the blog post. 
+Author: Stores the name of the user who created a post. 
+Created_on: Stores when a post was created.
+Content: Stores the actual content of the blog post. 
+Category: Stores which category the post belongs to.
+Likes: Stores the likes a post recieved.
+Image: Stores the image related to the post. If no images is uploaded, a default one will be applied. 
+
+**Categories database explained**
+name: It is the category name. Example: LifeStyle.
+
+**Comment database explained**
+Post: Stores which is the post which the comment should be added to. 
+Name: Stores the name of the user who made the comment. 
+Body: Stores the actual comment.
+Date_added: Stores when the comment was created. 
+
 
 ### Technologies Used
 
@@ -172,8 +233,8 @@ For this project the following technologies were used:
 - Bootstrap - Bootstrap was used to assist with the responsiveness and styling of the website.
 - Chrome/Firefox/Bing DevTools - Regularly used to test the site (Primarily Chrome).
 - Figma - Collaborative interface design tool used for creating wireframes as well logos and SVGs.
-- Python - 
-- Django - 
+- Python - Runs the entire backend server code, including the logic and safety.
+- Django - High-level Python web framework.
 
 ### Frameworks, Libraries, & Programs Used
 
@@ -212,16 +273,24 @@ Extensively used Crome Developer tools to test form submissions through network 
 
 1. Visiting page
 
-    - Test if navigation bar works correctly on phone, tablet and desktop browsers
-    - Test if page is responsive at all sizes
-    - Test footer social icon links (links open homepages in a new window)
-    - Test If I see the different posts on the home page (Pagination)
-    - Test if I could go to each post individually, by clicking on the image or "Read More" button
+    - Test if navigation bar works correctly on phone, tablet and desktop browsers.
+    - Test if page is responsive at all sizes.
+    - Test footer social icon links (links open homepages in a new window).
+    - Test If I see the different posts on the home page (Pagination).
+    - Test if I could go to each post individually, by clicking on the image or "Read More" button.
 
 2. Sign Up
 
     - Try registering with empty form/inputs (shows tooltip "Please fill out this field")
+    
+    <img width="380" alt="fillin-form" src="https://user-images.githubusercontent.com/65717229/157551573-7e03c92a-5ecb-4f01-bfe4-632ab8dd7baf.PNG">
+     
+
     - Try to register with invalid email or not email at all ("Please include a "@" in the email address" or "Please fill out this field")
+    
+    <img width="380" alt="email-error" src="https://user-images.githubusercontent.com/65717229/157551420-76787c9c-04e6-4552-9dd5-660672684d37.PNG">
+    
+    
     - Attempt to use username/password that is too long or too short ("There was an error with your form!")
 
 3. Login
