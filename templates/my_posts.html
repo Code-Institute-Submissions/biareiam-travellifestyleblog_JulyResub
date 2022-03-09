@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% if user.is_authenticated %}
-{% if user.id == post.author.id %}
+
 <div class="container-fluid homepage">
     <h2 class="add-edit-post-page text-white">My Posts</h2>
     <div class="row">
@@ -71,14 +70,5 @@
         <p><a href="{% url 'add-post' %}">Add one</a></p>
     </div>
 </div>
-{% endif %}
-
-<div class="not-allow">
-    <div class="not-allow-box">
-        <p>You need to login to be able to add a post</p>
-        <p><a href="{% url 'login' %}">Login Here</a></p>
-    </div>
-</div>
-{% endif %}
 {% endif %}
 {%endblock%}
