@@ -35,3 +35,51 @@ This site was built on the basis of ideas from initial wireframes created in Fig
 
 IMAGES!!!!
 
+#### Color Scheme
+Colors are kept to a minimum in order to keep focus on the imagery of the post, chosen colours are various shades of purple. Color scheme can be found below:
+
+IMAGESS!!
+
+#### Typography
+tWO Google Fonts were used across the site:
+
+fontssssss
+
+####  Media
+
+The images on the blog were from [Pexel](https://www.pexels.com/).
+
+### Features
+
+#### Existing Features on every page
+
+**Navbar**
+The navigation bar features the blog name in the top left corner, which works as a link to the home page from any other page on the blog. The other navigation links are in the top right. 
+
+For users who visited to site and are not registered/logged in yet, the follow links are visible:
+
+* Home
+* Categories
+* Login
+* Register
+
+For users who are logged in, the follow links are visible:
+
+* Home
+* Categories
+* Add Post
+* User's name 
+    * Profile (the actual profile page)
+    * Edit Profile
+    * My Posts
+    * Settings
+    * Logou out 
+
+
+Python determines if the user is logged in or not by checking if 'user' in session and passes this data to Jinja to display the correct navbar for the user.
+
+On the smaller resolutions (tablet, mobile) the navbar is collapsed into a burger icon. A slide out menu opens when the burger icon is clicked.
+
+
+
+#### Future Features
