@@ -184,6 +184,10 @@ For this project the following technologies were used:
     - [Django Project](https://docs.djangoproject.com/en/4.0/)
     - [Ask Python](https://www.askpython.com/django/django-blog-app)
 
+**Content**
+
+All the posts from the website have the name of the original author as well as a link to the original post on the bottom of each post. This blog was only done for educational proposes. 
+
 ### Testing
 
 #### Validators and linters
@@ -216,10 +220,12 @@ Extensively used Crome Developer tools to test form submissions through network 
 4. Create  Profile
     - Try leaving the form empty. A default image will be added to the profile image.
     - Try not to add all the social media links. It will be displayed in the profile page only the ones added. 
+    - Try to create a profile without being logged in (Message "You need to login to be able to create a profile")
 
 5. Edit Profile
     - Test if it is possible to edit an existing profile.
     - Check if changes were effective.
+    - try to edit a post without being logged in (Message "You need to login to be able to edit your profile. Login here")
 
 6. Settings
     - Try to update the user first name. 
@@ -229,22 +235,60 @@ Extensively used Crome Developer tools to test form submissions through network 
     - Try inserting the wrong "old password". (Message "Your old password was entered incorrectly. Please enter it again.")
 
 7. Add Post
-
     - Log in
     - Go to the "Add Post" page
     - Try to submit empty form and verify that no post has been added to any category page.The page just reloads and will not submit the form until it is filled in.
     - Try to submit filled out form and verify that fields appear correctly, there is no missing information.
     - Try not add any image to the post. A default image is added as a placeholder. 
+    - Try to add a post without being logged in (Message "You need to login to be able to add a post. Log in here")
 
 8. Edit and Delete Post
-
     - Try to edit a post published by me.
     - Try to delete a post published by me. 
-    - Check if changes have been made and displayed correctly
+    - Check if changes have been made and displayed correctly.
+    - Try to edit or delete a post while not logged in. (Message "You need to login to be able to edit/delete a post. Log in here" )
 
 9. My Posts page
     - Try to check if all the posts from the user who is logged in are in one page.
     - Try to check the "My Posts" page without having any post. (Message "You do not have any post yet")
+    - Try to go to "My Posts" without being logged in. (Message "You are not authorized to view this page")
 
-10. 
+10. Categories
+    - Try to sort all the posts from the same category, without being logged in and when logged in. 
+    - Try to see all the categories without being logged in.
+    - Try to add a category and see if it appears.
+    - Try to add a category without being logged in. 
 
+11. Comment
+    - Try to see the comments without being logged in.
+    - Try to add a comment while logged in and see the comment on the post page.
+    - Try to add a comment without being logged in. 
+
+### Deployment
+The website can be accessed [here]().
+
+Deployment instructions assume that you have already set up your repository and basic flask application. The website is deployed on the Heroku cloud platform using the following steps:
+
+    1. Create the necessary files for deployment
+    2. Create requirements file using pip3 freeze > requirements.txt which will contain the required dependencies.
+    3. Create Procfile using echo web: python app.py > Procfile.
+    4. Push both files to GitHub
+    5. Log in to Heroku and create a new app
+    6. Connect the app to your project
+    7. Go to deployment method section and choose the method. If using GitHub, select that option, otherwise use the Heroku CLI method.
+    8. Following the GitHub method, search for the desired repository and connect to it
+    9. Enter configuration variables
+    10. Go to the settings tab and select Reveal Config Vars. Enter the variables defined in the env.py file (IP, PORT and SECRET_KEY).
+    11. Deploy and preview
+    12. Go back to the deployment tab and enable automatic deployment.
+    13. Finally, press deploy branch and preview your website.
+
+
+
+### Acknowledgements
+A thanks to my friend Authur Pereira Neto for all the support and help throughout this project, and the Slack groups. 
+
+##### Disclaimer
+If there are any issues with copyright of content, please contact me. I will fix that as soon as possible. This project is for educational purposes only.
+
+Beatriz Amorim 
