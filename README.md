@@ -29,3 +29,9 @@ As a user, I want:
 * Be able to add a comment to a post.
 * Be able to like a post if signed in.
 * Be able to read other users' comments
+
+
+This site was built on the basis of ideas from initial wireframes created in Figma and exported image files for these can be seen below. Some changes were done as the projectes started to getting into shape, for instance the color of the background are different from the initial idea. 
+
+IMAGES!!!!
+
