@@ -101,9 +101,9 @@ Where there are more than six results navigation links to pages are displayed be
 One the card, in the home page, it is possible to see the category the post belongs to and by clicking on it, the user is directed to a page with all the posts from that specific category. The same happens on the individual post page and also on the my posts page, which is were a user can see all the posts published by himself/herself.
 
 
-##### Individual Pages
+#### Individual Pages
 
-Post Page
+* Post Page
 
 **Edit and Delete post**
 
@@ -113,7 +113,25 @@ If logged in and the author of the post, the user can either edit or delete it, 
 If logged in, the user can like and deslike a post.
 
 **Author Profile**
-The user can check the profile of the author of the post.
+The user can check the profile of the author of the post, as well as see their social media. 
+
+**Comments**
+When logged in, user can leave comments on the posts. Everyone is able to see them, logged in or not.
+
+**edit and delete post**
+
+The owner of the post have the power to edit and delete it, if wish.
+
+* Login
+This section contains a form where users may login and be redirected to Home Page. Below the form, the user can find a link to register.
+
+* Logout
+Clicking 'Logout' ends a user session and redirects them to the 'Home' page.
+
+* Register
+This section contains a registration form.Once it is completed, they will be redirectd to the login page where they can then sign in.
+
+
 
 
  

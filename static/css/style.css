@@ -1034,6 +1034,7 @@ hr {
 .btn-login,
 .btn-register {
     text-align: center;
+    margin-top: 1rem;
 }
 
 
@@ -1069,6 +1070,17 @@ hr {
     padding-bottom: 0.5rem;
 }
 
+.already-registered a {
+    text-decoration: none;
+    color: #3B5998;
+    font-weight: 600;
+}
+
+.already-registered a:hover {
+    color: mediumpurple;
+}
+
+
 @media(max-width:1024px) {
 
     .login,
@@ -1102,7 +1114,6 @@ hr {
         width: 95%;
     }
 }
-
 
 
 /*----- Delete Post -------------*/

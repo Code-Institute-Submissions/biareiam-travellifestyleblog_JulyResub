@@ -18,6 +18,9 @@
         <form method="POST" action="{% url 'register' %}">
             {% csrf_token %}
             {{ form.as_p }}
+            <small class="already-registered">Already have an account? <a href="{% url 'login' %}">Login
+                    here</a></small>
+            <br>
             <div class="btn-register">
                 <button class="btn btn-secondary btn-submit">Submit</button>
             </div>
