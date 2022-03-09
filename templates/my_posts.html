@@ -30,10 +30,11 @@
                                             {{ post.category }}</a></p>
                                     <p class="card-text"><small>{{ post.created_on}}</small></p>
                                     <p class=" card-text-2 "> {{ post.content|slice:":200"|safe }} ... </p>
-                                    <a href="{% url 'article-detail' post.pk %}"
-                                        class="btn btn-outline-dark readmore">Read
-                                        More</a>
+                                    <p><a href="{% url 'article-detail' post.pk %}"
+                                            class="btn btn-outline-dark readmore">Read
+                                            More</a></p>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -62,11 +63,13 @@
         </ul>
     </nav>
     {% endif %}
-    <div class="no-post">
-        <div class="not-allow-box">
-            <p>You have no posts yet</p>
-            <p><a href="{% url 'add-post' %}">Add one</a></p>
-        </div>
+</div>
+{% if not posts.all %}
+<div class="no-post">
+    <div class="not-allow-box">
+        <p>You have not posts yet</p>
+        <p><a href="{% url 'add-post' %}">Add one</a></p>
     </div>
 </div>
+{% endif %}
 {%endblock%}
