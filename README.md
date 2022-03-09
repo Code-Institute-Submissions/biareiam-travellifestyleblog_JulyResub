@@ -75,11 +75,48 @@ For users who are logged in, the follow links are visible:
     * Settings
     * Logou out 
 
-
 Python determines if the user is logged in or not by checking if 'user' in session and passes this data to Jinja to display the correct navbar for the user.
 
 On the smaller resolutions (tablet, mobile) the navbar is collapsed into a burger icon. A slide out menu opens when the burger icon is clicked.
 
+**Footer**
+The footer features some key Information such as copyright information and links to social media platforms.
+
+#### Elements on Multiple Pages
+
+**Posts Cards**
+(Home, individual category page, my posts page)
+
+It displays the post's image, a small headline of the post, date posted, author of the post and a "Read More" button which directs users to the individual post page. The user can also be directed to that page by clicking on the images. 
+On large and medium devices, 3 cards are displayed in a row and on smaller devices, one card per row. If the user hover over the images, they zoom in a little giving it a bit of effect. 
+
+**Pagination**
+(Home, individual category page, my posts page)
+
+Where there are more than six results navigation links to pages are displayed below the number of results (6 results per page).
+
+**Sort into categories**
+(Home, categories page, individual category page, post page, my posts page)
+
+One the card, in the home page, it is possible to see the category the post belongs to and by clicking on it, the user is directed to a page with all the posts from that specific category. The same happens on the individual post page and also on the my posts page, which is were a user can see all the posts published by himself/herself.
+
+
+##### Individual Pages
+
+Post Page
+
+**Edit and Delete post**
+
+If logged in and the author of the post, the user can either edit or delete it, if desired. 
+
+**Like button**
+If logged in, the user can like and deslike a post.
+
+**Author Profile**
+The user can check the profile of the author of the post.
+
+
+ 
 
 
 #### Future Features
