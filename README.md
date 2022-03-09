@@ -162,8 +162,43 @@ For this project the following technologies were used:
 
 - HTML - Used throughout the site
 - CSS (Cascading Style Sheets) - Used throughout the site
-- Bootstrap - 
+- Bootstrap - Bootstrap was used to assist with the responsiveness and styling of the website.
 - Chrome/Firefox/Bing DevTools - Regularly used to test the site (Primarily Chrome).
 - Figma - Collaborative interface design tool used for creating wireframes as well logos and SVGs.
 - Python - 
 - Django - 
+
+#### Frameworks, Libraries, & Programs Used
+
+- Many different Django libraries were used:
+    - django.shortcuts, django.views.generic, django.urls,django.http, among many others.
+- For the textarea ckeditor was used. 
+
+#### Credits
+
+**Resources Used**
+- MDN General Web Docs: For semantic structure reference, arrays, localStorage, fetch.
+- W3Schools.com: For html/css/js general refernece, semantic structure reference, arrays, localStorage.
+- Django Tutorial : 
+    - [Django Model](https://www.geeksforgeeks.org/django-model-data-types-and-fields-list/#:~:text=Basic%20model%20data%20types%20and%20fields%20list%20,raw%20binary%20data.%20%2021%20more%20rows%20)
+    - [Django Project](https://docs.djangoproject.com/en/4.0/)
+    - [Ask Python](https://www.askpython.com/django/django-blog-app)
+
+### Testing
+
+#### Validators and linters
+- W3C HTML Validator Passed tests without issues
+- W3C CSS Validator Passed tests without issues
+- CSS Lint VSCode extension
+- PEP8 and AUTOPEP8. Online PEP8 warns about lines being too long but when I attempted to fix that
+  AUTOPEP8 would break the code, otherwise no issues.
+
+#### Manual Testing
+
+Extensively used Crome Developer tools to test form submissions through network tab etc.
+
+1. Visiting page
+
+    - Test if navigation bar works correctly on phone, tablet and desktop browsers
+    - Test if page is responsive at all sizes
+    - Test footer social icon links (links open homepages in a new window)

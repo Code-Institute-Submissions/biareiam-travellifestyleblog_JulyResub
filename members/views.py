@@ -2,10 +2,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.views.generic import DetailView, CreateView
-# from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
 from django.contrib.auth.views import PasswordChangeView
 from django.urls import reverse_lazy
-# from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from travellifestyleblog22.models import Profile
 from .forms import SignUpForm, EditProfileForm, PasswordChangingForm, ProfilePageForm
