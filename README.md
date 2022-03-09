@@ -154,3 +154,16 @@ User can see all the existing categories and if needed, add a new one. For insta
 #### Future Features
 * make it possible for users to edit and deleted comments.
 * Have "favorites" area where users can add their favorite posts.
+
+
+### Technologies Used
+
+For this project the following technologies were used:
+
+- HTML - Used throughout the site
+- CSS (Cascading Style Sheets) - Used throughout the site
+- Bootstrap - 
+- Chrome/Firefox/Bing DevTools - Regularly used to test the site (Primarily Chrome).
+- Figma - Collaborative interface design tool used for creating wireframes as well logos and SVGs.
+- Python - 
+- Django - 
