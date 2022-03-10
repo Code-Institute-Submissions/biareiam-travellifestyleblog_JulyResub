@@ -5,9 +5,10 @@
 This blog was created to host posts covering a series of different topics, such as travel, lifestyle, food & drink, fashion, and so on. Users can browse through many different posts and engage with them. If registered, users can submit, edit and delete posts published by themselves. It was designed to have a clean and simple navigation, aiming for a smooth user experience. 
 
 ## UI/UX
+
 ### Project goals
 
-What's Up Blog is a milestone project for Code Institute Data Centric Development module. The goal of this project is to create, store, edit and delete posts (CRUD). Target audience for this project is people that are interested in topics such as travel, lifestyle, books and movies. Users have the ability to create different categories, expanding the topics for discussion on the blog. 
+This project is part of my Code Institute Full Stack Software Development studies, specifically the Data Centric Development module. The objective for this milestone project is to "Create a web application that allows users to store and easily access cooking recipes", using the CRUD operations of Create, Read, Update, and Delete for their recipes. The goal of this project is to create, store, edit and delete posts (CRUD). Target audience for this project is people that are interested in topics such as travel, lifestyle, books and movies. Users have the ability to create different categories, expanding the topics for discussion on the blog. 
 
 ### User Stories
 As a user, I want: 
@@ -31,15 +32,15 @@ As a user, I want:
 * Be able to read other users' comments
 
 
-This site was built on the basis of ideas from initial wireframes created in Figma and exported image files for these can be seen below. Some changes were done as the projectes started to get into shape, for instance the colour of the background is different from the initial idea. 
+### Wireframe 
 
+This site was built on the basis of ideas from initial wireframes created in Figma and exported image files for these can be seen below. Some changes were done as the projectes started to get into shape, for instance the colour of the background is different from the initial idea. 
 
 <details>
 <summary>Desktop</summary>
 <br>
 <p class="align-center">
-<img width="700" alt="desktop" src="https://user-images.githubusercontent.com/65717229/157550577-c41ea9a1-0361-44ca-a044-7b5c28b1530e.PNG">
-</p>
+<img width="700" alt="desktop" src="https://user-images.githubusercontent.com/65717229/157550577-c41ea9a1-0361-44ca-a044-7b5c28b1530e.PNG"></p>
 </details>
 <br>
 <details>
@@ -59,32 +60,46 @@ This site was built on the basis of ideas from initial wireframes created in Fig
 </details>
 <br>
 
+### Design 
+
+This site was built using Bootstrap, as well as refactored designs I used in my previous milestones. On the homepage, individual category page and my posts page are displayed as cards that when clicked, lead to the individual post page. 
+On the individual post page, users can find the photo, name, bio and social media links to the author of the posts. by clicking on the photo or "Profile" button, the users are directed to a page where they can see the author's full profile. 
+The initial idea was to create a site which would be easy to navigate without many painpoints. The user can easily find what they are looking for as well as engage with the posts, by liking or leaving a comment to it. 
+
 ### Colour Scheme
 Colours are kept to a minimum in order to keep focus on the imagery of the post, chosen colours are various shades of purple. Colour scheme can be found below:
 
 ![colour_scheme](https://user-images.githubusercontent.com/65717229/157550822-a0f2f9aa-cc02-44f2-af3d-e6cc1b293dff.PNG)
 
-#### Typography
-Two Google Fonts were used across the site: fontssssss
+### Typography
+Two Google Fonts were used across the site: 
+- [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto)
+- [Lato](https://fonts.google.com/specimen/Lato?query=lato) 
 
-####  Media
+###  Media
 
 The images on the blog were from [Pexel](https://www.pexels.com/).
 
-### Features
 
-#### Existing Features on every page
+## Features
+
+### Existing Features on every page
+
 
 **Navbar**
 
 The navigation bar features the blog name in the top left corner, which works as a link to the home page from any other page on the blog. The other navigation links are in the top right. 
-
 For users who visited to site and are not registered/logged in yet, the follow links are visible:
 
 * Home
 * Categories
 * Login
 * Register
+
+<br>
+<img width="700" src="https://user-images.githubusercontent.com/65717229/157740977-d28e27a5-bd48-4949-9b23-992e14f52bca.PNG" alt="not logged in navbar">
+<br>
+<br>
 
 For users who are logged in, the follow links are visible:
 
@@ -98,18 +113,29 @@ For users who are logged in, the follow links are visible:
     * Settings
     * Logout 
 
-Python determines if the user is logged in or not by checking if 'user' in session and passes this data to Jinja to display the correct navbar for the user.
+<br>
+<img width="700" src="https://user-images.githubusercontent.com/65717229/157741278-a7392e69-6285-42be-a9e2-a07a866eadd3.PNG" alt="not logged in navbar">
+<br>
+<br>
 
+
+Python determines if the user is logged in or not by checking if 'user' in session and passes this data to Jinja to display the correct navbar for the user.
 On the smaller resolutions (tablet, mobile) the navbar is collapsed into a burger icon. A slide out menu opens when the burger icon is clicked.
+
+<br>
 
 **Footer**
 
 The footer features some key Information such as copyright information and links to social media platforms.
 
+<img width="700" src="https://user-images.githubusercontent.com/65717229/157741717-b23d3686-2356-4666-9ae6-8a4a91de5adb.PNG" alt="footer">
+<br>
+
+
 ### Elements on Multiple Pages
+<br>
 
-**Posts Cards**
-
+**Posts Cards** 
 (Home, individual category page, my posts page)
 
 It displays the post's image, a small headline of the post, date posted, author of the post and a "Read More" button which directs users to the individual post page. The user can also be directed to that page by clicking on the images. 
@@ -181,6 +207,14 @@ Users who are registered can create their own post.
 * Categories
 Users can see all the existing categories and if needed, add a new one. For instance, pets.
 
+* Admin Superuser
+
+-   My 'Admin' profile has several extra features, which currently include:
+-   Edit / Delete any post from the database.
+-   Edit / Delete any comment from the database.
+-   Edit / Delete any users/profile from the database.
+
+
 ### Future Features
 
 * make it possible for users to edit and delete comments.
@@ -226,21 +260,24 @@ Date_added: Stores when the comment was created.
 
 ### Technologies Used
 
-For this project the following technologies were used:
+- HTML5 - Used as the base for markup text.
+- CSS3 - Used as the base for cascading styles.
+- Bootstrap - Used to simplify the structure of the website and make the website responsive easily.
 
-- HTML - Used throughout the site
-- CSS (Cascading Style Sheets) - Used throughout the site
-- Bootstrap - Bootstrap was used to assist with the responsiveness and styling of the website.
-- Chrome/Firefox/Bing DevTools - Regularly used to test the site (Primarily Chrome).
-- Figma - Collaborative interface design tool used for creating wireframes as well logos and SVGs.
-- Python - Runs the entire backend server code, including the logic and safety.
-- Django - High-level Python web framework.
+### Back-End Technologies
+
+- Python 3.6.7 - Used as the back-end programming language.
+- Django 2.2.16 - Used as my Python web framework.
+- Heroku - Used for "Platform as a Service" (PaaS) for app hosting.
+- PostgreSQL 11.4 - Used as relational SQL database plugin via Heroku.
 
 ### Frameworks, Libraries, & Programs Used
 
 - Many different Django libraries were used:
     - django.shortcuts, django.views.generic, django.urls,django.http, among many others.
 - For the textarea ckeditor was used. 
+
+Further details on all Python packages used on this project can be found in the requirements.txt file.
 
 ### Credits
 
@@ -383,4 +420,9 @@ A thanks to my friend Authur Pereira Neto for all the support and help throughou
 If there are any issues with copyright of content, please contact me. I will fix that as soon as possible. This project is for educational purposes only.
 
 Beatriz Amorim 
+
+
+
+
+
 
