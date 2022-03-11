@@ -61,7 +61,6 @@ This site was built on the basis of ideas from initial wireframes created in Fig
 <br>
 
 ### Design 
-
 This site was built using Bootstrap, as well as refactored designs I used in my previous milestones. On the homepage, individual category page and my posts page are displayed as cards that when clicked, lead to the individual post page. 
 On the individual post page, users can find the photo, name, bio and social media links to the author of the posts. by clicking on the photo or "Profile" button, the users are directed to a page where they can see the author's full profile. 
 The initial idea was to create a site which would be easy to navigate without many painpoints. The user can easily find what they are looking for as well as engage with the posts, by liking or leaving a comment to it. 
@@ -77,9 +76,7 @@ Two Google Fonts were used across the site:
 - [Lato](https://fonts.google.com/specimen/Lato?query=lato) 
 
 ###  Media
-
 The images on the blog were from [Pexel](https://www.pexels.com/).
-
 
 ## Features
 
@@ -96,10 +93,7 @@ For users who visited to site and are not registered/logged in yet, the follow l
 * Login
 * Register
 
-<br>
 <img width="700" src="https://user-images.githubusercontent.com/65717229/157740977-d28e27a5-bd48-4949-9b23-992e14f52bca.PNG" alt="not logged in navbar">
-<br>
-<br>
 
 For users who are logged in, the follow links are visible:
 
@@ -113,27 +107,19 @@ For users who are logged in, the follow links are visible:
     * Settings
     * Logout 
 
-<br>
 <img width="700" src="https://user-images.githubusercontent.com/65717229/157741278-a7392e69-6285-42be-a9e2-a07a866eadd3.PNG" alt="not logged in navbar">
-<br>
-<br>
-
 
 Python determines if the user is logged in or not by checking if 'user' in session and passes this data to Jinja to display the correct navbar for the user.
 On the smaller resolutions (tablet, mobile) the navbar is collapsed into a burger icon. A slide out menu opens when the burger icon is clicked.
-
-<br>
 
 **Footer**
 
 The footer features some key Information such as copyright information and links to social media platforms.
 
 <img width="700" src="https://user-images.githubusercontent.com/65717229/157741717-b23d3686-2356-4666-9ae6-8a4a91de5adb.PNG" alt="footer">
-<br>
 
 
 ### Elements on Multiple Pages
-<br>
 
 **Posts Cards** 
 
@@ -141,139 +127,108 @@ The footer features some key Information such as copyright information and links
 
 -   It displays the post's image, a small headline of the post, date posted, author of the post and a "Read More" button which directs users to the individual post page. The user can also be directed to that page by clicking on the images. 
 On large and medium devices, 3 cards are displayed in a row and on smaller devices, one card per row. If the user hover over the images, they zoom in a little, giving it a bit of effect. 
-<br>
-<br>
+
 <img width="700" alt="post-card" src="https://user-images.githubusercontent.com/65717229/157744283-23bcfb43-438a-4e34-83db-aaa19e692f7a.PNG">
-<br>
+
 
 **Pagination**
 
 (Home, individual category page, my posts page)
 
 - Where there are more than six results navigation links to pages are displayed below the number of results (6 results per page).
-<br>
-<br>
-<img width="700"  alt="pagination-homepage" src="https://user-images.githubusercontent.com/65717229/157744517-b9d6b95b-aefb-4332-b6b7-51cb7eebac47.PNG">
-<br>
 
+<img width="700"  alt="pagination-homepage" src="https://user-images.githubusercontent.com/65717229/157744517-b9d6b95b-aefb-4332-b6b7-51cb7eebac47.PNG">
 
 **Sort into categories**
 
 (Home, categories page, individual category page, post page, my posts page)
 
 - One the card, in the home page, it is possible to see the category the post belongs to and by clicking on it, the user is directed to a page with all the posts from that specific category. The same happens on the individual post page and also on the my posts page, which is where a user can see all the posts published by himself/herself.
-<br>
-<br>
+
 <img width="700"  alt="categories" src="https://user-images.githubusercontent.com/65717229/157744750-be958c6b-233c-44af-9ed3-735097933cee.PNG">
-<br>
+
 
 ### Individual Pages
-<br>
 
-### Post Page
-<br>
+#### Post Page
 
 **Edit and Delete post**
 
 - If logged in and the author of the post, the user can either edit or delete it, if desired. 
-<br>
-<br>
+
 <img width="700" alt="test-edit" src="https://user-images.githubusercontent.com/65717229/157745039-5447019e-c0eb-4ab7-bad7-faac36902a93.PNG">
-<br>
 
 **Like button**
 
 - If logged in, the user can like and dislike a post.
-<br>
-<br>
+
 <img width="700"  alt="like" src="https://user-images.githubusercontent.com/65717229/157745171-ecee9b3d-a6ae-413a-92c8-ce839889e3ea.PNG">
-<br>
 
 **Author Profile**
 
 - The user can check the profile of the author of the post, as well as see their social media. 
-<br>
-<br>
+
 <img width="700"  alt="authoer-card" src="https://user-images.githubusercontent.com/65717229/157745972-8a2790a9-4eec-43e7-b342-1d87afe8e2a4.PNG">
-<br>
+
 
 **Comments**
 
 - When logged in, users can leave comments on the posts. Everyone is able to see them, logged in or not.
-<br>
-<br>
+
 <img width="700"  alt="comments" src="https://user-images.githubusercontent.com/65717229/157745523-ae41646a-3ea1-46ce-8c1c-ffe1d87f09bd.PNG">
-<br>
 
-**Login**
+
+#### Login Page
 - This section contains a form where users may login and be redirected to Home Page. Below the form, the user can find a link to register.
-<br>
-<br>
+
 <img width="700" alt="login" src="https://user-images.githubusercontent.com/65717229/157746034-54e3f933-8b74-4154-b1c1-3e92adb01c65.PNG">
-<br>
 
-**Logout**
+
+#### Logout
 - Clicking 'Logout' ends a user session and redirects them to the 'Home' page.
-<br>
-<br>
+
 <img width="700" alt="logout" src="https://user-images.githubusercontent.com/65717229/157746134-22799471-adc2-4804-ab1e-7a1a031aa4da.PNG">
-<br>
 
-**Register**
+#### Register Page
 - This section contains a registration form.Once it is completed, they will be redirected to the login page where they can then sign in.
-<br>
-<br>
-<img width="700"  alt="register" src="https://user-images.githubusercontent.com/65717229/157746192-c2859a25-8aa2-4b65-8438-6a27af68c5d7.PNG">
-<br>
 
-**User Profile**
+<img width="700"  alt="register" src="https://user-images.githubusercontent.com/65717229/157746192-c2859a25-8aa2-4b65-8438-6a27af68c5d7.PNG">
+
+#### User Profile Page
 
 It contains a profile image, the user first and last name, their email, bio and a link to their social media.
-<br>
-<br>
-<img width="700" alt="profile" src="https://user-images.githubusercontent.com/65717229/157745360-baa61e89-74cd-4b4a-b400-5460c813ffa5.PNG">
-<br>
 
-**Edit Profile**
+<img width="700" alt="profile" src="https://user-images.githubusercontent.com/65717229/157745360-baa61e89-74cd-4b4a-b400-5460c813ffa5.PNG">
+
+#### Edit Profile Page
 
 The owner of the profile can edit it, for instance change the profile image or the information provided in the bio. 
-<br>
-<br>
-<img width="700" alt="edit-pro" src="https://user-images.githubusercontent.com/65717229/157748547-4ca3e635-d6ae-45ba-bc86-c4fa9722c601.PNG">
-<br>
 
-**Settings**
+<img width="700" alt="edit-pro" src="https://user-images.githubusercontent.com/65717229/157748547-4ca3e635-d6ae-45ba-bc86-c4fa9722c601.PNG">
+
+#### Settings
 
 On this page, the user can change their first and last name, email, and password. 
-<br>
-<br>
-<img width="700" alt="setting" src="https://user-images.githubusercontent.com/65717229/157747410-83260407-d388-4780-b87f-0993ca5f0f20.PNG">
-<br>
 
-**My Post**
+<img width="700" alt="setting" src="https://user-images.githubusercontent.com/65717229/157747410-83260407-d388-4780-b87f-0993ca5f0f20.PNG">
+
+#### My Posts Page
 
 This page displays as posts published by the user, who is logged in. if there are no posts, there is a message and a button directing them to the add post page. 
-<br>
-<br>
-<img width="700" alt="myposts" src="https://user-images.githubusercontent.com/65717229/157747467-dec2efec-6655-4a7b-890e-6bcae1b878f5.PNG">
-<br>
-<br>
 
-**Add Post**
+<img width="700" alt="myposts" src="https://user-images.githubusercontent.com/65717229/157747467-dec2efec-6655-4a7b-890e-6bcae1b878f5.PNG">
+
+#### Add Post Page
 
 Users who are registered can create their own post.
-<br>
-<img width="700" alt="add-post" src="https://user-images.githubusercontent.com/65717229/157747547-0e6c887f-6910-4458-bf5e-ec7005f27890.PNG">
-<br>
-<br>
 
-**Categories**
+<img width="700" alt="add-post" src="https://user-images.githubusercontent.com/65717229/157747547-0e6c887f-6910-4458-bf5e-ec7005f27890.PNG">
+
+#### Categories Page
 
 Users can see all the existing categories and if needed, add a new one. For instance, pets.
-<br>
-<br>
+
 <img width="700" alt="categories-list" src="https://user-images.githubusercontent.com/65717229/157746399-dcd5f5b1-8707-4a96-9ce7-879ead84328a.PNG">
-<br>
 
 **Admin Superuser**
 
@@ -281,73 +236,52 @@ Users can see all the existing categories and if needed, add a new one. For inst
 -   Edit / Delete any post from the database.
 -   Edit / Delete any comment from the database.
 -   Edit / Delete any users/profile from the database.
-<br>
-<br>
 
 ## Future Features
 
 * make it possible for users to edit and delete comments.
 * Have a "favourites" area where users can add their favourite posts.
 
-<br>
-
 ## Database
 This website have 4 databases, 1 for user profile, 1 for posts, 1 for comments and 1 for the categories. they are connected to some extend to each other as well as being used to store various calculations, and store all general information on the page. 
 
-- Profile Database
-- Post Database 
-- Categories
-- Comment Database
+  * Profile Database
+  * Post Database 
+  * Categories
+  * Comment Database
 
 **Profile database explained**
 
-User: Stores the chosen username added by the user.
-
-First_name: Stores the user's first name.
-
-Last_name: Stores the user's last name.
-
-Email: Stores the email address added by the user.
-
-Bio: Stores the bio added by the user to the profile.
-
-Profile_pic: Stores the profile picture uploaded by the user. If none is uploaded by the user, a default images will be added instead. 
-
-Instagram_url: Store the url of the user's instragram account.
-
-Facebook_url: Store the url of the user's facebook account
-
-Twitter_url: Store the url of the user's Twitter account
+- User: Stores the chosen username added by the user.
+- First_name: Stores the user's first name.
+- Last_name: Stores the user's last name.
+- Email: Stores the email address added by the user.
+- Bio: Stores the bio added by the user to the profile.
+- Profile_pic: Stores the profile picture uploaded by the user. If none is uploaded by the user, a default images will be added instead. 
+- Instagram_url: Store the url of the user's instragram account.
+- Facebook_url: Store the url of the user's facebook account.
+- Twitter_url: Store the url of the user's Twitter account
 
 **Post database explained**
 
-Post_title: Stores the title of the blog post. 
-
-Author: Stores the name of the user who created a post. 
-
-Created_on: Stores when a post was created.
-
-Content: Stores the actual content of the blog post. 
-
-Category: Stores which category the post belongs to.
-
-Likes: Stores the likes a post recieved.
-
-Image: Stores the image related to the post. If no images is uploaded, a default one will be applied. 
+  - Post_title: Stores the title of the blog post.
+  - Author: Stores the name of the user who created a post. 
+  - Created_on: Stores when a post was created.
+  - Content: Stores the actual content of the blog post. 
+  - Category: Stores which category the post belongs to.
+  - Likes: Stores the likes a post recieved.
+  - Image: Stores the image related to the post. If no images is uploaded, a default one will be applied. 
 
 **Categories database explained**
 
-name: It is the category name. Example: LifeStyle.
+  - name: It is the category name. Example: LifeStyle.
 
 **Comment database explained**
 
-Post: Stores which is the post which the comment should be added to. 
-
-Name: Stores the name of the user who made the comment. 
-
-Body: Stores the actual comment.
-
-Date_added: Stores when the comment was created. 
+  - Post: Stores which is the post which the comment should be added to. 
+  - Name: Stores the name of the user who made the comment. 
+  - Body: Stores the actual comment.
+  - Date_added: Stores when the comment was created. 
 
 
 ### Technologies Used
@@ -381,6 +315,7 @@ Further details on all Python packages used on this project can be found in the 
     - [Django Model](https://www.geeksforgeeks.org/django-model-data-types-and-fields-list/#:~:text=Basic%20model%20data%20types%20and%20fields%20list%20,raw%20binary%20data.%20%2021%20more%20rows%20)
     - [Django Project](https://docs.djangoproject.com/en/4.0/)
     - [Ask Python](https://www.askpython.com/django/django-blog-app)
+    - [Django Central](https://djangocentral.com/building-a-blog-application-with-django/)
 
 ### Content
 
