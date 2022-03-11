@@ -5,7 +5,6 @@
 <div class="container-fluid homepage">
     <h2 class="add-edit-post-page text-white">My Posts</h2>
     <div class="row">
-        <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in posts %}
@@ -13,6 +12,7 @@
                     <div class="card mb-2">
                         <div class="card-body">
                             <div class="image-container">
+                                <!-- If the post does not have an image, a default one will be displayed instead -->
                                 {% if "placeholder" in post.image.url %}
                                 <a href="{% url 'article-detail' post.pk  %}" class="post-link"><img
                                         class="card-img-top"
@@ -34,7 +34,6 @@
                                             class="btn btn-outline-dark readmore">Read
                                             More</a></p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -63,6 +62,7 @@
     </nav>
     {% endif %}
 </div>
+<!-- If the user does not have any post, a message will be displayed -->
 {% if not posts.all %}
 <div class="no-post">
     <div class="not-allow-box">

@@ -23,7 +23,6 @@
 <body class="d-flex flex-column h-100 main-bg">
 
     <!-- Navigation -->
-
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <h1><a class="navbar-brand" href="{% url 'home' %}"><span class="brand">W<span class="red-o">h</span>at's
@@ -39,7 +38,6 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
-
                     <!-- Category Menu-->
                     {% if cat_menu %}
                     <li class="nav-item dropdown">
@@ -62,12 +60,10 @@
                     {% if user.is_authenticated %}
                     <li><a class="nav-link" href="{% url 'add-post' %}">Add Post</a>
                     </li>
-
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             {{ user.first_name }}</a>
-
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             {% if user.profile.user %}
                             <li><a class="dropdown-item nav-link" href="{% url 'profile' user.profile.id %}">Profile</a>
@@ -79,7 +75,6 @@
                             </li>
                             <li><a class="dropdown-item nav-link" href="{% url 'setting' %}">Settings</a>
                             </li>
-
                             {% else %}
                             <li><a class="dropdown-item nav-link" href="{% url 'create_profile' %}">Create Profile</a>
                             </li>
@@ -88,7 +83,6 @@
                             </li>
                         </ul>
                     </li>
-
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'register' %}">Register</a>
@@ -99,10 +93,7 @@
                     {% endif %}
             </div>
         </div>
-
     </nav>
-
-
 
     <main class="flex-shrink-0 main-bg base">
         <hr class="line">
@@ -132,7 +123,6 @@
 
         <div id="lab_social_icon_footer">
             <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
             <div class="block">
                 <a href="https://www.facebook.com" target="_blank"><i id="social-fb"
                         class="fa fa-facebook-square fa-3x social"></i></a>

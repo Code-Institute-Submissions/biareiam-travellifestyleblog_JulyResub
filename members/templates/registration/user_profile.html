@@ -11,7 +11,7 @@
                     <div class="profile-card text-center">
 
                         <div class="profile-info">
-
+                            <!-- If the user does not have a profile image, a default one will be displayed instead -->
                             {% if "placeholder" in page_user.profile_pic.url %}
                             <img src="https://www.kindpng.com/picc/m/451-4517876_default-profile-hd-png-download.png"
                                 class="profile-pic" alt="default profile image" width="250px" height="auto">
@@ -23,6 +23,7 @@
                                 {{page_user.user.last_name}}</h2>
                             <p class="profile-content">{{ page_user.email}}</p>
                             <div class="profile-content">{{ page_user.bio }}</div>
+                            <!-- Only if the user adds the urls to the social media, the icons will be displayed -->
                             {% if page_user.facebook_url %}
                             <a href="{{ page_user.facebook_url }}"><i class="fa fa-facebook-square fa-2x"></i></a>
                             {% endif %}

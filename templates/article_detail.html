@@ -20,7 +20,6 @@
                             <span><small class="date"><i class="fa fa-date">{{ post.created_on}}</i></small></span>
                             <div class="sub-title">
                                 <div class="row icons-sub-title">
-
                                     <div class="col">
                                         <div class="likes">
                                             <form action="{% url 'like_post' post.pk %}" method="POST">
@@ -37,7 +36,6 @@
                                                     <i class="far fa-heart"></i>
                                                     {{ total_likes }}</button>
                                                 {% endif %}
-
                                                 {% else %}
                                                 <small><i class="far fa-heart"></i> <a href="{% url 'login' %}"
                                                         class="login-btn">
@@ -51,6 +49,7 @@
                             </div>
                         </div>
                         <div class="blog-post-image">
+                            <!-- If the post does not have an image, a default one will be displayed instead -->
                             {% if "placeholder" in post.image.url %}
                             <a href="{% url 'article-detail' post.pk  %}" class="post-link"><img class="card-img-top"
                                     src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.png"
@@ -74,12 +73,10 @@
                         {% endif %}
                         {% endif %}
                         <hr class="divisor">
-
                     </div>
-
                     <div class="blog-author">
-
                         <div class="media-object pull-left">
+                            <!-- If the user does not have a profile picture, a default one will be displayed instead -->
                             {% if "placeholder" in post.author.profile.profile_pic.url %}
                             <div class="media-object pull-left"><a href="{% url 'profile' post.author.profile.id %}">
                                     <img src="https://www.kindpng.com/picc/m/451-4517876_default-profile-hd-png-download.png"
@@ -91,12 +88,12 @@
                                     alt="postr author"></a>
                         </div>
                         {% endif %}
-
                         <h3 class="media-heading">{{  post.author.profile.first_name }}
                             {{  post.author.profile.last_name }}</h3>
                         <small>
                             <p class="links"><a href="{% url 'profile' post.author.profile.id %}"
                                     class="social-media">Profile</a>
+                                <!-- One if the user enters a social media, it will be displayed in the page -->
                                 {% if post.author.profile.facebook_url %}
                                 | <a href="{{ post.author.profile.instagram_url }}" class="social-media">Facebook</a>
                                 {% endif %}
@@ -111,8 +108,6 @@
         </div>
     </div>
     <div class="container bootstrap  bootdey">
-
-
         <div class="blog-comment">
             <h3 class="text-success">Comment</h3>
 
@@ -120,11 +115,8 @@
             <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add
                     comment</a></p>
             {% else%}
-
             <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add
                     comment</a></p>
-
-
             <ul class="comments">
                 <li class="">
                     {% for comment in post.comments.all %}
@@ -136,7 +128,6 @@
                     {% endfor %}
                 </li>
             </ul>
-
             {% endif %}
         </div>
     </div>

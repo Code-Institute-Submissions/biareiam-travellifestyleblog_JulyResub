@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} Add Book Genres{% endblock%}
+{% block title %} Add a new category{% endblock%}
 {% block content %}
 
 
 {% if user.is_authenticated %}
 <div class="cat">
     <div class="category-add">
-        <h2 class="category-add-title">Add Categories</h2>
+        <h2 class="category-add-title">Add Category</h2>
         <div class="form-group form-categories">
             <form method="POST">
                 {% csrf_token %}
@@ -18,6 +18,7 @@
             </form>
         </div>
         {% else %}
+        <!-- If the user ends up on this page without being logged in, a message will be displayed -->
         <div class="not-allow">
             <div class="not-allow-box">
                 <p>You need to login to be able to add a category</p>
