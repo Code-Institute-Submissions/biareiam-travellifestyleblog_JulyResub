@@ -164,7 +164,6 @@ body {
 }
 
 .page-link {
-    border-bottom: 1px solid #e5e5e5;
     border-right: none;
     border-top: none;
     border-left: none;
@@ -175,6 +174,7 @@ body {
     letter-spacing: 2px;
     font-weight: 700;
     font-size: 0.8rem;
+
 
 }
 
@@ -202,6 +202,11 @@ body {
 .categories-home:focus {
     color: #ffffff;
     background-color: #BFACB2;
+}
+
+.card-title {
+    margin-bottom: 2rem;
+    font-family: "Montserrat", sans-serif;
 }
 
 
@@ -384,7 +389,6 @@ body {
     padding-left: 8rem;
     padding-right: 8rem;
     padding-top: 0;
-    background-color: #eaeaf0;
     padding-bottom: 1rem;
     margin-top: -0.3rem;
 }
@@ -394,11 +398,6 @@ body {
     padding: 2rem 1rem 1rem 1rem;
     margin-bottom: 1rem;
     color: #212529;
-}
-
-.line-space {
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 
 .blog-post-des {
@@ -417,6 +416,7 @@ body {
 
 .post-title {
     text-align: center;
+    font-family: "Montserrat", sans-serif;
 }
 
 .blog-post-title h2,
@@ -576,6 +576,12 @@ body {
     color: white;
 }
 
+
+.card-body {
+    height: 650px;
+    border: none;
+}
+
 .card-body-categories-items {
     margin: auto;
     width: 50%;
@@ -697,10 +703,7 @@ body {
     color: white;
 }
 
-.line-cat {
-    border-bottom: 1.3px solid white;
-    margin-top: -1rem;
-}
+
 
 .cat {
     padding-bottom: 7rem;
@@ -1979,7 +1982,7 @@ body {
 
 /**************************************************/
 .postcard__title {
-    font-size: 24px;
+    font-size: 1.2rem;
     letter-spacing: 3px;
     text-transform: uppercase;
     font-weight: 500;
@@ -1993,6 +1996,9 @@ body {
     color: #000;
 }
 
+.postcard__subtitle {
+    margin-bottom: 1rem;
+}
 
 .list-title-divider {
     border-top: 2px solid;
@@ -2035,7 +2041,7 @@ a:hover {
     overflow: hidden;
     position: relative;
     color: #000000;
-    border-bottom: 1px solid #eee;
+
 
     &.light {
         background-color: #e1e5ea;
@@ -2090,6 +2096,7 @@ a:hover {
         text-overflow: ellipsis;
         text-align: justify;
         height: 100%;
+        font-size: 0.8rem;
 
     }
 
@@ -2152,10 +2159,6 @@ a:hover {
             transition: transform 0.3s ease;
         }
 
-        .postcard__text {
-            padding: 3rem;
-            width: 100%;
-        }
 
         .media.postcard__text:before {
             content: "";
@@ -2192,10 +2195,6 @@ a:hover {
 }
 
 @media screen and (min-width: 1024px) {
-    .postcard__text {
-        padding: 1rem;
-
-    }
 
     .postcard__text:before {
         content: "";

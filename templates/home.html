@@ -8,13 +8,13 @@
         </div>
     </div>
     <div class="container">
-        <h2 class="card-title text-center">Latest Posts</h2>
         {% for post in object_list %}
         <article class="postcard light blue list-item">
             <div class="row">
                 <div class="col-md-4">
                     <a class="postcard__img_link" href="{% url 'article-detail' post.pk  %}">
-                        <img class="postcard__img img-fluid" src="{{ post.image.url }}" alt="Image Title" />
+                        <img class="postcard__img img-fluid" src="{{ post.image.url }}" alt="Image Title" width="520"
+                            height="400" />
                     </a>
                 </div>
                 <div class="col-md-8">
@@ -33,7 +33,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
         </article>
+        <hr>
         {% endfor %}
     </div>
 </section>
