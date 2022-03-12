@@ -1,65 +1,56 @@
 {% extends "base.html" %}
 
 {% block content %}
+<section class="light">
+    <div class="banner">
+        <div class="image-banner">
 
-<div class="container-fluid homepage">
-    <div class="row">
-        <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 left">
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="card-title text-center">Latest Posts</h2>
+        {% for post in object_list %}
+        <article class="postcard light blue list-item">
             <div class="row">
-                {% for post in object_list %}
                 <div class="col-md-4">
-                    <div class="card mb-2">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in post.image.url %}
-                                <a href="{% url 'article-detail' post.pk  %}" class="post-link"><img
-                                        class="card-img-top"
-                                        src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.png"
-                                        alt="defalt profile image"></a>
-                                {% else %}
-                                <a href="{% url 'article-detail' post.pk  %}" class="post-link"><img
-                                        class="card-img-top" src=" {{ post.image.url }}" alt="post image"></a>
-                                {% endif %}
-                                <div class="image-flash">
-                                    <br>
-                                    <h5 class="card-title">{{ post.post_title }}</h5>
-                                    <p class="author">Post by: {{ post.author }} <a
-                                            href="{% url 'category' post.category %}" class="categories-home">
-                                            {{ post.category }}</a></p>
-                                    <p class="card-text"><small>{{ post.created_on}}</small></p>
-                                    <p class=" card-text-2 "> {{ post.content|slice:":200"|safe }} ... </p>
-                                    <a href="{% url 'article-detail' post.pk %}"
-                                        class="btn btn-outline-dark readmore">Read
-                                        More</a>
-                                </div>
-                            </div>
+                    <a class="postcard__img_link" href="{% url 'article-detail' post.pk  %}">
+                        <img class="postcard__img img-fluid" src="{{ post.image.url }}" alt="Image Title" />
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <div class="postcard__text t-dark">
+                        <a href="{% url 'category' post.category %}" class="categories-home">{{ post.category }}</a>
+                        <br>
+                        <span class="list-title-divider"></span>
+                        <h3 class="postcard__title"><a
+                                href="{% url 'article-detail' post.pk  %}">{{ post.post_title }}</a></h3>
+                        <div class="postcard__bar"></div>
+                        <div class="postcard__preview-txt">{{ post.content|slice:":300"|safe }}</div>
+                        <div class="postcard__subtitle small">
+                            <time datetime="2020-05-25 12:00:00">
+                                <small class="post-date">{{ post.created_on}}</small>
+                            </time>
                         </div>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif %}
-                {% endfor %}
-
-            </div>
-        </div>
+        </article>
+        {% endfor %}
     </div>
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <button class="btn btn-page"><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo;
-                    PREV </a></button>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <button class="btn btn-page"><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT
-                    &raquo;</a></button>
+</section>
+{% if is_paginated %}
+<nav aria-label="Page navigation">
+    <ul class="pagination">
+        {% if page_obj.has_previous %}
+        <button class="btn btn-page"><a href="?page={{ page_obj.previous_page_number }}" class="page-link">
+                &laquo; Newer Posts </a></button>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <button class="btn btn-page"><a href="?page={{ page_obj.next_page_number }}" class="page-link"> Older
+                Posts &raquo; </a></button>
 
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
 </div>
 {%endblock%}
