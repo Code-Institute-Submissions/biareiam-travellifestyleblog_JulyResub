@@ -1,6 +1,7 @@
 """ Libraries """
 from django import forms
 from .models import Post, Category, Comment
+from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
 choices = Category.objects.all().values_list('name', 'name')
 
@@ -20,7 +21,7 @@ class PostForm(forms.ModelForm):
             'post_title': forms.TextInput(attrs={'class': 'form-control'}),
             'author': forms.TextInput(attrs={'class': 'form-control', 'value': '', 'id': 'identifier', 'type': 'hidden'}),
             'category': forms.Select(choices=choice_list, attrs={'class': 'form-control'}),
-            'content': forms.Textarea(attrs={'class': 'form-control'}),
+            'content': SummernoteWidget(attrs={'class': 'form-control'}),
             }
 
 
@@ -33,7 +34,7 @@ class EditForm(forms.ModelForm):
         widgets = {
             'post_title': forms.TextInput(attrs={'class': 'form-control'}),
             'category': forms.Select(choices=choice_list, attrs={'class': 'form-control'}),
-            'content': forms.Textarea(attrs={'class': 'form-control'}),
+            'content': SummernoteWidget(attrs={'class': 'form-control'}),
         }
 
 
