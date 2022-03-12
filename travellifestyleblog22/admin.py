@@ -16,4 +16,4 @@ admin.site.register(Category)
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'body', 'date_addded')
+    list_display = ('name', 'body', 'post', 'date_addded')
