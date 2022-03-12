@@ -4,16 +4,12 @@
 }
 
 body {
-    background-image: url("https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-image: url("https://images.pexels.com/photos/6482874/pexels-photo-6482874.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
 }
 
-@media(max-width:500px) {
-    body {
-        background-image: linear-gradient(#BDBFD6, #D0C6CF, #BDB0B9, #A29199, #7F727B, #5F555E, #443B3E);
-    }
-}
 
 /**--------------------base---------------**/
 .base {
