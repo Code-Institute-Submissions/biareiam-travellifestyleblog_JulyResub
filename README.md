@@ -4,6 +4,8 @@
 
 This blog was created to host posts covering a series of different topics, such as travel, lifestyle, food & drink, fashion, and so on. Users can browse through many different posts and engage with them. If registered, users can submit, edit and delete posts published by themselves. It was designed to have a clean and simple navigation, aiming for a smooth user experience. 
 
+You can view the live site [here](https://travellifestyleblog22.herokuapp.com/)
+
 ## UI/UX
 
 ### Project goals
@@ -461,7 +463,7 @@ Extensively used Crome Developer tools to test form submissions through network 
 
 ### Deployment
 
-The website can be accessed [here]().
+The website can be accessed [here](https://travellifestyleblog22.herokuapp.com/).
 
 Deployment instructions assume that you have already set up your repository and basic flask application. The website is deployed on the Heroku cloud platform using the following steps:
 
