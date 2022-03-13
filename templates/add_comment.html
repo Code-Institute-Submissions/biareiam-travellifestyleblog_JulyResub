@@ -3,28 +3,30 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<div class="comment-posts">
-    <div class="add-comment">
-        <div class="add-comment-post">
-            <h2 class="comment-title">Add Comment</h2>
-        </div>
-        <div class="form-group form-comment">
-            <form method="POST">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <div class="btn-login">
-                    <button type="submit" class="btn btn-primary btn-submit">Submit</button>
-                </div>
-            </form>
+<div class="bg-banner-comment">
+    <div class="comment-posts">
+        <div class="add-comment">
+            <div class="add-comment-post">
+                <h2 class="comment-title">Add Comment</h2>
+            </div>
+            <div class="form-group form-comment">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="btn-login">
+                        <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-{% else %}
-<!-- If the user ended up in this page without being logged in, a message will be displayed -->
-<div class="not-allow">
-    <div class="not-allow-box">
-        <p>You must be <a href="{% url 'login' %}">logged in</a> to post a comment.</p>
+    {% else %}
+    <!-- If the user ended up in this page without being logged in, a message will be displayed -->
+    <div class="not-allow">
+        <div class="not-allow-box">
+            <p>You must be <a href="{% url 'login' %}">logged in</a> to post a comment.</p>
 
+        </div>
     </div>
 </div>
 {% endif %}

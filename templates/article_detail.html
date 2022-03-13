@@ -74,48 +74,54 @@
                         {% endif %}
                         <hr class="divisor">
                     </div>
-                    <div class="blog-author">
-                        <div class="media-object pull-left">
-                            <!-- If the user does not have a profile picture, a default one will be displayed instead -->
-                            {% if "placeholder" in post.author.profile.profile_pic.url %}
-                            <div class="media-object pull-left"><a href="{% url 'profile' post.author.profile.id %}">
-                                    <img src="https://www.kindpng.com/picc/m/451-4517876_default-profile-hd-png-download.png"
-                                        class="img-circle-2 img-responsive" alt="post author"></a>
-                            </div>
-                            {% else %}
-                            <a href="{% url 'profile' post.author.profile.id %}">
-                                <img src="{{ post.author.profile.profile_pic.url }}" class="img-circle-2 img-responsive"
-                                    alt="postr author"></a>
-                        </div>
-                        {% endif %}
-                        <h3 class="media-heading">{{  post.author.profile.first_name }}
-                            {{  post.author.profile.last_name }}</h3>
-                        <small>
-                            <p class="links"><a href="{% url 'profile' post.author.profile.id %}"
-                                    class="social-media">Profile</a>
-                                <!-- One if the user enters a social media, it will be displayed in the page -->
-                                {% if post.author.profile.facebook_url %}
-                                | <a href="{{ post.author.profile.instagram_url }}" class="social-media">Facebook</a>
-                                {% endif %}
-                                {% if post.author.profile.instagram_url %}
-                                | <a href="{{ post.author.profile.instagram_url }}" class="social-media">Instagram</a>
-                                {% endif %}
-                        </small>
-                        <p class="bio">{{ post.author.profile.bio|safe }}</p>
-                    </div>
                 </div>
+            </div>
+            <div class="col-md-2 col-sm-12">
+                <div class="blog-author">
+                    <div class="media-object pull-left">
+                        <!-- If the user does not have a profile picture, a default one will be displayed instead -->
+                        {% if "placeholder" in post.author.profile.profile_pic.url %}
+                        <div class="media-object pull-left"><a href="{% url 'profile' post.author.profile.id %}">
+                                <img src="https://www.kindpng.com/picc/m/451-4517876_default-profile-hd-png-download.png"
+                                    class="img-circle-2 img-fluid" alt="post author"></a>
+                        </div>
+                        {% else %}
+                        <a href="{% url 'profile' post.author.profile.id %}">
+                            <img src="{{ post.author.profile.profile_pic.url }}" class="img-circle-2 img-fluid"
+                                alt="postr author"></a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-md-10 col-sm-12">
+
+                <h3 class="media-heading">{{  post.author.profile.first_name }}
+                    {{  post.author.profile.last_name }}</h3>
+                <small>
+                    <p class="links"><a href="{% url 'profile' post.author.profile.id %}"
+                            class="social-media">Profile</a>
+                        <!-- One if the user enters a social media, it will be displayed in the page -->
+                        {% if post.author.profile.facebook_url %}
+                        | <a href="{{ post.author.profile.instagram_url }}" class="social-media">Facebook</a>
+                        {% endif %}
+                        {% if post.author.profile.instagram_url %}
+                        | <a href="{{ post.author.profile.instagram_url }}" class="social-media">Instagram</a>
+                        {% endif %}
+                </small>
+                <p class="bio">{{ post.author.profile.bio|safe }}</p>
             </div>
         </div>
     </div>
+
     <div class="container bootstrap  bootdey">
         <div class="blog-comment">
             <h3 class="text-success">Comment</h3>
 
             {% if not post.comments.all %}
-            <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add
+            <p><a href="{% url 'add_comment' post.pk %}" class="btn btn-primary btn-submit">Add
                     comment</a></p>
             {% else%}
-            <p><a href="{% url 'add_comment' post.pk %}" class="add-comment-page">Add
+            <p><a href="{% url 'add_comment' post.pk %}" class="btn btn-primary btn-submit">Add
                     comment</a></p>
             <ul class="comments">
                 <li class="">

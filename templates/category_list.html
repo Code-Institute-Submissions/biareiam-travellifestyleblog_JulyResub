@@ -4,31 +4,33 @@
 {% block title %} {{ post.post_title}} {% endblock%}
 
 {% block content %}
-<div class="container-fluid homepage">
-    <h2 class="blog-categories">Categories</h2>
-    <div class="row">
-        <div class="col-12 mt-3 card-body-categories-items">
-            <div class="row">
-                {% for item in cat_menu_list %}
-                <div class="col-sm-6 col-xsm-12">
-                    <div class="card-categories mb-4">
-                        <div class="card-body-categories">
-                            <a class="dropdown-item-cat" href="{% url 'category' item %}">{{ item }}</a>
+<div class="bg-banner">
+    <div class="container-fluid">
+        <h2 class="page-title">Categories</h2>
+        <div class="row">
+            <div class="col-12 mt-3 card-body-categories-items">
+                <div class="row">
+                    {% for item in cat_menu_list %}
+                    <div class="col-sm-6 col-xsm-12">
+                        <div class="card-categories mb-4">
+                            <div class="card-body-categories">
+                                <a class="dropdown-item-cat" href="{% url 'category' item %}">{{ item }}</a>
+                            </div>
                         </div>
                     </div>
+                    {% if forloop.counter|divisibleby:4 %}
                 </div>
-                {% if forloop.counter|divisibleby:4 %}
+                <div class="row">
+                    {% endif %}
+                    {% endfor %}
+                </div>
             </div>
-            <div class="row">
+            {% if user.is_authenticated %}
+            <div class="btn-category">
+                <a class="add-category-item btn btn-outline-dark add-category" href=" {% url 'add-category' %}">Add
+                    Category</a>
                 {% endif %}
-                {% endfor %}
             </div>
-        </div>
-        {% if user.is_authenticated %}
-        <div class="btn-category">
-            <a class="add-category-item btn btn-outline-dark add-category" href=" {% url 'add-category' %}">Add
-                Category</a>
-            {% endif %}
         </div>
     </div>
 </div>

@@ -3,39 +3,33 @@
 {% block content %}
 
 <div class="container-fluid homepage">
-    <h2 class="add-edit-post-page text-white">My Posts</h2>
+    <h2 class="page-title">My Posts</h2>
     <div class="row">
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in posts %}
                 <div class="col-md-4">
-                    <div class="card mb-2">
+                    <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                <!-- If the post does not have an image, a default one will be displayed instead -->
                                 {% if "placeholder" in post.image.url %}
                                 <a href="{% url 'article-detail' post.pk  %}" class="post-link"><img
                                         class="card-img-top"
-                                        src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.png"
-                                        alt="defalt profile image"></a>
+                                        src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.png"></a>
                                 {% else %}
                                 <a href="{% url 'article-detail' post.pk  %}" class="post-link"><img
-                                        class="card-img-top" src=" {{ post.image.url }}" alt="post image"></a>
+                                        class="card-img-top" src=" {{ post.image.url }}"></a>
                                 {% endif %}
                                 <div class="image-flash">
                                     <br>
                                     <h5 class="card-title">{{ post.post_title }}</h5>
                                     <p class="author">Post by: {{ post.author }}</p>
-                                    </p> <a href="{% url 'category' post.category %}" class="categoriespage-home">
-                                        {{ post.category }}</a></p>
-
-
-
+                                    <p><a href="{% url 'category' post.category %}" class="categories-home">
+                                            {{ post.category }}</a></p>
                                     <p class="card-text"><small>{{ post.created_on}}</small></p>
-                                    <p class=" card-text-2 "> {{ post.content|slice:":200"|safe }} ... </p>
-                                    <p><a href="{% url 'article-detail' post.pk %}"
-                                            class="btn btn-outline-dark readmore">Read
-                                            More</a></p>
+                                    <p>{{ post.content|slice:":200"|safe }} ...</p>
+                                    <a href="{% url 'article-detail' post.pk %}" class="btn btn-primary btn-submit">Read
+                                        More</a>
                                 </div>
                             </div>
                         </div>

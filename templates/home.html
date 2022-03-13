@@ -5,19 +5,27 @@
 <div id="base">
     <div class="banner">
         <div class="image-banner">
-
         </div>
     </div>
 
     <div class="container">
         {% for post in object_list %}
-        <article class="postcard light blue list-item">
+        <article class="postcard">
             <div class="row">
                 <div class="col-md-4">
+                    {% if "placeholder" in post.image.url %}
+                    <a class="postcard__img_link" href="{% url 'article-detail' post.pk  %}">
+                        <img class="postcard__img img-fluid"
+                            src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.png"
+                            alt="Image Title" width="520" height="400" />
+                    </a>
+                    {% else %}
                     <a class="postcard__img_link" href="{% url 'article-detail' post.pk  %}">
                         <img class="postcard__img img-fluid" src="{{ post.image.url }}" alt="Image Title" width="520"
                             height="400" />
                     </a>
+                    {% endif %}
+
                 </div>
                 <div class="col-md-8">
                     <div class="postcard__text t-dark">
@@ -29,7 +37,6 @@
                         </h3>
                         <div class="postcard__bar"></div>
                         <div class="postcard__preview-txt">{{ post.content|slice:":200"|safe }}</div>
-                        <br>
                         <div class="postcard__subtitle small">
                             <time datetime="2020-05-25 12:00:00">
                                 <small class="post-date">{{ post.created_on}}</small>
@@ -59,5 +66,10 @@
     </nav>
     {% endif %}
 </div>
+<div class="banner-places">
+    <div class="footer-banner">
+    </div>
+</div>
 
-{%endblock%}
+
+{% endblock %}
