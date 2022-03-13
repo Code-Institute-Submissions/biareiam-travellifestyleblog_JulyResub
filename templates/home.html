@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-
 <div id="base">
     <div class="banner">
         <div class="image-banner">
@@ -37,7 +36,9 @@
                                 href="{% url 'article-detail' post.pk  %}">{{ post.post_title }}</a>
                         </h3>
                         <div class="postcard__bar"></div>
-                        <div class="postcard__preview-txt">{{ post.content|slice:":200"|safe }}</div>
+                        <div class="postcard__preview-txt">
+                            <p id="text-snippet">{{ post.content|slice:":200"|safe }}</p>
+                        </div>
                         <div class="postcard__subtitle small">
                             <time datetime="2020-05-25 12:00:00">
                                 <small class="post-date">{{ post.created_on}}</small>

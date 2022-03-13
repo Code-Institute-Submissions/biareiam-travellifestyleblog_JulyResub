@@ -81,22 +81,27 @@
                     <div class="media-object pull-left">
                         <!-- If the user does not have a profile picture, a default one will be displayed instead -->
                         {% if "placeholder" in post.author.profile.profile_pic.url %}
-                        <div class="media-object pull-left"><a href="{% url 'profile' post.author.profile.id %}">
-                                <img src="https://www.kindpng.com/picc/m/451-4517876_default-profile-hd-png-download.png"
-                                    class="img-circle-2 img-fluid" alt="post author"></a>
+                        <div class="circle-image">
+                            <div class="media-object pull-left"><a href="{% url 'profile' post.author.profile.id %}">
+                                    <img src="https://www.kindpng.com/picc/m/451-4517876_default-profile-hd-png-download.png"
+                                        class="img-circle-2 img-fluid " alt="post author"></a>
+                            </div>
                         </div>
                         {% else %}
-                        <a href="{% url 'profile' post.author.profile.id %}">
-                            <img src="{{ post.author.profile.profile_pic.url }}" class="img-circle-2 img-fluid"
-                                alt="postr author"></a>
+                        <div class="circle-image">
+                            <a href="{% url 'profile' post.author.profile.id %}">
+                                <img src="{{ post.author.profile.profile_pic.url }}" class="img-circle-2 img-fluid"
+                                    alt="postr author"></a>
+                        </div>
                     </div>
                     {% endif %}
                 </div>
             </div>
             <div class="col-md-10 col-sm-12">
-
-                <h3 class="media-heading">{{  post.author.profile.first_name }}
-                    {{  post.author.profile.last_name }}</h3>
+                <h3 class="media-heading hover-underline-animation">
+                    {{  post.author.profile.first_name }}
+                    {{  post.author.profile.last_name }}
+                </h3>
                 <small>
                     <p class="links"><a href="{% url 'profile' post.author.profile.id %}"
                             class="social-media">Profile</a>
@@ -106,6 +111,9 @@
                         {% endif %}
                         {% if post.author.profile.instagram_url %}
                         | <a href="{{ post.author.profile.instagram_url }}" class="social-media">Instagram</a>
+                        {% endif %}
+                        {% if post.author.profile.twitter_url %}
+                        | <a href="{{ post.author.profile.twitter_url }}" class="social-media">Twitter</a>
                         {% endif %}
                 </small>
                 <p class="bio">{{ post.author.profile.bio|safe }}</p>

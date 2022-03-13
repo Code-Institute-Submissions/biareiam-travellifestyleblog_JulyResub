@@ -73,6 +73,7 @@ Colours are kept to a minimum in order to keep focus on the imagery of the post,
 ### Typography
 Google Fonts used across the site: 
 - [Montserrat](https://fonts.google.com/specimen/Montserrat?query=mont)
+- [Comfortaa](https://fonts.google.com/specimen/Comfortaa?preview.text=What%27s%20up%20&preview.text_type=custom)
 
 ###  Media
 The images on the blog were from [Pexel](https://www.pexels.com/).
