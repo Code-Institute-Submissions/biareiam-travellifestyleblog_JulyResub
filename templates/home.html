@@ -7,11 +7,12 @@
         <div class="image-banner">
         </div>
     </div>
-
+    {% for post in object_list %}
     <div class="container">
-        {% for post in object_list %}
+
         <article class="postcard">
             <div class="row">
+
                 <div class="col-md-4">
                     {% if "placeholder" in post.image.url %}
                     <a class="postcard__img_link" href="{% url 'article-detail' post.pk  %}">
@@ -45,11 +46,13 @@
                     </div>
                 </div>
                 <hr>
-            </div>
-        </article>
-        {% endfor %}
-    </div>
 
+            </div>
+
+        </article>
+
+    </div>
+    {% endfor %}
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination">
