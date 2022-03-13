@@ -3,38 +3,39 @@
 
 {% block title %} Delete Post{% endblock%}
 {% block content %}
-
-{% if user.is_authenticated %}
-{% if user.id == post.author.id %}
-<div class="delete">
-    <div class="delete-post">
-        <h2 class="delete-title">Delete Your Post</h2>
-        <p class="delete-post-title">Delete: "{{ post.post_title }}" </p>
-        <div class="form-group">
-            <form method="POST">
-                {% csrf_token %}
-                <p class="delete-question"> Are you sure you want to delete this post?</p><br>
-                <div class="btn-login">
-                    <button type="submit" class="btn btn-primary btn-submit">Delete</button>
-                </div>
-            </form>
+<div class="post-banner">
+    {% if user.is_authenticated %}
+    {% if user.id == post.author.id %}
+    <div class="delete">
+        <div class="delete-post">
+            <h2 class="delete-title">Delete Your Post</h2>
+            <p class="delete-post-title">Delete: "{{ post.post_title }}" </p>
+            <div class="form-group">
+                <form method="POST">
+                    {% csrf_token %}
+                    <p class="delete-question"> Are you sure you want to delete this post?</p><br>
+                    <div class="btn-login">
+                        <button type="submit" class="btn btn-primary btn-submit">Delete</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-{% else %}
-<div class="not-allow">
-    <div class="not-allow-box">
-        <p>You need to login to be able to delete a post</p>
-        <p><a href="{% url 'login' %}">Login Here</a></p>
+    {% else %}
+    <div class="not-allow">
+        <div class="not-allow-box">
+            <p>You need to login to be able to delete a post</p>
+            <p><a href="{% url 'login' %}">Login Here</a></p>
+        </div>
     </div>
-</div>
-{% endif %}
-{% else %}
-<!-- If the user ends up on this page without being logged in, a message will be displayed -->
-<div class="not-allow">
-    <div class="not-allow-box">
-        <p>You need to login to be able to delete a post</p>
-        <p><a href="{% url 'login' %}">Login Here</a></p>
+    {% endif %}
+    {% else %}
+    <!-- If the user ends up on this page without being logged in, a message will be displayed -->
+    <div class="not-allow">
+        <div class="not-allow-box">
+            <p>You need to login to be able to delete a post</p>
+            <p><a href="{% url 'login' %}">Login Here</a></p>
+        </div>
     </div>
 </div>
 {% endif %}

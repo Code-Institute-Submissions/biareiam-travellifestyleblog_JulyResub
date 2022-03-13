@@ -4,30 +4,31 @@
 {% block title %} Register {% endblock%}
 {% block content %}
 
-<!-- If the user inputs something wrong, he/she will be notified -->
-{% if form.errors %}
-<br>
-<div class="alert alert-danger" role="alert">
-    There was an error with your form!
-</div>
-{% endif %}
+<div class="login-register-banner">
+    <!-- If the user inputs something wrong, he/she will be notified -->
+    {% if form.errors %}
+    <br>
+    <div class="alert alert-danger" role="alert">
+        There was an error with your form!
+    </div>
+    {% endif %}
 
-<div class="register">
-    <h3 class="register-title">Register User</h3>
-    <div class="form-group form-register">
-        <form method="POST" action="{% url 'register' %}">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <small class="already-registered">Already have an account? <a href="{% url 'login' %}">Login
-                    here</a></small>
-            <br>
-            <div class="btn-register">
-                <button class="btn btn-secondary btn-submit">Submit</button>
-            </div>
-        </form>
+    <div class="register">
+        <h3 class="register-title">Register User</h3>
+        <div class="form-group form-register">
+            <form method="POST" action="{% url 'register' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <small class="already-registered">Already have an account? <a href="{% url 'login' %}">Login
+                        here</a></small>
+                <br>
+                <div class="btn-register">
+                    <button class="btn btn-secondary btn-submit">Submit</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
-
 
 
 {% endblock %}

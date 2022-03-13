@@ -3,6 +3,8 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -10,70 +12,60 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover; */
-    color: #2f4c4c;
-    font-family: "Lora", sans-serif;
 }
 
+font-family: "Lora",
+sans-serif !important;
 
 /**--------------------base---------------**/
-.base {
-    padding-top: 1rem;
+#base {
+    padding: 1rem 4rem;
 }
 
 /**----------- Navbar---------------------**/
 .nav-link {
     text-transform: uppercase;
-    font-weight: 600;
-    color: #ffffff;
+    color: #ffffff !important;
     display: block;
     padding: 0.5rem 1rem;
     text-decoration: none;
     transition: none;
-    font-family: "Montserrat", sans-serif;
-}
-
-.nav-link:hover {
-    background-color: #2c3033;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .navbar {
-    background-color: #2c3033;
-    font-family: "Montserrat", sans-serif;
+    background-color: #000000;
 }
 
 .navbar-nav .dropdown-menu {
     position: static;
     border: none;
-    background-color: #2c3033;
-    color: #ffffff;
-    ;
+    background-color: black;
+    color: #ffffff !important;
 }
 
 .navbar-brand {
-    font-size: 2rem;
+    font-size: 1.6rem;
     padding-left: 2.5rem;
     padding-top: 1.3rem;
     padding-bottom: 1.3rem;
-
 }
 
 .brand {
     color: #ffffff;
 }
 
+
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .show>.nav-link {
     color: #ffffff;
-    ;
-
 }
 
 .navbar-light:hover .navbar-nav:hover .nav-link:hover {
-    color: #3b1c74;
+    color: white;
 }
 
 .dropdown-menu {
@@ -85,11 +77,17 @@ body {
     margin: 0;
     font-size: 1rem;
     color: #ffffff;
+    background-color: #424242;
     text-align: left;
     list-style: none;
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, .15);
     border-radius: 0.25rem;
+}
+
+.dropdown-menu a:hover {
+    background-color: #797879;
+    color: white;
 }
 
 .navbar>.container,
@@ -98,7 +96,7 @@ body {
     flex-wrap: inherit;
     align-items: center;
     justify-content: space-between;
-    padding-right: 4rem;
+    padding-right: 3rem;
 }
 
 .navbar-toggler {
@@ -112,13 +110,14 @@ body {
 }
 
 
-@media(max-width:500px) {
+@media(max-width:400px) {
     .navbar-brand {
         padding-left: 1rem;
     }
 
-    .navbar>.container {
-        padding-right: 0;
+    .navbar>.container,
+    .navbar>.container-fluid {
+        padding-right: 0.5rem;
     }
 }
 
@@ -145,9 +144,13 @@ body {
 /**-------------------- Home Page --------------**/
 .image-banner {
     background-size: cover;
-    background-color: #4099FF;
-    height: 10rem;
+    background-image: url("https://images.pexels.com/photos/1229753/pexels-photo-1229753.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    height: 16rem;
     margin-bottom: 1rem;
+    background-position: bottom;
+    margin-top: 1rem;
+    margin-right: 4.6rem;
+    margin-left: 4.6rem;
 }
 
 .homepage {
@@ -160,22 +163,28 @@ body {
     margin-bottom: 1rem;
     float: right;
     margin-right: 2.5rem;
-
 }
 
-.page-link {
+
+.pagination a {
     border-right: none;
     border-top: none;
     border-left: none;
     color: #212529;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;
     letter-spacing: 2px;
     font-weight: 700;
     font-size: 0.8rem;
+}
 
-
+.postcard__bar {
+    border-top: 2px solid;
+    display: block;
+    max-width: 40px;
+    margin: 0 0 14px;
+    color: #161616;
+    margin-top: 0.5rem;
 }
 
 .categories {
@@ -188,25 +197,33 @@ body {
 
 .categories-home {
     text-decoration: none;
-    color: #c39f76;
+    color: white;
     font-weight: 400;
     font-size: 0.8rem;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     display: inline-block;
     text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;
+    margin-bottom: 0.6rem;
+    background-color: #c39f76;
+    padding: 0rem 0.1rem;
+    border: 1px solid #c39f76;
 
 }
 
 .categories-home:hover,
 .categories-home:focus {
-    color: #ffffff;
-    background-color: #BFACB2;
+    background-color: white;
+    color: #c39f76;
+    border: 1px solid #c39f76;
 }
 
 .card-title {
     margin-bottom: 2rem;
-    font-family: "Montserrat", sans-serif;
+}
+
+.page-link:hover {
+    color: #c39f76;
+    background-color: transparent !important;
 }
 
 
@@ -261,128 +278,55 @@ body {
     }
 }
 
-/*------------------------ Footer -----------------*/
-
-.footer {
-    display: flex;
-    margin-right: 5rem;
-    justify-content: space-between;
-    color: #ffffff;
-    font-family: "Montserrat", sans-serif;
-    background-color: #212529;
+/*-----------------Footer ---------------------*/
+#footer {
+    background: #161616;
+    clear: both
 }
 
-.copyright p {
-    padding-top: 1rem;
-    color: #ffffff;
-    padding-left: 6rem;
+#footer-social {
+    border-bottom: 1px solid;
+    border-color: #313131;
+    text-align: center;
+    padding: 28px 0
 }
 
-
-.icon {
-    text-align: right;
-    margin-left: -100px;
-    color: #ffffff;
+#footer-social a {
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 28px;
+    -o-transition: .3s;
+    -ms-transition: .3s;
+    -moz-transition: .3s;
+    -webkit-transition: .3s;
+    transition: .3s
 }
 
-
-
-#lab_social_icon_footer {
-    padding: 10px 0;
-    font-size: 0.8rem;
+#footer-social a:hover {
+    color: #c39f76
 }
 
-#lab_social_icon_footer a {
-    color: #ffffff;
+#footer-social a span {
+    margin-left: 5px
 }
 
-#lab_social_icon_footer .social:hover {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
+#footer-copyright {
+    text-align: center;
+    padding: 28px 0;
+    clear: both
 }
 
-#lab_social_icon_footer .social {
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    -o-transform: scale(0.8);
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
+.copyright {
+    color: #888;
+    font-size: 12px
 }
 
-#lab_social_icon_footer #social-fb:hover {
-    color: #3B5998;
+.copyright a {
+    color: #fff
 }
 
-#lab_social_icon_footer #social-tw:hover {
-    color: #4099FF;
-}
-
-#lab_social_icon_footer #social-gp:hover {
-    color: #d34836;
-}
-
-#lab_social_icon_footer #social-ig:hover {
-    color: #f3127b;
-}
-
-
-@media(max-width:800px) {
-    .copyright p {
-        font-size: 0.8rem;
-        padding-left: 6rem;
-    }
-}
-
-@media (max-width: 500px) {
-    .copyright p {
-        padding-left: 5rem;
-    }
-
-    footer {
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin: auto;
-    }
-
-    .block {
-        margin-left: 1rem;
-        padding-left: 5.5rem;
-    }
-
-    .icon {
-        text-align: center;
-        margin-left: 0;
-    }
-
-    .copyright {
-        text-align: center;
-        margin-bottom: -1rem;
-    }
-
-    #lab_social_icon_footer {
-        padding: 10px 0;
-        font-size: 0.8rem;
-        margin-left: 3rem;
-    }
-}
-
-@media(max-width:400px) {
-    .block {
-        margin-left: 0rem;
-        display: flex;
-        flex-wrap: nowrap;
-    }
-}
-
-@media(max-width:350px) {
-    .block {
-        margin-left: -1.5rem;
-    }
-}
 
 /*---------------- Post page -----------------**/
 #blog-single-post {
@@ -416,7 +360,6 @@ body {
 
 .post-title {
     text-align: center;
-    font-family: "Montserrat", sans-serif;
 }
 
 .blog-post-title h2,
@@ -464,7 +407,7 @@ body {
 
 .blog-post-format span a {
     text-decoration: none;
-    color: #3B5998;
+    color: #c39f76;
 }
 
 .icons-sub-title {
@@ -474,7 +417,7 @@ body {
 .categories-detail-2 {
     font-size: 0.9rem;
     padding: 0.3rem 0.5rem;
-    background-color: #D4C4CE !important;
+    background-color: #000000 !important;
     border: none;
 
 }
@@ -497,7 +440,6 @@ body {
 .blog-post-image {
     text-align: center;
 }
-
 
 .snippets {
     padding-bottom: 1rem;
@@ -573,9 +515,7 @@ body {
     text-align: center;
     margin-top: 1rem;
     font-size: 1.7rem;
-    color: white;
 }
-
 
 .card-body {
     height: 650px;
@@ -602,7 +542,7 @@ body {
 .dropdown-item-cat:hover,
 .dropdown-item-cat:focus {
     text-decoration: underline;
-    color: #212529;
+    color: #c39f76;
 }
 
 .categories-items {
@@ -611,14 +551,24 @@ body {
 
 
 .add-category {
-    color: #ffffff;
-    background-color: #32373c;
+
     margin-top: -3rem;
     border-radius: 0;
     margin-left: 1rem;
     padding: 0.5rem 1rem;
     font-size: 1.1rem;
     margin-bottom: 4rem;
+
+    border: solid 1px #000000;
+    color: #000000;
+    background-color: transparent;
+}
+
+.add-category:hover,
+.add-category:focus {
+    border: 1px solid #c39f76;
+    background-color: #c39f76;
+    color: #ffffff;
 }
 
 
@@ -648,15 +598,15 @@ body {
 
 .card-categories {
     padding: 10px;
-    box-shadow: 12px 12px 2px 1px #5f555e;
     border: 2px solid #ffffff;
-    background-color: #D4C4CE;
+    background-color: #212529;
     color: white;
 }
 
 .card-categories:hover,
 .card-categories:focus {
     text-decoration: underline;
+    color: white;
 }
 
 @media(max-width:800px) {
@@ -696,14 +646,11 @@ body {
     text-align: center;
 }
 
-
 .category-title {
     padding-top: 1rem;
     margin-top: -1.4rem;
     color: white;
 }
-
-
 
 .cat {
     padding-bottom: 7rem;
@@ -712,7 +659,6 @@ body {
 }
 
 .category-add {
-
     max-width: 26rem;
     margin: auto;
     padding: 2rem;
@@ -787,18 +733,22 @@ body {
 }
 
 
-
 /*------------- Add Post ------------------*/
-.post {
-    margin-bottom: 2rem;
+.post-banner {
+    background-image: url("https://images.pexels.com/photos/2609463/pexels-photo-2609463.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=740");
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    margin-top: -1rem;
 }
 
 
 .add-edit-post {
     margin-bottom: 2.5rem;
     padding: 1rem;
-    background-color: #D4C4CE;
-    color: white;
+    background-color: rgba(163, 163, 163, 0.589);
+    color: rgb(0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
 }
 
 .add-edit-post-page {
@@ -935,19 +885,39 @@ body {
 
 
 /*------------- Login and register pages ------------------*/
+.login-register-banner {
+    background-image: url("https://images.pexels.com/photos/262325/pexels-photo-262325.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=800");
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
 .login,
 .register {
     margin: auto;
     width: 40%;
-    margin-top: 2.5rem;
     padding-bottom: 0.5rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    margin-bottom: 2.5rem;
-    background-color: #D4C4CE;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: rgba(255, 255, 255, 0.144);
+    background-clip: padding-box;
+    border: 1px solid #ffffff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
 
 .login-title,
 .register-title {
@@ -982,13 +952,13 @@ body {
 }
 
 .signin {
-    color: gray;
+    color: rgb(255, 255, 255);
 }
 
 .signin a {
     text-decoration: none;
     font-weight: 600;
-    color: #5398dd;
+    color: #7e76c3;
 }
 
 .helptext {
@@ -1987,8 +1957,6 @@ body {
     text-transform: uppercase;
     font-weight: 500;
     line-height: 1.4em;
-    font-family: "Montserrat", sans-serif;
-
 }
 
 .postcard__title a {
@@ -2000,21 +1968,11 @@ body {
     margin-bottom: 1rem;
 }
 
-.list-title-divider {
-    border-top: 2px solid;
-    display: block;
-    max-width: 40px;
-    margin: 0 0 14px;
-    color: #161616;
-    margin-top: 0.5rem;
-}
 
 .post-date {
     color: #999;
     font-style: italic;
 }
-
-
 
 a,
 a:hover {
@@ -2061,8 +2019,6 @@ a:hover {
         text-decoration: underline;
         color: #212529;
     }
-
-
 
     .postcard__img {
         max-height: 180px;
@@ -2351,3 +2307,5 @@ a:hover {
                 transparent 50%);
     }
 }
+
+/*********************/

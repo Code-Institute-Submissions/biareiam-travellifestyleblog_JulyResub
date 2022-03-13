@@ -4,36 +4,37 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<div class="post">
-    <div class="add-edit-post">
-        <h2 class="add-edit-post-page">Add Post</h2>
-        <div class="form-group add-edit-post-form">
-            <form method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ form.media}}
-                {{ form.as_p }}
-                <div class="btn-login">
-                    <button type="submit" class="btn btn-primary btn-submit">Submit</button>
-                </div>
-            </form>
+<div class="post-banner">
+    <div class="post">
+        <div class="add-edit-post">
+            <h2 class="add-edit-post-page">Add Post</h2>
+            <div class="form-group add-edit-post-form">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.media}}
+                    {{ form.as_p }}
+                    <div class="btn-login">
+                        <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-<script>
-    var name = "{{ user.id }}";
-    document.getElementById("identifier").value = name;
-</script>
-{% else %}
-<!-- If the user ended up in this page without being logged in, a message will be displayed -->
-<div class="not-allow">
-    <div class="not-allow-box">
-        <p>You need to login to be able to add a post</p>
-        <p><a href="{% url 'login' %}">Login Here</a></p>
+    <script>
+        var name = "{{ user.id }}";
+        document.getElementById("identifier").value = name;
+    </script>
+    {% else %}
+    <!-- If the user ended up in this page without being logged in, a message will be displayed -->
+    <div class="not-allow">
+        <div class="not-allow-box">
+            <p>You need to login to be able to add a post</p>
+            <p><a href="{% url 'login' %}">Login Here</a></p>
+        </div>
     </div>
+    {% endif %}
 </div>
-{% endif %}
 </div>
-
 
 
 

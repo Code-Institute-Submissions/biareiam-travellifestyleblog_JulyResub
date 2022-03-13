@@ -2,18 +2,21 @@
 {% block title%} Settings {% endblock%}
 {% block content %}
 
+
 {% if user.is_authenticated %}
-<div class="profile">
-    <div class="profile-page">
-        <h3 class="profile-page-title">Settings</h3>
-        <div class="form-group profile-page-form">
-            <form method="POST">
-                {% csrf_token %}
-                {{ form.as_p}}
-                <div class="btn-login">
-                    <button type="submit" class="btn btn-primary btn-submit">Edit Profile</button>
-                </div>
-            </form>
+<div class="login-register-banner">
+    <div class="profile">
+        <div class="profile-page">
+            <h3 class="profile-page-title">Settings</h3>
+            <div class="form-group profile-page-form">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p}}
+                    <div class="btn-login">
+                        <button type="submit" class="btn btn-primary btn-submit">Edit Profile</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
