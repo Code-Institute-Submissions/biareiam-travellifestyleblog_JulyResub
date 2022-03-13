@@ -66,14 +66,13 @@ On the individual post page, users can find the photo, name, bio and social medi
 The initial idea was to create a site which would be easy to navigate without many painpoints. The user can easily find what they are looking for as well as engage with the posts, by liking or leaving a comment to it. 
 
 ### Colour Scheme
-Colours are kept to a minimum in order to keep focus on the imagery of the post, chosen colours are various shades of purple. Colour scheme can be found below:
+Colours are kept to a minimum in order to keep focus on the imagery of the post, chosen colours were based on the hero image. Colour scheme can be found below:
 
-![colour_scheme](https://user-images.githubusercontent.com/65717229/157550822-a0f2f9aa-cc02-44f2-af3d-e6cc1b293dff.PNG)
+![colour_scheme](https://user-images.githubusercontent.com/65717229/158066980-21028c56-d426-453c-83cd-52559dac98ab.PNG)
 
 ### Typography
-Two Google Fonts were used across the site: 
-- [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto)
-- [Lato](https://fonts.google.com/specimen/Lato?query=lato) 
+Google Fonts used across the site: 
+- [Montserrat](https://fonts.google.com/specimen/Montserrat?query=mont)
 
 ###  Media
 The images on the blog were from [Pexel](https://www.pexels.com/).
@@ -93,7 +92,7 @@ For users who visited to site and are not registered/logged in yet, the follow l
 * Login
 * Register
 
-<img width="700" src="https://user-images.githubusercontent.com/65717229/157740977-d28e27a5-bd48-4949-9b23-992e14f52bca.PNG" alt="not logged in navbar">
+<img width="500" src="https://user-images.githubusercontent.com/65717229/158068621-2d679857-dbfc-4c12-b162-a94484937852.PNG" alt="not logged in navbar">
 
 For users who are logged in, the follow links are visible:
 
@@ -107,16 +106,20 @@ For users who are logged in, the follow links are visible:
     * Settings
     * Logout 
 
-<img width="700" src="https://user-images.githubusercontent.com/65717229/157741278-a7392e69-6285-42be-a9e2-a07a866eadd3.PNG" alt="not logged in navbar">
+<img width="500" src="https://user-images.githubusercontent.com/65717229/158068642-60da9b2f-4636-4209-87f7-1a752cfe7e0e.PNG" alt="logged in navbar">
+
 
 Python determines if the user is logged in or not by checking if 'user' in session and passes this data to Jinja to display the correct navbar for the user.
 On the smaller resolutions (tablet, mobile) the navbar is collapsed into a burger icon. A slide out menu opens when the burger icon is clicked.
+
+<img width="500" src="https://user-images.githubusercontent.com/65717229/158069792-6af5848c-11e0-4f87-ac28-8b5d47684496.PNG" alt="hambuger navbar">
+
 
 **Footer**
 
 The footer features some key Information such as copyright information and links to social media platforms.
 
-<img width="700" src="https://user-images.githubusercontent.com/65717229/157741717-b23d3686-2356-4666-9ae6-8a4a91de5adb.PNG" alt="footer">
+<img width="500" src="https://user-images.githubusercontent.com/65717229/158068681-dee6ad4c-f9b9-4cbd-956a-563b0329b498.PNG" alt="footer">
 
 
 ### Elements on Multiple Pages
@@ -125,10 +128,9 @@ The footer features some key Information such as copyright information and links
 
 (Home, individual category page, my posts page)
 
--   It displays the post's image, a small headline of the post, date posted, author of the post and a "Read More" button which directs users to the individual post page. The user can also be directed to that page by clicking on the images. 
-On large and medium devices, 3 cards are displayed in a row and on smaller devices, one card per row. If the user hover over the images, they zoom in a little, giving it a bit of effect. 
+-   It displays the post's image, the post categorym a small headline of the post, and the date which it was posted. The user can read the whole post by clicing on the image or on the post name.. 
 
-<img width="700" alt="post-card" src="https://user-images.githubusercontent.com/65717229/157744283-23bcfb43-438a-4e34-83db-aaa19e692f7a.PNG">
+<img width="500" alt="post-card" src="https://user-images.githubusercontent.com/65717229/158068746-9fbe3bd4-796f-493a-b4af-b9296e2dbdf9.PNG">
 
 
 **Pagination**
@@ -137,7 +139,7 @@ On large and medium devices, 3 cards are displayed in a row and on smaller devic
 
 - Where there are more than six results navigation links to pages are displayed below the number of results (6 results per page).
 
-<img width="700"  alt="pagination-homepage" src="https://user-images.githubusercontent.com/65717229/157744517-b9d6b95b-aefb-4332-b6b7-51cb7eebac47.PNG">
+<img width="500"  alt="pagination-homepage" src="https://user-images.githubusercontent.com/65717229/158068759-8aba7919-67bd-45a4-89a9-d6a4d30c90dd.PNG">
 
 **Sort into categories**
 
@@ -145,90 +147,112 @@ On large and medium devices, 3 cards are displayed in a row and on smaller devic
 
 - One the card, in the home page, it is possible to see the category the post belongs to and by clicking on it, the user is directed to a page with all the posts from that specific category. The same happens on the individual post page and also on the my posts page, which is where a user can see all the posts published by himself/herself.
 
-<img width="700"  alt="categories" src="https://user-images.githubusercontent.com/65717229/157744750-be958c6b-233c-44af-9ed3-735097933cee.PNG">
+<img width="500"  alt="categories" src="https://user-images.githubusercontent.com/65717229/158068780-73338ec0-009b-4498-8a4a-f1c10ecf0304.PNG">
 
 
 ### Individual Pages
 
-#### Post Page
+### Post Page
+
+**Individual Post Page**
+- if the users click on the image or the post title, they will directed to the individual post page, where they can read the full post. 
+
+<img width="500" alt="post" src="https://user-images.githubusercontent.com/65717229/158068839-cf856fd6-f93f-4c56-8bb5-e53cfd1249f6.PNG">
 
 **Edit and Delete post**
 
 - If logged in and the author of the post, the user can either edit or delete it, if desired. 
 
-<img width="700" alt="test-edit" src="https://user-images.githubusercontent.com/65717229/157745039-5447019e-c0eb-4ab7-bad7-faac36902a93.PNG">
+<img width="500" alt="add-edit-delete-btn" src="https://user-images.githubusercontent.com/65717229/158068950-0c22af61-3cea-4be8-abeb-78a76f9513be.PNG">
+<img width="500" alt="edit-post" src="https://user-images.githubusercontent.com/65717229/158069645-919590d7-c9fc-42ad-92c1-82d5b14844f6.PNG">
+<img width="500" alt="delete-post" src="https://user-images.githubusercontent.com/65717229/158069659-445ff5a7-ddb3-405e-ba30-2c723b325469.PNG">
+
 
 **Like button**
 
 - If logged in, the user can like and dislike a post.
 
-<img width="700"  alt="like" src="https://user-images.githubusercontent.com/65717229/157745171-ecee9b3d-a6ae-413a-92c8-ce839889e3ea.PNG">
+<img width="500"  alt="like" src="https://user-images.githubusercontent.com/65717229/158068956-b0ba8962-c081-4a8d-929c-fb420df9d301.PNG">
 
 **Author Profile**
 
 - The user can check the profile of the author of the post, as well as see their social media. 
 
-<img width="700"  alt="authoer-card" src="https://user-images.githubusercontent.com/65717229/157745972-8a2790a9-4eec-43e7-b342-1d87afe8e2a4.PNG">
+<img width="500"  alt="authoer-card" src="https://user-images.githubusercontent.com/65717229/158069005-01c52e22-60e9-4d88-8a7f-49cb55605898.PNG">
 
 
 **Comments**
 
 - When logged in, users can leave comments on the posts. Everyone is able to see them, logged in or not.
 
-<img width="700"  alt="comments" src="https://user-images.githubusercontent.com/65717229/157745523-ae41646a-3ea1-46ce-8c1c-ffe1d87f09bd.PNG">
+<img width="500"  alt="comments" src="https://user-images.githubusercontent.com/65717229/158069298-6e64d93a-8468-45b3-8a52-5ab9014b9a86.PNG">
 
 
-#### Login Page
+### Login Page
 - This section contains a form where users may login and be redirected to Home Page. Below the form, the user can find a link to register.
 
-<img width="700" alt="login" src="https://user-images.githubusercontent.com/65717229/157746034-54e3f933-8b74-4154-b1c1-3e92adb01c65.PNG">
+<img width="500" alt="login" src="https://user-images.githubusercontent.com/65717229/158069311-f753376c-8e59-42c1-8478-771a0cf8e007.PNG">
 
 
-#### Logout
+### Logout
 - Clicking 'Logout' ends a user session and redirects them to the 'Home' page.
 
-<img width="700" alt="logout" src="https://user-images.githubusercontent.com/65717229/157746134-22799471-adc2-4804-ab1e-7a1a031aa4da.PNG">
-
-#### Register Page
+### Register Page
 - This section contains a registration form.Once it is completed, they will be redirected to the login page where they can then sign in.
 
-<img width="700"  alt="register" src="https://user-images.githubusercontent.com/65717229/157746192-c2859a25-8aa2-4b65-8438-6a27af68c5d7.PNG">
+<img width="500"  alt="register" src="https://user-images.githubusercontent.com/65717229/158069320-657b6016-fdd5-4766-a2a5-a0aa9f7e9af3.PNG">
 
-#### User Profile Page
+### User Profile Page
 
 It contains a profile image, the user first and last name, their email, bio and a link to their social media.
 
-<img width="700" alt="profile" src="https://user-images.githubusercontent.com/65717229/157745360-baa61e89-74cd-4b4a-b400-5460c813ffa5.PNG">
+<img width="500" alt="profile" src="https://user-images.githubusercontent.com/65717229/158069371-eb34de0f-e2ea-4fe0-8a60-3e3697a59ebe.PNG">
 
-#### Edit Profile Page
+### Create User Profile page
+
+Once users created an account, they can create a profile.
+
+<img width="500" alt="profile" src="https://user-images.githubusercontent.com/65717229/158069860-d085e4fc-1a43-443f-8f73-a50e8afb5d8c.PNG">
+
+### Edit Profile Page
 
 The owner of the profile can edit it, for instance change the profile image or the information provided in the bio. 
 
-<img width="700" alt="edit-pro" src="https://user-images.githubusercontent.com/65717229/157748547-4ca3e635-d6ae-45ba-bc86-c4fa9722c601.PNG">
+<img width="500" alt="edit-pro" src="https://user-images.githubusercontent.com/65717229/158069387-b49f4915-ddfa-48e1-a7a7-afca729e9650.PNG">
 
-#### Settings
+### Settings
 
 On this page, the user can change their first and last name, email, and password. 
 
-<img width="700" alt="setting" src="https://user-images.githubusercontent.com/65717229/157747410-83260407-d388-4780-b87f-0993ca5f0f20.PNG">
+<img width="500" alt="setting" src="https://user-images.githubusercontent.com/65717229/158069403-09a2a589-0ded-4ea4-8131-6a199188366f.PNG">
 
-#### My Posts Page
+<img width="500"  alt="change-password" src="https://user-images.githubusercontent.com/65717229/158070956-f8b79530-ed1b-4ecc-9d09-7f003456a621.PNG">
+
+
+### My Posts Page
 
 This page displays as posts published by the user, who is logged in. if there are no posts, there is a message and a button directing them to the add post page. 
 
-<img width="700" alt="myposts" src="https://user-images.githubusercontent.com/65717229/157747467-dec2efec-6655-4a7b-890e-6bcae1b878f5.PNG">
+<img width="500" alt="myposts" src="https://user-images.githubusercontent.com/65717229/158069429-88bd5027-d7e6-429e-b740-b88bd125be53.PNG">
 
-#### Add Post Page
+### Add Post Page
 
 Users who are registered can create their own post.
 
-<img width="700" alt="add-post" src="https://user-images.githubusercontent.com/65717229/157747547-0e6c887f-6910-4458-bf5e-ec7005f27890.PNG">
+<img width="500" alt="add-post" src="https://user-images.githubusercontent.com/65717229/158069440-1e749af1-e3e8-4774-a39e-8c9a339381d8.PNG">
 
-#### Categories Page
+### Categories Page
 
 Users can see all the existing categories and if needed, add a new one. For instance, pets.
 
-<img width="700" alt="categories-list" src="https://user-images.githubusercontent.com/65717229/157746399-dcd5f5b1-8707-4a96-9ce7-879ead84328a.PNG">
+<img width="500" alt="categories-list" src="https://user-images.githubusercontent.com/65717229/158069453-96c42a43-cc76-4434-86a0-65720b45b745.PNG">
+
+### Add Categories Page
+
+Users can add new categories if they see necessary.
+
+<img width="500" alt="categories-list" src="https://user-images.githubusercontent.com/65717229/158069928-3cad7e6a-ed87-4744-b71a-5e6eb921ef6d.PNG">
+
 
 **Admin Superuser**
 
@@ -316,6 +340,7 @@ Further details on all Python packages used on this project can be found in the 
     - [Django Project](https://docs.djangoproject.com/en/4.0/)
     - [Ask Python](https://www.askpython.com/django/django-blog-app)
     - [Django Central](https://djangocentral.com/building-a-blog-application-with-django/)
+- [Social Media Icons](https://icons8.com/icon)
 
 ### Content
 
@@ -341,7 +366,6 @@ Extensively used Crome Developer tools to test form submissions through network 
     - Test if page is responsive at all sizes.
     - Test footer social icon links (links open homepages in a new window).
     - Test If I see the different posts on the home page (Pagination).
-    - Test if I could go to each post individually, by clicking on the image or "Read More" button.
 
 2. Sign Up
 
@@ -349,10 +373,17 @@ Extensively used Crome Developer tools to test form submissions through network 
     - Try to register with invalid email or not email at all ("Please include a "@" in the email address" or "Please fill out this field")    
     - Attempt to use username/password that is too long or too short ("There was an error with your form!")
 
+    <img width="500"  alt="register-message" src="https://user-images.githubusercontent.com/65717229/158070446-60c36693-1c35-4eef-a2c6-31f05eeb1ba5.PNG">
+
+     <img width="500" alt="change-password-message" src="https://user-images.githubusercontent.com/65717229/158070943-20c5ba96-2bb0-4e8a-92ec-53f7924a7e84.PNG">
+
+
 3. Login
 
     - Try leaving fields empty (message "There was an error with your form...Please try again")
     - Typed the wrong username or password (message "There was an error with your form...Please try again" )
+
+ <img width="500" alt="login-error" src="https://user-images.githubusercontent.com/65717229/158070414-51d21470-05a4-4b4c-8284-050d94b8450d.PNG">
 
 4. Create  Profile
 
@@ -360,12 +391,15 @@ Extensively used Crome Developer tools to test form submissions through network 
     - Try not to add all the social media links. It will be displayed in the profile page only the ones added. 
     - Try to create a profile without being logged in (Message "You need to login to be able to create a profile")
 
+    <img width="500"   alt="create-profile-not-logged" src="https://user-images.githubusercontent.com/65717229/158070500-95130eb7-98ee-4676-9628-3f23f6093f5a.PNG">
 
 5. Edit Profile
 
     - Test if it is possible to edit an existing profile.
     - Check if changes were effective.
     - try to edit a post without being logged in (Message "You need to login to be able to edit your profile. Login here")
+
+    <img width="500" alt="edit-profile-notlogged" src="https://user-images.githubusercontent.com/65717229/158070569-bd7d4225-e577-4b62-8c7a-585d394ba778.PNG">
 
 6. Settings
 
@@ -375,12 +409,17 @@ Extensively used Crome Developer tools to test form submissions through network 
     - Test if the passwords do not match.(Message "The two password fields didn’t match.")
     - Try inserting the wrong "old password". (Message "Your old password was entered incorrectly. Please enter it again.")
 
+    <img width="500" alt="edit-profile-notlogged" src="https://user-images.githubusercontent.com/65717229/158070569-bd7d4225-e577-4b62-8c7a-585d394ba778.PNG">
+
+
 7. Add Post
 
     - Try to submit an empty form and verify that no post has been added to any category page.The page just reloads and will not submit the form until it is filled in.
     - Try to submit a filled out form and verify that fields appear correctly, there is no missing information.
     - Try not to add any image to the post. A default image is added as a placeholder. 
     - Try to add a post without being logged in (Message "You need to login to be able to add a post. Log in here")
+
+    <img width="500" alt="addpost-notlogged" src="https://user-images.githubusercontent.com/65717229/158071012-0da865c5-fe68-4b79-ae04-00d70a1d89b9.PNG">
 
 8. Edit and Delete Post
 
@@ -389,11 +428,18 @@ Extensively used Crome Developer tools to test form submissions through network 
     - Check if changes have been made and displayed correctly.
     - Try to edit or delete a post while not logged in. (Message "You need to login to be able to edit/delete a post. Log in here" )
 
+    <img width="500" alt="addpost-notlogged" src="https://user-images.githubusercontent.com/65717229/158071012-0da865c5-fe68-4b79-ae04-00d70a1d89b9.PNG">
+
+    <img width="500" alt="editpost-notlogged" src="https://user-images.githubusercontent.com/65717229/158071044-0c778421-044c-4242-9eab-57572f9bf3a7.PNG">
+
 9. My Posts page
 
     - Try to check if all the posts from the user who is logged in are on one page.
     - Try to check the "My Posts" page without having any posts. (Message "You do not have any post yet")
     - Try to go to "My Posts" without being logged in. (Message "You are not authorised to view this page")
+
+    <img width="500" alt="no-post" src="https://user-images.githubusercontent.com/65717229/158071300-cc3f900a-d46c-49af-a65a-ab076ee73ede.PNG">
+   
 
 10. Categories
 
@@ -402,11 +448,15 @@ Extensively used Crome Developer tools to test form submissions through network 
     - Try to add a category and see if it appears.
     - Try to add a category without being logged in. 
 
+    <img width="500" alt="category-notlogged" src="https://user-images.githubusercontent.com/65717229/158071350-dc7530d1-202e-4ee6-b2f0-39289523b307.PNG">
+
 11. Comment
 
     - Try to see the comments without being logged in.
     - Try to add a comment while logged in and see the comment on the post page.
     - Try to add a comment without being logged in. 
+
+    <img width="500" alt="comment-notlogged" src="https://user-images.githubusercontent.com/65717229/158071362-99b7ab76-c0e0-4a1c-8d3b-1500e1e30c0b.PNG"> 
 
 ### Deployment
 

@@ -1,24 +1,34 @@
 {% extends 'base.html' %}
-{% block title%} Settings {% endblock%}
+
+{% block title %} Settings {% endblock%}
 {% block content %}
 
 
 {% if user.is_authenticated %}
-<div class="profile-banner">
-    <div class="profile">
-        <div class="profile-page">
-            <h3 class="profile-page-title">Settings</h3>
-            <div class="form-group profile-page-form">
-                <form method="POST">
-                    {% csrf_token %}
-                    {{ form.as_p}}
-                    <div class="btn-login">
-                        <button type="submit" class="btn btn-primary btn-submit">Edit Profile</button>
-                    </div>
-                </form>
+
+<div class="profile">
+    <div class="profile-page">
+        <h3 class="profile-page-title">Settings</h3>
+        <div class="form-group profile-page-form">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.media }}
+                {{ form.as_p }}
+                <div class="btn-login">
+                    <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        {% else %}
+        <!-- If the user ends up on this page without being logged in, a message will be displayed -->
+        <div class="not-allow">
+            <div class="not-allow-box">
+                <p>You need to login to be able to edit settings</p>
+                <p><a href="{% url 'login' %}">Login Here</a></p>
             </div>
         </div>
+        {% endif %}
     </div>
 </div>
-{% endif %}
+
 {% endblock %}

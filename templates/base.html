@@ -36,7 +36,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     <!-- Category Menu-->
                     {% if cat_menu %}
@@ -46,9 +46,9 @@
                             Category
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class=" nav-link dropdown-item" href="{% url 'category-list' %}">All Categories</a>
+                            <a class="dropdown-item" href="{% url 'category-list' %}">All Categories</a>
                             {% for item in cat_menu %}
-                            <a class=" nav-link dropdown-item" href="{% url 'category' item %}">{{ item }}</a>
+                            <a class=" dropdown-item drop" href="{% url 'category' item %} ">{{ item }}</a>
                             {% endfor %}
                         </div>
                     </li>
@@ -66,20 +66,20 @@
                             {{ user.first_name }}</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             {% if user.profile.user %}
-                            <li><a class="dropdown-item nav-link" href="{% url 'profile' user.profile.id %}">Profile</a>
+                            <li><a class="dropdown-item drop" href="{% url 'profile' user.profile.id %}">Profile</a>
                             </li>
-                            <li><a class="dropdown-item nav-link" href="{% url 'edit_profile' user.profile.id %}">Edit
+                            <li><a class="dropdown-item drop" href="{% url 'edit_profile' user.profile.id %}">Edit
                                     Profile</a>
                             </li>
-                            <li><a class="dropdown-item nav-link" href="{% url 'my_posts' %}">My Posts</a>
+                            <li><a class="dropdown-item drop" href="{% url 'my_posts' %}">My Posts</a>
                             </li>
-                            <li><a class="dropdown-item nav-link" href="{% url 'setting' %}">Settings</a>
+                            <li><a class="dropdown-item drop" href="{% url 'setting' %}">Settings</a>
                             </li>
                             {% else %}
-                            <li><a class="dropdown-item nav-link" href="{% url 'create_profile' %}">Create Profile</a>
+                            <li><a class="dropdown-item" href="{% url 'create_profile' %}">Create Profile</a>
                             </li>
                             {% endif %}
-                            <li><a class="dropdown-item nav-link" href="{% url 'logout' %}">Logout</a>
+                            <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
                             </li>
                         </ul>
                     </li>
@@ -116,56 +116,21 @@
     <footer id="footer">
         <div class="container">
             <div id="footer-social">
-                <a href="https://facebook.com/solopinedesigns" target="_blank"><i class="fa fa-facebook"></i>
-                    <span>Facebook</span></a> <a href="https://twitter.com/solopinedesigns" target="_blank"><i
-                        class="fa fa-twitter"></i> <span>Twitter</span></a> <a href="https://instagram.com/solopine"
-                    target="_blank"><i class="fa fa-instagram"></i> <span>Instagram</span></a> <a
-                    href="https://pinterest.com/solopinedesigns" target="_blank"><i class="fa fa-pinterest"></i>
-                    <span>Pinterest</span></a></span></a>
+                <a href="https://facebook.com/solopinedesigns" target="_blank">
+                    <span><img src="https://img.icons8.com/ios/18/000000/facebook-new.png" /> Facebook</span></a> <a
+                    href="https://twitter.com/solopinedesigns" target="_blank">
+                    <span><img src="https://img.icons8.com/ios/18/000000/twitter-circled--v1.png" /> Twitter</span></a>
+                <a href="https://instagram.com/solopine" target="_blank"><span><img
+                            src="https://img.icons8.com/ios/18/000000/instagram-new--v1.png" /> Instagram</span></a> <a
+                    href="https://pinterest.com/solopinedesigns" target="_blank">
+                    <span><img src="https://img.icons8.com/ios/18/000000/pinterest--v1.png" />
+                        Pinterest</span></a></span></a>
             </div>
             <div id="footer-copyright">
                 <p class="copyright">© 2022 What'sUp | blog - All rights reserved</p>
             </div>
         </div>
     </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--Footer
-    <footer class="footer bg-dark">
-        <div class="copyright">
-            <p>© 2022 What'sUp | blog - All rights reserved</p>
-        </div>
-
-        <div id="lab_social_icon_footer">
-            <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-            <div class="block">
-                <a href="https://www.facebook.com" target="_blank"><i id="social-fb"
-                        class="fa fa-facebook-square fa-3x social"></i></a>
-                <a href="https://twitter.com" target="_blank"><i id="social-tw"
-                        class="fa fa-twitter-square fa-3x social"></i></a>
-                <a href="https://pinterest.com" target="_blank"><i id="social-gp"
-                        class="fab fa-pinterest-square fa-3x social"></i></a>
-            </div>
-        </div>
-    </footer>-->
 </body>
 
 </html>
