@@ -1,8 +1,8 @@
-# Code Institute Data Centric Development Milestone Project
+# Code Institute Data-Centric Development Milestone Project
 
 ## What’s Up | Blog
 
-This blog was created to host posts covering a series of different topics, such as travel, lifestyle, food & drink, fashion, and so on. Users can browse through many different posts and engage with them. If registered, users can submit, edit and delete posts published by themselves. It was designed to have a clean and simple navigation, aiming for a smooth user experience. 
+This blog was created to host posts covering a series of different topics, such as travel, lifestyle, food & drink, fashion, and so on. Users can browse through many different posts and engage with them. If registered, users can submit, edit and delete posts published by themselves. It was designed to have clean and simple navigation, aiming for a smooth user experience. 
 
 You can view the live site [here](https://travellifestyleblog22.herokuapp.com/)
 
@@ -10,7 +10,7 @@ You can view the live site [here](https://travellifestyleblog22.herokuapp.com/)
 
 ### Project goals
 
-This project is part of my Code Institute Full Stack Software Development studies, specifically the Data Centric Development module. The objective for this milestone project is to "Create a web application that allows users to store and easily access cooking recipes", using the CRUD operations of Create, Read, Update, and Delete for their recipes. The goal of this project is to create, store, edit and delete posts (CRUD). Target audience for this project is people that are interested in topics such as travel, lifestyle, books and movies. Users have the ability to create different categories, expanding the topics for discussion on the blog. 
+This project is part of my Code Institute Full Stack Software Development studies, specifically the Data-Centric Development module. The objective for this milestone project is to create a web application that allows users to store and easily access cooking recipes, using the CRUD operations of Create, Read, Update, and Delete for their recipes. The goal of this project is to create, store, edit and delete posts (CRUD). The target audience for this project is people that are interested in topics such as travel, lifestyle, books and movies. Users can create different categories, expanding the topics for discussion on the blog. 
 
 ### User Stories
 As a user, I want: 
@@ -23,11 +23,11 @@ As a user, I want:
 * Be able to see the profile of the author of the post.
 * Be able to register to the site.
 * Be able to sign in and sign out. 
-* Be able to create my own profile.
+* Be able to create my profile.
 * Be able to add, edit and delete posts to the website.
 * Be able to change my profile information.
 * Be able to change my password.
-* Be able to see a list of my own posts.
+* Be able to see a list of my posts.
 * Be able to add a new category.
 * Be able to add a comment to a post.
 * Be able to like a post if signed in.
@@ -36,7 +36,7 @@ As a user, I want:
 
 ### Wireframe 
 
-This site was built on the basis of ideas from initial wireframes created in Figma and exported image files for these can be seen below. Some changes were done as the projectes started to get into shape, for instance the colour of the background is different from the initial idea. 
+This site was built based on ideas from initial wireframes created in Figma and exported image files for these can be seen below. Some changes were done as the projects started to get into shape, for instance, the colour of the background is different from the initial idea. 
 
 <details>
 <summary>Desktop</summary>
@@ -63,12 +63,12 @@ This site was built on the basis of ideas from initial wireframes created in Fig
 <br>
 
 ### Design 
-This site was built using Bootstrap, as well as refactored designs I used in my previous milestones. On the homepage, individual category page and my posts page are displayed as cards that when clicked, lead to the individual post page. 
+This site was built using Bootstrap, as well as refactored designs I used in my previous milestones. On the homepage, the individual category page and my posts page are displayed as cards that when clicked, lead to the individual post page. 
 On the individual post page, users can find the photo, name, bio and social media links to the author of the posts. by clicking on the photo or "Profile" button, the users are directed to a page where they can see the author's full profile. 
-The initial idea was to create a site which would be easy to navigate without many painpoints. The user can easily find what they are looking for as well as engage with the posts, by liking or leaving a comment to it. 
+The initial idea was to create a site that would be easy to navigate without any pain points. The user can easily find what they are looking for as well as engage with the posts, by liking or leaving a comment to them. 
 
 ### Colour Scheme
-Colours are kept to a minimum in order to keep focus on the imagery of the post, chosen colours were based on the hero image. Colour scheme can be found below:
+Colours are kept to a minimum to keep the focus on the imagery of the post, chosen colours were based on the hero image. The Colour scheme can be found below:
 
 ![colour_scheme](https://user-images.githubusercontent.com/65717229/158066980-21028c56-d426-453c-83cd-52559dac98ab.PNG)
 
@@ -84,11 +84,10 @@ The images on the blog were from [Pexel](https://www.pexels.com/).
 
 ### Existing Features on every page
 
-
 **Navbar**
 
 The navigation bar features the blog name in the top left corner, which works as a link to the home page from any other page on the blog. The other navigation links are in the top right. 
-For users who visited to site and are not registered/logged in yet, the follow links are visible:
+For users who visited the site and are not registered/logged in yet, the following links are visible:
 
 * Home
 * Categories
@@ -97,7 +96,7 @@ For users who visited to site and are not registered/logged in yet, the follow l
 
 <img width="500" src="https://user-images.githubusercontent.com/65717229/158068621-2d679857-dbfc-4c12-b162-a94484937852.PNG" alt="not logged in navbar">
 
-For users who are logged in, the follow links are visible:
+For users who are logged in, the following links are visible:
 
 * Home
 * Categories
@@ -112,8 +111,8 @@ For users who are logged in, the follow links are visible:
 <img width="500" src="https://user-images.githubusercontent.com/65717229/158068642-60da9b2f-4636-4209-87f7-1a752cfe7e0e.PNG" alt="logged in navbar">
 
 
-Python determines if the user is logged in or not by checking if 'user' in session and passes this data to Jinja to display the correct navbar for the user.
-On the smaller resolutions (tablet, mobile) the navbar is collapsed into a burger icon. A slide out menu opens when the burger icon is clicked.
+Python determines if the user is logged in or not by checking if 'user' is in session and passes this data to Jinja to display the correct navbar for the user.
+On the smaller resolutions (tablet, mobile) the navbar is collapsed into a burger icon. A slide-out menu opens when the burger icon is clicked.
 
 <img width="500" src="https://user-images.githubusercontent.com/65717229/158069792-6af5848c-11e0-4f87-ac28-8b5d47684496.PNG" alt="hambuger navbar">
 
@@ -131,7 +130,7 @@ The footer features some key Information such as copyright information and links
 
 (Home, individual category page, my posts page)
 
--   It displays the post's image, the post categorym a small headline of the post, and the date which it was posted. The user can read the whole post by clicing on the image or on the post name.. 
+-   It displays the post's image, the post category, a small headline of the post, and the date on which it was posted. The user can read the whole post by clicking on the image or the post name.
 
 <img width="500" alt="post-card" src="https://user-images.githubusercontent.com/65717229/158068746-9fbe3bd4-796f-493a-b4af-b9296e2dbdf9.PNG">
 
@@ -140,7 +139,7 @@ The footer features some key Information such as copyright information and links
 
 (Home, individual category page, my posts page)
 
-- Where there are more than six results navigation links to pages are displayed below the number of results (6 results per page).
+- Where there are more than six results, navigation links to pages are displayed below the number of results (6 results per page).
 
 <img width="500"  alt="pagination-homepage" src="https://user-images.githubusercontent.com/65717229/158068759-8aba7919-67bd-45a4-89a9-d6a4d30c90dd.PNG">
 
@@ -148,7 +147,7 @@ The footer features some key Information such as copyright information and links
 
 (Home, categories page, individual category page, post page, my posts page)
 
-- One the card, in the home page, it is possible to see the category the post belongs to and by clicking on it, the user is directed to a page with all the posts from that specific category. The same happens on the individual post page and also on the my posts page, which is where a user can see all the posts published by himself/herself.
+- On the card, on the home page, it is possible to see the category the post belongs to and by clicking on it, the user is directed to a page with all the posts from that specific category. The same happens on the individual post page and also on my posts page, which is where a user can see all the posts published by himself/herself.
 
 <img width="500"  alt="categories" src="https://user-images.githubusercontent.com/65717229/158068780-73338ec0-009b-4498-8a4a-f1c10ecf0304.PNG">
 
@@ -158,7 +157,7 @@ The footer features some key Information such as copyright information and links
 ### Post Page
 
 **Individual Post Page**
-- if the users click on the image or the post title, they will directed to the individual post page, where they can read the full post. 
+- if the users click on the image or the post title, they will be directed to the individual post page, where they can read the full post. 
 
 <img width="500" alt="post" src="https://user-images.githubusercontent.com/65717229/158068839-cf856fd6-f93f-4c56-8bb5-e53cfd1249f6.PNG">
 
@@ -186,13 +185,13 @@ The footer features some key Information such as copyright information and links
 
 **Comments**
 
-- When logged in, users can leave comments on the posts. Everyone is able to see them, logged in or not.
+- When logged in, users can leave comments on the posts. Everyone can see them, log in or not.
 
 <img width="500"  alt="comments" src="https://user-images.githubusercontent.com/65717229/158069298-6e64d93a-8468-45b3-8a52-5ab9014b9a86.PNG">
 
 
 ### Login Page
-- This section contains a form where users may login and be redirected to Home Page. Below the form, the user can find a link to register.
+- This section contains a form where users may log in and be redirected to the Home Page. Below the form, the user can find a link to register.
 
 <img width="500" alt="login" src="https://user-images.githubusercontent.com/65717229/158069311-f753376c-8e59-42c1-8478-771a0cf8e007.PNG">
 
@@ -201,25 +200,25 @@ The footer features some key Information such as copyright information and links
 - Clicking 'Logout' ends a user session and redirects them to the 'Home' page.
 
 ### Register Page
-- This section contains a registration form.Once it is completed, they will be redirected to the login page where they can then sign in.
+- This section contains a registration form. Once it is completed, they will be redirected to the login page where they can then sign in.
 
 <img width="500"  alt="register" src="https://user-images.githubusercontent.com/65717229/158069320-657b6016-fdd5-4766-a2a5-a0aa9f7e9af3.PNG">
 
 ### User Profile Page
 
-It contains a profile image, the user first and last name, their email, bio and a link to their social media.
+It contains a profile image, the user's first and last name, their email, bio and a link to their social media.
 
 <img width="500" alt="profile" src="https://user-images.githubusercontent.com/65717229/158069371-eb34de0f-e2ea-4fe0-8a60-3e3697a59ebe.PNG">
 
-### Create User Profile page
+### Create a User Profile page
 
-Once users created an account, they can create a profile.
+Once users create an account, they can create a profile.
 
 <img width="500" alt="profile" src="https://user-images.githubusercontent.com/65717229/158069860-d085e4fc-1a43-443f-8f73-a50e8afb5d8c.PNG">
 
 ### Edit Profile Page
 
-The owner of the profile can edit it, for instance change the profile image or the information provided in the bio. 
+The owner of the profile can edit it, for instance, change the profile image or the information provided in the bio. 
 
 <img width="500" alt="edit-pro" src="https://user-images.githubusercontent.com/65717229/158069387-b49f4915-ddfa-48e1-a7a7-afca729e9650.PNG">
 
@@ -234,13 +233,13 @@ On this page, the user can change their first and last name, email, and password
 
 ### My Posts Page
 
-This page displays as posts published by the user, who is logged in. if there are no posts, there is a message and a button directing them to the add post page. 
+This page displays as posts published by the user, who is logged in. if there are no posts, a message and a button is directing them to the add post page. 
 
 <img width="500" alt="myposts" src="https://user-images.githubusercontent.com/65717229/158069429-88bd5027-d7e6-429e-b740-b88bd125be53.PNG">
 
 ### Add Post Page
 
-Users who are registered can create their own post.
+Users who are registered can create their posts.
 
 <img width="500" alt="add-post" src="https://user-images.githubusercontent.com/65717229/158069440-1e749af1-e3e8-4774-a39e-8c9a339381d8.PNG">
 
@@ -262,7 +261,7 @@ Users can add new categories if they see necessary.
 -   My 'Admin' profile has several extra features, which currently include:
 -   Edit / Delete any post from the database.
 -   Edit / Delete any comment from the database.
--   Edit / Delete any users/profile from the database.
+-   Edit / Delete any users/profiles from the database.
 
 ## Future Features
 
@@ -270,7 +269,7 @@ Users can add new categories if they see necessary.
 * Have a "favourites" area where users can add their favourite posts.
 
 ## Database
-This website have 4 databases, 1 for user profile, 1 for posts, 1 for comments and 1 for the categories. they are connected to some extend to each other as well as being used to store various calculations, and store all general information on the page. 
+This website has 4 databases, 1 for user profile, 1 for posts, 1 for comments and 1 for the categories. They are connected to some extent to each other as well as being used to store various calculations, and store all general information on the page. 
 
   * Profile Database
   * Post Database 
@@ -284,10 +283,11 @@ This website have 4 databases, 1 for user profile, 1 for posts, 1 for comments a
 - Last_name: Stores the user's last name.
 - Email: Stores the email address added by the user.
 - Bio: Stores the bio added by the user to the profile.
-- Profile_pic: Stores the profile picture uploaded by the user. If none is uploaded by the user, a default images will be added instead. 
-- Instagram_url: Store the url of the user's instragram account.
-- Facebook_url: Store the url of the user's facebook account.
-- Twitter_url: Store the url of the user's Twitter account
+- Profile_pic: Stores the profile picture uploaded by the user. If none is uploaded by the user, a default image will be added instead. 
+- Instagram_url: Store the URL of the user's Instagram account.
+- Facebook_url: Store the URL of the user's Facebook account.
+- Twitter_url: Store the URL of the user's Twitter account
+- Pinterest_url: Store the URL of the user's Pinterest account
 
 **Post database explained**
 
@@ -296,8 +296,8 @@ This website have 4 databases, 1 for user profile, 1 for posts, 1 for comments a
   - Created_on: Stores when a post was created.
   - Content: Stores the actual content of the blog post. 
   - Category: Stores which category the post belongs to.
-  - Likes: Stores the likes a post recieved.
-  - Image: Stores the image related to the post. If no images is uploaded, a default one will be applied. 
+  - Likes: Stores the likes a post received.
+  - Image: Stores the image related to the post. If no images are uploaded, a default one will be applied. 
 
 **Categories database explained**
 
@@ -305,8 +305,8 @@ This website have 4 databases, 1 for user profile, 1 for posts, 1 for comments a
 
 **Comment database explained**
 
-  - Post: Stores which is the post which the comment should be added to. 
-  - Name: Stores the name of the user who made the comment. 
+  - Post: Stores which is the post to which the comment should be added. 
+  - Name: Stores the name of the user who commented. 
   - Body: Stores the actual comment.
   - Date_added: Stores when the comment was created. 
 
@@ -322,13 +322,13 @@ This website have 4 databases, 1 for user profile, 1 for posts, 1 for comments a
 - Python 3.6.7 - Used as the back-end programming language.
 - Django 2.2.16 - Used as my Python web framework.
 - Heroku - Used for "Platform as a Service" (PaaS) for app hosting.
-- PostgreSQL 11.4 - Used as relational SQL database plugin via Heroku.
+- PostgreSQL 11.4 - Used as a relational SQL database plugin via Heroku.
 
 ### Frameworks, Libraries, & Programs Used
 
 - Many different Django libraries were used:
-    - django.shortcuts, django.views.generic, django.urls,django.http, among many others.
-- For the textarea ckeditor was used. 
+    - Django. shortcuts, Django. views.generic, Django.URLs, Django. HTTP, among many others.
+- For the textarea, CKEditor was used. 
 
 Further details on all Python packages used on this project can be found in the requirements.txt file.
 
@@ -351,7 +351,7 @@ All the posts from the website have the name of the original author as well as a
 
 ## Testing
 
-### Validators and linters
+### Validators
 
 - W3C HTML Validator Passed tests without issues
 - W3C CSS Validator Passed tests without issues
@@ -361,20 +361,20 @@ All the posts from the website have the name of the original author as well as a
 
 ### Manual Testing
 
-Extensively used Crome Developer tools to test form submissions through network tab etc.
+Extensively used Chrome Developer tools to test form submissions through network tab etc.
 
 1. Visiting page
 
-    - Test if navigation bar works correctly on phone, tablet and desktop browsers.
-    - Test if page is responsive at all sizes.
+    - Test if the navigation bar works correctly on phone, tablet and desktop browsers.
+    - Test if the page is responsive in all sizes.
     - Test footer social icon links (links open homepages in a new window).
     - Test If I see the different posts on the home page (Pagination).
 
 2. Sign Up
 
     - Try registering with empty form/inputs (shows tooltip "Please fill out this field")
-    - Try to register with invalid email or not email at all ("Please include a "@" in the email address" or "Please fill out this field")    
-    - Attempt to use username/password that is too long or too short ("There was an error with your form!")
+    - Try to register with an invalid email or not email at all ("Please include a "@" in the email address" or "Please fill out this field")    
+    - Attempt to use a username/password that is too long or too short ("There was an error with your form!")
 
     <img width="500"  alt="register-message" src="https://user-images.githubusercontent.com/65717229/158070446-60c36693-1c35-4eef-a2c6-31f05eeb1ba5.PNG">
 
@@ -383,15 +383,15 @@ Extensively used Crome Developer tools to test form submissions through network 
 
 3. Login
 
-    - Try leaving fields empty (message "There was an error with your form...Please try again")
-    - Typed the wrong username or password (message "There was an error with your form...Please try again" )
+    - Try leaving fields empty (message, " There was an error with your form...Please try again" )
+    - Typed the wrong username or password (message, "There was an error with your form...Please try again" )
 
  <img width="500" alt="login-error" src="https://user-images.githubusercontent.com/65717229/158070414-51d21470-05a4-4b4c-8284-050d94b8450d.PNG">
 
 4. Create  Profile
 
     - Try leaving the form empty. A default image will be added to the profile image.
-    - Try not to add all the social media links. It will be displayed in the profile page only the ones added. 
+    - Try not to add all the social media links. It will be displayed on the profile page only the ones added. 
     - Try to create a profile without being logged in (Message "You need to login to be able to create a profile")
 
     <img width="500"   alt="create-profile-not-logged" src="https://user-images.githubusercontent.com/65717229/158070500-95130eb7-98ee-4676-9628-3f23f6093f5a.PNG">
@@ -417,8 +417,8 @@ Extensively used Crome Developer tools to test form submissions through network 
 
 7. Add Post
 
-    - Try to submit an empty form and verify that no post has been added to any category page.The page just reloads and will not submit the form until it is filled in.
-    - Try to submit a filled out form and verify that fields appear correctly, there is no missing information.
+    - Try to submit an empty form and verify that no post has been added to any category page. The page just reloads and will not submit the form until it is filled in.
+    - Try to submit a filled-out form and verify that fields appear correctly, there is no missing information.
     - Try not to add any image to the post. A default image is added as a placeholder. 
     - Try to add a post without being logged in (Message "You need to login to be able to add a post. Log in here")
 
@@ -456,7 +456,7 @@ Extensively used Crome Developer tools to test form submissions through network 
 11. Comment
 
     - Try to see the comments without being logged in.
-    - Try to add a comment while logged in and see the comment on the post page.
+    - Try to add a comment while logged in and see the comment on the posting page.
     - Try to add a comment without being logged in. 
 
     <img width="500" alt="comment-notlogged" src="https://user-images.githubusercontent.com/65717229/158071362-99b7ab76-c0e0-4a1c-8d3b-1500e1e30c0b.PNG"> 
@@ -468,10 +468,10 @@ The website can be accessed [here](https://travellifestyleblog22.herokuapp.com/)
 Deployment instructions assume that you have already set up your repository and basic flask application. The website is deployed on the Heroku cloud platform using the following steps:
 
     1. Create the necessary files for deployment
-    2. Create requirements file using pip3 freeze > requirements.txt which will contain the required dependencies.
+    2. Create a requirements file using pip3 freeze > requirements.txt which will contain the required dependencies.
     3. Create Procfile using echo web: python app.py > Procfile.
     4. Push both files to GitHub
-    5. Login to Heroku and create a new app
+    5. log in to Heroku and create a new app
     6. Connect the app to your project
     7. Go to the deployment method section and choose the method. If using GitHub, select that option, otherwise use the Heroku CLI method.
     8. Following the GitHub method, search for the desired repository and connect to it
@@ -479,16 +479,16 @@ Deployment instructions assume that you have already set up your repository and 
     10. Go to the settings tab and select Reveal Config Vars. Enter the variables defined in the env.py file (IP, PORT and SECRET_KEY).
     11. Deploy and preview
     12. Go back to the deployment tab and enable automatic deployment.
-    13. Finally, press deploy branch and preview your website.
+    13. Finally, press deploys branch and preview your website.
 
 
 ### Acknowledgements
 
-A thanks to my friend Authur Pereira Neto for all the support and help throughout this project, and the Slack groups. 
+Thanks to my friend Authur Pereira Neto for all the support and help throughout this project, and the Slack groups. 
 
 #### Disclaimer
 
-If there are any issues with copyright of content, please contact me. I will fix that as soon as possible. This project is for educational purposes only.
+If there are any issues with the copyright of the content, please contact me. I will fix that as soon as possible. This project is for educational purposes only.
 
 Beatriz Amorim 
 
