@@ -61,8 +61,21 @@ body {
 
 .page-title {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 2rem;
     padding-top: 1.5rem;
+}
+
+@media(max-width:800px) {
+    .page-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media(max-width:450px) {
+    .page-title {
+        font-size: 1.8rem;
+        padding-bottom: 1rem;
+    }
 }
 
 
@@ -220,7 +233,7 @@ body {
     }
 
     .postcard__preview-txt {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     .categories-home {
@@ -241,15 +254,6 @@ body {
         margin-top: 1rem;
     }
 }
-
-@media(max-width:425px) {
-
-    #footer-social a span {
-        margin-left: 25px;
-    }
-}
-
-
 
 
 .postcard__bar {
@@ -328,15 +332,29 @@ body {
     margin-top: 1rem;
 }
 
+.fa-2x {
+    color: rgb(20, 20, 20);
+}
+
 @media(max-width:800px) {
     .footer-banner {
         height: 150px;
     }
+
 }
 
 @media(max-width:450px) {
     .footer-banner {
         height: 110px;
+    }
+
+    #footer-social span {
+        display: none;
+    }
+
+    #footer-social i {
+        font-size: 1rem;
+
     }
 }
 
@@ -365,7 +383,10 @@ body {
     transition: .3s
 }
 
-#footer-social a:hover {
+
+.fa-2x:hover,
+#footer-social a:hover,
+#footer-social img:hover {
     color: #c39f76
 }
 
@@ -446,12 +467,7 @@ body {
     padding-right: 1rem;
 }
 
-.bio {
-    margin-bottom: 3rem;
-    color: #4e4e4e;
-    padding-right: 1rem;
-    font-size: 0.8rem;
-}
+
 
 .media-heading {
     font-size: 1.3rem;
@@ -537,7 +553,7 @@ body {
 }
 
 .img-circle-2 {
-    width: 130px;
+    width: 150px;
     border-radius: 50%;
     margin-top: 2rem;
     border: 1px solid #ccc;
@@ -573,6 +589,7 @@ body {
     .media-heading {
         font-size: 1rem;
     }
+
 
     .img-circle-2 {
         margin-top: 3rem;
@@ -617,16 +634,25 @@ body {
         margin-top: 0;
         text-align: justify;
     }
+
+    .media-heading {
+        font-size: 1rem;
+        padding-left: 8rem;
+    }
+
+    .links {
+        padding-left: 4rem;
+    }
 }
 
 
 @media(max-width:380px) {
-    .links {
-        text-align: center;
+    .media-heading {
+        padding-left: 8rem;
     }
 
-    .media-heading {
-        text-align: center;
+    .links {
+        padding-left: 3rem;
     }
 
     .img-circle-2 {
@@ -642,7 +668,7 @@ body {
 
     .media-heading {
         font-size: 1rem;
-        text-align: center;
+        margin-left: -2rem;
     }
 
     .img-circle-2 {
@@ -654,6 +680,9 @@ body {
         margin-left: -1.5rem;
     }
 
+    .links {
+        margin-left: -2rem;
+    }
 
 }
 
@@ -669,7 +698,7 @@ body {
 }
 
 .card-body {
-    height: 650px;
+    height: 670px;
     border: none;
 }
 
@@ -758,21 +787,6 @@ body {
 }
 
 
-@media(max-width:500px) {
-    .category-add {
-        max-width: 18rem;
-        margin-left: 1rem;
-    }
-}
-
-@media(max-width:350px) {
-    .category-add {
-        max-width: 16rem;
-    }
-}
-
-
-
 @media(max-width:800px) {
     .card-body-categories-items {
         width: 70%;
@@ -809,10 +823,6 @@ body {
 .category-page {
     padding: 0 3.5rem 1rem 3.5rem;
 }
-
-
-
-
 
 .cat {
     padding-bottom: 7rem;
@@ -855,7 +865,14 @@ body {
     .category-page {
         padding: 0.5rem;
     }
+
+
+    .category-add {
+        margin-left: 1rem;
+    }
 }
+
+
 
 
 /*------------- Add Post ------------------*/
@@ -867,6 +884,22 @@ body {
     color: rgb(0, 0, 0);
     background-color: white;
     box-shadow: 12px 12px 2px 1px rgba(116, 115, 113, 0.2);
+}
+
+@media(max-width:2560px) {
+    .post {
+        padding-bottom: 1rem;
+        padding-top: 2rem;
+    }
+
+    .add-edit-post {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    #cke_id_content {
+        max-width: 665px;
+    }
 }
 
 .add-edit-post-page {
@@ -916,7 +949,7 @@ body {
     }
 
     #cke_id_content {
-        max-width: 750px;
+        max-width: 665px;
     }
 
 }
@@ -1549,7 +1582,7 @@ body {
         display: none;
     }
 
-    .card-body-page {
+    # .card-body-page {
         flex: 1 1 auto;
         padding: 0.3rem;
         margin-bottom: -5rem;
@@ -1573,6 +1606,10 @@ body {
     .image-profile {
         width: 150px;
         margin-left: 2.5rem;
+    }
+
+    .profile-info {
+        margin-left: -1.5rem;
     }
 }
 
@@ -1606,15 +1643,15 @@ body {
         margin-left: -2rem;
     }
 
-    #footer-social a {
-        margin: 0;
-        display: inline;
+    #footer-social span {
+        display: none;
     }
 
 }
 
 .author {
     margin-bottom: -0.1rem;
+    text-transform: capitalize;
 }
 
 .bootdey {
@@ -1746,6 +1783,12 @@ body {
     color: rgb(179, 179, 179);
 }
 
+.bio {
+    margin-bottom: 3rem;
+    color: #4e4e4e;
+    padding-right: 1rem;
+}
+
 @media(max-width:1300px) {
     .col-md-9 {
         flex: 0 0 auto;
@@ -1778,6 +1821,7 @@ body {
         margin-bottom: 0.5rem;
         padding-right: 0.5rem;
         margin-top: 0;
+        font-size: 0.9rem;
     }
 
     .links {

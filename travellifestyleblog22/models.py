@@ -26,6 +26,7 @@ class Profile(models.Model):
     instagram_url = models.CharField(max_length=255, null=True, blank=True)
     facebook_url = models.CharField(max_length=255, null=True, blank=True)
     twitter_url = models.CharField(max_length=255, null=True, blank=True)
+    pinterest_url = models.CharField(max_length=255, null=True, blank=True)
     first_name = models.CharField(max_length=255, default=' ')
     last_name = models.CharField(max_length=255, default=' ')
     email = models.EmailField(default=' ')
