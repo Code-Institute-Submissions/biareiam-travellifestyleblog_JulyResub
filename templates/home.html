@@ -17,12 +17,11 @@
                     <a class="postcard__img_link" href="{% url 'article-detail' post.pk  %}">
                         <img class="postcard__img img-fluid"
                             src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.png"
-                            alt="Image Title" width="520" height="400" />
+                            alt="Image Title" />
                     </a>
                     {% else %}
                     <a class="postcard__img_link" href="{% url 'article-detail' post.pk  %}">
-                        <img class="postcard__img img-fluid" src="{{ post.image.url }}" alt="Image Title" width="520"
-                            height="400" />
+                        <img class="postcard__img img-fluid" src="{{ post.image.url }}" alt="Image Title" />
                     </a>
                     {% endif %}
 
