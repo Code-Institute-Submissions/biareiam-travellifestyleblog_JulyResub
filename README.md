@@ -38,29 +38,18 @@ As a user, I want:
 
 This site was built based on ideas from initial wireframes created in Figma and exported image files for these can be seen below. Some changes were done as the projects started to get into shape, for instance, the colour of the background is different from the initial idea. 
 
-<details>
-<summary>Desktop</summary>
-<br>
-<p class="align-center">
-<img width="700" alt="desktop" src="https://user-images.githubusercontent.com/65717229/157550577-c41ea9a1-0361-44ca-a044-7b5c28b1530e.PNG"></p>
-</details>
-<br>
-<details>
-<summary>Tablet</summary>
-<br>
-<p class="align-center">
-  <img width="700" src="https://user-images.githubusercontent.com/65717229/157550403-e90a505a-54e3-4c45-a54d-cd70752a3e63.PNG" alt="tablet">
-</p>
-</details>
-<br>
-<details>
-<summary>Mobile</summary>
-<br>
-<p class="align-center">
-  <img width="700" src="https://user-images.githubusercontent.com/65717229/157549908-f67ff91d-82e8-4586-aeac-cbb928d6f4ff.PNG" alt="mobile">
-</p>
-</details>
-<br>
+**Tablet and Mobie**
+
+![Wireframe- tablet and mobile](https://user-images.githubusercontent.com/65717229/158603516-b8760174-0f04-4ae1-8765-5bc600861e07.png)
+
+
+**Desktop**
+
+<img width="500" src="https://user-images.githubusercontent.com/65717229/158603412-10817e70-7db2-44fc-9181-21f37becf6d7.png" alt="Wireframe- desktop">
+
+***Figma Wireframe**
+
+<img width="552" alt="wireframe-figma" src="https://user-images.githubusercontent.com/65717229/158605393-25fe2fce-7282-45e0-a6d1-4c3465c30e69.PNG">
 
 ### Design 
 This site was built using Bootstrap, as well as refactored designs I used in my previous milestones. On the homepage, the individual category page and my posts page are displayed as cards that when clicked, lead to the individual post page. 
