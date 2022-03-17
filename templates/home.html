@@ -11,29 +11,27 @@
 
         <article class="postcard">
             <div class="row">
-
                 <div class="col-md-4">
                     {% if "placeholder" in post.image.url %}
                     <a class="postcard__img_link" href="{% url 'article-detail' post.pk  %}">
                         <img class="postcard__img img-fluid"
                             src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.png"
-                            alt="Image Title" />
+                            alt="Post image" />
                     </a>
                     {% else %}
                     <a class="postcard__img_link" href="{% url 'article-detail' post.pk  %}">
-                        <img class="postcard__img img-fluid" src="{{ post.image.url }}" alt="Image Title" />
+                        <img class="postcard__img img-fluid" src="{{ post.image.url }}" alt="Post image" />
                     </a>
                     {% endif %}
-
                 </div>
                 <div class="col-md-8">
                     <div class="postcard__text t-dark">
                         <p><a href="{% url 'category' post.category %}" class="categories-home">
                                 {{ post.category }}</a></p>
 
-                        <h3 class="postcard__title"><a
+                        <h2 class="postcard__title"><a
                                 href="{% url 'article-detail' post.pk  %}">{{ post.post_title }}</a>
-                        </h3>
+                        </h2>
                         <div class="postcard__bar"></div>
                         <div class="postcard__preview-txt">
                             <p id="text-snippet">{{ post.content|slice:":200"|safe }}</p>
@@ -55,7 +53,7 @@
     {% endfor %}
     {% if is_paginated %}
     <nav aria-label="Page navigation">
-        <ul class="pagination">
+        <div class="pagination">
             {% if page_obj.has_previous %}
             <a href="?page={{ page_obj.previous_page_number }}" class="page-link">
                 &laquo; Newer Posts </a>
@@ -65,7 +63,7 @@
                 Posts &raquo; </a>
 
             {% endif %}
-        </ul>
+        </div>
     </nav>
     {% endif %}
 </div>
