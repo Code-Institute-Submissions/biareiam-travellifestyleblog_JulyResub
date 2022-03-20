@@ -91,13 +91,6 @@ body {
     background-color: #ffffff;
 }
 
-@media(max-width:500px) {
-    .navbar {
-        padding-top: 1.5rem;
-        padding-bottom: 1rem;
-    }
-}
-
 .navbar-nav .dropdown-menu {
     position: static;
     border: none;
@@ -221,33 +214,6 @@ body {
     text-align: left;
 }
 
-@media(max-width:800px) {
-    .image-banner {
-        height: 130px;
-        background-position: center;
-    }
-
-    .postcard__title {
-        font-size: 1rem;
-        margin-top: -0.5rem;
-    }
-
-    .postcard__preview-txt {
-        font-size: 0.9rem;
-    }
-
-    .categories-home {
-        font-size: 0.7rem;
-        margin-bottom: -0.7rem;
-    }
-
-    .postcard {
-        overflow: visible;
-    }
-
-
-}
-
 
 @media(max-width:450px) {
     .image-banner {
@@ -298,24 +264,7 @@ body {
 
 
 
-@media(max-width:800px) {
-    .homepage {
-        padding: 0 1rem 1rem 1rem;
-    }
-}
 
-@media (max-width: 500px) {
-
-    .card-img,
-    .card-img-top {
-        padding-top: 0;
-    }
-
-    .homepage {
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-    }
-}
 
 @media (max-width: 400px) {
     .homepage {
@@ -334,13 +283,6 @@ body {
 
 .fa-2x {
     color: rgb(20, 20, 20);
-}
-
-@media(max-width:800px) {
-    .footer-banner {
-        height: 150px;
-    }
-
 }
 
 @media(max-width:450px) {
@@ -569,78 +511,7 @@ body {
 
 
 
-@media(max-width:800px) {
-    #blog-single-post {
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }
 
-    .blog-post-des {
-        font-size: 1rem;
-    }
-
-    .bio {
-        font-size: 0.9rem;
-    }
-
-    .media-heading {
-        font-size: 1rem;
-    }
-
-
-    .img-circle-2 {
-        margin-top: 3rem;
-    }
-
-    .btn-submit {
-        font-size: 0.8rem;
-    }
-
-    .post-comments {
-        font-size: 0.8rem;
-    }
-
-    .comment-body {
-        font-size: 0.8rem;
-    }
-
-    .btn-edit a,
-    .btn-delete a {
-        font-size: 0.8rem;
-    }
-}
-
-@media(max-width:500px) {
-    #blog-single-post {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
-
-    .img-circle-2 {
-        margin-bottom: 0;
-        margin-top: -1rem;
-        margin-left: 7.5rem;
-    }
-
-    .update-post {
-        margin-bottom: 1.5rem;
-    }
-
-    .bio {
-        margin-bottom: -1rem;
-        margin-top: 0;
-        text-align: justify;
-    }
-
-    .media-heading {
-        font-size: 1rem;
-        padding-left: 8rem;
-    }
-
-    .links {
-        padding-left: 4rem;
-    }
-}
 
 
 @media(max-width:380px) {
@@ -688,6 +559,10 @@ body {
 
 }
 
+#id_bio {
+    border: 1px solid gainsboro;
+    padding: 0.5rem
+}
 
 
 
@@ -795,11 +670,7 @@ body {
 }
 
 
-@media(max-width:800px) {
-    .card-body-categories-items {
-        width: 70%;
-    }
-}
+
 
 @media(max-width:500px) {
     .card-body-categories-items {
@@ -871,15 +742,6 @@ body {
 
 
 
-
-@media(max-width:800px) {
-
-
-    .navbar>.container {
-        padding-right: 1rem;
-    }
-}
-
 @media(max-width:500px) {
     .category-page {
         padding: 0.5rem;
@@ -945,20 +807,8 @@ body {
 
 
 
-@media(max-width:800px) {
-    .add-edit-post {
-        width: 75%;
-    }
 
 
-    #cke_id_content {
-        max-width: 535px;
-    }
-
-    .navbar-brand {
-        padding-left: 1rem;
-    }
-}
 
 @media(max-width:500px) {
     .add-edit-post {
@@ -1174,21 +1024,6 @@ body {
 
 
 
-@media(max-width:800px) {
-    .not-allow-box {
-        max-width: 70%;
-    }
-
-    .not-allow {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-    }
-
-    .delete-post {
-        max-width: 70%;
-    }
-}
-
 @media(max-width:500px) {
     .not-allow-box {
         max-width: 90%;
@@ -1248,16 +1083,6 @@ textarea {
 }
 
 
-@media(max-width:800px) {
-    #id_bio {
-        max-width: 465px;
-    }
-
-    .profile-page {
-        width: 65%;
-    }
-}
-
 @media(max-width:500px) {
     #id_bio {
         max-width: 370px;
@@ -1293,11 +1118,6 @@ textarea {
     margin: auto;
 }
 
-@media(max-width:800px) {
-    .user-profile {
-        max-width: 50rem;
-    }
-}
 
 .profile-banner {
     background-color: #C2C8C4;
@@ -1461,25 +1281,7 @@ textarea {
 
 
 
-@media(max-width:800px) {
-    .card-title-page {
-        margin-bottom: 0.5rem;
-        font-size: 1rem;
-    }
 
-    .social-media {
-        font-size: 0.8rem;
-    }
-
-    .card-body-page {
-        flex: 1 1 auto;
-        padding: 0.3rem;
-        width: 400px;
-        height: 200px;
-        margin-bottom: 1rem;
-        font-size: 0.8rem;
-    }
-}
 
 @media(max-width:500px) {
     .image-profile {
@@ -1726,35 +1528,7 @@ textarea {
 
 
 
-@media(max-width:800px) {
-    .col-md-9 {
-        flex: 0 0 auto;
-        width: 95%;
-        margin: auto;
-        /* margin-top: -1.5rem; */
-        margin-left: -1rem;
-    }
 
-    .g-bg-secondary {
-        margin-left: 0;
-    }
-
-    .profile-bio-text {
-        text-align: justify;
-        font-size: 0.8rem;
-    }
-
-    .profile-image-post {
-        margin-left: -0.5rem;
-        width: 140px;
-    }
-
-    .profile-name {
-        font-size: 1rem;
-        text-align: center;
-
-    }
-}
 
 @media(max-width:500px) {
     .profile-image-post {
@@ -1925,15 +1699,6 @@ textarea {
     margin-bottom: 3.5rem;
 }
 
-@media(max-width:800px) {
-    .password-container {
-        width: 60%;
-    }
-
-    .change-password {
-        font-size: 1.3rem;
-    }
-}
 
 @media(max-width:500px) {
     .password-container {
@@ -2677,8 +2442,236 @@ a {
         font-size: 1.5rem;
     }
 
+    .navbar>.container {
+        padding-right: 1rem;
+    }
+
+    .add-edit-post {
+        width: 75%;
+    }
+
+
+    #cke_id_content {
+        max-width: 535px;
+    }
+
+    .navbar-brand {
+        padding-left: 1rem;
+    }
+
+    .homepage {
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .footer-banner {
+        height: 150px;
+    }
+
     .page-title {
         font-size: 1.8rem;
     }
 
+    .image-banner {
+        height: 130px;
+        background-position: center;
+    }
+
+    .postcard__title {
+        font-size: 1rem;
+        margin-top: -0.5rem;
+    }
+
+    .postcard__preview-txt {
+        font-size: 0.9rem;
+    }
+
+    .categories-home {
+        font-size: 0.7rem;
+        margin-bottom: -0.7rem;
+    }
+
+    .postcard {
+        overflow: visible;
+    }
+
+    #blog-single-post {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .blog-post-des {
+        font-size: 1rem;
+    }
+
+    .bio {
+        font-size: 0.9rem;
+    }
+
+    .media-heading {
+        font-size: 1rem;
+    }
+
+
+    .img-circle-2 {
+        margin-top: 3rem;
+    }
+
+    .btn-submit {
+        font-size: 0.8rem;
+    }
+
+    .post-comments {
+        font-size: 0.8rem;
+    }
+
+    .comment-body {
+        font-size: 0.8rem;
+    }
+
+    .btn-edit a,
+    .btn-delete a {
+        font-size: 0.8rem;
+    }
+
+    .card-body-categories-items {
+        width: 70%;
+    }
+
+    .not-allow-box {
+        max-width: 70%;
+    }
+
+    .not-allow {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .delete-post {
+        max-width: 70%;
+    }
+
+    #id_bio {
+        max-width: 465px;
+    }
+
+    .profile-page {
+        width: 65%;
+    }
+
+    .user-profile {
+        max-width: 50rem;
+    }
+
+    .card-title-page {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .social-media {
+        font-size: 0.8rem;
+    }
+
+    .card-body-page {
+        flex: 1 1 auto;
+        padding: 0.3rem;
+        width: 400px;
+        height: 200px;
+        margin-bottom: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .col-md-9 {
+        flex: 0 0 auto;
+        width: 95%;
+        margin: auto;
+        /* margin-top: -1.5rem; */
+        margin-left: -1rem;
+    }
+
+    .g-bg-secondary {
+        margin-left: 0;
+    }
+
+    .profile-bio-text {
+        text-align: justify;
+        font-size: 0.8rem;
+    }
+
+    .profile-image-post {
+        margin-left: -0.5rem;
+        width: 140px;
+    }
+
+    .profile-name {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .password-container {
+        width: 60%;
+    }
+
+    .change-password {
+        font-size: 1.3rem;
+    }
+
+    .login-title h3,
+    .register-title {
+        font-size: 1.3rem;
+    }
+
+    .img-circle-2 {
+        margin-top: 0;
+    }
+
+    .comment-title {
+        font-size: 1.4rem;
+    }
+}
+
+@media(max-width:500px) {
+    .navbar {
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .card-img,
+    .card-img-top {
+        padding-top: 0;
+    }
+
+    .homepage {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    #blog-single-post {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .img-circle-2 {
+        margin-bottom: 0;
+        margin-top: -1rem;
+        margin-left: 7.5rem;
+    }
+
+    .update-post {
+        margin-bottom: 1.5rem;
+    }
+
+    .bio {
+        margin-bottom: -1rem;
+        margin-top: 0;
+        text-align: justify;
+    }
+
+    .media-heading {
+        font-size: 1rem;
+        padding-left: 8rem;
+    }
+
+    .links {
+        padding-left: 4rem;
+    }
 }
