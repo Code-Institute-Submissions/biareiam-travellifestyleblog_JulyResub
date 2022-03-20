@@ -584,12 +584,6 @@ body {
 
 
 
-@media(max-width:1440px) {
-    .bio {
-        margin-bottom: 0;
-    }
-}
-
 
 @media(max-width:1200px) {
     #blog-single-post {
@@ -866,16 +860,7 @@ body {
     padding-bottom: 1rem;
 }
 
-@media(max-width:1300px) {
 
-    .bg-banner,
-    .post-banner {
-        background-color: #C2C8C4;
-        padding-top: 3rem;
-        padding-bottom: 3.5rem;
-        margin-top: -1rem;
-    }
-}
 
 .category-add-title {
     font-size: 1.4rem;
@@ -998,31 +983,8 @@ body {
 }
 
 
-@media(max-width:1440px) {
-    .add-edit-post {
-        width: 55%;
-        margin: auto;
-        margin-top: 2rem;
-    }
 
-    #cke_id_content {
-        max-width: 665px;
-    }
 
-}
-
-@media(max-width:1300px) {
-    .add-edit-post {
-        width: 55%;
-        margin: auto;
-        margin-top: 2rem;
-    }
-
-    #cke_id_content {
-        max-width: 650px;
-    }
-
-}
 
 @media(max-width:1200px) {
     .add-edit-post {
@@ -1285,19 +1247,9 @@ body {
 }
 
 
-@media(max-width:1440px) {
-    .not-allow {
-        padding-top: 10rem;
-        padding-bottom: 10rem;
-    }
-}
 
-@media(max-width:1300px) {
-    .not-allow {
-        padding-top: 8rem;
-        padding-bottom: 8rem;
-    }
-}
+
+@media(max-width:1300px) {}
 
 @media(max-width:1024px) {
     .not-allow {
@@ -1376,15 +1328,6 @@ textarea {
 
 
 
-@media(max-width:1440px) {
-    #id_bio {
-        width: 755px;
-    }
-
-    .profile-page {
-        width: 55%;
-    }
-}
 
 @media(max-width:1300px) {
     #id_bio {
@@ -1625,20 +1568,7 @@ textarea {
     margin-top: -12.5rem;
 }
 
-@media(max-width:1440px) {
-    .card-body-page {
-        width: 800px;
-    }
 
-    .user-profile {
-        width: 40rem;
-    }
-
-    .profile-banner {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-}
 
 @media(max-width:1024px) {
     .card-body-page {
@@ -2520,7 +2450,6 @@ a {
     /*Home Page*/
     .pagination {
         justify-content: space-evenly;
-        margin-left: 65rem;
     }
 
     /*User Profile*/
@@ -2577,6 +2506,11 @@ a {
         width: 20%;
     }
 
+    /*Change Password*/
+    .password-container {
+        width: 20%;
+    }
+
     /*Post Page*/
     .post {
         padding-bottom: 1rem;
@@ -2592,6 +2526,19 @@ a {
         max-width: 665px;
     }
 
+    .img-circle-2 {
+        margin-left: 2rem;
+    }
+
+    .blog-card {
+        margin-bottom: 0rem;
+    }
+
+    /*Delete Post*/
+    .delete-post {
+        max-width: 20%;
+    }
+
     /*Comment Section*/
     .bootdey {
         margin: auto;
@@ -2600,6 +2547,119 @@ a {
     /*Not Allow here/ not logged in messages*/
     .not-allow-box {
         max-width: 20%;
+    }
+}
+
+@media(max-width:1440px) {
+
+    /*Pagination*/
+    .pagination {
+        justify-content: flex-end;
+    }
+
+    /*Post Page - User*/
+    .bio {
+        margin-bottom: 0;
+    }
+
+    /*Post Page*/
+    .add-edit-post {
+        width: 55%;
+        margin: auto;
+        margin-top: 2rem;
+    }
+
+    #cke_id_content {
+        max-width: 665px;
+    }
+
+    /*Not allowed messages*/
+    .not-allow {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+
+    /*User profile*/
+    #id_bio {
+        width: 755px;
+    }
+
+    .profile-page {
+        width: 55%;
+    }
+
+    .user-profile {
+        width: 40rem;
+    }
+
+    .profile-banner {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    /*My posts page and categories page*/
+    .card-body-page {
+        width: 800px;
+    }
+
+    /*Categories page*/
+    .category-page {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /*Settings*/
+    .profile-page,
+    .password-container {
+        width: 35%;
+    }
+
+    /*Login/Register*/
+    .login {
+        width: 35%;
+    }
+
+    .register {
+        width: 45%;
+    }
+
+    /*Delete Post*/
+    .delete-post {
+        max-width: 40%;
+    }
+
+    /*Not allowed message*/
+    .not-allow-box {
+        max-width: 30%;
+    }
+}
+
+@media(max-width:1300px) {
+
+    /*Gnereral background*/
+    .bg-banner,
+    .post-banner {
+        background-color: #C2C8C4;
+        padding-top: 3rem;
+        padding-bottom: 3.5rem;
+        margin-top: -1rem;
+    }
+
+    /*Post page*/
+    .add-edit-post {
+        width: 55%;
+        margin: auto;
+        margin-top: 2rem;
+    }
+
+    #cke_id_content {
+        max-width: 650px;
+    }
+
+    /*Not allowed Page*/
+    .not-allow {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
     }
 
 }

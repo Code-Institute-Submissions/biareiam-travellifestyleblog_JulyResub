@@ -5,7 +5,6 @@
 
 
 {% if user.is_authenticated %}
-{% if user.id == userprofile.user.id %}
 
 <div class="profile">
     <div class="profile-page">
@@ -25,15 +24,6 @@
             <div class="not-allow-box">
                 <p>You need to login to be able to edit your profile</p>
                 <p><a href="{% url 'login' %}">Login Here</a></p>
-            </div>
-        </div>
-        {% endif %}
-
-        {% else %}
-        <!-- If the user tries to edit a profile which does not belong to him/her -->
-        <div class="not-allow">
-            <div class="not-allow-box">
-                <p>You are not allowed to edit this profile.</p>
             </div>
         </div>
         {% endif %}
