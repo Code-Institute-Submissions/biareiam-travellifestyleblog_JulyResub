@@ -347,6 +347,10 @@ All the posts from the website have the name of the original author as well as a
 - CSS Lint VSCode extension
 - PEP8 and AUTOPEP8. Online PEP8 warns about lines being too long but when I attempted to fix that
   AUTOPEP8 would break the code, otherwise no issues.
+- Lighthouse:
+
+<img width="500" alt="lighthouse-test" src="https://user-images.githubusercontent.com/65717229/159161401-c3ab6e39-386f-42db-ab67-cbf3b5ef7a43.PNG">
+
 
 ### Manual Testing
 
