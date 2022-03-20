@@ -672,19 +672,6 @@ body {
 
 
 
-@media(max-width:500px) {
-    .card-body-categories-items {
-        width: 100%;
-    }
-
-    .card-body {
-        height: 650px;
-    }
-
-    .dropdown-item-cat {
-        font-size: 1.1rem;
-    }
-}
 
 @media(max-width:400px) {
     .card-categories {
@@ -742,18 +729,6 @@ body {
 
 
 
-@media(max-width:500px) {
-    .category-page {
-        padding: 0.5rem;
-    }
-
-    .category-add {
-        margin-left: 1rem;
-    }
-}
-
-
-
 
 /*------------- Add Post ------------------*/
 
@@ -807,22 +782,6 @@ body {
 
 
 
-
-
-
-@media(max-width:500px) {
-    .add-edit-post {
-        width: 95%;
-    }
-
-    #cke_id_content {
-        max-width: 370px;
-    }
-
-    .navbar>.container {
-        padding-right: 1rem;
-    }
-}
 
 @media(max-width:400px) {
     #cke_id_content {
@@ -938,20 +897,6 @@ body {
     }
 }
 
-@media (max-width: 500px) {
-
-    .login,
-    .register {
-        width: 95%;
-    }
-
-    .login-register-banner {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-
-
-    }
-}
 
 @media (max-width: 400px) {
 
@@ -1022,18 +967,6 @@ body {
     background-color: #C2C8C4;
 }
 
-
-
-@media(max-width:500px) {
-    .not-allow-box {
-        max-width: 90%;
-    }
-
-    .delete-post {
-        max-width: 85%;
-    }
-}
-
 @media(max-width:400px) {
     .not-allow-box {
         max-width: 90%;
@@ -1083,15 +1016,7 @@ textarea {
 }
 
 
-@media(max-width:500px) {
-    #id_bio {
-        max-width: 370px;
-    }
 
-    .profile-page {
-        width: 95%;
-    }
-}
 
 @media(max-width:400px) {
     #id_bio {
@@ -1281,59 +1206,6 @@ textarea {
 
 
 
-
-
-@media(max-width:500px) {
-    .image-profile {
-        width: 150px;
-        margin-left: -2rem;
-    }
-
-    .card-text-bio {
-        display: none;
-    }
-
-    .card-body-page {
-        flex: 1 1 auto;
-        padding: 0.3rem;
-        margin-bottom: -5rem;
-        margin-left: -6rem;
-        padding-top: 3rem;
-    }
-
-    .card-title-page {
-        margin-bottom: 4rem;
-        font-size: 1rem;
-    }
-
-    .card-body-page h5 {
-        margin-bottom: 3rem;
-    }
-
-    .image-avatar-col {
-        margin-left: 0;
-    }
-
-    .image-profile {
-        width: 150px;
-        margin-left: 2.5rem;
-    }
-
-    .profile-info {
-        margin-left: -1.5rem;
-    }
-
-    .profile-info i {
-        padding: 15px 3px 0px 35px;
-        font-size: 1.4rem;
-    }
-
-    .user-profile {
-        width: 23rem;
-        margin-left: 1.8rem;
-    }
-}
-
 @media(max-width:400px) {
     .card-body-page {
         flex: 1 1 auto;
@@ -1413,13 +1285,6 @@ textarea {
     color: rgb(0, 0, 0);
     background-color: white;
     box-shadow: 12px 12px 2px 1px rgba(116, 115, 113, 0.2);
-}
-
-@media(max-width:500px) {
-    .add-comment {
-        width: 95%;
-    }
-
 }
 
 .comment-title {
@@ -1527,58 +1392,6 @@ textarea {
 }
 
 
-
-
-
-@media(max-width:500px) {
-    .profile-image-post {
-        width: 110px;
-        height: auto;
-        margin-left: 5rem;
-        margin-bottom: 2rem;
-    }
-
-    .col-md-9 {
-        flex: 0 0 auto;
-        width: 100%;
-        margin: auto;
-        margin-top: -2rem;
-    }
-
-    .profile-name {
-        font-size: 1rem;
-        text-align: center;
-    }
-
-    .content-card {
-        margin-bottom: -1rem;
-        margin-top: 1.5rem;
-    }
-
-    .g-bg-secondary {
-        margin-left: 0;
-        margin-bottom: 1.5rem;
-    }
-
-    .allcomment-section {
-        padding-left: 0;
-    }
-
-    .comment-text {
-        font-size: 0.8rem;
-    }
-
-    .comment-section {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
-    .comment-title-page,
-    .add-comment-btn {
-        margin-left: 1rem;
-    }
-
-}
 
 @media(max-width:400px) {
     .profile-image-post {
@@ -1699,14 +1512,6 @@ textarea {
     margin-bottom: 3.5rem;
 }
 
-
-@media(max-width:500px) {
-    .password-container {
-        width: 90%;
-
-    }
-}
-
 /*--------------- my posts -----------------*/
 
 .no-post {
@@ -1753,14 +1558,6 @@ textarea {
     background-color: #d1e7dd !important;
     border-color: #badbcc !important;
     margin-bottom: 1rem;
-}
-
-@media(max-width:500px) {
-    .col-md-8 {
-        flex: 0 0 auto;
-        width: 98%;
-        padding-left: 1.5rem;
-    }
 }
 
 /**************************************************/
@@ -1813,18 +1610,6 @@ a:hover {
     position: relative;
     color: #000000;
 
-}
-
-@media(max-width:500px) {
-    .postcard {
-        margin-bottom: -1rem;
-    }
-
-    .pagination a {
-        margin-bottom: 1rem;
-        margin-top: 1rem;
-        margin-right: 2.5rem;
-    }
 }
 
 a {
@@ -1961,36 +1746,6 @@ a {
     }
 }
 
-@media(max-width:500px) {
-    .postcard__text {
-        padding-left: 1.5rem;
-        margin-top: -1rem;
-        margin-bottom: 3rem;
-        padding-right: 1.5rem;
-    }
-
-    .col-md-10 {
-        width: 100%;
-        margin-top: 1rem;
-        padding-left: 1.5rem;
-    }
-
-    .media-heading {
-        font-size: 1rem;
-        padding-left: 8rem;
-        margin-top: -1rem;
-    }
-
-    .pagination a {
-        margin-bottom: 1rem;
-        margin-top: 1rem;
-        margin-right: 2.5rem;
-    }
-
-    .image-banner {
-        margin-bottom: 2rem;
-    }
-}
 
 @media(max-width:380px) {
     .pagination a {
@@ -2673,5 +2428,225 @@ a {
 
     .links {
         padding-left: 4rem;
+    }
+
+    .card-body-categories-items {
+        width: 100%;
+    }
+
+    .card-body {
+        height: 650px;
+    }
+
+    .dropdown-item-cat {
+        font-size: 1.1rem;
+    }
+
+    .category-page {
+        padding: 0.5rem;
+    }
+
+    .category-add {
+        margin-left: 1rem;
+    }
+
+    .add-edit-post {
+        width: 95%;
+    }
+
+    #cke_id_content {
+        max-width: 370px;
+    }
+
+    .navbar>.container {
+        padding-right: 1rem;
+    }
+
+    .login,
+    .register {
+        width: 95%;
+    }
+
+    .login-register-banner {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .not-allow-box {
+        max-width: 90%;
+    }
+
+    .delete-post {
+        max-width: 85%;
+    }
+
+    #id_bio {
+        max-width: 370px;
+    }
+
+    .profile-page {
+        width: 95%;
+    }
+
+    .image-profile {
+        width: 150px;
+        margin-left: -2rem;
+    }
+
+    .card-text-bio {
+        display: none;
+    }
+
+    .card-body-page {
+        flex: 1 1 auto;
+        padding: 0.3rem;
+        margin-bottom: -5rem;
+        margin-left: -6rem;
+        padding-top: 3rem;
+    }
+
+    .card-title-page {
+        margin-bottom: 4rem;
+        font-size: 1rem;
+    }
+
+    .card-body-page h5 {
+        margin-bottom: 3rem;
+    }
+
+    .image-avatar-col {
+        margin-left: 0;
+    }
+
+    .image-profile {
+        width: 150px;
+        margin-left: 2.5rem;
+    }
+
+    .profile-info {
+        margin-left: -1.5rem;
+    }
+
+    .profile-info i {
+        padding: 15px 3px 0px 35px;
+        font-size: 1.4rem;
+    }
+
+    .user-profile {
+        width: 23rem;
+        margin-left: 1.8rem;
+    }
+
+    .add-comment {
+        width: 95%;
+    }
+
+    .profile-image-post {
+        width: 110px;
+        height: auto;
+        margin-left: 5rem;
+        margin-bottom: 2rem;
+    }
+
+    .col-md-9 {
+        flex: 0 0 auto;
+        width: 100%;
+        margin: auto;
+        margin-top: -2rem;
+    }
+
+    .profile-name {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .content-card {
+        margin-bottom: -1rem;
+        margin-top: 1.5rem;
+    }
+
+    .g-bg-secondary {
+        margin-left: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .allcomment-section {
+        padding-left: 0;
+    }
+
+    .comment-text {
+        font-size: 0.8rem;
+    }
+
+    .comment-section {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .comment-title-page,
+    .add-comment-btn {
+        margin-left: 1rem;
+    }
+
+    .password-container {
+        width: 90%;
+    }
+
+    .col-md-8 {
+        flex: 0 0 auto;
+        width: 98%;
+        padding-left: 1.5rem;
+    }
+
+    .postcard {
+        margin-bottom: -1rem;
+    }
+
+    .pagination a {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        margin-right: 2.5rem;
+    }
+
+    .postcard__text {
+        padding-left: 0;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        padding-right: 0;
+    }
+
+    .col-md-10 {
+        width: 100%;
+        margin-top: 1rem;
+        padding-left: 1.5rem;
+    }
+
+    .media-heading {
+        font-size: 1rem;
+        padding-left: 8rem;
+        margin-top: -1rem;
+    }
+
+    .pagination a {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        margin-right: 2.5rem;
+    }
+
+    .image-banner {
+        margin-bottom: 2rem;
+    }
+
+    .post-title {
+        font-size: 1.4rem;
+    }
+
+    .author,
+    .date i {
+        font-size: 0.8rem;
+    }
+
+    .text-success {
+        font-size: 1.2rem;
     }
 }
