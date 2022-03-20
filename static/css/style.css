@@ -582,11 +582,7 @@ body {
     background-color: rgba(204, 204, 204, 0.719);
 }
 
-@media(max-width:2560px) {
-    .user-profile {
-        max-width: 40rem;
-    }
-}
+
 
 @media(max-width:1440px) {
     .bio {
@@ -962,21 +958,6 @@ body {
     box-shadow: 12px 12px 2px 1px rgba(116, 115, 113, 0.2);
 }
 
-@media(max-width:2560px) {
-    .post {
-        padding-bottom: 1rem;
-        padding-top: 2rem;
-    }
-
-    .add-edit-post {
-        max-width: 700px;
-        margin: auto;
-    }
-
-    #cke_id_content {
-        max-width: 665px;
-    }
-}
 
 .add-edit-post-page {
     text-transform: uppercase;
@@ -1388,9 +1369,16 @@ body {
     padding-bottom: 0.5rem;
 }
 
+textarea {
+    resize: horizontal;
+}
+
+
+
+
 @media(max-width:1440px) {
-    #cke_id_bio {
-        max-width: 755px;
+    #id_bio {
+        width: 755px;
     }
 
     .profile-page {
@@ -1399,29 +1387,36 @@ body {
 }
 
 @media(max-width:1300px) {
-    #cke_id_bio {
+    #id_bio {
         max-width: 675px;
     }
 }
 
 
 @media(max-width:1200px) {
-    #cke_id_bio {
-        max-width: 500px;
+    #id_bio {
+        max-width: 630px;
     }
 }
+
+@media(max-width:1100px) {
+    #id_bio {
+        max-width: 630px;
+    }
+}
+
 
 
 
 @media(max-width:1024px) {
-    #cke_id_bio {
-        max-width: 525px;
+    #id_bio {
+        max-width: 535px;
     }
 }
 
 @media(max-width:800px) {
-    #cke_id_bio {
-        max-width: 460px;
+    #id_bio {
+        max-width: 465px;
     }
 
     .profile-page {
@@ -1430,8 +1425,8 @@ body {
 }
 
 @media(max-width:500px) {
-    #cke_id_bio {
-        max-width: 365px;
+    #id_bio {
+        max-width: 370px;
     }
 
     .profile-page {
@@ -1440,8 +1435,8 @@ body {
 }
 
 @media(max-width:400px) {
-    #cke_id_bio {
-        max-width: 320px;
+    #id_bio {
+        max-width: 325px;
     }
 
     .profile-page {
@@ -1450,8 +1445,8 @@ body {
 }
 
 @media(max-width:350px) {
-    #cke_id_bio {
-        max-width: 270px;
+    #id_bio {
+        max-width: 275px;
     }
 
     .profile-page {
@@ -2519,4 +2514,92 @@ a {
     margin-right: 4rem;
 }
 
-/*********************/
+/*----------------- Media Query ------------------*/
+@media(max-width:2560px) {
+
+    /*Home Page*/
+    .pagination {
+        justify-content: space-evenly;
+        margin-left: 65rem;
+    }
+
+    /*User Profile*/
+    .profile-banner {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .profile-page {
+        width: 30%;
+    }
+
+    .user-profile {
+        max-width: 40rem;
+    }
+
+    /*Category list*/
+    .page-title {
+        padding-top: 2.5rem;
+        padding-bottom: 2rem;
+    }
+
+    .card-body-categories {
+        padding: 0.7rem;
+    }
+
+    .dropdown-item-cat {
+        font-size: 1.5rem;
+    }
+
+    .btn-category {
+        margin-bottom: -2rem;
+    }
+
+    /*Individual Categories*/
+
+    .category-page {
+        padding-left: 35rem;
+        padding-right: 35rem;
+    }
+
+    .card-body {
+        width: 100%;
+    }
+
+    /*Create Profile*/
+    #id_bio {
+        width: 720px;
+    }
+
+    /*Login*/
+    .login,
+    .register {
+        width: 20%;
+    }
+
+    /*Post Page*/
+    .post {
+        padding-bottom: 1rem;
+        padding-top: 2rem;
+    }
+
+    .add-edit-post {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    #cke_id_content {
+        max-width: 665px;
+    }
+
+    /*Comment Section*/
+    .bootdey {
+        margin: auto;
+    }
+
+    /*Not Allow here/ not logged in messages*/
+    .not-allow-box {
+        max-width: 20%;
+    }
+
+}
