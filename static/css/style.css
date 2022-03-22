@@ -1689,6 +1689,39 @@ a {
     }
 }
 
+@media(max-width:1500px) {
+
+    .profile-page {
+        width: 45%;
+    }
+
+    #id_bio {
+        width: 645px;
+    }
+
+    .category-page {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .login {
+        width: 40%;
+    }
+
+    .register {
+        width: 45%;
+    }
+
+    .pagination {
+        justify-content: flex-end;
+    }
+
+    .postcard__text {
+        padding: 0.5rem 0 1rem 0.5rem;
+        margin-top: 0.1rem;
+    }
+}
+
 @media(max-width:1440px) {
 
     /*Pagination*/
