@@ -46,5 +46,12 @@
         </div>
     </div>
 </div>
+{% else %}
+<div class="no-post-category">
+    <div class="not-allow-box">
+        <p>This category has no posts.</p>
+        <p><a href="{% url 'add-post' %}">Add one</a></p>
+    </div>
+</div>
 {% endif %}
 {%endblock%}

@@ -240,6 +240,12 @@ body {
     padding: 1rem 5rem;
 }
 
+.no-post-category {
+    padding-top: 6.5rem;
+    padding-bottom: 8rem !important;
+    background-color: #C2C8C4;
+}
+
 
 /*-----------------Footer ---------------------*/
 .footer-banner {
@@ -466,6 +472,7 @@ body {
 
 .img-circle-2 {
     width: 150px;
+    height: 150px;
     border-radius: 50%;
     margin-top: 2rem;
     border: 1px solid #ccc;
@@ -1309,7 +1316,7 @@ textarea {
 /*--------------- my posts -----------------*/
 
 .no-post {
-    padding-top: 3rem;
+    padding-top: 1rem;
     padding-bottom: 8rem !important;
     background-color: #C2C8C4;
 }
@@ -1324,6 +1331,7 @@ textarea {
     color: #3b1c74;
 
 }
+
 
 /*--------------- Alert messages --------------------*/
 .alert-danger {
