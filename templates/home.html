@@ -6,8 +6,23 @@
         <div class="image-banner">
         </div>
     </div>
+    <h2 class="mb-3">Categories</h2>
+    <div class="list-group mb-3">
+        {% for item in cat_menu %}
+        {% if "placeholder" in item.image.url %}
+        <a href="{% url 'category' item %}" class="list-group-item list-group-item-action text-black bg-light">
+            <p><img src="http://www.onlylondon.properties/application/modules/themes/views/default/assets/images/image-placeholder.png"
+                    alt="" width="100px" height="auto">{{ item }}</p>
+        </a>
+        {% else %}
+        <a href="{% url 'category' item %}" class="list-group-item list-group-item-action text-black bg-light">
+            <p><img src="{{ item.image.url }}" alt="" width="100px" height="auto">{{ item }}</p>
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
     {% for post in object_list %}
-    <div class="container homepage">
+    <div class=" container homepage">
         <article class="postcard">
             <div class="row">
                 <div class="col-md-4">

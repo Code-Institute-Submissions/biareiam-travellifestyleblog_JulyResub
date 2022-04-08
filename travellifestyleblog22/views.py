@@ -4,7 +4,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
 from .models import Post, Category, Comment
-from .forms import PostForm, EditForm, CommentForm
+from .forms import PostForm, EditForm, CommentForm, CategoryForm
 from django.contrib import messages
 
 
@@ -51,7 +51,7 @@ class AddCategoryView(CreateView):
     """ It will allow users to add new categories """
     model = Category
     template_name = 'add_category.html'
-    fields = '__all__'
+    form_class = CategoryForm
 
 
 class HomeView(ListView):

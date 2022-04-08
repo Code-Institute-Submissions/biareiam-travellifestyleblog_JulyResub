@@ -246,6 +246,16 @@ body {
     background-color: #C2C8C4;
 }
 
+.list-group {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: 0.25rem;
+    align-items: center;
+    text-align: center;
+}
+
 
 /*-----------------Footer ---------------------*/
 .footer-banner {
@@ -2488,6 +2498,11 @@ a {
 
     .text-success {
         font-size: 1.2rem;
+    }
+
+    .list-group {
+        flex-direction: column;
+
     }
 
 

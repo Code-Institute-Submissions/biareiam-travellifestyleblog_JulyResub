@@ -47,3 +47,13 @@ class CommentForm(forms.ModelForm):
             'name': forms.TextInput(attrs={'class': 'form-control'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
             }
+
+class CategoryForm(forms.ModelForm):
+    """ It will help to shape the add a categories form """
+    class Meta:
+        """ giving some style to the form """
+        model = Category
+        fields = ('name','image')
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            }
