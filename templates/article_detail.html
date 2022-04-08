@@ -109,7 +109,7 @@
                 <small>
                     <p class="links"><a href="{% url 'profile' post.author.profile.id %}"
                             class="social-media">Profile</a>
-                        <!-- One if the user enters a social media, it will be displayed in the page -->
+                        <!-- Once if the user enters a social media, it will be displayed in the page -->
                         {% if post.author.profile.facebook_url %}
                         | <a href="{{ post.author.profile.instagram_url }}" class="social-media">Facebook</a>
                         {% endif %}
