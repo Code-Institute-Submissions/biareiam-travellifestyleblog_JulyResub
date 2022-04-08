@@ -9,7 +9,6 @@ from datetime import datetime
 class Category(models.Model):
     """  display the post categories"""
     name = models.CharField(max_length=255)
-    image = models.ImageField(null=True, blank=True, upload_to="images/", default="placeholder")
 
     def __str__(self):
         return self.name
