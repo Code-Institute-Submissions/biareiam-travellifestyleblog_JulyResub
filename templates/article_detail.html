@@ -44,6 +44,7 @@
                                                 {% endif %}
                                             </form>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -61,6 +62,10 @@
                         </div>
                         <div class="blog-post-des">
                             <p>{{ post.content|safe }}</p>
+                        </div>
+                        <div class="post-category">
+                            <p><a href="{% url 'category' post.category %}" class="categories-home">
+                                    {{ post.category }}</a></p>
                         </div>
                         {% if user.is_authenticated %}
                         {% if user.id == post.author.id %}
