@@ -31,8 +31,6 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
@@ -58,39 +56,40 @@
                     </li>
                     {% endif %}
                     {% if user.is_authenticated %}
-                    <li><a class="nav-link" href="{% url 'add-post' %}">Add Post</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            {{ user.first_name }}</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                            {% if user.profile.user %}
-                            <li><a class="dropdown-item drop" href="{% url 'profile' user.profile.id %}">Profile</a>
-                            </li>
-                            <li><a class="dropdown-item drop" href="{% url 'edit_profile' user.profile.id %}">Edit
-                                    Profile</a>
-                            </li>
-                            <li><a class="dropdown-item drop" href="{% url 'my_posts' %}">My Posts</a>
-                            </li>
-                            <li><a class="dropdown-item drop" href="{% url 'setting' %}">Settings</a>
-                            </li>
-                            {% else %}
-                            <li><a class="dropdown-item" href="{% url 'create_profile' %}">Create Profile</a>
-                            </li>
-                            {% endif %}
-                            <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
-                            </li>
-                        </ul>
+                    {% if user.profile.id %}
+                    <li class="nav-item px-2">
+                        <a class="nav-link active" aria-current="page" href="{% url 'add-post' %}">Add Post</a>
                     </li>
                     {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'register' %}">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    <li class="nav-item px-2">
+                        <a class="nav-link active" aria-current="page" href="{% url 'create_profile' %}">Create
+                            Profile</a>
                     </li>
                     {% endif %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ user.first_name }}</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'setting' %}">Settings</a></li>
+                            {% if user.profile.id %}
+                            <li><a class="dropdown-item" href="{% url 'profile' user.profile.id %}">Profile
+                                    Page</a></li>
+                            <li><a class="dropdown-item" href="{% url 'edit_profile' user.profile.id %}">Edit
+                                    Profile</a></li>
+                            {% endif %}
+                            <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                            {% else %}
+                            <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                    href="{% url 'register' %}">Register</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                    href="{% url 'login' %}">Login</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    {% endif %}
+                </ul>
             </div>
         </div>
     </nav>
