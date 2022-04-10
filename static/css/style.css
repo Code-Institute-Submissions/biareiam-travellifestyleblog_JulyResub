@@ -481,8 +481,8 @@ body {
 }
 
 .img-circle-2 {
-    width: 150px;
-    height: 150px;
+    width: 145px;
+    height: 145px;
     border-radius: 50%;
     margin-top: 2rem;
     border: 1px solid #ccc;
@@ -1505,12 +1505,8 @@ a {
         margin-top: 0;
     }
 
-    .col-md-10 {
-        flex: 0 0 auto;
-        width: 80%;
-        padding-left: 3rem;
-        margin-top: -2rem;
-    }
+
+
 
     .img-circle-2 {
         margin-top: 0;
@@ -1547,10 +1543,7 @@ a {
         padding-left: 0;
     }
 
-    .col-md-10 {
-        padding-left: 4.5rem;
-        margin-top: -3rem;
-    }
+
 
     .img-circle-2 {
         margin-top: -1rem;
@@ -2468,8 +2461,7 @@ a {
 
     .col-md-10 {
         width: 100%;
-        margin-top: 1rem;
-        padding-left: 1.5rem;
+
     }
 
     .media-heading {
@@ -2638,6 +2630,7 @@ a {
 
     .links {
         margin-left: -2rem;
+        text-align: center;
     }
 
     .date i {

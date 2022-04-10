@@ -53,7 +53,7 @@
                             <!-- If the post does not have an image, a default one will be displayed instead -->
                             {% if "placeholder" in post.image.url %}
                             <a href="{% url 'article-detail' post.pk  %}" class="post-link"><img class="card-img-top"
-                                    src="https://reactnativecode.com/wp-content/uploads/2018/02/Default_Image_Thumbnail.png"
+                                    src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.png"
                                     alt="defalt profile image"></a>
                             {% else %}
                             <a href="{% url 'article-detail' post.pk  %}" class="post-link"><img class="card-img-top"
@@ -81,28 +81,34 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2 col-sm-12">
+        </div>
+        <div class="row">
+            <div class="col-md-2">
                 <div class="blog-author">
-                    <div class="media-object pull-left">
+                    <div class="media-object">
                         <!-- If the user does not have a profile picture, a default one will be displayed instead -->
                         {% if "placeholder" in post.author.profile.profile_pic.url %}
                         <div class="circle-image">
                             <div class="media-object pull-left"><a href="{% url 'profile' post.author.profile.id %}">
-                                    <img src="https://reactnativecode.com/wp-content/uploads/2018/02/Default_Image_Thumbnail.png"
-                                        class="img-circle-2" alt="post author"></a>
+                                    <img src="https://www.odeliver.net/images/members/default.png" class="img-circle-2"
+                                        alt="post author"></a>
                             </div>
                         </div>
-                        {% else %}
-                        <div class="circle-image">
-                            <a href="{% url 'profile' post.author.profile.id %}">
+                    </div>
+                    {% else %}
+                    <div class="circle-image">
+                        <div class="media-object pull-left"><a href="{% url 'profile' post.author.profile.id %}">
                                 <img src="{{ post.author.profile.profile_pic.url }}" class="img-circle-2"
                                     alt="post's author"></a>
                         </div>
+
                     </div>
                     {% endif %}
                 </div>
             </div>
-            <div class="col-md-10 col-sm-12">
+        </div>
+        <div class="row">
+            <div class="col-md-10">
                 <h3 class="media-heading hover-underline-animation">
                     {{ post.author.first_name }} {{ post.author.last_name}}
                 </h3>
@@ -124,31 +130,31 @@
             </div>
         </div>
     </div>
+</div>
+<div class="container bootstrap  bootdey">
+    <div class="blog-comment">
+        <h3 class="text-success">Comment</h3>
 
-    <div class="container bootstrap  bootdey">
-        <div class="blog-comment">
-            <h3 class="text-success">Comment</h3>
-
-            {% if not post.comments.all %}
-            <p><a href="{% url 'add_comment' post.pk %}" class="btn btn-primary btn-submit">Add
-                    comment</a></p>
-            {% else%}
-            <p><a href="{% url 'add_comment' post.pk %}" class="btn btn-primary btn-submit">Add
-                    comment</a></p>
-            <ul class="comments">
-                <li class="">
-                    {% for comment in post.comments.all %}
-                    <div class="post-comments">
-                        <p class="meta"><strong>{{ comment.name}}</strong>
-                            says : <i class="pull-right"><small>{{ comment.date_addded}}</small></i></p>
-                        <p class="comment-body">{{ comment.body }}</p>
-                    </div>
-                    {% endfor %}
-                </li>
-            </ul>
-            {% endif %}
-        </div>
+        {% if not post.comments.all %}
+        <p><a href="{% url 'add_comment' post.pk %}" class="btn btn-primary btn-submit">Add
+                comment</a></p>
+        {% else%}
+        <p><a href="{% url 'add_comment' post.pk %}" class="btn btn-primary btn-submit">Add
+                comment</a></p>
+        <ul class="comments">
+            <li class="">
+                {% for comment in post.comments.all %}
+                <div class="post-comments">
+                    <p class="meta"><strong>{{ comment.name}}</strong>
+                        says : <i class="pull-right"><small>{{ comment.date_addded}}</small></i></p>
+                    <p class="comment-body">{{ comment.body }}</p>
+                </div>
+                {% endfor %}
+            </li>
+        </ul>
+        {% endif %}
     </div>
+</div>
 </div>
 
 {% endblock %}
