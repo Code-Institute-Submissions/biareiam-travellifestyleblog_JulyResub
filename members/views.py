@@ -34,10 +34,10 @@ class ShowProfilePageView(DetailView):
     model = Profile
     template_name = 'registration/user_profile.html'
 
-    def get(self, id, *args, **kwargs):
-        context = super(ShowProfilePageView, self).get_context_data(*args, **kwargs)
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
         
-        page_user = get_object_or_404(Profile, id=pk)
+        page_user = get_object_or_404(Profile, id=self.kwargs['pk'])
 
         context["page_user"] = page_user
         return context
@@ -65,11 +65,10 @@ class UserRegisterView(generic.CreateView):
         return super().form_valid(form)
 
 
-class UserEditView(generic.UpdateView):
+class UserUpdateView(generic.UpdateView):
     form_class = EditProfileForm
     template_name = 'registration/edit_profile.html'
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('home')
 
-#function to display user who is updating his details. 
     def get_object(self):
-        return self.request
+        return self.request.user

@@ -4,9 +4,9 @@ from django.views.generic import ListView, DetailView, CreateView,\
      UpdateView, DeleteView
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
-from django.contrib import messages
 from .models import Post, Category, Comment
 from .forms import PostForm, EditForm, CommentForm
+
 
 
 def my_posts(request):
@@ -76,8 +76,7 @@ class ArticleDetailView(DetailView):
 
     def get_context_data(self, *args, **kwargs):
         cat_menu = Category.objects.all()
-        context = super(ArticleDetailView, self).get_context_data(
-                  *args, **kwargs)
+        context = super().get_context_data(*args, **kwargs)
 
         engagement = get_object_or_404(Post, id=self.kwargs['pk'])
         total_likes = engagement.total_likes()

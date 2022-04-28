@@ -1,12 +1,12 @@
 """ libraries used """
 from django.urls import path
-from .views import UserRegisterView, UserEditView, PasswordsChangeView,\
+from .views import UserRegisterView, UserUpdateView, PasswordsChangeView,\
     ShowProfilePageView, EditProfilePageview, CreateProfilePageView
 from . import views
 
 urlpatterns = [
     path('register/', UserRegisterView.as_view(), name='register'),
-    path('settings/', UserEditView.as_view(), name='setting'),
+    path('settings/', UserUpdateView.as_view(), name='setting'),
     path('password/',
          PasswordsChangeView.as_view(
             template_name='registration/change_password.html'
