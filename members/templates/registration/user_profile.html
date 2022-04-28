@@ -14,8 +14,8 @@
                             <div class="profile-info">
                                 <!-- If the user does not have a profile image, a default one will be displayed instead -->
                                 {% if "placeholder" in page_user.profile_pic.url %}
-                                <img src="https://www.kindpng.com/picc/m/451-4517876_default-profile-hd-png-download.png"
-                                    class="profile-pic" alt="default profile image" width="250px" height="auto">
+                                <img src="https://www.odeliver.net/images/members/default.png" class="profile-pic"
+                                    alt="default profile image" width="250px" height="auto">
                                 {% else %}
                                 <img src="{{ page_user.profile_pic.url }}" class="profile-pic" alt="profile image">
                                 {% endif %}
