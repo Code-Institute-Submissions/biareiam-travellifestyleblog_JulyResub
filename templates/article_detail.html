@@ -13,7 +13,7 @@
                             <h2 class="post-title">{{ post.post_title}}</h2>
                         </div>
                         <div class="blog-post-format">
-                            <span class="author"><a href="{% url 'profile' post.author.profile.id %}"><img
+                            <span class="author"><a href="{% url 'show_profile_page' post.author.profile.id %}"><img
                                         src="{{ post.author.profile.profile_pic.url }}"
                                         class="img-responsive img-circle"></a>Post by: {{ post.author }}</span>
                             <span class="line-space"> | </span>
@@ -89,7 +89,8 @@
                         <!-- If the user does not have a profile picture, a default one will be displayed instead -->
                         {% if "placeholder" in post.author.profile.profile_pic.url %}
                         <div class="circle-image">
-                            <div class="media-object pull-left"><a href="{% url 'profile' post.author.profile.id %}">
+                            <div class="media-object pull-left"><a
+                                    href="{% url 'show_profile_page' post.author.profile.id %}">
                                     <img src="https://www.odeliver.net/images/members/default.png" class="img-circle-2"
                                         alt="post author"></a>
                             </div>
@@ -97,7 +98,8 @@
                     </div>
                     {% else %}
                     <div class="circle-image">
-                        <div class="media-object pull-left"><a href="{% url 'profile' post.author.profile.id %}">
+                        <div class="media-object pull-left"><a
+                                href="{% url 'show_profile_page' post.author.profile.id %}">
                                 <img src="{{ post.author.profile.profile_pic.url }}" class="img-circle-2"
                                     alt="post's author"></a>
                         </div>
@@ -113,7 +115,7 @@
                     {{ post.author.first_name }} {{ post.author.last_name}}
                 </h3>
                 <small>
-                    <p class="links"><a href="{% url 'profile' post.author.profile.id %}"
+                    <p class="links"><a href="{% url 'show_profile_page' post.author.profile.id %}"
                             class="social-media">Profile</a>
                         <!-- Once if the user enters a social media, it will be displayed in the page -->
                         {% if post.author.profile.facebook_url %}
@@ -136,10 +138,10 @@
         <h3 class="text-success">Comment</h3>
 
         {% if not post.comments.all %}
-        <p><a href="{% url 'add_comment' post.pk %}" class="btn btn-primary btn-submit">Add
+        <p><a href="{% url 'add_cmt' post.pk %}" class="btn btn-primary btn-submit">Add
                 comment</a></p>
         {% else%}
-        <p><a href="{% url 'add_comment' post.pk %}" class="btn btn-primary btn-submit">Add
+        <p><a href="{% url 'add_cmt' post.pk %}" class="btn btn-primary btn-submit">Add
                 comment</a></p>
         <ul class="comments">
             <li class="">

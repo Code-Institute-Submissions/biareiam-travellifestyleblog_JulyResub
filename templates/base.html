@@ -57,49 +57,37 @@
                     {% endif %}
                     {% if user.is_authenticated %}
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'add_post' %}">Add Post</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'add_category' %}">Add Category</a>
+                    <li class="nav-item px-2">
+                        <a class="nav-link active" aria-current="page" href="{% url 'add-post' %}">Add Post</a>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-expanded="false">
-                            {{ user.first_name }}
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{% url 'update_profile' %}">Settings</a>
-                            {% if user.userprofile.id %}
-                            <a class="dropdown-item" href="{% url 'edit_profile_page' user.userprofile.id %}">Edit
-                                Profile Page</a>
-                            <a class="dropdown-item" href="{% url 'show_profile_page' user.userprofile.id %}">Show
-                                Profile Page</a>
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ user.first_name }}</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'setting' %}">Settings</a></li>
+                            {% if user.profile.id %}
+                            <li><a class="dropdown-item" href="{% url 'show_profile_page' user.profile.id %}">Profile
+                                    Page</a></li>
+                            <li><a class="dropdown-item drop" href="{% url 'my_posts' %}">My Posts</a>
+                            <li><a class="dropdown-item" href="{% url 'edit_profile' user.profile.id %}">Edit
+                                    Profile</a></li>
                             {% else %}
-                            <a class="dropdown-item" href="{% url 'create_profile_page' %}">Create Profile Page</a>
+
+                            <li><a class="dropdown-item" href="{% url 'create_profile' %}">Create
+                                    Profile</a></li>
                             {% endif %}
+                            <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                            {% else %}
+                            <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                    href="{% url 'register' %}">Register</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                    href="{% url 'login' %}">Login</a>
+                            </li>
 
-
-                        </div>
+                        </ul>
                     </li>
-
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-                    </li>
-
-                    {% else %}
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'register' %}">Register</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login' %}">Login</a>
-                    </li>
-
                     {% endif %}
 
                 </ul>

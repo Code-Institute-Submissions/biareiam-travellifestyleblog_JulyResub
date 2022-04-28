@@ -7,17 +7,17 @@ class PostAdmin(admin.ModelAdmin):
 
     list_display = ('post_title', 'category', 'created_on')
     list_filter = ('category', 'created_on',)
-    search_fields = ('post_title', 'category')
+    search_fields = ('post_title', 'category',)
 
 
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
 
-    list_display = ('first_name', 'last_name', 'created_on')
+    list_display = ('created_on', )
 
 admin.site.register(Category)
 
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'body', 'post', 'date_addded')
+    list_display = ('name', 'body', 'post', 'date_addded',)

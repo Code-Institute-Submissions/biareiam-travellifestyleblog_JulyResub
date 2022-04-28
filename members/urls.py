@@ -1,7 +1,7 @@
 """ libraries used """
 from django.urls import path
 from .views import UserRegisterView, UserEditView, PasswordsChangeView,\
-    ShowProfilePageview, EditProfilePageview, CreateProfilePageView
+    ShowProfilePageView, EditProfilePageview, CreateProfilePageView
 from . import views
 
 urlpatterns = [
@@ -12,7 +12,8 @@ urlpatterns = [
             template_name='registration/change_password.html'
             )),
     path('password_success', views.password_success, name='password_success'),
-    path('<int:pk>/profile/', ShowProfilePageview.as_view(), name='profile'),
+    path('<int:pk>/profile/', ShowProfilePageView.as_view(),
+         name='show_profile_page'),
     path('<int:pk>/edit/profile_page/',
          EditProfilePageview.as_view(), name='edit_profile'),
     path('create_profile/', CreateProfilePageView.as_view(),

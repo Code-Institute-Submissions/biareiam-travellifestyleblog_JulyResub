@@ -11,7 +11,7 @@ class Category(models.Model):
     name = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
     def get_absolute_url(self):
         """ Return to the home page """
@@ -19,26 +19,18 @@ class Category(models.Model):
 
 
 class Profile(models.Model):
-    """ Profile model """
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
-    bio = RichTextField(blank=True, null=True)
-    profile_pic = models.ImageField(null=True, blank=True,
-                                    upload_to="images/profile/",
-                                    default="placeholder")
-    instagram_url = models.CharField(max_length=255, null=True, blank=True)
+    bio = models.TextField()
+    profile_pic = models.ImageField(null=True, blank=True, upload_to="images/profile/", default="placeholder")
     facebook_url = models.CharField(max_length=255, null=True, blank=True)
     twitter_url = models.CharField(max_length=255, null=True, blank=True)
+    instagram_url = models.CharField(max_length=255, null=True, blank=True)
     pinterest_url = models.CharField(max_length=255, null=True, blank=True)
-    first_name = models.CharField(max_length=255, default=' ')
-    last_name = models.CharField(max_length=255, default=' ')
-    email = models.EmailField(default=' ')
-    created_on = models.DateField(auto_now_add=True)
+    created_on = models.DateField(default=datetime.now)
 
     def __str__(self):
         return str(self.user)
-
     def get_absolute_url(self):
-        """ Once done the user will be redirect to the home page """
         return reverse('home')
 
 
