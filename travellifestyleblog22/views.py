@@ -1,25 +1,25 @@
 """ Libraries """
 from django.shortcuts import render, get_object_or_404, redirect
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView,\
+     UpdateView, DeleteView
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 from .models import Post, Category, Comment
 from .forms import PostForm, EditForm, CommentForm
-from django.contrib import messages
 
 
 def my_posts(request):
     """ Create my posts page """
     if request.user.is_authenticated:
         posts = Post.objects.filter(author=request.user.id)
-        return render(request,"my_posts.html", {
-            "posts" : posts
+        return render(request, "my_posts.html", {
+            "posts": posts
         })
 
     else:
         messages.success(request, ("You are not authorized to view this page"))
         return redirect('home')
-
 
 
 def like_view(request, pk):
@@ -38,13 +38,15 @@ def like_view(request, pk):
 def category_view(request, cats):
     """ Function which will allow users to sort the posts into categories """
     category_posts = Post.objects.filter(category=cats)
-    return render(request, 'category.html', {'cats': cats.title(), 'category_posts': category_posts})
+    return render(request, 'category.html', {'cats': cats.title(),
+                                             'category_posts': category_posts})
 
 
 def category_list_view(request):
     """ Function which will allow user to see the post sorted by category """
     cat_menu_list = Category.objects.all()
-    return render(request, 'category_list.html', {'cat_menu_list': cat_menu_list})
+    return render(request, 'category_list.html', {
+                           'cat_menu_list': cat_menu_list})
 
 
 class AddCategoryView(CreateView):
@@ -74,7 +76,8 @@ class ArticleDetailView(DetailView):
 
     def get_context_data(self, *args, **kwargs):
         cat_menu = Category.objects.all()
-        context = super(ArticleDetailView, self).get_context_data(*args, **kwargs)
+        context = super(ArticleDetailView, self).get_context_data(
+                  *args, **kwargs)
 
         engagement = get_object_or_404(Post, id=self.kwargs['pk'])
         total_likes = engagement.total_likes()
@@ -137,5 +140,3 @@ class AddCommentView(CreateView):
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
         return super().form_valid(form)
-
-

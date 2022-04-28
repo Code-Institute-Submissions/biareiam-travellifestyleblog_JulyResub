@@ -1,9 +1,9 @@
 """ Libraries """
+from datetime import datetime
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 from ckeditor.fields import RichTextField
-from datetime import datetime
 
 
 class Category(models.Model):
@@ -22,7 +22,9 @@ class Profile(models.Model):
     """ Profile model """
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     bio = RichTextField(blank=True, null=True)
-    profile_pic = models.ImageField(null=True, blank=True, upload_to="images/profile/", default="placeholder")
+    profile_pic = models.ImageField(null=True, blank=True,
+                                    upload_to="images/profile/",
+                                    default="placeholder")
     instagram_url = models.CharField(max_length=255, null=True, blank=True)
     facebook_url = models.CharField(max_length=255, null=True, blank=True)
     twitter_url = models.CharField(max_length=255, null=True, blank=True)
@@ -36,7 +38,7 @@ class Profile(models.Model):
         return str(self.user)
 
     def get_absolute_url(self):
-        """ Once the action is completed it will direct the user to the home page """
+        """ Once done the user will be redirect to the home page """
         return reverse('home')
 
 
@@ -48,7 +50,8 @@ class Post (models.Model):
     content = RichTextField(blank=True, null=True)
     category = models.CharField(max_length=255, default="Movies")
     likes = models.ManyToManyField(User, related_name="blog_posts")
-    image = models.ImageField(null=False, blank=False, upload_to="images/", default="placeholder")
+    image = models.ImageField(null=False, blank=False, upload_to="images/",
+                              default="placeholder")
 
     class Meta:
         """ Post sorted by date """
@@ -68,7 +71,8 @@ class Post (models.Model):
 
 class Comment(models.Model):
     """ Comment Model """
-    post = models.ForeignKey(Post, related_name="comments", on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, related_name="comments",
+                             on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
     body = models.TextField()
     date_addded = models.DateField(auto_now_add=True)

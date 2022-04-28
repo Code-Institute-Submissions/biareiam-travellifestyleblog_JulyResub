@@ -788,7 +788,7 @@ body {
 }
 
 .form-register ul li {
-    display: none;
+    font-size: 0.8rem;
 }
 
 .form-register form label {
