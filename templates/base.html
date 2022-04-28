@@ -68,6 +68,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{% url 'setting' %}">Settings</a></li>
                             {% if user.profile.id %}
+                            {{ user.profile.id }}
                             <li><a class="dropdown-item" href="{% url 'show_profile_page' user.profile.id %}">Profile
                                     Page</a></li>
                             <li><a class="dropdown-item drop" href="{% url 'my_posts' %}">My Posts</a>
