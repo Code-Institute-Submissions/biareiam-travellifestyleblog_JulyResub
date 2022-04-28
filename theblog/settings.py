@@ -15,6 +15,7 @@ import os
 import dj_database_url
 
 
+
 if os.path.isfile("env.py"):
     import env
 
@@ -99,8 +100,9 @@ WSGI_APPLICATION = 'theblog.wsgi.application'
 #     }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-    }
+   'default': dj_database_url.parse('postgres://tnpurbdyxjlyok:532735176bdaabb153a8fe9f579b4bb45e201ddb22dabc971937cc97902f3366@ec2-54-74-77-126.eu-west-1.compute.amazonaws.com:5432/d9ethjrkhnojna')
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
