@@ -15,7 +15,6 @@ import os
 import dj_database_url
 
 
-
 if os.path.isfile("env.py"):
     import env
 
@@ -25,11 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
+development = os.environ.get('DEVELOPMENT', False)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
@@ -38,6 +39,8 @@ DEBUG = True   # Change to False
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ["travellifestyleblog22.herokuapp.com", "localhost"]
+
+
 
 
 # Application definition
@@ -89,19 +92,18 @@ TEMPLATES = [
 WSGI_APPLICATION = 'theblog.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+if development:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+else:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#         }
-#     }
-
-DATABASES = {
-   'default': dj_database_url.parse('postgres://tnpurbdyxjlyok:532735176bdaabb153a8fe9f579b4bb45e201ddb22dabc971937cc97902f3366@ec2-54-74-77-126.eu-west-1.compute.amazonaws.com:5432/d9ethjrkhnojna')
-}
 
 
 # Password validation
