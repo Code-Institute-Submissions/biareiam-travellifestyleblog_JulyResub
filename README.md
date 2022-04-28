@@ -258,14 +258,9 @@ Users can add new categories if they see necessary.
 * Have a "favourites" area where users can add their favourite posts.
 
 ## Database
-This website has 4 databases, 1 for user profile, 1 for posts, 1 for comments and 1 for the categories. They are connected to some extent to each other as well as being used to store various calculations, and store all general information on the page. 
+This website has one postgres database with a number of collections or data models.The models  are connected to some extent to each other as well as being used to store various calculations, and store all general information on the page. 
 
-  * Profile Database
-  * Post Database 
-  * Categories
-  * Comment Database
-
-**Profile database explained**
+ **Profile model**
 
 - User: Stores the chosen username added by the user.
 - First_name: Stores the user's first name.
@@ -278,7 +273,7 @@ This website has 4 databases, 1 for user profile, 1 for posts, 1 for comments an
 - Twitter_url: Store the URL of the user's Twitter account
 - Pinterest_url: Store the URL of the user's Pinterest account
 
-**Post database explained**
+**Post model**
 
   - Post_title: Stores the title of the blog post.
   - Author: Stores the name of the user who created a post. 
@@ -288,11 +283,11 @@ This website has 4 databases, 1 for user profile, 1 for posts, 1 for comments an
   - Likes: Stores the likes a post received.
   - Image: Stores the image related to the post. If no images are uploaded, a default one will be applied. 
 
-**Categories database explained**
+**Categories model**
 
   - name: It is the category name. Example: LifeStyle.
 
-**Comment database explained**
+**Comment model**
 
   - Post: Stores which is the post to which the comment should be added. 
   - Name: Stores the name of the user who commented. 
@@ -458,13 +453,13 @@ Extensively used Chrome Developer tools to test form submissions through network
 
 The website can be accessed [here](https://travellifestyleblog22.herokuapp.com/).
 
-Deployment instructions assume that you have already set up your repository and basic flask application. The website is deployed on the Heroku cloud platform using the following steps:
+Deployment instructions assume that you have already set up your repository and basic django application. The website is deployed on the Heroku cloud platform using the following steps:
 
     1. Create the necessary files for deployment
     2. Create a requirements file using pip3 freeze > requirements.txt which will contain the required dependencies.
     3. Create Procfile using echo web: python app.py > Procfile.
-    4. Push both files to GitHub
-    5. log in to Heroku and create a new app
+    4. Push both files to GitHub.
+    5. Log in to Heroku and create a new app
     6. Connect the app to your project
     7. Go to the deployment method section and choose the method. If using GitHub, select that option, otherwise use the Heroku CLI method.
     8. Following the GitHub method, search for the desired repository and connect to it
