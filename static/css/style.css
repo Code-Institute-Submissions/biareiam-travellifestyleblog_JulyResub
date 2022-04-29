@@ -358,7 +358,7 @@ body {
 }
 
 .date i {
-    font-style: italic;
+    font-weight: 100;
     color: gray;
     font-family: "Montserrat", sans-serif;
 }
@@ -1395,7 +1395,8 @@ textarea {
 
 .post-date {
     color: rgb(44, 44, 44);
-    font-style: italic;
+    font-weight: 100;
+
 }
 
 a,

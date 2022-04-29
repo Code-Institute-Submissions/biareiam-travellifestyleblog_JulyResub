@@ -39,7 +39,7 @@ class Post (models.Model):
     """ Creating a post model """
     post_title = models.CharField(max_length=255)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    created_on = models.DateField(default=datetime.now)
+    created_on = models.DateTimeField(default=datetime.now)
     content = RichTextField(blank=True, null=True)
     category = models.CharField(max_length=255, default="Movies")
     likes = models.ManyToManyField(User, related_name="blog_posts")
