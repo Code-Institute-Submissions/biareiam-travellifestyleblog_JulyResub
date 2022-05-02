@@ -18,23 +18,6 @@ class Category(models.Model):
         return reverse('home')
 
 
-class Profile(models.Model):
-    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
-    bio = models.TextField()
-    profile_pic = models.ImageField(null=True, blank=True, upload_to="images/profile/",
-                                    default="placeholder")
-    facebook_url = models.CharField(max_length=255, null=True, blank=True)
-    twitter_url = models.CharField(max_length=255, null=True, blank=True)
-    instagram_url = models.CharField(max_length=255, null=True, blank=True)
-    pinterest_url = models.CharField(max_length=255, null=True, blank=True)
-    created_on = models.DateField(default=datetime.now)
-
-    def __str__(self):
-        return str(self.user)
-    def get_absolute_url(self):
-        return reverse('home')
-
-
 class Post (models.Model):
     """ Creating a post model """
     post_title = models.CharField(max_length=255)

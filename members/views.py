@@ -5,7 +5,7 @@ from django.views.generic import DetailView, CreateView
 from django.contrib.auth.views import PasswordChangeView
 from django.urls import reverse_lazy
 from django.contrib import messages
-from travellifestyleblog22.models import Profile
+from .models import Profile
 from .forms import SignUpForm, EditProfileForm, PasswordChangingForm,\
      ProfilePageForm
 
