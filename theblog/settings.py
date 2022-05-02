@@ -34,7 +34,7 @@ development = os.environ.get('DEVELOPMENT', False)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True   # Change to False
+DEBUG = False   # Change to False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
