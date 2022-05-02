@@ -36,11 +36,8 @@ development = os.environ.get('DEVELOPMENT', False)
 
 DEBUG = False   # Change to False
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ["travellifestyleblog22.herokuapp.com", "localhost"]
-
-
 
 
 # Application definition
@@ -92,16 +89,26 @@ TEMPLATES = [
 WSGI_APPLICATION = 'theblog.wsgi.application'
 
 
-if development:
+# Database
+# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+if "DATABASE_URL" in os.environ:
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
+         "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
     }
 else:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        "default": {
+            "ENGINE": 'django.db.backends.sqlite3',
+            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        }
     }
 
 
