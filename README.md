@@ -346,7 +346,7 @@ All the posts from the website have the name of the original author as well as a
 <img width="500" alt="lighthouse-test" src="https://user-images.githubusercontent.com/65717229/159161401-c3ab6e39-386f-42db-ab67-cbf3b5ef7a43.PNG">
 
 
-### [Manual Testing] (https://github.com/biareiam/travellifestyleblog/blob/main/Tests)
+### [Manual Testing](https://github.com/biareiam/travellifestyleblog/blob/main/Tests)
 
 Extensively used Chrome Developer tools to test form submissions through network tab etc.
 
