@@ -257,7 +257,7 @@ Users can add new categories if they see necessary.
 * make it possible for users to edit and delete comments.
 * Have a "favourites" area where users can add their favourite posts.
 
-## Database
+## Models
 This website has one postgres database with a number of collections or data models.The models  are connected to some extent to each other as well as being used to store various calculations, and store all general information on the page. 
 
  **Profile model**
@@ -340,8 +340,7 @@ All the posts from the website have the name of the original author as well as a
 - W3C HTML Validator Passed tests without issues
 - W3C CSS Validator Passed tests without issues
 - CSS Lint VSCode extension
-- PEP8 and AUTOPEP8. Online PEP8 warns about lines being too long but when I attempted to fix that
-  AUTOPEP8 would break the code, otherwise no issues.
+- PEP8 and AUTOPEP8.(FIXED)
 - Lighthouse:
 
 <img width="500" alt="lighthouse-test" src="https://user-images.githubusercontent.com/65717229/159161401-c3ab6e39-386f-42db-ab67-cbf3b5ef7a43.PNG">
