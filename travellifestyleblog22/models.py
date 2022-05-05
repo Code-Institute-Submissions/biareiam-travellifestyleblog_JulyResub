@@ -23,7 +23,7 @@ class Post (models.Model):
     post_title = models.CharField(max_length=255)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     created_on = models.DateTimeField(default=datetime.now)
-    content = RichTextField(blank=True, null=True)
+    content = models.TextField()
     category = models.CharField(max_length=255, default="Movies")
     likes = models.ManyToManyField(User, related_name="blog_posts")
     image = models.ImageField(null=False, blank=False, upload_to="images/",

@@ -3,7 +3,6 @@
 {% block title %} Add Post {% endblock%}
 {% block content %}
 
-{% if user.profile.id %}
 {% if user.is_authenticated %}
 <div class="bg-banner">
     <div class="post">
@@ -34,16 +33,6 @@
         </div>
     </div>
     {% endif %}
-    {% else %}
-    <!-- If the user ended up in this page without being logged in, a message will be displayed -->
-    <div class="not-allow">
-        <div class="not-allow-box">
-            <p>You need to <a href="{% url 'create_profile' %}">create a profile</a> first!</p>
-        </div>
-    </div>
-    {% endif %}
-
-
 </div>
 </div>
 
