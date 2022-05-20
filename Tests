@@ -1,1 +1,329 @@
+#Tests
+
+The testing approach will be described in detail in this section.
+
+## Validators
+
+  * W3C HTML Validator Passed tests without issues
+  * W3C CSS Validator Passed tests without issues
+  * PEP8 and AUTOPEP8. Online PEP8  previously warned about lines being too long and it was FIXED. No errors should be displayed. 
+ 
+## Manual testing information:
+
+  * Testing was completed on the following browsers and device types:
+  * Browsers: Safari, Chrome, IE Edge, Mozilla Firefox and Chrome Emulator.
+  * Devices: Mobile, tablet and desktop.
+ 
+## User stories and tests 
+
+### Feature 1 Navigation Bar
+
+01 - User story:
+* As an admin/ user, while not logged in, I would like to see the navigation bar displayed with a logo on all pages for easy navigation, redirecting to the home, on the different devices.
+
+Test case: 
+* Navigate to the home/index page on desktop, tablet and mobile.  
+
+Expected result : 
+* Be able to see the full navigation bar in different devices. 
+
+Results: (image nav bar when not  logged in)
+
+
+02 - User story:
+* As an admin/regular user, while logged in, I would like to see the navigation bar displayed with a logo on all pages for easy navigation, redirecting to the home, on the different devices. As well as the other features available to logged in members. 
+
+Test case:  
+* Navigate to the home page after logged in.
+* See the links displayed to members who are logged in.
+
+Expected result: 
+* Be able to see all the links available to a person who is logged in the navigation bar, such as add a post and profile. 
+
+Results: image of the navigation bar from a perspective of someone who is logged in. 
+
+### Feature 2 Login Register Logout administration
+
+03 - User Story:
+* As a regular user I can register for an account by providing my username, password, confirm password, first name, last name, and email. Once it is done, be redirected to the login page. 
+
+Test case: 
+* As a regular user, navigate to the register page from the home page and create an account. 
+
+Expected result:
+* Be able to successfully register to the blog and be notified of it. 
+
+Result: image of the register form filled in and the account created. 
+
+04 - User Story:
+* As a regular user I will be notified if I did not fill one of the fields or if I entered any wrong information. 
+
+Test case:  
+* Enter my email with the “@”  and click register. 
+* Do not enter an email and click on the register.
+* Enter a username which already exists and click register. 
+* Do not enter a user name and click register.
+* Do not enter a first name or last name and click on register.
+* Enter passwords which do not match. 
+
+Expected result: 
+* In all these cases, the user is notified that something went wrong or an information is missing. 
+
+Results: Images showing the register form match the test cases.
+
+05 - User Story:
+
+* As a regular user my password must be a minimum of 6 characters and contain at least one number, one lowercase and one uppercase letter, with no special characters.
+
+Test case: 
+* Navigate to the register page and enter a password that does not meet the criteria and click Register.
+
+Expected result:
+* An error message is displayed beside the password field: The "password entered does not meet the required format". 
+
+Result : image showing the message when the password is not correct. 
+
+06 - User Story:
+
+* As a regular user/admin user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the home page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed 
+
+Test case:  
+* Navigate to the login page and click the Login button.
+* Enter a username and/or password that does not exist
+* Enter a valid username and password
+
+Expected results:
+
+* An error message is displayed that both the username and password fields must be entered, if not filled in. 
+* An error message is displayed if the username or password are incorrect or if the user does not have an account. 
+* The user is successfully logged in and is brought to the memories page
+ 
+ 
+Result :  An image showing a field which was not filled in and the warning. /
+An image showing a message of error if the password is not correct.
+
+07 - User Story:
+* As an admin/regular user, when I am logged into the site, I can click Logout and successfully be logged out of the site, and redirected to the home page. The navigation bar is updated, displaying the link to the categories page, Login, and Register.
+
+Test case:
+* Click the Logout button.
+
+Expected result: 
+* The user is logged out, navigated to the home page.
+
+Result: Images displaying someone logged in logged out. 
+ 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Feature 3 Profile/settings
+08 - User Story:
+As an admin/regular user, when I am logged into the site for the first time, I can create a profile.
+Test case: 
+As an admin/regular user logged in for the first time, and through the navigation bar can create a profile.
+As an admin/regular user I choose not to add a profile image or I forgot to add one. 
+Expected result: New user can successfully create a profile, with a bio, image and add links to social media, if desired. If a profile image is not provided, a default one will be add instead.  
+Image: create profile button, profile form, profile created. One profile with a default image first, and a new image after. This can show that you can edit.  
+11.user story:
+As an admin/regular user, when I am logged into the site, I can see and edit my existing profile.
+Test case:
+Users can see their own profile. 
+Users can edit their own profile. 
+Expected result: Users can successfully view their profile and edit the text, social media links and the bio.
+Image of a profile, show the edit page, change something, show the change ( text) and another change image. 
+12. user story:
+As an admin/regular user, when I am logged into the site, I can see and edit my account settings.
+Test case:
+Users can see their own account settings. 
+Users can edit their information, for instance - email address.
+Expected result: Users can successfully view their own account settings and edit it.
+Result: Image of the settings, edit settings and a new email.
+ 
+13. user story:
+As an admin/regular user, when I am logged into the site, I can change my password. 
+Test case:
+Users can see the settings form and successfully change its password.
+Be notified if passwords do not match. 
+Expected result: Users can successfully change the password and be notified of it as well as be notified if anything went wrong. 
+Result: Image of the settings,change password and success message.
+ 
+Feature 4 Home page
+14.  User story:
+ As a regular user/admin user I can view all the posts added on the blog, as well as when it was added, title, a snippet of the post an image and which categories the post belongs to. 
+
+Test case:  As a regular user/admin I can navigate through the home page and see all the posts, from newest to oldest. 
+Results: Images showing the home page and the pagination on different devices.
+
+15.  User story:
+ As a regular user/admin user I can view the posts by filtering it by category.
+
+Test case:  As a regular user/admin I can navigate through the different categories. 
+Results: Images showing the home page and the pagination on different devices.
+ 
+Feature 4 Post detail page
+16  User story:
+ As a regular user/admin user I can click on any of the posts and be directed to a page where I can read the whole blog post. 
+
+Test case:  
+User wants to read the entire post, see how it was posted, when it was posted.
+Expected result: Be able to access the post page.
+Results: Images showing a blog on the home page and the same post on the page detail. 
+
+17  User story:
+
+As a regular user/admin user I can click on the name or image of the author of the post and see their page.It does not matter if I am logged in or not. 
+
+Test case:  
+Go into one of the posts and check its author.
+Expected result: Be able to access the profile of the author of the post. 
+Results: Images showing the blog post and author and after the profile of the author.
+
+18  User story:
+
+As a regular user/admin user, when logged in, I can leave a comment in one of the posts. 
+Test case:  
+Go into one of the posts and leave a comment.
+Expected result:
+A comment is added to the chosen post. Displaying the name of the author of the post, the date and the posts itself. 
+
+Result: image of the page without the comment, the add comment form and the post added. 
+
+19. User story:
+As a regular user/admin user, when logged out, I can not leave a comment.
+
+Test case:  
+Try to access to leave a comment on a post..  
+Expected result:
+Be notified that the user does not log in or does not have an account so a comment can not be created. 
+
+Result: images of the scenario. 
+
+
+
+Feature 4 Add post
+20.  User story:
+
+As a regular user/admin user, when logged in, I can add a new post.
+
+Test case:  
+Go into one of the “add post” page through the navigation bar.
+Create a new post. 
+Expected result:
+Post successfully created. 
+If an image is not added, a default one should be added instead. 
+If a category is not chosen, a default one should be applied. 
+
+Result: add post form not filled and then  filled in, no image added.
+
+21. User story:
+
+As a regular user/admin user, when logged in, I can add a new post even if I do not create a profile.
+
+Test case:  
+Go into one of the “add post” page through the navigation bar.
+Create a new post. 
+Expected result:
+Post successfully created, without having a profile.
+
+Result: add post by new user, post created showing the user’s name and default image. 
+
+
+
+
+22. User story:
+
+As a regular user/admin user, when logged out, I can not access the add post page .
+
+Test case:  
+Try to access the add post page without being logged in or having an account.  
+Expected result:
+Be notified that the user do not logged in or do not have an account. 
+
+Result: images of the scenario. 
+
+Feature 4 Edit/delete post
+23. User story:
+
+As a regular user/admin user, when logged in, I can edit my own posts.
+
+Test case:  
+Go into one of your own posts and through the post detail page be directed to the edit post page. 
+Be able to edit the test, category and image of the post. 
+Expected result:
+Post successfully edit. 
+New image should be displayed.
+New text or category should be displayed.  
+
+Result: image of all the possibilities.
+24. User story:
+
+As a regular user/admin user, when logged in, I can delete my own posts.
+
+Test case:  
+Go into one of your own posts and through the post detail page be directed to the delete post page. 
+Delete a post 
+Expected result:
+Post successfully deleted. 
+ 
+
+Result: show post, message asking if user wants to delete, and post deleted on the home page. 
+
+25. User story:
+As a regular user/admin user, when logged out, I can not access the edit or delete post page .
+
+Test case:  
+Try to access the edit/delete without being logged in or having an account.  
+Expected result:
+Be notified that the user does not log in or do not have an account as well as that they are not allowed to edit or delete someone else’s post. 
+
+Result: images of the scenario. 
+
+
+Feature 5 my posts page
+26. User story:
+
+As a regular user/admin user, when logged in, I can see all the posts published by me.
+Test case:  
+From a link on the navigation bar go to all my posts. 
+Expected result:
+Be able to see all my published posts in one place. 
+
+
+
+27. User story:
+As a regular user/admin user, when logged out in, I am can see my posts page even if I do not publish any post yet. 
+Test case:  
+From a link on the navigation bar go to all my posts. 
+Expected result:
+Be able to see all my post page and the message notifying that i do not publish anything yet. 
+
+Result: my post without posts. 
+Feature 6 add Category  page
+
+28. User story:
+As a regular user/admin user, when logged in or out, I can see all the different categories in one place
+Test case:  
+From a link on the navigation bar go and see all the existing categories and see all the posts from a specific category. 
+Expected result:
+Be able to see all the available categories.
+Result: my post without posts. 
+
+29. User story:
+As a regular user/admin user, when logged in , I can add a new category if I need to. 
+Test case:  
+From a link on the navigation bar go and see all the existing categories. 
+Add a new category. 
+Be notified if the field was not filled in. 
+Expected result:
+Be able to add a new category. It will be displayed in the all categories page and on the dropdown from the navigation bar. 
+A message should be displayed if nothing is filled in the form. 
+
+Result: my post without posts. 
+
+30. User story:
+As a regular user/admin user, when logged out, I can add a new category.
+Test case:  
+From a link on the navigation bar go and see all the existing categories. 
+Try to add a new category without logging.  
+Expected result:
+Messages alert the users that they should have an account or be logging in to be able to add a new category. 
+
+Result: my post without posts. 
 
