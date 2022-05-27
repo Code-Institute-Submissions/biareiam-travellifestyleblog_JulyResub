@@ -27,7 +27,15 @@ Test case:
 Expected result : 
 * Be able to see the full navigation bar in different devices. 
 
-Results: (image nav bar when not  logged in)
+Results: 
+Desktop
+![Desktop](https://user-images.githubusercontent.com/65717229/170710769-78055156-f0fa-4931-a376-55127fe39118.PNG)
+
+Tablet 
+![Tablet](https://user-images.githubusercontent.com/65717229/170710991-ca7968eb-f86e-4b0c-a663-a7db462abb65.PNG)
+
+Mobile 
+![Mobile](https://user-images.githubusercontent.com/65717229/170711132-0b2688f6-beaf-4b03-ad1a-d642212a410f.PNG)
 
 
 02 - User story:
@@ -40,7 +48,16 @@ Test case:
 Expected result: 
 * Be able to see all the links available to a person who is logged in the navigation bar, such as add a post and profile. 
 
-Results: image of the navigation bar from a perspective of someone who is logged in. 
+Results: 
+Desktop
+![loged in - desktop](https://user-images.githubusercontent.com/65717229/170711636-1ac5fb0f-e435-44df-b4d7-267dae5228a6.PNG)
+
+Tablet
+![loged in - tablet](https://user-images.githubusercontent.com/65717229/170711643-00129cac-b3c3-4baa-b1b9-7d6da6ba2b10.PNG)
+
+Mobile
+![loged in - mobile](https://user-images.githubusercontent.com/65717229/170711640-84648a3e-53ec-4a0d-bf7c-c307e3b89917.PNG)
+
 
 ### Feature 2 Login Register Logout administration
 
@@ -53,7 +70,11 @@ Test case:
 Expected result:
 * Be able to successfully register to the blog and be notified of it. 
 
-Result: image of the register form filled in and the account created. 
+Result: 
+![success - desktop](https://user-images.githubusercontent.com/65717229/170715699-2f048b1e-89dd-488e-addf-3acc637ba2b4.PNG)
+![success - tablet](https://user-images.githubusercontent.com/65717229/170715695-28517919-b0d9-467a-a5cb-39ada5a726db.PNG)
+![success - mobile](https://user-images.githubusercontent.com/65717229/170715691-d2d256c5-67a2-4f0f-b811-3cfb235adc6c.PNG)
+
 
 04 - User Story:
 * As a regular user I will be notified if I did not fill one of the fields or if I entered any wrong information. 
@@ -69,21 +90,39 @@ Test case:
 Expected result: 
 * In all these cases, the user is notified that something went wrong or an information is missing. 
 
-Results: Images showing the register form match the test cases.
+Results:
+  Already a user:
+
+  ![already user - desktop](https://user-images.githubusercontent.com/65717229/170713987-c1a857c1-76a1-4190-b36c-8bd314bdfc52.PNG)
+  ![already user - tablet](https://user-images.githubusercontent.com/65717229/170713983-daee3263-37c7-4f58-af19-d8cad020b69d.PNG)
+  ![already user - mobile](https://user-images.githubusercontent.com/65717229/170713979-db27d5f5-339f-47cc-95d0-9806b65983a3.PNG)
+
+  Missing "@" on the email:
+
+  ![resgister no @ - desktop](https://user-images.githubusercontent.com/65717229/170714132-c9c17a6f-698b-47c3-8056-738df54e522c.png)
+  ![resgister no @ - tablet](https://user-images.githubusercontent.com/65717229/170714124-6f46f8d4-73f8-4e11-9ece-9b8e7432ff98.png)
+  ![resgister no @ - mobile](https://user-images.githubusercontent.com/65717229/170714135-1a6d6df0-824c-4fd7-b346-56d63763b319.png)
+
+
+  Do not enter an username:
+
+  ![username missing - desktop](https://user-images.githubusercontent.com/65717229/170714306-24cf532f-1925-45a6-af4d-f9241baaf9a8.PNG)
+  ![username missing - tablet](https://user-images.githubusercontent.com/65717229/170714310-e8a8f617-0072-49bd-8161-a8c723354a75.PNG)
+  ![username missing  - mobile](https://user-images.githubusercontent.com/65717229/170714313-3174c629-3acf-4d34-b33a-bc626c7aead1.PNG)
+
+  Password do not match or do not fullfil the requirement:
+
+  ![password not matching - desktop](https://user-images.githubusercontent.com/65717229/170714421-a76a59e9-90f9-4d74-823e-b8a8367b39b4.png)
+  ![password not matching - tablet](https://user-images.githubusercontent.com/65717229/170714429-2b66dded-da30-4b34-a168-6d3662f1031c.png)
+  ![password not matching  - mobile](https://user-images.githubusercontent.com/65717229/170714434-738b44ff-a0cf-4aa2-8fe7-d08d9efe0a49.png)
+
+  Missing password:
+
+  ![missing password - desktop](https://user-images.githubusercontent.com/65717229/170714497-dd023809-2d5b-4a99-9ec1-996806670263.png)
+  ![missing password - tablet](https://user-images.githubusercontent.com/65717229/170714510-aac9dcc4-f3df-4e6f-b507-3a930380d718.png)
+  ![missing password - mobile](https://user-images.githubusercontent.com/65717229/170714505-5880d8ab-17fc-4543-9919-174a7ba00796.png)
 
 05 - User Story:
-
-* As a regular user my password must be a minimum of 6 characters and contain at least one number, one lowercase and one uppercase letter, with no special characters.
-
-Test case: 
-* Navigate to the register page and enter a password that does not meet the criteria and click Register.
-
-Expected result:
-* An error message is displayed beside the password field: The "password entered does not meet the required format". 
-
-Result : image showing the message when the password is not correct. 
-
-06 - User Story:
 
 * As a regular user/admin user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the home page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed 
 
@@ -99,81 +138,167 @@ Expected results:
 * The user is successfully logged in and is brought to the memories page
  
  
-Result :  An image showing a field which was not filled in and the warning. /
-An image showing a message of error if the password is not correct.
+Result :
+Login form
+![login - desktop](https://user-images.githubusercontent.com/65717229/170716116-b960de91-f911-433e-8206-7c639cdeeeab.PNG)
+![login - tablet](https://user-images.githubusercontent.com/65717229/170716122-90cfd3ad-b68d-44b3-af81-8012ab2b51c2.PNG)
+![login - mobile](https://user-images.githubusercontent.com/65717229/170716125-e4d94e4a-9375-4928-87fa-ea805cf39f82.PNG)
 
-07 - User Story:
-* As an admin/regular user, when I am logged into the site, I can click Logout and successfully be logged out of the site, and redirected to the home page. The navigation bar is updated, displaying the link to the categories page, Login, and Register.
+Logged in
+![login - mobile](https://user-images.githubusercontent.com/65717229/170716455-df1b5d3c-e051-4041-9b63-87b15a7f0e64.PNG)
+![login - tablet](https://user-images.githubusercontent.com/65717229/170716470-35c52998-af12-40a1-b79a-5f0bb5d84eb3.PNG)
+![login - desktop](https://user-images.githubusercontent.com/65717229/170716464-f0cdec71-c688-460f-a910-6dc6f5b20ab4.PNG)
 
-Test case:
-* Click the Logout button.
+
+### Feature 3 Profile/settings
+06 - User Story:
+
+As an admin/regular user, when I am logged into the site for the first time, I can create a profile.
+
+Test case: 
+* As an admin/regular user logged in for the first time, and through the navigation bar can create a profile.
+* As an admin/regular user I choose not to add a profile image or I forgot to add one. 
 
 Expected result: 
-* The user is logged out, navigated to the home page.
+* New user can successfully create a profile, with a bio, image and add links to social media, if desired. If a profile image is not provided, a default one will be add instead.  
 
-Result: Images displaying someone logged in logged out. 
- 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-### Feature 3 Profile/settings
-08 - User Story:
-As an admin/regular user, when I am logged into the site for the first time, I can create a profile.
-Test case: 
-As an admin/regular user logged in for the first time, and through the navigation bar can create a profile.
-As an admin/regular user I choose not to add a profile image or I forgot to add one. 
-Expected result: New user can successfully create a profile, with a bio, image and add links to social media, if desired. If a profile image is not provided, a default one will be add instead.  
-Image: create profile button, profile form, profile created. One profile with a default image first, and a new image after. This can show that you can edit.  
-11.user story:
-As an admin/regular user, when I am logged into the site, I can see and edit my existing profile.
+Result:
+Create a profile - Navigation bar:
+
+![login - desktop](https://user-images.githubusercontent.com/65717229/170717302-6fa3d125-f72f-4623-91f4-c0439ed74f85.PNG)
+![login - tablet](https://user-images.githubusercontent.com/65717229/170717305-8472d0d0-1b66-4847-9e9c-9647c66cfb2a.PNG)
+![login - mobile](https://user-images.githubusercontent.com/65717229/170717296-2143103a-6cd9-4648-b812-7261c4fdfce3.PNG)
+
+Create a profile form:
+
+![create - desktop](https://user-images.githubusercontent.com/65717229/170717489-c1aa0476-d154-49fa-a951-309e683d5f13.png)
+![create - tablet](https://user-images.githubusercontent.com/65717229/170717485-916e9085-42cb-413a-bb90-1aa7d97f9aaf.png)
+![create - mobile](https://user-images.githubusercontent.com/65717229/170717480-40d92eb6-3bf2-405f-a3cc-4daf5228f093.png)
+
+Profile without picture:
+
+![no photo - desktop](https://user-images.githubusercontent.com/65717229/170717951-b14e5249-acc9-4094-9153-914d1894e325.PNG)
+![no photo - tablet](https://user-images.githubusercontent.com/65717229/170717956-b45ec607-8641-45e4-8ee0-0b592c04ec58.PNG)
+![no photo - mobile](https://user-images.githubusercontent.com/65717229/170717960-573420db-90ec-4ff3-ad42-e868f781ea39.PNG)
+
+
+
+07.user story:
+
+* As an admin/regular user, when I am logged into the site, I can see and edit my existing profile.
+
 Test case:
-Users can see their own profile. 
-Users can edit their own profile. 
-Expected result: Users can successfully view their profile and edit the text, social media links and the bio.
-Image of a profile, show the edit page, change something, show the change ( text) and another change image. 
-12. user story:
-As an admin/regular user, when I am logged into the site, I can see and edit my account settings.
+* Users can see their own profile. 
+* Users can edit their own profile. 
+* Users can edit their account settings
+
+Expected result: 
+* Users can successfully view their profile and edit the text, social media links and the bio.
+
+Results:
+User Profile:
+
+![no photo - desktop](https://user-images.githubusercontent.com/65717229/170717951-b14e5249-acc9-4094-9153-914d1894e325.PNG)
+![no photo - tablet](https://user-images.githubusercontent.com/65717229/170717956-b45ec607-8641-45e4-8ee0-0b592c04ec58.PNG)
+![no photo - mobile](https://user-images.githubusercontent.com/65717229/170717960-573420db-90ec-4ff3-ad42-e868f781ea39.PNG)
+
+Edit Profile:
+Before:
+
+![edit before](https://user-images.githubusercontent.com/65717229/170719246-a75a1006-7166-408f-a45b-b13e67136fe5.png)
+![edit before - tablet](https://user-images.githubusercontent.com/65717229/170719237-233038f5-e12e-4304-b67d-eeb39b0a2250.png)
+![edit before - mobile](https://user-images.githubusercontent.com/65717229/170719243-b517af9b-fc66-4d1e-b449-ac3c52422d75.png)
+
+- After:
+
+![UPDATED DESKTOP](https://user-images.githubusercontent.com/65717229/170719318-d38981cb-feeb-4030-95df-caf145ed66ea.png)
+![UPDATED tablet](https://user-images.githubusercontent.com/65717229/170719326-a03b85a4-e432-4a8a-a688-d7e94497491a.png)
+![UPDATED mobile](https://user-images.githubusercontent.com/65717229/170719330-fda07cbd-fac4-45f5-b63b-dae313fa55ad.png)
+
+Edit Account settings:
+- Before:
+- 
+![SETTING DESK](https://user-images.githubusercontent.com/65717229/170719423-9560b179-8166-4412-81c9-e5b343d1d338.png)
+![SETTING TABLET](https://user-images.githubusercontent.com/65717229/170719432-ead151da-784d-4540-af81-80ba2c4f798b.png)
+![SETTING MOBILE](https://user-images.githubusercontent.com/65717229/170719429-98084312-ef36-4ed1-8765-fbd4814d3ae4.png)
+
+- After: 
+![updated](https://user-images.githubusercontent.com/65717229/170719632-5cabdfef-5902-4a7d-9038-0925d90623ed.PNG)
+
+
+08. user story:
+
+* As an admin/regular user, when I am logged into the site, I can change my password.
+
 Test case:
-Users can see their own account settings. 
-Users can edit their information, for instance - email address.
-Expected result: Users can successfully view their own account settings and edit it.
-Result: Image of the settings, edit settings and a new email.
+* Users can see the settings form and successfully change its password.
+* Be notified if passwords do not match. 
+
+Expected result: 
+* Users can successfully change the password and be notified of it as well as be notified if anything went wrong. 
+
+Result: 
+Old password is wrong:
+![wrong old](https://user-images.githubusercontent.com/65717229/170720269-f3552d82-64bd-49e2-bb4a-96e6947abbec.PNG)
+
+Password changed:
+![updated password](https://user-images.githubusercontent.com/65717229/170720263-7161928d-945e-4560-a66b-61b42f1eb4fe.PNG)
+
+Password do not fullfiul the requirements:
+![not match](https://user-images.githubusercontent.com/65717229/170720507-8c7e8689-b414-4cb4-af0c-4b5b403f1058.PNG)
+
  
-13. user story:
-As an admin/regular user, when I am logged into the site, I can change my password. 
+### Feature 4 Home page
+09.  User story:
+* As a regular user/admin user, logged in or not, I can view all the posts added on the blog, as well as when it was added, title, a snippet of the post an image and which categories the post belongs to. 
+
 Test case:
-Users can see the settings form and successfully change its password.
-Be notified if passwords do not match. 
-Expected result: Users can successfully change the password and be notified of it as well as be notified if anything went wrong. 
-Result: Image of the settings,change password and success message.
+* As a regular user/admin I can navigate through the home page and see all the posts, from newest to oldest. 
+
+Results:
+![home page](https://user-images.githubusercontent.com/65717229/170720860-4b6c7923-2964-4739-81f0-d377c33da87f.png)
+
+
+10.  User story:
+* As a regular user/admin user I can view the posts by filtering it by category.
+
+Test case:
+*As a regular user/admin I can navigate through the different categories.
+
+Results:
+![category](https://user-images.githubusercontent.com/65717229/170721070-bf2b03d3-f112-44b5-a567-1def49b4b529.png)
  
-Feature 4 Home page
-14.  User story:
- As a regular user/admin user I can view all the posts added on the blog, as well as when it was added, title, a snippet of the post an image and which categories the post belongs to. 
-
-Test case:  As a regular user/admin I can navigate through the home page and see all the posts, from newest to oldest. 
-Results: Images showing the home page and the pagination on different devices.
-
-15.  User story:
- As a regular user/admin user I can view the posts by filtering it by category.
-
-Test case:  As a regular user/admin I can navigate through the different categories. 
-Results: Images showing the home page and the pagination on different devices.
- 
-Feature 4 Post detail page
-16  User story:
- As a regular user/admin user I can click on any of the posts and be directed to a page where I can read the whole blog post. 
+### Feature 4 Post detail page
+11. User story:
+* As a regular user/admin user I can click on any of the posts and be directed to a page where I can read the whole blog post. 
 
 Test case:  
-User wants to read the entire post, see how it was posted, when it was posted.
-Expected result: Be able to access the post page.
-Results: Images showing a blog on the home page and the same post on the page detail. 
+* User wants to read the entire post, see how it was posted, when it was posted.
 
-17  User story:
+Expected result:
+* Be able to access the post page.
 
-As a regular user/admin user I can click on the name or image of the author of the post and see their page.It does not matter if I am logged in or not. 
+Results:
+![detail](https://user-images.githubusercontent.com/65717229/170721264-7df16950-0359-4947-b0bb-9f8afd4ed693.png)
+
+
+11. User story:
+* As a regular user/admin user I can click on the name or image of the author of the post and see their page.It does not matter if I am logged in or not. 
 
 Test case:  
-Go into one of the posts and check its author.
-Expected result: Be able to access the profile of the author of the post. 
-Results: Images showing the blog post and author and after the profile of the author.
+* Go into one of the posts and check its author.
+
+Expected result: 
+* Be able to access the profile of the author of the post. 
+
+Results: 
+Author of the post:
+![author](https://user-images.githubusercontent.com/65717229/170721546-c65d13d7-2fa6-4b6f-86c2-8df0dc00bf1d.PNG)
+
+Profile of the author:
+![author profile](https://user-images.githubusercontent.com/65717229/170721552-75ed14fd-bbe2-4f80-bdf9-05e4bba31852.PNG)
+
+######################################################################################################################################################
 
 18  User story:
 
