@@ -356,19 +356,44 @@ The website can be accessed [here](https://travellifestyleblog22.herokuapp.com/)
 
 Deployment instructions assume that you have already set up your repository and basic django application. The website is deployed on the Heroku cloud platform using the following steps:
 
-    1. Create the necessary files for deployment
-    2. Create a requirements file using pip3 freeze > requirements.txt which will contain the required dependencies.
-    3. Create Procfile using echo web: python app.py > Procfile.
-    4. Push both files to GitHub.
-    5. Log in to Heroku and create a new app
-    6. Connect the app to your project
-    7. Go to the deployment method section and choose the method. If using GitHub, select that option, otherwise use the Heroku CLI method.
-    8. Following the GitHub method, search for the desired repository and connect to it
-    9. Enter configuration variables
-    10. Go to the settings tab and select Reveal Config Vars. Enter the variables defined in the env.py file (IP, PORT and SECRET_KEY).
-    11. Deploy and preview
-    12. Go back to the deployment tab and enable automatic deployment.
-    13. Finally, press deploys branch and preview your website.
+- To run this project locally, you will need to clone the repository.
+- Login to GitHub (https://wwww.github.com)
+- Select the repository biareiam/travellifestyleblog
+- Click the “Code” button and copy the HTTPS url, for example: https://github.com/biareiam/travellifestyleblog.git
+- In your IDE, open a terminal and run the git clone command:
+- git clone https://github.com/biareiam/travellifestyleblog.git
+- The repository will now be cloned in your workspace.
+- Create an env.py file in the root folder in your project, and add in the following code with the relevant key, value pairs, and ensure you enter the correct key values.
+- Add to the env.py file: 
+   import os
+   os.environ["DATABASE_URL"] = "Paste in Heroku DATABASE_URL Link"
+   os.environ["SECRET_KEY"] = "Make up your own randomSecretKey"
+- Install the relevant packages as per the requirements.txt file
+- Start the application by running python3 manage.py runserver 
+
+#### Heroku
+
+- To deploy this application to Heroku, run the following steps.
+- In the app.py file, ensure that debug is not enabled, i.e. set to True
+- Create a file called ProcFile in the root directory, and add the line - “web: gunicorn PROJ_NAME.wsgi”. If this file already exists, just go to the next step.
+- Run the command “pip freeze > requirements.txt” to create a requirements.txt file in your terminal if the file doesn't already exist.
+- Both the ProcFile and requirements.txt files should be added to your git repo in the root directory
+- Create an account on heroku.com
+- Create a new application and give it a unique name
+- In the application dashboard, navigate to the deploy section and connect your application to your git repo, by selecting your repo
+- Select the branch, for example, master and enable automatic deploys if desired. Otherwise, a deployment will be manual
+- The next step is to set the config variables in the Settings section
+- Set key/value pairs for the following keys:DATABASE_URL, SECRET_KEY
+- Go to the dashboard and trigger a deployment - “deploy branch”
+- This will trigger a deployment, once the deployment has been successful click on the "Open App" link to open the app
+- If you encounter any issues accessing the build logs is a good way to troubleshoot the issue
+
+Note: 
+- If Heroku can not be connected to gitpod. On the terminal, type “heroku login -i”.
+- Your heroku email and password will be requested.
+- Once it is done, type “ heroku git:remote -a travellifestyleblog22”.
+- The next step is to push it to heroku by typing “ git push heroku main”. 
+- If you encounter any issues accessing the build logs is a good way to troubleshoot the issue
 
 
 ### Acknowledgements
