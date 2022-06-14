@@ -1,4 +1,4 @@
-#Tests
+# Tests
 
 The testing approach will be described in detail in this section.
 
@@ -29,12 +29,15 @@ Expected result :
 
 Results: 
  Desktop
+
  ![Desktop](https://user-images.githubusercontent.com/65717229/170710769-78055156-f0fa-4931-a376-55127fe39118.PNG)
 
  Tablet 
+
  ![Tablet](https://user-images.githubusercontent.com/65717229/170710991-ca7968eb-f86e-4b0c-a663-a7db462abb65.PNG)
 
  Mobile 
+
  ![Mobile](https://user-images.githubusercontent.com/65717229/170711132-0b2688f6-beaf-4b03-ad1a-d642212a410f.PNG)
 
 
@@ -50,12 +53,15 @@ Expected result:
 
 Results: 
  Desktop
+
  ![loged in - desktop](https://user-images.githubusercontent.com/65717229/170711636-1ac5fb0f-e435-44df-b4d7-267dae5228a6.PNG)
 
  Tablet
+
  ![loged in - tablet](https://user-images.githubusercontent.com/65717229/170711643-00129cac-b3c3-4baa-b1b9-7d6da6ba2b10.PNG)
 
  Mobile
+
  ![loged in - mobile](https://user-images.githubusercontent.com/65717229/170711640-84648a3e-53ec-4a0d-bf7c-c307e3b89917.PNG)
 
 
@@ -71,6 +77,7 @@ Expected result:
 * Be able to successfully register to the blog and be notified of it. 
 
 Result: 
+
  ![success - desktop](https://user-images.githubusercontent.com/65717229/170715699-2f048b1e-89dd-488e-addf-3acc637ba2b4.PNG)
  ![success - tablet](https://user-images.githubusercontent.com/65717229/170715695-28517919-b0d9-467a-a5cb-39ada5a726db.PNG)
  ![success - mobile](https://user-images.githubusercontent.com/65717229/170715691-d2d256c5-67a2-4f0f-b811-3cfb235adc6c.PNG)
@@ -91,6 +98,7 @@ Expected result:
 * In all these cases, the user is notified that something went wrong or an information is missing. 
 
 Results:
+
   Already a user:
 
   ![already user - desktop](https://user-images.githubusercontent.com/65717229/170713987-c1a857c1-76a1-4190-b36c-8bd314bdfc52.PNG)
@@ -138,12 +146,15 @@ Expected results:
  
  
 Result :
+
  Login form
+
  ![login - desktop](https://user-images.githubusercontent.com/65717229/170716116-b960de91-f911-433e-8206-7c639cdeeeab.PNG)
  ![login - tablet](https://user-images.githubusercontent.com/65717229/170716122-90cfd3ad-b68d-44b3-af81-8012ab2b51c2.PNG)
  ![login - mobile](https://user-images.githubusercontent.com/65717229/170716125-e4d94e4a-9375-4928-87fa-ea805cf39f82.PNG)
 
  Logged in
+
  ![login - mobile](https://user-images.githubusercontent.com/65717229/170716455-df1b5d3c-e051-4041-9b63-87b15a7f0e64.PNG)
  ![login - tablet](https://user-images.githubusercontent.com/65717229/170716470-35c52998-af12-40a1-b79a-5f0bb5d84eb3.PNG)
  ![login - desktop](https://user-images.githubusercontent.com/65717229/170716464-f0cdec71-c688-460f-a910-6dc6f5b20ab4.PNG)
@@ -214,7 +225,7 @@ User Profile:
 
  Edit Account settings:
  - Before:
- - 
+ 
  ![SETTING DESK](https://user-images.githubusercontent.com/65717229/170719423-9560b179-8166-4412-81c9-e5b343d1d338.png)
  ![SETTING TABLET](https://user-images.githubusercontent.com/65717229/170719432-ead151da-784d-4540-af81-80ba2c4f798b.png)
  ![SETTING MOBILE](https://user-images.githubusercontent.com/65717229/170719429-98084312-ef36-4ed1-8765-fbd4814d3ae4.png)
@@ -235,15 +246,19 @@ Expected result:
 
 Result: 
  Old password is wrong:
+
  ![wrong old](https://user-images.githubusercontent.com/65717229/170720269-f3552d82-64bd-49e2-bb4a-96e6947abbec.PNG)
 
  Password changed:
+
  ![updated password](https://user-images.githubusercontent.com/65717229/170720263-7161928d-945e-4560-a66b-61b42f1eb4fe.PNG)
 
  Password do not fullfiul the requirements:
+
  ![not match](https://user-images.githubusercontent.com/65717229/170720507-8c7e8689-b414-4cb4-af0c-4b5b403f1058.PNG)
 
 ### Feature 4 Home page
+
 09.  User story:
 * As a regular user/admin user, logged in or not, I can view all the posts added on the blog, as well as when it was added, title, a snippet of the post an image and which categories the post belongs to. 
 
@@ -251,6 +266,7 @@ Test case:
 * As a regular user/admin I can navigate through the home page and see all the posts, from newest to oldest. 
 
 Results:
+
  ![home page](https://user-images.githubusercontent.com/65717229/170720860-4b6c7923-2964-4739-81f0-d377c33da87f.png)
 
 
@@ -261,9 +277,11 @@ Test case:
 *As a regular user/admin I can navigate through the different categories.
 
 Results:
+
  ![category](https://user-images.githubusercontent.com/65717229/170721070-bf2b03d3-f112-44b5-a567-1def49b4b529.png)
  
 ### Feature 5 Post detail page
+
 11. User story:
 * As a regular user/admin user I can click on any of the posts and be directed to a page where I can read the whole blog post. 
 
@@ -274,6 +292,7 @@ Expected result:
 * Be able to access the post page.
 
 Results:
+
 ![detail](https://user-images.githubusercontent.com/65717229/170721264-7df16950-0359-4947-b0bb-9f8afd4ed693.png)
 
 
@@ -288,9 +307,11 @@ Expected result:
 
 Results: 
 Author of the post:
+
 ![author](https://user-images.githubusercontent.com/65717229/170721546-c65d13d7-2fa6-4b6f-86c2-8df0dc00bf1d.PNG)
 
 Profile of the author:
+
  ![author profile](https://user-images.githubusercontent.com/65717229/170721552-75ed14fd-bbe2-4f80-bdf9-05e4bba31852.PNG)
 
 12.User story:
@@ -304,6 +325,7 @@ Expected result:
 
 Result:
  Logged in:
+
  ![leave comment](https://user-images.githubusercontent.com/65717229/171625063-869af14f-a8e4-4ace-acd3-9e0b1a1c7944.PNG)
  ![my comment](https://user-images.githubusercontent.com/65717229/171625034-c0deb2d6-1be1-4268-b9bb-13fff5371971.PNG)
 
@@ -319,6 +341,7 @@ Expected result:
 
 Result:
  Not logged in:
+
  ![comment](https://user-images.githubusercontent.com/65717229/171625052-6300ae56-f176-470b-b8a1-0faf0741cf21.PNG)
 
 
@@ -338,14 +361,17 @@ Expected result:
 * Be notified of missing information on the form 
 
 Result: 
- Adding a post;
+ Adding a post:
+
  ![adding post](https://user-images.githubusercontent.com/65717229/171625948-b8e52d7c-c6dd-478b-90f7-2d0a25cb171d.PNG)
  ![new post](https://user-images.githubusercontent.com/65717229/171626118-ab941039-437b-44c0-bec1-a69d2e951187.PNG)
 
  Missing Title:
+
  ![no title](https://user-images.githubusercontent.com/65717229/171626096-1a7b157b-a9a7-4923-be00-2f2b6ef876f6.PNG)
 
  Missing content: 
+
  ![no content](https://user-images.githubusercontent.com/65717229/171626104-fe1c2da7-2da1-4e5b-b0d1-f9027e0ce816.PNG)
 
 
@@ -359,6 +385,7 @@ Expected result:
 * Be notified that the user do not logged in or do not have an account. 
 
 Result:
+
  ![add post loggoed out](https://user-images.githubusercontent.com/65717229/171626432-377e26e6-a9bd-4c3e-8e6f-9a0b1079597c.PNG)
 
 
@@ -378,6 +405,7 @@ Expected result:
 
 Result:
  Edit photo:
+
  ![edit detail](https://user-images.githubusercontent.com/65717229/171627152-8a0fd14a-ace5-4a73-aac2-63eaf383afed.PNG)
  ![edit](https://user-images.githubusercontent.com/65717229/171627169-4b83a38d-88c6-4506-b2f7-a46588404c61.PNG)
  ![change image](https://user-images.githubusercontent.com/65717229/171627184-a4ecde83-f3b7-4ecc-b351-e1386dc505a0.PNG)
@@ -395,25 +423,27 @@ Expected result:
 
 Resullt:
 Delete Post:
+
  ![delete](https://user-images.githubusercontent.com/65717229/171627306-23153841-6069-48ee-b82f-cdf87ab2b069.PNG)
  ![deleted](https://user-images.githubusercontent.com/65717229/171627313-c9836569-fdb2-4285-8f84-fa7f25c8492b.PNG)
 
 
 18.User story:
-*As a regular user/admin user, when logged out, I can not access the edit or delete post page .
+* As a regular user/admin user, when logged out, I can not access the edit or delete post page .
 
 Test case:  
-*Try to access the edit/delete without being logged in or having an account.  
+* Try to access the edit/delete without being logged in or having an account.  
 
 Expected result:
-*Be notified that the user does not log in or do not have an account as well as that they are not allowed to edit or delete someone else’s post. 
+* Be notified that the user does not log in or do not have an account as well as that they are not allowed to edit or delete someone else’s post. 
 
 Result:
- Not able to delete:
- ![not delete](https://user-images.githubusercontent.com/65717229/171628143-98ec5c14-98b2-4cb3-bb97-cba8cee4812f.PNG)
+Not able to delete:
 
- Not able to edit:
- ![not edit](https://user-images.githubusercontent.com/65717229/171628146-1dac4e56-74a9-4630-9a16-7e22d7b5628a.PNG)
+![not delete](https://user-images.githubusercontent.com/65717229/171628143-98ec5c14-98b2-4cb3-bb97-cba8cee4812f.PNG)
+
+Not able to edit:
+![not edit](https://user-images.githubusercontent.com/65717229/171628146-1dac4e56-74a9-4630-9a16-7e22d7b5628a.PNG)
 
 
 ### Feature 8 my posts page
@@ -428,6 +458,7 @@ Expected result:
 
 Results: 
  My posts:
+
  ![myposts](https://user-images.githubusercontent.com/65717229/171628403-74e7d4a6-dfc0-482c-8898-c061862b3075.PNG)
 
 
@@ -442,6 +473,7 @@ Expected result:
 
 Result: 
  No posts:
+
  ![no post](https://user-images.githubusercontent.com/65717229/171628393-16d07332-33c8-4a52-9680-a2b39be8e1bd.PNG)
 
 ### Feature 9 add Category  page
@@ -456,10 +488,12 @@ Expected result:
 * Be able to see all the available categories.
 
 Result: 
- All categories
+ All categories:
+
  ![categories](https://user-images.githubusercontent.com/65717229/171628830-7b8a19ad-7541-439d-bd24-f0a47f3f900a.PNG)
 
- Speficic categor
+ Speficic category:
+
  ![category1](https://user-images.githubusercontent.com/65717229/171628827-ff1b3d7f-b5ba-44c8-a800-fba96dc45103.PNG)
 
 
@@ -477,11 +511,13 @@ Expected result:
 
 Result: 
  Creating new category:
+
  ![category new](https://user-images.githubusercontent.com/65717229/171629447-b365689c-f3cb-4fcf-a17f-407c80ac49f9.PNG)
  ![NEW CATEGORY](https://user-images.githubusercontent.com/65717229/171629471-721f6979-66fd-4db4-b87f-d70b712a16af.PNG)
  ![NEW NEW CATEGORY](https://user-images.githubusercontent.com/65717229/171629481-1a75fdbf-cfee-49a3-a6b4-354191437d8d.PNG)
 
  Missing information:
+
  ![missing category](https://user-images.githubusercontent.com/65717229/171629462-eec25dfa-a5a5-4d1f-87c2-55dbbcd0c4b4.PNG)
 
 
@@ -497,4 +533,5 @@ Expected result:
 
 Result:
  Not able to create a new category:
+ 
  ![NO CATEGORY](https://user-images.githubusercontent.com/65717229/171629491-cac67fd4-a85c-4c22-854e-c5cea61b9399.PNG)
