@@ -15,7 +15,7 @@
                         <div class="image-container">
                             {% if "placeholder" in post.image.url %}
                             <a href="{% url 'article-detail' post.pk  %}" class="post-link"><img class="card-img-top"
-                                    src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.png"></a>
+                                    src="https://www.usbforwindows.com/storage/img/images_3/function_set_default_image_when_image_not_present.png"></a>
                             {% else %}
                             <a href="{% url 'article-detail' post.pk  %}" class="post-link"><img class="card-img-top"
                                     src=" {{ post.image.url }}"></a>

@@ -4,6 +4,7 @@
 {% block content %}
 
 {% if user.is_authenticated %}
+{% if user.profile.user %}
 <div class="bg-banner">
     <div class="post">
         <div class="add-edit-post">
@@ -25,6 +26,15 @@
         document.getElementById("identifier").value = name;
     </script>
     {% else %}
+    <div class="not-allow">
+        <div class="not-allow-box">
+            <p>You need to create a profile first.</p>
+            <p><a href="{% url 'create_profile' %}">Create profile</a></p>
+        </div>
+    </div>
+    {% endif %}
+    {% else %}
+
     <!-- If the user ended up in this page without being logged in, a message will be displayed -->
     <div class="not-allow">
         <div class="not-allow-box">
@@ -32,10 +42,8 @@
             <p><a href="{% url 'login' %}">Login Here</a></p>
         </div>
     </div>
-    {% endif %}
 </div>
-</div>
-
+{% endif %}
 
 
 {% endblock %}

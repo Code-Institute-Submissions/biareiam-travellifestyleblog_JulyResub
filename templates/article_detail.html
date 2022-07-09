@@ -13,47 +13,56 @@
                             <h2 class="post-title">{{ post.post_title}}</h2>
                         </div>
                         <div class="blog-post-format">
-                            <span class="author"><a href="{% url 'show_profile_page' post.author.profile.id %}"><img
-                                        src="{{ post.author.profile.profile_pic.url }}"
-                                        class="img-responsive img-circle"></a>Post by: {{ post.author }}</span>
-                            <span class="line-space"> | </span>
-                            <span><small class="date"><i class="fa fa-date">{{ post.created_on}}</i></small></span>
-                            <div class="sub-title">
-                                <div class="row icons-sub-title">
-                                    <div class="col">
-                                        <div class="likes">
-                                            <form action="{% url 'like_post' post.pk %}" method="POST">
-                                                {% csrf_token %}
-                                                {% if user.is_authenticated %}
-                                                {% if liked %}
-                                                <button type="submit" name="post_id" value="{{ post.id }}"
-                                                    class="btn btn-danger btn-sm like-btn">
-                                                    <i class="far fa-heart"></i>
-                                                    {{ total_likes }}</button>
-                                                {% else %}
-                                                <button type="submit" name="post_id" value="{{ post.id }}"
-                                                    class="btn  btn-secondary btn-sm like-btn">
-                                                    <i class="far fa-heart"></i>
-                                                    {{ total_likes }}</button>
-                                                {% endif %}
-                                                {% else %}
-                                                <small><i class="far fa-heart"></i> <a href="{% url 'login' %}"
-                                                        class="login-btn">
-                                                        Login</a> to
-                                                    like</small>
-                                                {% endif %}
-                                            </form>
-                                        </div>
+                            {% if "placeholder" in post.author.profile.profile_pic.url %}
 
+                            <span class="author"><a href="{% url 'show_profile_page' post.author.profile.id %}"><img
+                                        src="https://www.odeliver.net/images/members/default.png"
+                                        class="img-responsive img-circle"> {% else %}
+                                    <span class="author"><a
+                                            href="{% url 'show_profile_page' post.author.profile.id %}"><img
+                                                src="{{ post.author.profile.profile_pic.url }}"
+                                                class="img-responsive img-circle">
+                                            {% endif %}
+                                        </a>Post by: {{ post.author }}</span>
+                                    <span class="line-space"> | </span>
+                                    <span><small class="date"><i
+                                                class="fa fa-date">{{ post.created_on}}</i></small></span>
+                                    <div class="sub-title">
+                                        <div class="row icons-sub-title">
+                                            <div class="col">
+                                                <div class="likes">
+                                                    <form action="{% url 'like_post' post.pk %}" method="POST">
+                                                        {% csrf_token %}
+                                                        {% if user.is_authenticated %}
+                                                        {% if liked %}
+                                                        <button type="submit" name="post_id" value="{{ post.id }}"
+                                                            class="btn btn-danger btn-sm like-btn">
+                                                            <i class="far fa-heart"></i>
+                                                            {{ total_likes }}</button>
+                                                        {% else %}
+                                                        <button type="submit" name="post_id" value="{{ post.id }}"
+                                                            class="btn  btn-secondary btn-sm like-btn">
+                                                            <i class="far fa-heart"></i>
+                                                            {{ total_likes }}</button>
+                                                        {% endif %}
+                                                        {% else %}
+                                                        <small><i class="far fa-heart"></i> <a href="{% url 'login' %}"
+                                                                class="login-btn">
+                                                                Login</a> to
+                                                            like</small>
+                                                        {% endif %}
+                                                    </form>
+                                                </div>
+
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="blog-post-image">
                             <!-- If the post does not have an image, a default one will be displayed instead -->
                             {% if "placeholder" in post.image.url %}
                             <a href="{% url 'article-detail' post.pk  %}" class="post-link"><img class="card-img-top"
-                                    src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.png"
+                                    src="https://www.usbforwindows.com/storage/img/images_3/function_set_default_image_when_image_not_present.png"
                                     alt="defalt profile image"></a>
                             {% else %}
                             <a href="{% url 'article-detail' post.pk  %}" class="post-link"><img class="card-img-top"
