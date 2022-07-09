@@ -1,12 +1,19 @@
-# Tests
+# What'up Blog - Testing documentation
 
-The testing approach will be described in detail in this section.
-
+*This file contains the Testing section of the [full README.md file for the what's Up | Blog](README.md).*
 ## Validators
 
   * W3C HTML Validator Passed tests without issues
   * W3C CSS Validator Passed tests without issues
   * PEP8 and AUTOPEP8. Online PEP8  previously warned about lines being too long and it was FIXED. No errors should be displayed. 
+
+### [Manual Testing]
+
+Extensively used Chrome Developer tools to test form submissions through network tab etc.
+
+# Tests
+
+The testing approach will be described in detail in this section.
  
 ## Manual testing information:
 
