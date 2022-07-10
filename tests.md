@@ -7,15 +7,15 @@
   * W3C CSS Validator Passed tests without issues
   * PEP8 and AUTOPEP8. Online PEP8  previously warned about lines being too long and it was FIXED. No errors should be displayed. 
 
-### [Manual Testing]
+  <img width="360" alt="member-validation" src="https://user-images.githubusercontent.com/65717229/178137891-3675592e-83f4-4149-a863-f856c42d3c15.PNG">
+<img width="495" alt="travelapp-validation" src="https://user-images.githubusercontent.com/65717229/178137893-c3681510-09d2-46a5-8e93-9e7b97b5b458.PNG">
+
+## [Manual Testing]
 
 Extensively used Chrome Developer tools to test form submissions through network tab etc.
-
-# Tests
-
 The testing approach will be described in detail in this section.
  
-## Manual testing information:
+### Manual testing information:
 
   * Testing was completed on the following browsers and device types:
   * Browsers: Safari, Chrome, IE Edge, Mozilla Firefox and Chrome Emulator.
