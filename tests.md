@@ -32,7 +32,7 @@ Test case:
 * Navigate to the home/index page on desktop, tablet and mobile.  
 
 Expected result : 
-* Be able to see the full navigation bar in different devices. 
+* Be able to see the full navigation bar on different devices. 
 
 Results: 
  Desktop
@@ -49,10 +49,10 @@ Results:
 
 
 02 - User story:
-* As an admin/regular user, while logged in, I would like to see the navigation bar displayed with a logo on all pages for easy navigation, redirecting to the home, on the different devices. As well as the other features available to logged in members. 
+* As an admin/regular user, while logged in, I would like to see the navigation bar displayed with a logo on all pages for easy navigation, redirecting to the home, on the different devices. As well as the other features available to logged-in members. 
 
 Test case:  
-* Navigate to the home page after logged in.
+* Navigate to the home page after logging in.
 * See the links displayed to members who are logged in.
 
 Expected result: 
@@ -78,7 +78,7 @@ Results:
 * As a regular user I can register for an account by providing my username, password, confirm password, first name, last name, and email. Once it is done, be redirected to the login page. 
 
 Test case: 
-* As a regular user, navigate to the register page from the home page and create an account. 
+* As a regular user, navigate to the registration page from the home page and create an account. 
 
 Expected result:
 * Be able to successfully register to the blog and be notified of it. 
@@ -102,7 +102,7 @@ Test case:
 * Enter passwords which do not match. 
 
 Expected result: 
-* In all these cases, the user is notified that something went wrong or an information is missing. 
+* In all these cases, the user is notified that something went wrong or information is missing. 
 
 Results:
 
@@ -119,13 +119,13 @@ Results:
   ![resgister no @ - mobile](https://user-images.githubusercontent.com/65717229/170714135-1a6d6df0-824c-4fd7-b346-56d63763b319.png)
 
 
-  Do not enter an username:
+  Do not enter a username:
 
   ![username missing - desktop](https://user-images.githubusercontent.com/65717229/170714306-24cf532f-1925-45a6-af4d-f9241baaf9a8.PNG)
   ![username missing - tablet](https://user-images.githubusercontent.com/65717229/170714310-e8a8f617-0072-49bd-8161-a8c723354a75.PNG)
   ![username missing  - mobile](https://user-images.githubusercontent.com/65717229/170714313-3174c629-3acf-4d34-b33a-bc626c7aead1.PNG)
 
-  Password do not match or do not fullfil the requirement:
+  Password do not match or do not fulfil the requirement:
 
   ![password not matching - desktop](https://user-images.githubusercontent.com/65717229/170714421-a76a59e9-90f9-4d74-823e-b8a8367b39b4.png)
   ![password not matching - tablet](https://user-images.githubusercontent.com/65717229/170714429-2b66dded-da30-4b34-a168-6d3662f1031c.png)
@@ -148,7 +148,7 @@ Test case:
 Expected results:
 
 * An error message is displayed that both the username and password fields must be entered, if not filled in. 
-* An error message is displayed if the username or password are incorrect or if the user does not have an account. 
+* An error message is displayed if the username or password is incorrect or if the user does not have an account. 
 * The user is successfully logged in and is brought to the memories page
  
  
@@ -177,7 +177,7 @@ Test case:
 * As an admin/regular user I choose not to add a profile image or I forgot to add one. 
 
 Expected result: 
-* New user can successfully create a profile, with a bio, image and add links to social media, if desired. If a profile image is not provided, a default one will be add instead.  
+* New users can successfully create a profile, with a bio, and image and add links to social media if desired. If a profile image is not provided, a default one will be added instead.  
 
 Result:
  Create a profile - Navigation bar:
@@ -192,23 +192,23 @@ Result:
  ![create - tablet](https://user-images.githubusercontent.com/65717229/170717485-916e9085-42cb-413a-bb90-1aa7d97f9aaf.png)
  ![create - mobile](https://user-images.githubusercontent.com/65717229/170717480-40d92eb6-3bf2-405f-a3cc-4daf5228f093.png)
 
- Profile without picture:
+ A profile without a picture:
 
  ![no photo - desktop](https://user-images.githubusercontent.com/65717229/170717951-b14e5249-acc9-4094-9153-914d1894e325.PNG)
  ![no photo - tablet](https://user-images.githubusercontent.com/65717229/170717956-b45ec607-8641-45e4-8ee0-0b592c04ec58.PNG)
  ![no photo - mobile](https://user-images.githubusercontent.com/65717229/170717960-573420db-90ec-4ff3-ad42-e868f781ea39.PNG)
 
 
-07.user story:
+07. user story:
 * As an admin/regular user, when I am logged into the site, I can see and edit my existing profile.
 
 Test case:
-* Users can see their own profile. 
-* Users can edit their own profile. 
+* Users can see their own profiles. 
+* Users can edit their own profiles. 
 * Users can edit their account settings
 
 Expected result: 
-* Users can successfully view their profile and edit the text, social media links and the bio.
+* Users can successfully view their profile and edit the text, social media links and bio.
 
 Results:
 User Profile:
@@ -245,14 +245,14 @@ User Profile:
 * As an admin/regular user, when I am logged into the site, I can change my password.
 
 Test case:
-* Users can see the settings form and successfully change its password.
+* Users can see the settings form and successfully change their password.
 * Be notified if passwords do not match. 
 
 Expected result: 
 * Users can successfully change the password and be notified of it as well as be notified if anything went wrong. 
 
 Result: 
- Old password is wrong:
+ The old password is wrong:
 
  ![wrong old](https://user-images.githubusercontent.com/65717229/170720269-f3552d82-64bd-49e2-bb4a-96e6947abbec.PNG)
 
@@ -260,14 +260,14 @@ Result:
 
  ![updated password](https://user-images.githubusercontent.com/65717229/170720263-7161928d-945e-4560-a66b-61b42f1eb4fe.PNG)
 
- Password do not fullfiul the requirements:
+ Password does not fulfil the requirements:
 
  ![not match](https://user-images.githubusercontent.com/65717229/170720507-8c7e8689-b414-4cb4-af0c-4b5b403f1058.PNG)
 
 ### Feature 4 Home page
 
 09.  User story:
-* As a regular user/admin user, logged in or not, I can view all the posts added on the blog, as well as when it was added, title, a snippet of the post an image and which categories the post belongs to. 
+* As a regular user/admin user, log in or not, I can view all the posts added on the blog, as well as when it was added, the title, a snippet of the post an image and which categories the post belongs to. 
 
 Test case:
 * As a regular user/admin I can navigate through the home page and see all the posts, from newest to oldest. 
@@ -278,10 +278,10 @@ Results:
 
 
 10.  User story:
-* As a regular user/admin user I can view the posts by filtering it by category.
+* As a regular user/admin user I can view the posts by filtering them by category.
 
 Test case:
-*As a regular user/admin I can navigate through the different categories.
+*As a regular user/admin, I can navigate through the different categories.
 
 Results:
 
@@ -293,10 +293,10 @@ Results:
 * As a regular user/admin user I can click on any of the posts and be directed to a page where I can read the whole blog post. 
 
 Test case:  
-* User wants to read the entire post, see how it was posted, when it was posted.
+* User wants to read the entire post and see how it was posted when it was posted.
 
 Expected result:
-* Be able to access the post page.
+* Be able to access the posting page.
 
 Results:
 
@@ -304,7 +304,7 @@ Results:
 
 
 11. User story:
-* As a regular user/admin user I can click on the name or image of the author of the post and see their page.It does not matter if I am logged in or not. 
+* As a regular user/admin user I can click on the name or image of the author of the post and see their page. It does not matter if I am logged in or not. 
 
 Test case:  
 * Go into one of the posts and check its author.
@@ -321,14 +321,14 @@ Profile of the author:
 
  ![author profile](https://user-images.githubusercontent.com/65717229/170721552-75ed14fd-bbe2-4f80-bdf9-05e4bba31852.PNG)
 
-12.User story:
-* As a regular user/admin user, when logged in, I can leave a comment in one of the posts. 
+12. User story:
+* As a regular user/admin user, when logged in, I can leave a comment on one of the posts. 
 
 Test case:  
 * Go into one of the posts and leave a comment.
 
 Expected result:
-* A comment is added to the chosen post. Displaying the name of the author of the post, the date and the posts itself. 
+* A comment is added to the chosen post. Displaying the name of the author of the post, the date and the post itself. 
 
 Result:
  Logged in:
@@ -358,7 +358,7 @@ Result:
 * As a regular user/admin user, when logged in, I can add a new post.
 
 Test case:  
-* Go into one of the “add post” page through the navigation bar.
+* Go into one of the “add post” pages through the navigation bar.
 * Create a new post. 
 
 Expected result:
@@ -383,13 +383,13 @@ Result:
 
 
 15. User story:
-* As a regular user/admin user, when logged out, I can not access the add post page .
+* As a regular user/admin user, when logged out, I can not access the add post page.
 
 Test case:  
-* Try to access the add post page without being logged in or having an account.  
+* Try to access the add post page without being logged in or have an account.  
 
 Expected result:
-* Be notified that the user do not logged in or do not have an account. 
+* Be notified that the user does not log in or does not have an account. 
 
 Result:
 
@@ -428,21 +428,21 @@ Test case:
 Expected result:
 *Post successfully deleted.
 
-Resullt:
+Result:
 Delete Post:
 
  ![delete](https://user-images.githubusercontent.com/65717229/171627306-23153841-6069-48ee-b82f-cdf87ab2b069.PNG)
  ![deleted](https://user-images.githubusercontent.com/65717229/171627313-c9836569-fdb2-4285-8f84-fa7f25c8492b.PNG)
 
 
-18.User story:
-* As a regular user/admin user, when logged out, I can not access the edit or delete post page .
+18. User story:
+* As a regular user/admin user, when logged out, I can not access the edit or delete post page.
 
 Test case:  
-* Try to access the edit/delete without being logged in or having an account.  
+* Try to access the edit/delete without being logged in or have an account.  
 
 Expected result:
-* Be notified that the user does not log in or do not have an account as well as that they are not allowed to edit or delete someone else’s post. 
+* Be notified that the user does not log in or does not have an account as well as that they are not allowed to edit or delete someone else’s post. 
 
 Result:
 Not able to delete:
@@ -470,13 +470,13 @@ Results:
 
 
 20. User story:
-As a regular user/admin user, when logged out in, I am can see my posts page even if I do not publish any post yet. 
+As a regular user/admin user, when logged out, I am can see my posts page even if I do not publish any post yet. 
 
 Test case:  
 * From a link on the navigation bar go to all my posts. 
 
 Expected result:
-* Be able to see all my post page and the message notifying that i do not publish anything yet. 
+* Be able to see all my post pages and the message notifying me that I do not publish anything yet. 
 
 Result: 
  No posts:
@@ -499,13 +499,13 @@ Result:
 
  ![categories](https://user-images.githubusercontent.com/65717229/171628830-7b8a19ad-7541-439d-bd24-f0a47f3f900a.PNG)
 
- Speficic category:
+ Specific category:
 
  ![category1](https://user-images.githubusercontent.com/65717229/171628827-ff1b3d7f-b5ba-44c8-a800-fba96dc45103.PNG)
 
 
 22. User story:
-* As a regular user/admin user, when logged in , I can add a new category if I need to. 
+* As a regular user/admin user, when logged in, I can add a new category if I need to. 
 
 Test case:  
 * From a link on the navigation bar go and see all the existing categories.
@@ -513,7 +513,7 @@ Test case:
 * Be notified if the field was not filled in. 
 
 Expected result:
-* Be able to add a new category. It will be displayed in the all categories page and on the dropdown from the navigation bar. 
+* Be able to add a new category. It will be displayed on the all categories page and on the dropdown from the navigation bar. 
 * A message should be displayed if nothing is filled in the form. 
 
 Result: 
@@ -533,10 +533,10 @@ Result:
 
 Test case:  
 * From a link on the navigation bar go and see all the existing categories. 
-* Try to add a new category without logging.
+* Try to add a new category without logging in.
 
 Expected result:
-* Messages alert the users that they should have an account or be logging in to be able to add a new category. 
+* Messages alert the users that they should have an account or by logging in to be able to add a new category. 
 
 Result:
  Not able to create a new category:

@@ -10,7 +10,7 @@ You can view the live site [here](https://travellifestyleblog22.herokuapp.com/)
 
 ### Project goals
 
-This project is part of my Code Institute Full Stack Software Development studies, specifically the Data-Centric Development module. The objective for this milestone project is to create a web application that allows users to store and easily access cooking recipes, using the CRUD operations of Create, Read, Update, and Delete for their recipes. The goal of this project is to create, store, edit and delete posts (CRUD). The target audience for this project is people that are interested in topics such as travel, lifestyle, books and movies. Users can create different categories, expanding the topics for discussion on the blog. 
+This project is part of my Code Institute Full Stack Software Development studies, specifically the Data-Centric Development module. The objective of this milestone project is to create a web application that allows users to store and easily access cooking recipes, using the CRUD operations of Create, Read, Update, and Delete for their recipes. The goal of this project is to create, store, edit and delete posts (CRUD). The target audience for this project is people that are interested in topics such as travel, lifestyle, books and movies. Users can create different categories, expanding the topics for discussion on the blog. 
 
 ### User Stories
 As a user, I want: 
@@ -38,7 +38,7 @@ As a user, I want:
 
 This site was built based on ideas from initial wireframes created in Figma and exported image files for these can be seen below. Some changes were done as the projects started to get into shape, for instance, the colour of the background is different from the initial idea. 
 
-**Tablet and Mobie**
+**Tablet and Mobile**
 
 ![Wireframe- tablet and mobile](https://user-images.githubusercontent.com/65717229/158603516-b8760174-0f04-4ae1-8765-5bc600861e07.png)
 
@@ -54,7 +54,7 @@ This site was built based on ideas from initial wireframes created in Figma and 
 ### Design 
 This site was built using Bootstrap, as well as refactored designs I used in my previous milestones. On the homepage, the individual category page and my posts page are displayed as cards that when clicked, lead to the individual post page. 
 On the individual post page, users can find the photo, name, bio and social media links to the author of the posts. by clicking on the photo or "Profile" button, the users are directed to a page where they can see the author's full profile. 
-The initial idea was to create a site that would be easy to navigate without any pain points. The user can easily find what they are looking for as well as engage with the posts, by liking or leaving a comment to them. 
+The initial idea was to create a site that would be easy to navigate without any pain points. The user can easily find what they are looking for as well as engage with the posts, by liking or leaving a comment on them. 
 
 ### Colour Scheme
 Colours are kept to a minimum to keep the focus on the imagery of the post, chosen colours were based on the hero image. The Colour scheme can be found below:
@@ -258,7 +258,7 @@ Users can add new categories if they see necessary.
 * Have a "favourites" area where users can add their favourite posts.
 
 ## Models
-This website has one postgres database with a number of collections or data models.The models  are connected to some extent to each other as well as being used to store various calculations, and store all general information on the page. 
+This website has one Postgres database with a number of collections or data models. The models are connected to some extent to each other as well as being used to store various calculations and store all general information on the page. 
 
  **Profile model**
 
@@ -331,7 +331,7 @@ Further details on all Python packages used on this project can be found in the 
 
 ### Content
 
-All the posts from the website have the name of the original author as well as a link to the original post on the bottom of each post. This blog was only done for educational purposes. 
+All the posts from the website have the name of the original author as well as a link to the original post at the bottom of each post. This blog was only done for educational purposes. 
 
 ## Testing
 
@@ -341,22 +341,22 @@ The testing can be seen [here](tests.md).
 
 The website can be accessed [here](https://travellifestyleblog22.herokuapp.com/).
 
-Deployment instructions assume that you have already set up your repository and basic django application. The website is deployed on the Heroku cloud platform using the following steps:
+Deployment instructions assume that you have already set up your repository and basic Django application. The website is deployed on the Heroku cloud platform using the following steps:
 
 - To run this project locally, you will need to clone the repository.
 - Login to GitHub (https://wwww.github.com)
 - Select the repository biareiam/travellifestyleblog
-- Click the “Code” button and copy the HTTPS url, for example: https://github.com/biareiam/travellifestyleblog.git
+- Click the “Code” button and copy the HTTPS URL, for example, https://github.com/biareiam/travellifestyleblog.git
 - In your IDE, open a terminal and run the git clone command:
 - git clone https://github.com/biareiam/travellifestyleblog.git
 - The repository will now be cloned in your workspace.
-- Create an env.py file in the root folder in your project, and add in the following code with the relevant key, value pairs, and ensure you enter the correct key values.
+- Create an env.py file in the root folder in your project, and add the following code with the relevant key, value pairs, and ensure you enter the correct key values.
 - Add to the env.py file: 
    import os
    os.environ["DATABASE_URL"] = "Paste in Heroku DATABASE_URL Link"
    os.environ["SECRET_KEY"] = "Make up your own randomSecretKey"
 - Install the relevant packages as per the requirements.txt file
-- Start the application by running python3 manage.py runserver 
+- Start the application by running "python3 manage.py runserver" 
 
 #### Heroku
 
@@ -368,18 +368,18 @@ Deployment instructions assume that you have already set up your repository and 
 - Create an account on heroku.com
 - Create a new application and give it a unique name
 - In the application dashboard, navigate to the deploy section and connect your application to your git repo, by selecting your repo
-- Select the branch, for example, master and enable automatic deploys if desired. Otherwise, a deployment will be manual
+- Select the branch, for example, master and enable automatic deploys if desired. Otherwise, deployment will be manual
 - The next step is to set the config variables in the Settings section
-- Set key/value pairs for the following keys:DATABASE_URL, SECRET_KEY
+- Set key/value pairs for the following keys: DATABASE_URL, SECRET_KEY
 - Go to the dashboard and trigger a deployment - “deploy branch”
 - This will trigger a deployment, once the deployment has been successful click on the "Open App" link to open the app
 - If you encounter any issues accessing the build logs is a good way to troubleshoot the issue
 
 Note: 
-- If Heroku can not be connected to gitpod. On the terminal, type “heroku login -i”.
-- Your heroku email and password will be requested.
-- Once it is done, type “ heroku git:remote -a travellifestyleblog22”.
-- The next step is to push it to heroku by typing “ git push heroku main”. 
+- If Heroku can not be connected to gitpod. On the terminal, type “Heroku login -i”.
+- Your Heroku email and password will be requested.
+- Once it is done, type “ Heroku git:remote -a travellifestyleblog22”.
+- The next step is to push it to Heroku by typing “ git push Heroku main”. 
 - If you encounter any issues accessing the build logs is a good way to troubleshoot the issue
 
 
@@ -392,9 +392,3 @@ Thanks to my friend Authur Pereira Neto for all the support and help throughout 
 If there are any issues with the copyright of the content, please contact me. I will fix that as soon as possible. This project is for educational purposes only.
 
 Beatriz Amorim 
-
-
-
-
-
-
