@@ -15,15 +15,17 @@
                         <div class="blog-post-format">
                             {% if "placeholder" in post.author.profile.profile_pic.url %}
 
-                            <span class="author"><a href="{% url 'show_profile_page' post.author.profile.id %}"><img
-                                        src="https://www.odeliver.net/images/members/default.png"
-                                        class="img-responsive img-circle"> {% else %}
-                                    <span class="author"><a
-                                            href="{% url 'show_profile_page' post.author.profile.id %}"><img
-                                                src="{{ post.author.profile.profile_pic.url }}"
-                                                class="img-responsive img-circle">
-                                            {% endif %}
-                                        </a>Post by: {{ post.author }}</span>
+                            <span class="author">
+                                <a href="{% url 'show_profile_page' post.author.profile.id %}">
+                                    <img src="https://www.odeliver.net/images/members/default.png"
+                                        class="img-responsive img-circle"></a>
+                                {% else %}
+                                <span class="author">
+                                    <a href="{% url 'show_profile_page' post.author.profile.id %}">
+                                        <img src="{{ post.author.profile.profile_pic.url }}"
+                                            class="img-responsive img-circle"></a>
+                                    {% endif %}
+                                    <span>by: {{ post.author }}</span>
                                     <span class="line-space"> | </span>
                                     <span><small class="date"><i
                                                 class="fa fa-date">{{ post.created_on}}</i></small></span>
