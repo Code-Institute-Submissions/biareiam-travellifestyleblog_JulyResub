@@ -15,7 +15,7 @@ class PostForm(forms.ModelForm):
     class Meta:
         """ This will help to edit the form """
         model = Post
-        fields = ('post_title', 'author','category', 'image', 'content')
+        fields = ('post_title', 'author', 'category', 'image', 'content')
         widgets = {
             'post_title': forms.TextInput(attrs={'class': 'form-control'}),
             'author': forms.TextInput(attrs={'class': 'form-control',
@@ -32,7 +32,7 @@ class EditForm(forms.ModelForm):
     class Meta:
         """ stle the form """
         model = Post
-        fields = ('post_title','category', 'image', 'content')
+        fields = ('post_title', 'category', 'image', 'content')
         widgets = {
             'post_title': forms.TextInput(attrs={'class': 'form-control'}),
             'category': forms.Select(choices=choice_list,

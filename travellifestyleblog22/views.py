@@ -8,7 +8,6 @@ from .models import Post, Category, Comment
 from .forms import PostForm, EditForm, CommentForm
 
 
-
 def my_posts(request):
     """ Create my posts page """
     if request.user.is_authenticated:

@@ -9,7 +9,8 @@ from ckeditor.fields import RichTextField
 class Profile(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     bio = models.TextField()
-    profile_pic = models.ImageField(null=True, blank=True, upload_to="images/profile/",
+    profile_pic = models.ImageField(null=True, blank=True,
+                                    upload_to="images/profile/",
                                     default="placeholder")
     facebook_url = models.CharField(max_length=255, null=True, blank=True)
     twitter_url = models.CharField(max_length=255, null=True, blank=True)
@@ -19,5 +20,6 @@ class Profile(models.Model):
 
     def __str__(self):
         return str(self.user)
+
     def get_absolute_url(self):
         return reverse('home')
